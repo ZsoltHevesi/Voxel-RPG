@@ -39,8 +39,8 @@ data = PackedVector3Array(-23, 85.5, 25.5, -23, 85.5, 25, -23, 87.5, 25.5, -23, 
 [node name="Chateau" type="Node3D"]
 
 [node name="VoxelGI" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 76.3011, -28.6386)
-size = Vector3(20, 21.5122, 12.394)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75238, 79.146, -0.717451)
+size = Vector3(73.3314, 32.4573, 83.553)
 data = ExtResource("1_p7sj4")
 
 [node name="courtYard" type="MeshInstance3D" parent="."]
