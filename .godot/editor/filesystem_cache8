@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706737745
+::res://::1706739493
 icon.svg::CompressedTexture2D::7874682967027633112::1703089645::1703089656::1::::<><>::
 README.md::TextFile::-1::1706737184::0::1::::<><>::
 ::res://assets/::1706737428
@@ -18,14 +18,9 @@ darkGreyMET1.tres::StandardMaterial3D::1045339703941166048::1706732137::0::1::::
 goldMET1.tres::StandardMaterial3D::7787410889374107880::1706732137::0::1::::<><>::
 greyMET1.tres::StandardMaterial3D::5414068544397215203::1706732086::0::1::::<><>::
 greyMET2.tres::StandardMaterial3D::2958856803884362847::1706732086::0::1::::<><>::
-::res://assets/materials/transparent/::1706737428
+::res://assets/materials/transparent/::1706737880
 clearGlass_Refr.tres::StandardMaterial3D::6223340776132225623::1706733254::0::1::::<><>::uid://cpleldlhj73w8::::res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1706733254::0::1::::<><>::
-glass_mat_1.tres::StandardMaterial3D::-1::1706730367::0::1::::<><>::res://glass_mat_2.tres
-glass_mat_2.tres::StandardMaterial3D::-1::1706730367::0::1::::<><>::
-og_Glass.tres::StandardMaterial3D::4252961541370106929::1706731907::0::1::::<><>::uid://cpleldlhj73w8::::res://og_Glass_2_NEXT.tres
-og_Glass_2_NEXT.tres::StandardMaterial3D::5848644863849629997::1706731907::0::1::::<><>::
-windowClear1.tres::StandardMaterial3D::4270259333275479578::1706732086::0::1::::<><>::
 ::res://assets/models/::1706528686
 ::res://assets/models/player/::1706528660
 ::res://assets/models/player/solomon/::1706528662
