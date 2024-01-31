@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnx6rg6bityq"
+path="res://.godot/imported/pSolomonHead.obj-b723d7bc70fda63f04485e43643f1c16.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pSolomonHead.obj-b723d7bc70fda63f04485e43643f1c16.mesh"]
+
+source_file="res://assets/models/player/solomon/pSolomonHead.obj"
+dest_files=["res://.godot/imported/pSolomonHead.obj-b723d7bc70fda63f04485e43643f1c16.mesh", "res://.godot/imported/pSolomonHead.obj-b723d7bc70fda63f04485e43643f1c16.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

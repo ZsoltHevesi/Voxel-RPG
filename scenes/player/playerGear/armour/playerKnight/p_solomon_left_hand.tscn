@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://exqvanae0tiw"]
+
+[ext_resource type="ArrayMesh" uid="uid://duvs3jj5l0jlw" path="res://assets/models/player/solomon/pSolomonLHand.obj" id="1_dmxuh"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_0akdp"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_1vg8h"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF2.tres" id="4_51vuc"]
+[ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="5_p1y3s"]
+
+[node name="solomonLeftHand" type="Node3D"]
+transform = Transform3D(-0.075, 0, 6.55671e-09, 0, 0.075, 0, -6.55671e-09, 0, -0.075, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_dmxuh")
+surface_material_override/0 = ExtResource("2_0akdp")
+surface_material_override/1 = ExtResource("3_1vg8h")
+surface_material_override/2 = ExtResource("4_51vuc")
+surface_material_override/3 = ExtResource("5_p1y3s")

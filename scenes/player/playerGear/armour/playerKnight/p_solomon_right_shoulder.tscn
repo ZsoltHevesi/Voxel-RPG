@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://csqukmapf6j6y"]
+
+[ext_resource type="ArrayMesh" uid="uid://c62r8m7hsws7s" path="res://assets/models/player/solomon/pSolomonRShoulder.obj" id="1_ekifs"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_dg3lv"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/greyMET2.tres" id="3_j6mmy"]
+[ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="4_60f86"]
+
+[node name="solomonRightShoulder" type="Node3D"]
+transform = Transform3D(-0.075, 0, 6.55671e-09, 0, 0.075, 0, -6.55671e-09, 0, -0.075, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ekifs")
+surface_material_override/0 = ExtResource("2_dg3lv")
+surface_material_override/1 = ExtResource("3_j6mmy")
+surface_material_override/2 = ExtResource("4_60f86")

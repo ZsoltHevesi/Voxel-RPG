@@ -1,0 +1,15 @@
+VoxelGI
+OccluderInstance3D
+MeshInstance3D
+Node3D
+StaticBody3D
+Area3D
+CSGBox3D
+GridMap
+RemoteTransform3D
+CollisionShape3D
+AnimationPlayer
+DirectionalLight3D
+SpotLight3D
+Skeleton3D
+Camera3D

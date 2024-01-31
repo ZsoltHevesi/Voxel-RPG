@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cuwvrpomvt3pb"]
+
+[ext_resource type="Material" uid="uid://cpleldlhj73w8" path="res://assets/materials/transparent/clearGlass_Refr_NEXT.tres" id="1_wt7ha"]
+
+[resource]
+next_pass = ExtResource("1_wt7ha")
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0.0627451)
+metallic_specular = 0.0
+refraction_scale = 0.1

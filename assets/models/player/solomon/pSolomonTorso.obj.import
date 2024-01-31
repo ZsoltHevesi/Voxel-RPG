@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bh0iu1gxv0ndu"
+path="res://.godot/imported/pSolomonTorso.obj-85bf339538488ddf9b42f763e6f12657.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pSolomonTorso.obj-85bf339538488ddf9b42f763e6f12657.mesh"]
+
+source_file="res://assets/models/player/solomon/pSolomonTorso.obj"
+dest_files=["res://.godot/imported/pSolomonTorso.obj-85bf339538488ddf9b42f763e6f12657.mesh", "res://.godot/imported/pSolomonTorso.obj-85bf339538488ddf9b42f763e6f12657.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
