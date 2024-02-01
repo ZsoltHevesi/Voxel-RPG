@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var camera_mount = $cameraMount
 
 
-const SPEED = 5.0
+const SPEED = 6
 const JUMP_VELOCITY = 6
 
 @export var mouseSensitivity = 0.3
