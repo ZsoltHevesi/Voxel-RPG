@@ -1,2 +1,2 @@
 # Voxel-RPG
- TU voxel RPG game project
+ TUD voxel RPG game project
