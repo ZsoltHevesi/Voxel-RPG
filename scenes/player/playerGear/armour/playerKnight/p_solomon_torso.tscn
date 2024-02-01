@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dh42ns6gocqi1"]
 
-[ext_resource type="ArrayMesh" uid="uid://bh0iu1gxv0ndu" path="res://assets/models/player/solomon/pSolomonTorso.obj" id="1_f601r"]
+[ext_resource type="ArrayMesh" uid="uid://dl45j6b526cm8" path="res://assets/models/player/armour/solomon/torso.obj" id="1_i2ves"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF2.tres" id="2_k4hmy"]
 [ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_6oy06"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="4_1kdgm"]
@@ -11,15 +11,15 @@
 [ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="9_k16ys"]
 
 [node name="solomonTorso" type="Node3D"]
-transform = Transform3D(-0.075, 0, 6.55671e-09, 0, 0.075, 0, -6.55671e-09, 0, -0.075, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_f601r")
-surface_material_override/0 = ExtResource("2_k4hmy")
-surface_material_override/1 = ExtResource("3_6oy06")
-surface_material_override/2 = ExtResource("4_1kdgm")
-surface_material_override/3 = ExtResource("5_c40hp")
-surface_material_override/4 = ExtResource("6_i4pmw")
+mesh = ExtResource("1_i2ves")
+surface_material_override/0 = ExtResource("8_ed7nt")
+surface_material_override/1 = ExtResource("9_k16ys")
+surface_material_override/2 = ExtResource("5_c40hp")
+surface_material_override/3 = ExtResource("6_i4pmw")
+surface_material_override/4 = ExtResource("3_6oy06")
 surface_material_override/5 = ExtResource("7_i5atd")
-surface_material_override/6 = ExtResource("8_ed7nt")
-surface_material_override/7 = ExtResource("9_k16ys")
+surface_material_override/6 = ExtResource("2_k4hmy")
+surface_material_override/7 = ExtResource("4_1kdgm")

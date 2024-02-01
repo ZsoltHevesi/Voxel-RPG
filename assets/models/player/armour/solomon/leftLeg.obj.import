@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6xlgopjrgjbi"
+path="res://.godot/imported/leftLeg.obj-849d47a4df140adeeb8eb215def60628.mesh"
+
+[deps]
+
+files=["res://.godot/imported/leftLeg.obj-849d47a4df140adeeb8eb215def60628.mesh"]
+
+source_file="res://assets/models/player/armour/solomon/leftLeg.obj"
+dest_files=["res://.godot/imported/leftLeg.obj-849d47a4df140adeeb8eb215def60628.mesh", "res://.godot/imported/leftLeg.obj-849d47a4df140adeeb8eb215def60628.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctr8o6cym2xki"
+path="res://.godot/imported/head.obj-52948ed1e7aad50fb8da3b13a713321e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/head.obj-52948ed1e7aad50fb8da3b13a713321e.mesh"]
+
+source_file="res://assets/models/player/armour/solomon/head.obj"
+dest_files=["res://.godot/imported/head.obj-52948ed1e7aad50fb8da3b13a713321e.mesh", "res://.godot/imported/head.obj-52948ed1e7aad50fb8da3b13a713321e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

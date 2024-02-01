@@ -1,6 +1,6 @@
+MeshInstance3D
 VoxelGI
 OccluderInstance3D
-MeshInstance3D
 Node3D
 StaticBody3D
 Area3D
@@ -12,4 +12,3 @@ AnimationPlayer
 DirectionalLight3D
 SpotLight3D
 Skeleton3D
-Camera3D
