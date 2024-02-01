@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0k7ko4t6bmrl"]
 
-[ext_resource type="ArrayMesh" uid="uid://b8crhs2ebf7ny" path="res://assets/models/player/solomon/pSolomonRLeg.obj" id="1_x56sk"]
+[ext_resource type="ArrayMesh" uid="uid://wumgn4ifyttc" path="res://assets/models/player/armour/solomon/rightLeg.obj" id="1_33x76"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_cbvo8"]
 [ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_2awvm"]
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/greyMET2.tres" id="4_cj32g"]
 
 [node name="solomonRightLeg" type="Node3D"]
-transform = Transform3D(-0.075, 0, 6.55671e-09, 0, 0.075, 0, -6.55671e-09, 0, -0.075, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_x56sk")
-surface_material_override/0 = ExtResource("2_cbvo8")
-surface_material_override/1 = ExtResource("3_2awvm")
-surface_material_override/2 = ExtResource("4_cj32g")
+mesh = ExtResource("1_33x76")
+surface_material_override/0 = ExtResource("3_2awvm")
+surface_material_override/1 = ExtResource("4_cj32g")
+surface_material_override/2 = ExtResource("2_cbvo8")

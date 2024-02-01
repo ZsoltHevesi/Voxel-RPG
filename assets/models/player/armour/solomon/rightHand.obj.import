@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://np2qfm20xteq"
+path="res://.godot/imported/rightHand.obj-c9285e2dd25106daae1c5d032e42bc8c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightHand.obj-c9285e2dd25106daae1c5d032e42bc8c.mesh"]
+
+source_file="res://assets/models/player/armour/solomon/rightHand.obj"
+dest_files=["res://.godot/imported/rightHand.obj-c9285e2dd25106daae1c5d032e42bc8c.mesh", "res://.godot/imported/rightHand.obj-c9285e2dd25106daae1c5d032e42bc8c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
