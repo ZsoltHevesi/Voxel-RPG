@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706822962
+::res://::1706823053
 icon.svg::CompressedTexture2D::7874682967027633112::1703089645::1703089656::1::::<><>::
 README.md::TextFile::-1::1706811519::0::1::::<><>::
 ::res://assets/::1706737428
@@ -26,7 +26,7 @@ clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1706818199::
 ::res://assets/models/enemy/vahki/::1706818205
 ::res://assets/models/player/::1706822962
 ::res://assets/models/player/armour/::1706822962
-::res://assets/models/player/armour/solomon/::1706822962
+::res://assets/models/player/armour/solomon/::1706823023
 head.obj::Mesh::6143554112624833104::1706822962::1706823022::1::::<><>::
 leftFoot.obj::Mesh::1766389876975417526::1706822962::1706823022::1::::<><>::
 leftHand.obj::Mesh::6359031574901734988::1706822962::1706823022::1::::<><>::
