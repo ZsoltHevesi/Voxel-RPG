@@ -17,3 +17,4 @@ res://scenes/enemies/clanger/e_clanger_head.tscn
 res://scenes/player/player.tscn
 res://scenes/enemies/clanger/e_clanger.tscn
 res://assets/materials/emission/yellowNeon1.tres
+res://scenes/levels/tileset scenes/chateau scene/chateau.VoxelGI_data.res
