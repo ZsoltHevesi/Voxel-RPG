@@ -12,5 +12,4 @@ res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
-res://scenes/levels/level1.tscn
 res://scripts/player.gd
