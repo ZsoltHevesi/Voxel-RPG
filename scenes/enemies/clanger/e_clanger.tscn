@@ -1,0 +1,114 @@
+[gd_scene load_steps=17 format=3 uid="uid://b28y412e8tws"]
+
+[ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
+[ext_resource type="Script" path="res://scripts/playerCollision3D.gd" id="1_r14rp"]
+[ext_resource type="ArrayMesh" uid="uid://cbm3hdsxtec5w" path="res://assets/models/enemy/clanger/leftFoot.obj" id="2_1jy03"]
+[ext_resource type="ArrayMesh" uid="uid://crvj6gkfr6cjt" path="res://assets/models/enemy/clanger/leftLeg.obj" id="3_6lqky"]
+[ext_resource type="ArrayMesh" uid="uid://d1svghjfsliwn" path="res://assets/models/enemy/clanger/leftShoulder.obj" id="4_wsjfj"]
+[ext_resource type="ArrayMesh" uid="uid://i06l5voal8rl" path="res://assets/models/enemy/clanger/rightFoot.obj" id="5_25k0r"]
+[ext_resource type="ArrayMesh" uid="uid://b548heicnbb6b" path="res://assets/models/enemy/clanger/staff.obj" id="5_h705w"]
+[ext_resource type="ArrayMesh" uid="uid://cvk3hmgn7vnit" path="res://assets/models/enemy/clanger/rightLeg.obj" id="6_i2yh8"]
+[ext_resource type="ArrayMesh" uid="uid://csrp5gm0ejr61" path="res://assets/models/enemy/clanger/rightShoulder.obj" id="7_65oag"]
+[ext_resource type="Material" uid="uid://cxye7heyff71i" path="res://assets/materials/emission/yellowNeon1.tres" id="7_l8lm3"]
+[ext_resource type="ArrayMesh" uid="uid://cmm2syvbk1hv3" path="res://assets/models/enemy/clanger/torso.obj" id="8_04kk4"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="9_l5bwm"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/greyMET2.tres" id="10_1pv5p"]
+[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDIFF2.tres" id="10_axpor"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="12_ofklv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_smcg0"]
+size = Vector3(0.6, 1.7, 0.6)
+
+[node name="clanger" type="CharacterBody3D"]
+
+[node name="visuals" type="Node3D" parent="."]
+
+[node name="leftFoot" type="MeshInstance3D" parent="visuals"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.15, 0, 0)
+mesh = ExtResource("2_1jy03")
+surface_material_override/0 = ExtResource("9_l5bwm")
+surface_material_override/1 = ExtResource("10_1pv5p")
+surface_material_override/2 = ExtResource("10_axpor")
+surface_material_override/3 = ExtResource("12_ofklv")
+
+[node name="leftLeg" type="MeshInstance3D" parent="visuals/leftFoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = ExtResource("3_6lqky")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("10_axpor")
+surface_material_override/1 = ExtResource("9_l5bwm")
+
+[node name="RightFoot" type="MeshInstance3D" parent="visuals"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.15, 0, 0)
+mesh = ExtResource("5_25k0r")
+surface_material_override/0 = ExtResource("9_l5bwm")
+surface_material_override/1 = ExtResource("10_1pv5p")
+surface_material_override/2 = ExtResource("10_axpor")
+surface_material_override/3 = ExtResource("12_ofklv")
+
+[node name="RightLeg" type="MeshInstance3D" parent="visuals/RightFoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = ExtResource("6_i2yh8")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("10_axpor")
+surface_material_override/1 = ExtResource("9_l5bwm")
+
+[node name="torso" type="MeshInstance3D" parent="visuals"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.9, 0)
+mesh = ExtResource("8_04kk4")
+surface_material_override/0 = ExtResource("7_l8lm3")
+surface_material_override/1 = ExtResource("9_l5bwm")
+surface_material_override/2 = ExtResource("10_1pv5p")
+surface_material_override/3 = ExtResource("10_axpor")
+surface_material_override/4 = ExtResource("12_ofklv")
+
+[node name="head" type="MeshInstance3D" parent="visuals/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = ExtResource("1_g3qjx")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("7_l8lm3")
+surface_material_override/1 = ExtResource("9_l5bwm")
+surface_material_override/2 = ExtResource("10_1pv5p")
+surface_material_override/3 = ExtResource("10_axpor")
+surface_material_override/4 = ExtResource("12_ofklv")
+
+[node name="leftShoulder" type="MeshInstance3D" parent="visuals/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.2, 2.62268e-08)
+mesh = ExtResource("4_wsjfj")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("10_axpor")
+surface_material_override/1 = ExtResource("9_l5bwm")
+surface_material_override/2 = ExtResource("10_1pv5p")
+
+[node name="leftStaff" type="MeshInstance3D" parent="visuals/torso/leftShoulder"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, -0.3, 8.74228e-09)
+mesh = ExtResource("5_h705w")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("9_l5bwm")
+surface_material_override/1 = ExtResource("10_1pv5p")
+surface_material_override/2 = ExtResource("10_axpor")
+surface_material_override/3 = ExtResource("12_ofklv")
+
+[node name="RightShoulder" type="MeshInstance3D" parent="visuals/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.2, -2.62268e-08)
+mesh = ExtResource("7_65oag")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("10_axpor")
+surface_material_override/1 = ExtResource("9_l5bwm")
+surface_material_override/2 = ExtResource("10_1pv5p")
+
+[node name="rightStaff" type="MeshInstance3D" parent="visuals/torso/RightShoulder"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.1, -0.3, -8.74228e-09)
+mesh = ExtResource("5_h705w")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("9_l5bwm")
+surface_material_override/1 = ExtResource("10_1pv5p")
+surface_material_override/2 = ExtResource("10_axpor")
+surface_material_override/3 = ExtResource("12_ofklv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="visuals"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("BoxShape3D_smcg0")
+script = ExtResource("1_r14rp")

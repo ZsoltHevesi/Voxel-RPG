@@ -1,6 +1,5 @@
-res://scenes/levels/tileset scenes
-res://scenes/levels/tileset scenes/occluders
 res://assets/materials/emission
+res://scenes/levels/tileset scenes
 res://assets/materials/transparent
 res://assets/materials/metallic
 res://scenes

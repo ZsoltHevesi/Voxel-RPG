@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csrp5gm0ejr61"
+path="res://.godot/imported/rightShoulder.obj-2530292baaba6d7ddeb8d8b7e2eda68e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightShoulder.obj-2530292baaba6d7ddeb8d8b7e2eda68e.mesh"]
+
+source_file="res://assets/models/enemy/clanger/rightShoulder.obj"
+dest_files=["res://.godot/imported/rightShoulder.obj-2530292baaba6d7ddeb8d8b7e2eda68e.mesh", "res://.godot/imported/rightShoulder.obj-2530292baaba6d7ddeb8d8b7e2eda68e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

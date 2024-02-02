@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dh42ns6gocqi1"]
 
 [ext_resource type="ArrayMesh" uid="uid://dl45j6b526cm8" path="res://assets/models/player/armour/solomon/torso.obj" id="1_i2ves"]
-[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF2.tres" id="2_k4hmy"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="2_k4hmy"]
 [ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_6oy06"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="4_1kdgm"]
 [ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="5_c40hp"]

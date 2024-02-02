@@ -3,7 +3,7 @@
 [resource]
 albedo_color = Color(0.52549, 0.52549, 0.52549, 1)
 metallic = 1.0
-roughness = 0.6
+roughness = 0.5
 rim_tint = 1.0
 anisotropy_enabled = true
 anisotropy = 0.2

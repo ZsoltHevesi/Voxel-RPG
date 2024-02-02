@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvk3hmgn7vnit"
+path="res://.godot/imported/rightLeg.obj-42e95f20a72a9d2b54d3ccc84f9fdcd1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightLeg.obj-42e95f20a72a9d2b54d3ccc84f9fdcd1.mesh"]
+
+source_file="res://assets/models/enemy/clanger/rightLeg.obj"
+dest_files=["res://.godot/imported/rightLeg.obj-42e95f20a72a9d2b54d3ccc84f9fdcd1.mesh", "res://.godot/imported/rightLeg.obj-42e95f20a72a9d2b54d3ccc84f9fdcd1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
