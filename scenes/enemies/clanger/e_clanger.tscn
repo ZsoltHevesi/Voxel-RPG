@@ -82,6 +82,7 @@ surface_material_override/2 = ExtResource("10_1pv5p")
 
 [node name="leftStaff" type="MeshInstance3D" parent="visuals/torso/leftShoulder"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, -0.3, 8.74228e-09)
+gi_mode = 2
 mesh = ExtResource("5_h705w")
 skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("9_l5bwm")
