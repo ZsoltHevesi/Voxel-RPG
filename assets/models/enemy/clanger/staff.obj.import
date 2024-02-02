@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b548heicnbb6b"
+path="res://.godot/imported/staff.obj-80085da154a2fe01289890c506438ba2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/staff.obj-80085da154a2fe01289890c506438ba2.mesh"]
+
+source_file="res://assets/models/enemy/clanger/staff.obj"
+dest_files=["res://.godot/imported/staff.obj-80085da154a2fe01289890c506438ba2.mesh", "res://.godot/imported/staff.obj-80085da154a2fe01289890c506438ba2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
