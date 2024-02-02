@@ -20,7 +20,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(- event.relative.x * mouseSensitivity))
 		camera_mount.rotate_x(deg_to_rad(- event.relative.y * mouseSensitivity))
-		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-60), deg_to_rad(60))
+		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(60))
 
 func _physics_process(delta):
 	# Add the gravity.
