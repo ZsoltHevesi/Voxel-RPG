@@ -41,3 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
 
 [node name="clanger" parent="map" instance=ExtResource("3_kq876")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 64.5, 0.236501)
+
+[node name="clanger2" parent="map" instance=ExtResource("3_kq876")]
+transform = Transform3D(0.968614, 0, -0.248572, 0, 1, 0, 0.248572, 0, 0.968614, 0.606, 66, 36.773)
