@@ -1,31 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706895371
+::res://::1706896825
 icon.svg::CompressedTexture2D::7874682967027633112::1703089645::1706895372::1::::<><>::
 README.md::TextFile::-1::1706823053::0::1::::<><>::
 ::res://assets/::1706737428
 ::res://assets/materials/::1706737428
-::res://assets/materials/diffuse/::1706895163
-boneDIFF1.tres::StandardMaterial3D::5702512101255004082::1706895163::0::1::::<><>::
-boneDIFF2.tres::StandardMaterial3D::3301500030909191567::1706895163::0::1::::<><>::
-brownDIFF1.tres::StandardMaterial3D::1662401485794479580::1706895163::0::1::::<><>::
-crimsonDIFF1.tres::StandardMaterial3D::3026176498718391385::1706895163::0::1::::<><>::
-greyDIFF1.tres::StandardMaterial3D::2812667022223416286::1706895163::0::1::::<><>::
-greyDIFF2.tres::StandardMaterial3D::6597826966785397404::1706895163::0::1::::<><>::
+::res://assets/materials/diffuse/::1706895827
+boneDIFF1.tres::StandardMaterial3D::5702512101255004082::1706895827::0::1::::<><>::
+boneDIFF2.tres::StandardMaterial3D::3301500030909191567::1706895827::0::1::::<><>::
+brownDIFF1.tres::StandardMaterial3D::1662401485794479580::1706895827::0::1::::<><>::
+crimsonDIFF1.tres::StandardMaterial3D::3026176498718391385::1706895827::0::1::::<><>::
+greyDIFF1.tres::StandardMaterial3D::2812667022223416286::1706895827::0::1::::<><>::
+greyDIFF2.tres::StandardMaterial3D::6597826966785397404::1706895827::0::1::::<><>::
 greyDIFF3.tres::StandardMaterial3D::2382949626769391079::1706830906::0::1::::<><>::
-::res://assets/materials/emission/::1706895163
+::res://assets/materials/emission/::1706895827
 purpleTransGlow.tres::StandardMaterial3D::7936931006352333640::1706838285::0::1::::<><>::
-yellowNeon1.tres::StandardMaterial3D::6437030225474439028::1706895163::0::1::::<><>::
-::res://assets/materials/metallic/::1706895163
-darkGreyMET1.tres::StandardMaterial3D::1045339703941166048::1706895163::0::1::::<><>::
-goldMET1.tres::StandardMaterial3D::7787410889374107880::1706895163::0::1::::<><>::
-greyMET1.tres::StandardMaterial3D::5414068544397215203::1706895163::0::1::::<><>::
-greyMET2.tres::StandardMaterial3D::2958856803884362847::1706895163::0::1::::<><>::
-::res://assets/materials/transparent/::1706895163
-clearGlass_Refr.tres::StandardMaterial3D::6223340776132225623::1706895163::0::1::::<><>::uid://cpleldlhj73w8::::res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
-clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1706895163::0::1::::<><>::
+yellowNeon1.tres::StandardMaterial3D::6437030225474439028::1706895827::0::1::::<><>::
+::res://assets/materials/metallic/::1706895827
+darkGreyMET1.tres::StandardMaterial3D::1045339703941166048::1706895827::0::1::::<><>::
+goldMET1.tres::StandardMaterial3D::7787410889374107880::1706895827::0::1::::<><>::
+greyMET1.tres::StandardMaterial3D::5414068544397215203::1706895827::0::1::::<><>::
+greyMET2.tres::StandardMaterial3D::2958856803884362847::1706895827::0::1::::<><>::
+::res://assets/materials/transparent/::1706895827
+clearGlass_Refr.tres::StandardMaterial3D::6223340776132225623::1706895827::0::1::::<><>::uid://cpleldlhj73w8::::res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
+clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1706895827::0::1::::<><>::
 ::res://assets/models/::1706822962
 ::res://assets/models/enemy/::1706833493
-::res://assets/models/enemy/clanger/::1706836106
+::res://assets/models/enemy/clanger/::1706895374
 head.obj::Mesh::7357857491580998976::1706836105::1706895374::1::::<><>::
 leftFoot.obj::Mesh::4869515506874842698::1706836105::1706895374::1::::<><>::
 leftLeg.obj::Mesh::6010005785453218805::1706836105::1706895374::1::::<><>::
@@ -49,7 +49,7 @@ rightLeg.obj::Mesh::1586182161768545828::1706822962::1706823022::1::::<><>::
 rightShoulder.obj::Mesh::8245847907157443492::1706822962::1706823022::1::::<><>::
 torso.obj::Mesh::7993045499062554729::1706822962::1706823023::1::::<><>::
 ::res://assets/models/tilesets/::1706728837
-::res://assets/models/tilesets/chateu/::1706729163
+::res://assets/models/tilesets/chateu/::1706895373
 chateauCourtYard.obj::Mesh::1237630456326955073::1706729161::1706895373::1::::<><>::
 chateauCourtyardMonument.obj::Mesh::3330607570705510857::1706729161::1706895373::1::::<><>::
 chateauGlow.obj::Mesh::547245219242734642::1706729161::1706895373::1::::<><>::
@@ -64,14 +64,14 @@ chateauWindows.obj::Mesh::4429330904756026995::1706729161::1706895372::1::::<><>
 ::res://scenes/enemies/::1706833398
 ::res://scenes/enemies/clanger/::1706839522
 e_clanger.tscn::PackedScene::127975127388147698::1706839522::0::1::::<><>::uid://dc3g3quope3hs::::res://assets/models/enemy/clanger/head.obj<>res://scripts/playerCollision3D.gd<>uid://cbm3hdsxtec5w::::res://assets/models/enemy/clanger/leftFoot.obj<>uid://crvj6gkfr6cjt::::res://assets/models/enemy/clanger/leftLeg.obj<>uid://d1svghjfsliwn::::res://assets/models/enemy/clanger/leftShoulder.obj<>uid://i06l5voal8rl::::res://assets/models/enemy/clanger/rightFoot.obj<>uid://b548heicnbb6b::::res://assets/models/enemy/clanger/staff.obj<>uid://cvk3hmgn7vnit::::res://assets/models/enemy/clanger/rightLeg.obj<>uid://csrp5gm0ejr61::::res://assets/models/enemy/clanger/rightShoulder.obj<>uid://cxye7heyff71i::::res://assets/materials/emission/yellowNeon1.tres<>uid://cmm2syvbk1hv3::::res://assets/models/enemy/clanger/torso.obj<>uid://bgcqhkphvspe1::::res://assets/materials/diffuse/greyDIFF1.tres<>uid://bifj6615ofood::::res://assets/materials/metallic/greyMET2.tres<>uid://c1abimugnb35y::::res://assets/materials/diffuse/greyDIFF2.tres<>uid://cjeu6hd70w1o6::::res://assets/materials/metallic/greyMET1.tres
-::res://scenes/levels/::1706895339
-level1.tscn::PackedScene::5662476844370793964::1706895339::0::1::::<><>::uid://bqhd5qtvwp261::::res://scenes/levels/tileset scenes/chateau scene/chateau.tscn<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn
+::res://scenes/levels/::1706896054
+level1.tscn::PackedScene::5662476844370793964::1706896054::0::1::::<><>::uid://bqhd5qtvwp261::::res://scenes/levels/tileset scenes/chateau scene/chateau.tscn<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn
 ::res://scenes/levels/tileset scenes/::1706736595
 ::res://scenes/levels/tileset scenes/chateau scene/::1706895163
 chateau.tscn::PackedScene::3524129421684535260::1706895163::0::1::::<><>::uid://bcvl0f561a7qv::::res://scenes/levels/tileset scenes/chateau scene/chateau.VoxelGI_data.res<>uid://rvrufjie5uab::::res://assets/models/tilesets/chateu/chateauCourtYard.obj<>uid://bnpmvc2xpkq2t::::res://assets/models/tilesets/chateu/chateauCourtyardMonument.obj<>uid://o5muet0ljals::::res://assets/materials/metallic/darkGreyMET1.tres<>uid://h2dbwolc7eba::::res://assets/models/tilesets/chateu/chateauGlow.obj<>uid://cequi45fibugi::::res://assets/models/tilesets/chateu/chateauRampart.obj<>uid://bj351h4yxmfyc::::res://assets/models/tilesets/chateu/chateauStairsUp.obj<>uid://dlcydg0remmp1::::res://assets/materials/emission/purpleTransGlow.tres<>uid://cjo8khtfdys4e::::res://assets/models/tilesets/chateu/chateauUpRoom.obj<>uid://dqcul60046wt0::::res://assets/models/tilesets/chateu/chateauUpstairsRoomWall.obj<>uid://dxj708a7421dv::::res://assets/models/tilesets/chateu/chateauWalls.obj<>uid://b4duoynpcs7it::::res://assets/models/tilesets/chateu/chateauWindows.obj<>uid://di7jrwwc4ikou::::res://assets/materials/metallic/goldMET1.tres<>uid://cuwvrpomvt3pb::::res://assets/materials/transparent/clearGlass_Refr.tres
 chateau.VoxelGI_data.res::VoxelGIData::2570863145976638261::1706839894::0::1::::<><>::
-::res://scenes/player/::1706838889
-player.tscn::PackedScene::387203497611424142::1706838889::0::1::::<><>::res://scripts/player.gd<>uid://csjlj4qy7pktl::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_head.tscn<>uid://dggtc3s8ylkx7::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_hand.tscn<>uid://exqvanae0tiw::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_hand.tscn<>uid://csqukmapf6j6y::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_shoulder.tscn<>uid://j6qguw7ipqp8::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_shoulder.tscn<>uid://bxsf23gvr3mmj::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_leg.tscn<>uid://frw2sjqaqako::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_foot.tscn<>uid://dmvwgewnlaygq::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_foot.tscn<>uid://dh42ns6gocqi1::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_torso.tscn<>uid://d0k7ko4t6bmrl::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_leg.tscn<>res://scripts/playerCollision3D.gd
+::res://scenes/player/::1706895984
+player.tscn::PackedScene::387203497611424142::1706895984::0::1::::<><>::res://scripts/player.gd<>uid://csjlj4qy7pktl::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_head.tscn<>uid://dggtc3s8ylkx7::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_hand.tscn<>uid://exqvanae0tiw::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_hand.tscn<>uid://csqukmapf6j6y::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_shoulder.tscn<>uid://j6qguw7ipqp8::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_shoulder.tscn<>uid://bxsf23gvr3mmj::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_leg.tscn<>uid://frw2sjqaqako::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_foot.tscn<>uid://dmvwgewnlaygq::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_foot.tscn<>uid://dh42ns6gocqi1::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_torso.tscn<>uid://d0k7ko4t6bmrl::::res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_leg.tscn<>res://scripts/playerCollision3D.gd
 ::res://scenes/player/playerGear/::1706141012
 ::res://scenes/player/playerGear/armour/::1706141012
 ::res://scenes/player/playerGear/armour/playerChar1/::1703459955
@@ -86,6 +86,6 @@ p_solomon_right_hand.tscn::PackedScene::7593940073874398030::1706839216::0::1:::
 p_solomon_right_leg.tscn::PackedScene::8936588502309269653::1706822962::0::1::::<><>::uid://wumgn4ifyttc::::res://assets/models/player/armour/solomon/rightLeg.obj<>uid://cjeu6hd70w1o6::::res://assets/materials/metallic/greyMET1.tres<>uid://bgcqhkphvspe1::::res://assets/materials/diffuse/greyDIFF1.tres<>uid://bifj6615ofood::::res://assets/materials/metallic/greyMET2.tres
 p_solomon_right_shoulder.tscn::PackedScene::6070503425699764354::1706822962::0::1::::<><>::uid://dpql57klhsrhs::::res://assets/models/player/armour/solomon/rightShoulder.obj<>uid://bjd5xjvsg3ldh::::res://assets/materials/diffuse/crimsonDIFF1.tres<>uid://bifj6615ofood::::res://assets/materials/metallic/greyMET2.tres<>uid://cjeu6hd70w1o6::::res://assets/materials/metallic/greyMET1.tres
 p_solomon_torso.tscn::PackedScene::7712114479139379674::1706839216::0::1::::<><>::uid://dl45j6b526cm8::::res://assets/models/player/armour/solomon/torso.obj<>uid://87k3ka1johal::::res://assets/materials/diffuse/greyDIFF3.tres<>uid://bgcqhkphvspe1::::res://assets/materials/diffuse/greyDIFF1.tres<>uid://cjeu6hd70w1o6::::res://assets/materials/metallic/greyMET1.tres<>uid://bjd5xjvsg3ldh::::res://assets/materials/diffuse/crimsonDIFF1.tres<>uid://xxjrlc78o5oi::::res://assets/materials/diffuse/brownDIFF1.tres<>uid://bifj6615ofood::::res://assets/materials/metallic/greyMET2.tres<>uid://cnilsnt05jp4u::::res://assets/materials/diffuse/boneDIFF1.tres<>uid://bnbjht73tkg44::::res://assets/materials/diffuse/boneDIFF2.tres
-::res://scripts/::1706895339
-player.gd::GDScript::-1::1706895339::0::1::::<>CharacterBody3D<>::
+::res://scripts/::1706896507
+player.gd::GDScript::-1::1706896507::0::1::::<>CharacterBody3D<>::
 playerCollision3D.gd::GDScript::-1::1706065381::0::1::::<>CollisionShape3D<>::
