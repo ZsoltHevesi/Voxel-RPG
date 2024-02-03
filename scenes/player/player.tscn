@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=18 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_cl5u8"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_head.tscn" id="2_eel4o"]
@@ -29,6 +29,9 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t31la"]
 size = Vector3(0.6, 1.7, 0.6)
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_abrjc"]
+length = 0.5
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_cl5u8")
@@ -98,7 +101,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 [node name="Camera3D" type="Camera3D" parent="cameraMount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773045, 0.7, 2.3)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="collisionBox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("BoxShape3D_t31la")
 script = ExtResource("12_asdet")
+
+[node name="SepRayShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.5, -0.319)
+shape = SubResource("SeparationRayShape3D_abrjc")
