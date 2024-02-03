@@ -40,7 +40,6 @@ func _snap_down_stairs_check():
 		if PhysicsServer3D.body_test_motion(self.get_rid(), params, bodyTestResult):
 			var translate_y = bodyTestResult.get_travel().y
 			self.position.y += translate_y
-			apply_floor_snap()
 	
 	_on_floor_last_frame = is_on_floor()
 
