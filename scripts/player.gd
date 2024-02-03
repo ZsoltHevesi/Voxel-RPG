@@ -3,8 +3,13 @@ extends CharacterBody3D
 @onready var camera_mount = $cameraMount
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 6
+var SPEED = 5.0
+var SprintSpeed = 2.0
+var JUMP_VELOCITY = 6 #Jump height y-axis
+
+
+
+
 
 @export var mouseSensitivity = 0.3
 
@@ -21,8 +26,14 @@ func _input(event):
 		rotate_y(deg_to_rad(- event.relative.x * mouseSensitivity))
 		camera_mount.rotate_x(deg_to_rad(- event.relative.y * mouseSensitivity))
 		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-
+	
+	
+	
+		
+		
 func _physics_process(delta):
+
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -30,6 +41,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -38,8 +50,14 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		
+		#	Handle Sprinting
+		if Input.is_action_pressed("Sprint"):
+			velocity.x *= SprintSpeed
+			velocity.y *= SprintSpeed
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
