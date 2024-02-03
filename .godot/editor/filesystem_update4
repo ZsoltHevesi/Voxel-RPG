@@ -15,4 +15,4 @@ res://assets/materials/diffuse/greyDIFF2.tres
 res://scenes/player/player.tscn
 res://scenes/enemies/clanger/e_clanger.tscn
 res://scenes/levels/tileset scenes/chateau scene/chateau.tscn
-res://scripts/player.gd
+res://scenes/levels/test-area.tscn
