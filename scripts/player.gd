@@ -11,9 +11,11 @@ var JUMP_VELOCITY = 6 # Jump height y-axis
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+
 # Capture Mouse
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 
 # Rotate Player and Camera
 func _input(event):
@@ -21,6 +23,12 @@ func _input(event):
 		rotate_y(deg_to_rad(- event.relative.x * mouseSensitivity))
 		camera_mount.rotate_x(deg_to_rad(- event.relative.y * mouseSensitivity))
 		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+
+
+# Go down stairs
+func _snap_down_stairs_check():
+	pass
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -47,4 +55,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, (SprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 		velocity.z = move_toward(velocity.z, 0, (SprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 
+
 	move_and_slide()
+	_snap_down_stairs_check()
