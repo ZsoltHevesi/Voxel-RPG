@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var camera_mount = $cameraMount
 
 var SPEED = 5.0
-var sprintSpeed = 10.0
+var sprintSpeed = 9.0
 var JUMP_VELOCITY = 6 # Jump height y-axis
 
 @export var mouseSensitivity = 0.3
@@ -42,6 +42,8 @@ func _snap_down_stairs_check():
 			self.position.y += translate_y
 	
 	_on_floor_last_frame = is_on_floor()
+	
+
 
 
 func _physics_process(delta):
