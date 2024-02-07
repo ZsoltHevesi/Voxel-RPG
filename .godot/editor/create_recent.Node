@@ -1,6 +1,6 @@
+MeshInstance3D
 CollisionShape3D
 StaticBody3D
-MeshInstance3D
 VoxelGI
 AnimationPlayer
 Node3D
