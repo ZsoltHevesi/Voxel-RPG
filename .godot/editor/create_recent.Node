@@ -1,3 +1,6 @@
+Control
+ProgressBar
+CanvasLayer
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
@@ -10,5 +13,3 @@ OccluderInstance3D
 Area3D
 CSGBox3D
 GridMap
-RemoteTransform3D
-DirectionalLight3D
