@@ -1,7 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=16 format=3 uid="uid://b28y412e8tws"]
 
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
-[ext_resource type="Script" path="res://scripts/playerCollision3D.gd" id="1_r14rp"]
 [ext_resource type="ArrayMesh" uid="uid://cbm3hdsxtec5w" path="res://assets/models/enemy/clanger/leftFoot.obj" id="2_1jy03"]
 [ext_resource type="ArrayMesh" uid="uid://crvj6gkfr6cjt" path="res://assets/models/enemy/clanger/leftLeg.obj" id="3_6lqky"]
 [ext_resource type="ArrayMesh" uid="uid://d1svghjfsliwn" path="res://assets/models/enemy/clanger/leftShoulder.obj" id="4_wsjfj"]
@@ -112,4 +111,3 @@ surface_material_override/3 = ExtResource("12_ofklv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("BoxShape3D_smcg0")
-script = ExtResource("1_r14rp")

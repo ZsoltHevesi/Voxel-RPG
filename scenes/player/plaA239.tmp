@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=16 format=3 uid="uid://frtgj5uj6n7s"]
 
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_cl5u8"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_head.tscn" id="2_eel4o"]
 [ext_resource type="PackedScene" uid="uid://dggtc3s8ylkx7" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_hand.tscn" id="3_8wfcb"]
 [ext_resource type="PackedScene" uid="uid://exqvanae0tiw" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_left_hand.tscn" id="3_x0gmy"]
@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dmvwgewnlaygq" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_foot.tscn" id="7_0k2ed"]
 [ext_resource type="PackedScene" uid="uid://dh42ns6gocqi1" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_torso.tscn" id="7_7cmkj"]
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerKnight/p_solomon_right_leg.tscn" id="7_ntxyt"]
-[ext_resource type="Script" path="res://scripts/player/collisionBox.gd" id="12_o4kkl"]
-[ext_resource type="Script" path="res://scripts/player/remoteTransforms.gd" id="13_vfudf"]
 
 [sub_resource type="Animation" id="Animation_i7nc5"]
 length = 0.001
@@ -31,11 +29,8 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_t31la"]
 size = Vector3(0.6, 1.7, 0.6)
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_501mk"]
-length = 0.51
-
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_dq0rt")
+script = ExtResource("1_cl5u8")
 
 [node name="visuals" type="Node3D" parent="."]
 
@@ -103,73 +98,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773045, 0.7, 2.3)
 
 [node name="collisionBox" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, -0.0220863)
 shape = SubResource("BoxShape3D_t31la")
-script = ExtResource("12_o4kkl")
-
-[node name="frontLeftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="frontSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="frontRightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backLeftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="leftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backRightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="rightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="remoteTransforms" type="Node3D" parent="."]
-script = ExtResource("13_vfudf")
-
-[node name="frontLeftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, -0.31)
-remote_path = NodePath("../../frontLeftSepRay")
-
-[node name="frontRightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, -0.31)
-remote_path = NodePath("../../frontRightSepRay")
-
-[node name="frontRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.31)
-remote_path = NodePath("../../frontSepRay")
-
-[node name="backLeftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0.31)
-remote_path = NodePath("../../backLeftSepRay")
-
-[node name="leftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0)
-remote_path = NodePath("../../leftSepRay")
-
-[node name="backRightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0.31)
-remote_path = NodePath("../../backRightSepRay")
-
-[node name="rightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0)
-remote_path = NodePath("../../rightSepRay")
-
-[node name="backRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, 0.31)
-remote_path = NodePath("../../backSepRay")
