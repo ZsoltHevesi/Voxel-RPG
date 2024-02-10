@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
 
-[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/levels/tileset scenes/chateau scene/chateau.tscn" id="1_0dep5"]
+[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tilesets/chateau scene/chateau.tscn" id="1_0dep5"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_q74tb"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_kq876"]
 [ext_resource type="Script" path="res://scenes/levels/HealthBar.gd" id="4_jjus8"]
@@ -50,7 +50,7 @@ shadow_enabled = true
 [node name="Chateau" parent="map/tilesets" instance=ExtResource("1_0dep5")]
 
 [node name="Player" parent="map" instance=ExtResource("2_q74tb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
 
 [node name="clanger" parent="map" instance=ExtResource("3_kq876")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 64.5, 0.236501)

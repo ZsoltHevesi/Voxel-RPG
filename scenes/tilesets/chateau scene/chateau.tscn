@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bqhd5qtvwp261"]
 
-[ext_resource type="VoxelGIData" uid="uid://bcvl0f561a7qv" path="res://scenes/levels/tileset scenes/chateau scene/chateau.VoxelGI_data.res" id="1_p7sj4"]
+[ext_resource type="VoxelGIData" uid="uid://bcvl0f561a7qv" path="res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res" id="1_p7sj4"]
 [ext_resource type="ArrayMesh" uid="uid://rvrufjie5uab" path="res://assets/models/tilesets/chateu/chateauCourtYard.obj" id="1_xnssj"]
 [ext_resource type="ArrayMesh" uid="uid://bnpmvc2xpkq2t" path="res://assets/models/tilesets/chateu/chateauCourtyardMonument.obj" id="2_mllu3"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="3_341ty"]
