@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp6j2vgxxkd0v"]
+
+[ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="1_1q36k"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_uoqj4"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_gcmb7"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="4_r0hl5"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_xopka"]
+
+[node name="LongSword" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1q36k")
+surface_material_override/0 = ExtResource("2_uoqj4")
+surface_material_override/1 = ExtResource("3_gcmb7")
+surface_material_override/2 = ExtResource("4_r0hl5")
+surface_material_override/3 = ExtResource("5_xopka")

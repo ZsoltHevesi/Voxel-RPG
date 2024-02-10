@@ -2,8 +2,9 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dpql57klhsrhs" path="res://assets/models/player/armour/solomon/rightShoulder.obj" id="1_esgji"]
 [ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="2_viedx"]
-[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/greyMET2.tres" id="3_mkawm"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="3_mkawm"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="4_arcrm"]
+
 
 [node name="solomonRightShoulder" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
