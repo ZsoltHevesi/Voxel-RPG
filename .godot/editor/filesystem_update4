@@ -1,23 +1,15 @@
 res://scenes/player/player.tscn
-res://assets/materials/metallic/darkGreyMET1.tres
-res://assets/materials/metallic/goldMET1.tres
-res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
-res://assets/materials/transparent/clearGlass_Refr.tres
-res://assets/materials/metallic/goldMET2.tres
 res://assets/materials/metallic/greyMET1.tres
 res://assets/materials/diffuse/greyDIFF1.tres
-res://assets/materials/metallic/greyMET2.tres
 res://assets/materials/diffuse/crimsonDIFF1.tres
 res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
-res://scenes/levels/level1.tscn
-res://scenes/levels/test-area.tscn
-res://scenes/decorations/woodChair1.tscn
-res://scenes/player/playerGear/armour/playerWinterBasic/winterHead.tscn
-res://scenes/player/playerGear/armour/weapons/melee/longSword.tscn
 res://scenes/levels/test-area.VoxelGI_data.res
-res://scenes/tilesets/chateau scene/chateau.tscn
-res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res
+res://assets/materials/metallic/darkGreyMET1.tres
+res://assets/materials/metallic/goldMET1.tres
+res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
+res://assets/materials/transparent/clearGlass_Refr.tres
+res://assets/materials/metallic/goldMET2.tres
