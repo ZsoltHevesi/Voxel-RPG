@@ -3,6 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bhbygqa3tl6sj" path="res://assets/models/decor/wood/woodChair1.obj" id="1_1xk5l"]
 
 [node name="WoodChair1" type="Node3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_1xk5l")
