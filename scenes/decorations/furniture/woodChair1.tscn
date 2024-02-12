@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdujv6rk4yn8s"]
 
-[ext_resource type="ArrayMesh" uid="uid://bhbygqa3tl6sj" path="res://assets/models/decor/wood/woodChair1.obj" id="1_1xk5l"]
+[ext_resource type="ArrayMesh" uid="uid://bhbygqa3tl6sj" path="res://assets/models/decor/furniture/woodChair1.obj" id="1_ipfrq"]
 
 [node name="WoodChair1" type="Node3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_1xk5l")
+mesh = ExtResource("1_ipfrq")

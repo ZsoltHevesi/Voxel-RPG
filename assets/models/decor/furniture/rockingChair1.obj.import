@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ch54pxry6ecno"
+path="res://.godot/imported/rockingChair1.obj-d4ae0d5b9a63bb6cd59e353ff4d6f701.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rockingChair1.obj-d4ae0d5b9a63bb6cd59e353ff4d6f701.mesh"]
+
+source_file="res://assets/models/decor/furniture/rockingChair1.obj"
+dest_files=["res://.godot/imported/rockingChair1.obj-d4ae0d5b9a63bb6cd59e353ff4d6f701.mesh", "res://.godot/imported/rockingChair1.obj-d4ae0d5b9a63bb6cd59e353ff4d6f701.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

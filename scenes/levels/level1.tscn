@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
 
-[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tilesets/chateau scene/chateau.tscn" id="1_0dep5"]
-[ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_q74tb"]
-[ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_kq876"]
-[ext_resource type="Script" path="res://scenes/levels/HealthBar.gd" id="4_jjus8"]
+[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tilesets/chateau scene/chateau.tscn" id="1_3vodl"]
+[ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_1g6fl"]
+[ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_n32nu"]
+[ext_resource type="Script" path="res://scripts/player/HealthBar.gd" id="4_xbw4e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -47,15 +47,15 @@ shadow_enabled = true
 
 [node name="tilesets" type="Node3D" parent="map"]
 
-[node name="Chateau" parent="map/tilesets" instance=ExtResource("1_0dep5")]
+[node name="Chateau" parent="map/tilesets" instance=ExtResource("1_3vodl")]
 
-[node name="Player" parent="map" instance=ExtResource("2_q74tb")]
+[node name="Player" parent="map" instance=ExtResource("2_1g6fl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
 
-[node name="clanger" parent="map" instance=ExtResource("3_kq876")]
+[node name="clanger" parent="map" instance=ExtResource("3_n32nu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 64.5, 0.236501)
 
-[node name="clanger2" parent="map" instance=ExtResource("3_kq876")]
+[node name="clanger2" parent="map" instance=ExtResource("3_n32nu")]
 transform = Transform3D(0.995214, 0, -0.0977222, 0, 1, 0, 0.0977222, 0, 0.995214, 0.606, 66, 36.773)
 
 [node name="HealthBar" type="Control" parent="."]
@@ -63,7 +63,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("4_jjus8")
+script = ExtResource("4_xbw4e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="HealthBar"]
 

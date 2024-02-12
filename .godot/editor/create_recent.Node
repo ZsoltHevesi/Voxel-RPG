@@ -1,13 +1,13 @@
+CollisionShape3D
+StaticBody3D
 CSGBox3D
 MeshInstance3D
 Node3D
 RemoteTransform3D
 Marker3D
-CollisionShape3D
 Control
 ProgressBar
 CanvasLayer
-StaticBody3D
 VoxelGI
 AnimationPlayer
 CharacterBody3D

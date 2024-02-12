@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dp8lfh1ccvefj"]
+[gd_scene load_steps=12 format=3 uid="uid://dp8lfh1ccvefj"]
 
 [ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="1_sb3sa"]
 [ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="2_d8g4b"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_ybuow"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="4_8r2g5"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="5_3y5jj"]
-[ext_resource type="VoxelGIData" uid="uid://dcepdv2dfic5l" path="res://scenes/levels/test-area.VoxelGI_data.res" id="7_6sjvy"]
+[ext_resource type="PackedScene" uid="uid://dn0l71e7a6i0c" path="res://scenes/decorations/furniture/woodRockingChair1.tscn" id="6_5y8qx"]
+[ext_resource type="VoxelGIData" uid="uid://dcepdv2dfic5l" path="res://scenes/levels/test/test-area.VoxelGI_data.res" id="7_6sjvy"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="17_xpiuv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y72el"]
@@ -88,6 +89,25 @@ use_collision = true
 size = Vector3(2, 2, 2)
 
 [node name="Player" parent="map" instance=ExtResource("5_3y5jj")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -3.75)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -4.25)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.25, -4.25)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.25, -3.75)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="woodRockingChair1" parent="map" instance=ExtResource("6_5y8qx")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.25, 0.5, -4)
 
 [node name="clanger" parent="." instance=ExtResource("17_xpiuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.95703, 0, 0)
