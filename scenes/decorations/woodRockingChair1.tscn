@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dian303w32dt8"]
+
+[ext_resource type="ArrayMesh" uid="uid://coj6ebs00aa3o" path="res://assets/models/decor/wood/woodRockingChair1.obj" id="1_psc2n"]
+
+[node name="woodRockingChair1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_psc2n")
