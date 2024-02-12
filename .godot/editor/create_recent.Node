@@ -1,8 +1,8 @@
-Node3D
+CSGBox3D
 MeshInstance3D
+Node3D
 RemoteTransform3D
 Marker3D
-CSGBox3D
 CollisionShape3D
 Control
 ProgressBar
