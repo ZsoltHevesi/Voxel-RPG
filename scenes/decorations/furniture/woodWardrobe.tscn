@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi3gwnugk6oil"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwc4a44yfcgp2" path="res://assets/models/decor/furniture/woodWardrobe.obj" id="1_50yhh"]
+
+[node name="woodWardrobe" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = ExtResource("1_50yhh")
