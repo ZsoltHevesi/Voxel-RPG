@@ -1,4 +1,3 @@
-res://scenes/decorations/furniture/woodWardrobe.tscn
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
@@ -12,5 +11,8 @@ res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
-res://scenes/levels/test/test-area.tscn
 res://assets/materials/diffuse/brownDIFF2.tres
+res://scenes/decorations/lamps/chandelier.tscn
+res://assets/materials/metallic/goldMET2.tres
+res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res
+res://scenes/tilesets/chateau scene/chateau.tscn
