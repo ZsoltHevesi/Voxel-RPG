@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 @onready var camera_mount = $cameraMount
+@onready var animation_player = $visuals/AnimationPlayer
+
 
 var SPEED = 5.0
 var sprintSpeed = 9.0

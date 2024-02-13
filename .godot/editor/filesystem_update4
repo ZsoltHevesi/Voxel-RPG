@@ -15,3 +15,6 @@ res://assets/materials/diffuse/greyDIFF2.tres
 res://scenes/tilesets/chateau scene/chateau.tscn
 res://scenes/player/player.tscn
 res://scripts/player/player.gd
+res://scenes/enemies/clanger/e_clanger.tscn
+res://assets/materials/metallic/shinyGreyMET2.tres
+res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res
