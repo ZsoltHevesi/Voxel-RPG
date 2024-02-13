@@ -1,7 +1,6 @@
 extends CharacterBody3D
 
 @onready var camera_mount = $cameraMount
-@onready var animation_player = $visuals/AnimationPlayer
 
 var SPEED = 5.0
 var sprintSpeed = 9.0
@@ -45,12 +44,6 @@ func _snap_down_stairs_check():
 	_on_floor_last_frame = is_on_floor()
 
 
-# Signal function to reset speed scale when the animation is finished
-func _animation_finished(anim_name):
-	if anim_name == "walking" or anim_name == "idle":
-		animation_player.speed_scale = 1
-		print("Animation finished:", anim_name)
-
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -74,21 +67,10 @@ func _physics_process(delta):
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
 
-			# Play walk animation and set speed scale
-			if not animation_player.is_playing():
-				animation_player.play("walking")
-				animation_player.speed_scale = 4
-				print("Started walking animation")
-
 	else:
 		velocity.x = move_toward(velocity.x, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 		velocity.z = move_toward(velocity.z, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 
-		# Play idle animation and set speed scale
-		if not animation_player.is_playing():
-			animation_player.play("idle")
-			animation_player.speed_scale = 4
-			print("Started idle animation")
 
 	move_and_slide()
 	_snap_down_stairs_check()
