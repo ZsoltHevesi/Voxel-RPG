@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://x8hupu8xdx0c"]
+
+[ext_resource type="ArrayMesh" uid="uid://cbuc0xvmg5ps5" path="res://assets/models/decor/furniture/chandelier.obj" id="1_wwh38"]
+[ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="2_hpeos"]
+[ext_resource type="Material" uid="uid://jr8wpesdcr88" path="res://assets/materials/metallic/goldMET2.tres" id="3_xq484"]
+
+[node name="chandelier" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_wwh38")
+surface_material_override/0 = ExtResource("2_hpeos")
+surface_material_override/1 = ExtResource("3_xq484")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351133, 0.866955, 0.302671)
+light_color = Color(1, 0.772549, 0.419608, 1)
+light_size = 0.06
+omni_range = 6.337
+omni_attenuation = 6.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354044, 0.866955, 0.302671)
+light_color = Color(1, 0.772549, 0.419608, 1)
+light_size = 0.06
+omni_range = 6.337
+omni_attenuation = 6.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351133, 0.866955, -0.288409)
+light_color = Color(1, 0.772549, 0.419608, 1)
+light_size = 0.06
+omni_range = 6.337
+omni_attenuation = 6.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354044, 0.866955, -0.288409)
+light_color = Color(1, 0.772549, 0.419608, 1)
+light_size = 0.06
+omni_range = 6.337
+omni_attenuation = 6.0
