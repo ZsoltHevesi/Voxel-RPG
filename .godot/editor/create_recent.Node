@@ -1,3 +1,4 @@
+SpringArm3D
 AnimationTree
 MeshInstance3D
 Node3D
@@ -11,4 +12,3 @@ Control
 ProgressBar
 CanvasLayer
 VoxelGI
-AnimationPlayer
