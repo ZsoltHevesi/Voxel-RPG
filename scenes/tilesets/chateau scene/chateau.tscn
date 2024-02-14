@@ -111,4 +111,4 @@ surface_material_override/0 = ExtResource("12_fnwgq")
 shape = SubResource("ConcavePolygonShape3D_yxdpd")
 
 [node name="chandelier" parent="." instance=ExtResource("15_8na7r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009, 89.825, 38.156)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009, 91.025, 38.156)
