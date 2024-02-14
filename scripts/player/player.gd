@@ -6,6 +6,7 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 var sprintSpeed = 9.0
+var acceleration = 6
 var JUMP_VELOCITY = 6 # Jump height y-axis
 
 @export var mouseSensitivity = 0.3
@@ -46,11 +47,15 @@ func _snap_down_stairs_check():
 	_on_floor_last_frame = is_on_floor()
 
 
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	
+	if Input.is_action_pressed("aim"):
+		$visuals/AnimationTree.set("parameters/aimTransition/transition_request", "aiming")
+	else:
+		$visuals/AnimationTree.set("parameters/aimTransition/transition_request", "notAiming")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -62,16 +67,20 @@ func _physics_process(delta):
 
 	if direction:
 		# Handle Sprinting
-		if Input.is_action_pressed("Sprint"):
+		if Input.is_action_pressed("Sprint") && $visuals/AnimationTree.get("parameters/aimTransition/current") == 1:
 			velocity.x = direction.x * sprintSpeed
 			velocity.z = direction.z * sprintSpeed
+			$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), 1.0, delta * acceleration))
+			
 		else:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
+			$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), 0.0, delta * acceleration))
 
 	else:
 		velocity.x = move_toward(velocity.x, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 		velocity.z = move_toward(velocity.z, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
+		$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), -1.0, delta * acceleration))
 
 
 	move_and_slide()
