@@ -3,6 +3,6 @@
 [resource]
 albedo_color = Color(0.560784, 0.490196, 0.133333, 1)
 metallic = 1.0
-roughness = 0.3
+roughness = 0.5
 anisotropy_enabled = true
 anisotropy = 0.2

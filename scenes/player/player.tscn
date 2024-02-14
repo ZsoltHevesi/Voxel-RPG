@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=22 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://exqvanae0tiw" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_hand.tscn" id="3_x0gmy"]
 [ext_resource type="PackedScene" uid="uid://csqukmapf6j6y" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_shoulder.tscn" id="4_diqbd"]
 [ext_resource type="PackedScene" uid="uid://j6qguw7ipqp8" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_shoulder.tscn" id="4_hlefo"]
-[ext_resource type="PackedScene" uid="uid://cp6j2vgxxkd0v" path="res://scenes/player/playerGear/armour/weapons/melee/longSword.tscn" id="4_wwvhn"]
+[ext_resource type="PackedScene" uid="uid://cp6j2vgxxkd0v" path="res://scenes/player/playerGear/weapons/longSword.tscn" id="4_wwvhn"]
 [ext_resource type="PackedScene" uid="uid://bxsf23gvr3mmj" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_leg.tscn" id="5_4rcbk"]
 [ext_resource type="PackedScene" uid="uid://frw2sjqaqako" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_foot.tscn" id="6_fyuxa"]
 [ext_resource type="PackedScene" uid="uid://dmvwgewnlaygq" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_foot.tscn" id="7_0k2ed"]
 [ext_resource type="PackedScene" uid="uid://dh42ns6gocqi1" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_torso.tscn" id="7_7cmkj"]
+[ext_resource type="PackedScene" uid="uid://cf2yiqklalyaa" path="res://scenes/player/playerGear/weapons/flintlockPistol.tscn" id="7_8lmmm"]
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn" id="7_ntxyt"]
 [ext_resource type="Script" path="res://scripts/player/remoteTransforms.gd" id="13_vfudf"]
 
@@ -298,9 +299,12 @@ tracks/4/keys = {
 "values": [Vector3(0.3, 0.185, 0), Vector3(0.3, 0.164758, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_eku06"]
+resource_name = "in_air"
+
 [sub_resource type="Animation" id="Animation_ln3kj"]
 resource_name = "run"
-length = 1.7
+length = 1.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -312,7 +316,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.159, 0.127294, -0.462722), Vector3(0.159, 0.192546, -0.524491), Vector3(0.159, 0, -0.416662), Vector3(0.159, 0, -0.039731), Vector3(0.159, 0, 0.284984), Vector3(0.159, 0.104798, 0.48699), Vector3(0.159, 0.208415, 0.592354), Vector3(0.159, 0.283197, 0.378463), Vector3(0.159, 0.206675, 0.00745318)]
+"values": [Vector3(0.159, 0.127294, -0.462722), Vector3(0.159, 0.0954333, -0.659395), Vector3(0.159, 0, -0.673871), Vector3(0.159, 0, -0.039731), Vector3(0.159, 0, 0.284984), Vector3(0.159, 0.104798, 0.48699), Vector3(0.159, 0.208415, 0.592354), Vector3(0.159, 0.283197, 0.378463), Vector3(0.159, 0.206675, 0.00745318)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -324,7 +328,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.287124, 0, 0), Vector3(0.44574, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-0.648931, 0, 0), Vector3(-1.03866, 0, 0), Vector3(-1.14385, 0, 0), Vector3(-0.765344, 0, 0)]
+"values": [Vector3(0.287124, 0, 0), Vector3(0.301523, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-0.648931, 0, 0), Vector3(-1.03866, 0, 0), Vector3(-1.14385, 0, 0), Vector3(-0.765344, 0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -336,7 +340,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.133814, 0, 0), Vector3(0.178198, 0, 0), Vector3(0.396172, 0, 0), Vector3(-0.0842471, 0, 0), Vector3(-0.36994, 0, 0), Vector3(-0.403398, 0, 0), Vector3(-0.32053, 0, 0), Vector3(-0.314369, 0, 0), Vector3(-0.133012, 0, 0)]
+"values": [Vector3(0.133814, 0, 0), Vector3(0.269601, 0, 0), Vector3(0.396172, 0, 0), Vector3(-0.0842471, 0, 0), Vector3(-0.36994, 0, 0), Vector3(-0.403398, 0, 0), Vector3(-0.32053, 0, 0), Vector3(-0.314369, 0, 0), Vector3(-0.133012, 0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -348,7 +352,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.159, 0, 0.236851), Vector3(-0.159, 0.0459067, 0.394923), Vector3(-0.159, 0.198364, 0.617085), Vector3(-0.159, 0.260837, 0.249326), Vector3(-0.159, 0.207902, -0.0435687), Vector3(-0.159, 0.166825, -0.326863), Vector3(-0.159, 0.0664801, -0.683286), Vector3(-0.159, 0, -0.431809), Vector3(-0.159, 0, -0.0172596)]
+"values": [Vector3(-0.159, 0, 0.236851), Vector3(-0.159, 0.0596127, 0.454409), Vector3(-0.159, 0.198364, 0.617085), Vector3(-0.159, 0.260837, 0.249326), Vector3(-0.159, 0.207902, -0.0435687), Vector3(-0.159, 0.166825, -0.326863), Vector3(-0.159, 0.0664801, -0.683286), Vector3(-0.159, 0, -0.431809), Vector3(-0.159, 0, -0.0172596)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -468,7 +472,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.288555, 0, 0), Vector3(-0.951519, 0, 0), Vector3(-1.11125, 0, 0), Vector3(-0.627306, 0, 0), Vector3(-0.0857132, 0, 0), Vector3(0.358212, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.372401, 0, 0), Vector3(-0.951519, 0, 0), Vector3(-1.11125, 0, 0), Vector3(-0.627306, 0, 0), Vector3(-0.0857132, 0, 0), Vector3(0.358212, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -480,13 +484,14 @@ tracks/14/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0.986913, -0.0620805), Vector3(0, 0.984353, -0.0808978), Vector3(0, 0.984938, -0.120735), Vector3(0, 0.945922, -0.156894), Vector3(0, 0.954391, -0.118195), Vector3(0, 0.993289, -0.124152), Vector3(0, 0.957689, -0.173323), Vector3(0, 0.962052, -0.0825815), Vector3(0, 0.994431, -0.106177)]
+"values": [Vector3(0, 0.986913, -0.0951539), Vector3(0, 0.984353, -0.0808978), Vector3(0, 0.984938, -0.173304), Vector3(0, 0.945922, -0.156894), Vector3(0, 0.954391, -0.118195), Vector3(0, 0.993289, -0.124152), Vector3(0, 0.957689, -0.173323), Vector3(0, 0.962052, -0.125638), Vector3(0, 0.994431, -0.10168)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
 "RESET": SubResource("Animation_i7nc5"),
 "idle": SubResource("Animation_ofaes"),
+"in_air": SubResource("Animation_eku06"),
 "run": SubResource("Animation_ln3kj")
 }
 
@@ -533,6 +538,11 @@ transform = Transform3D(0.949998, 0, 0, 0, 0.949998, 0, 0, 0, 0.95, -0.12, -0.36
 
 [node name="solomonLeftHand" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand" instance=ExtResource("3_x0gmy")]
 
+[node name="pnLeftWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.11, 0)
+
+[node name="FlintlockPistol" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot" instance=ExtResource("7_8lmmm")]
+
 [node name="solomonLeftShoulder" parent="visuals/pnTorso/pnLeftShoulder" instance=ExtResource("4_hlefo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 3.55271e-15, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
@@ -554,7 +564,7 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.16, 0, 0)
 
 [node name="pnRightLeg" type="Node3D" parent="visuals/pnRightFoot"]
-transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.005, 0.124, -1.49012e-07)
+transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.005, 0.124, -1.19209e-07)
 
 [node name="solomonRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("7_ntxyt")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 7.45058e-09, 8.74228e-08, 7.45058e-09, -1, 0, 0, 0)
@@ -566,7 +576,6 @@ libraries = {
 "": SubResource("AnimationLibrary_g6ovt")
 }
 autoplay = "idle"
-speed_scale = 2.0
 
 [node name="cameraMount" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)

@@ -1,10 +1,10 @@
-OmniLight3D
 MeshInstance3D
-AnimationTree
+Node3D
 CollisionShape3D
+OmniLight3D
+AnimationTree
 StaticBody3D
 CSGBox3D
-Node3D
 RemoteTransform3D
 Marker3D
 Control
@@ -12,4 +12,3 @@ ProgressBar
 CanvasLayer
 VoxelGI
 AnimationPlayer
-CharacterBody3D
