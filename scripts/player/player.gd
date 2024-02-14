@@ -67,7 +67,7 @@ func _physics_process(delta):
 
 	if direction:
 		# Handle Sprinting
-		if Input.is_action_pressed("Sprint") && $visuals/AnimationTree.get("parameters/aimTransition/current") == 1:
+		if Input.is_action_pressed("Sprint"):
 			velocity.x = direction.x * sprintSpeed
 			velocity.z = direction.z * sprintSpeed
 			$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), 1.0, delta * acceleration))

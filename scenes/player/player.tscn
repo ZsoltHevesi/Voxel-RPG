@@ -271,7 +271,7 @@ animation = &"run"
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5aoor"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(-0.0819702, 165.165)
+graph_offset = Vector2(-32.8796, 612.124)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(530, 670)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -321,7 +321,7 @@ parameters/aimTransition/current_state = "notAiming"
 parameters/aimTransition/transition_request = ""
 parameters/aimTransition/current_index = 1
 parameters/runTimeScale/scale = 2.0
-parameters/strafe/blend_position = Vector2(-0.00758535, 0.0087719)
+parameters/strafe/blend_position = Vector2(-0.138288, 0.174603)
 parameters/strafeTimeScale/scale = 1.0
 parameters/walkTimeScale/scale = 1.0
 
