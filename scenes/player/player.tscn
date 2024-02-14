@@ -394,11 +394,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 7.45058e-09, 8.74228e-08, 7.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="cameraMount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773, 0.7, 2.16067e-07)
-spring_length = 2.3
+transform = Transform3D(0.948324, 0, 0.317305, 0, 1, 0, -0.317305, 0, 0.948324, 0, 0.7, 0)
+spring_length = 2.43
 
 [node name="Camera3D" type="Camera3D" parent="cameraMount/SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50015e-05, 0, 2.3)
+transform = Transform3D(0.948324, 0, -0.317305, 0, 1, 0, 0.317305, 0, 0.948324, 0.00329614, 0, 2.42644)
 
 [node name="remoteTransforms" type="Node3D" parent="."]
 script = ExtResource("13_vfudf")
