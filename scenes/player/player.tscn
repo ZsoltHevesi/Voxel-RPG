@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=36 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -19,192 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cf2yiqklalyaa" path="res://scenes/player/playerGear/weapons/flintlockPistol.tscn" id="7_8lmmm"]
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn" id="7_ntxyt"]
 [ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="7_uxe3y"]
+[ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="8_dnsbo"]
 [ext_resource type="Script" path="res://scripts/player/remoteTransforms.gd" id="13_vfudf"]
-
-[sub_resource type="Animation" id="Animation_goxkl"]
-resource_name = "run"
-length = 1.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("pnRightFoot:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.159, 0.127294, -0.462722), Vector3(0.159, 0.0954333, -0.659395), Vector3(0.159, 0, -0.673871), Vector3(0.159, 0, -0.039731), Vector3(0.159, 0, 0.284984), Vector3(0.159, 0.104798, 0.48699), Vector3(0.159, 0.208415, 0.592354), Vector3(0.159, 0.283197, 0.378463), Vector3(0.159, 0.206675, 0.00745318)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("pnRightFoot:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.287124, 0, 0), Vector3(0.301523, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-0.648931, 0, 0), Vector3(-1.03866, 0, 0), Vector3(-1.14385, 0, 0), Vector3(-0.765344, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("pnRightFoot/pnRightLeg:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.133814, 0, 0), Vector3(0.269601, 0, 0), Vector3(0.396172, 0, 0), Vector3(-0.0842471, 0, 0), Vector3(-0.36994, 0, 0), Vector3(-0.403398, 0, 0), Vector3(-0.32053, 0, 0), Vector3(-0.314369, 0, 0), Vector3(-0.133012, 0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("pnLeftFoot:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.159, 0, 0.236851), Vector3(-0.159, 0.0596127, 0.454409), Vector3(-0.159, 0.198364, 0.617085), Vector3(-0.159, 0.260837, 0.249326), Vector3(-0.159, 0.207902, -0.0435687), Vector3(-0.159, 0.166825, -0.326863), Vector3(-0.159, 0.0664801, -0.683286), Vector3(-0.159, 0, -0.431809), Vector3(-0.159, 0, -0.0172596)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("pnLeftFoot/pnLeftLeg:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.479058, 0, 0), Vector3(-0.390482, 0, 0), Vector3(-0.306549, 0, 0), Vector3(-0.15481, 0, 0), Vector3(-0.02035, 0, 0), Vector3(0.0149754, 0, 0), Vector3(0.151966, 0, 0), Vector3(0.271818, 0, 0), Vector3(-0.243578, 0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("pnTorso:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.194831, -0.0744908, 9.31513e-10), Vector3(-0.194831, -0.0630413, 0), Vector3(-0.195477, 0, 0), Vector3(-0.195477, 0.0585907, 0), Vector3(-0.195477, 0.173521, 0), Vector3(-0.195477, 0.224572, -3.74059e-09), Vector3(-0.195477, 0.0794125, -3.74059e-09), Vector3(-0.195477, -0.0146433, -4.92433e-09), Vector3(-0.195477, -0.086865, -4.92433e-09)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("pnTorso/pnLeftShoulder/pnLeftHand:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(1.23655, -0.0497791, -0.0832254), Vector3(1.24265, -0.107607, -0.144809), Vector3(0.967141, -0.047013, -0.0728656), Vector3(0.967141, -0.047013, -0.0728656), Vector3(0.713105, -0.0674819, -0.106753), Vector3(0.511195, -0.0737575, -0.126496), Vector3(0.748725, -0.0375126, -0.11128), Vector3(1.35391, 0.0265153, 0.0173218), Vector3(1.35438, 0, 0.0174533)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("pnTorso/pnLeftShoulder/pnLeftHand:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.126171, -0.397057, -0.191017), Vector3(-0.130596, -0.405687, -0.207845), Vector3(-0.126331, -0.432511, -0.135214), Vector3(-0.126331, -0.432511, -0.135214), Vector3(-0.134452, -0.426793, -0.0793363), Vector3(-0.138744, -0.455842, -0.0559388), Vector3(-0.134193, -0.443861, -0.110839), Vector3(-0.134637, -0.426416, -0.148415), Vector3(-0.134637, -0.426416, -0.148415)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("pnTorso/pnLeftShoulder:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.946829, -0.0422332, -0.0844956), Vector3(1.27058, -0.105541, -0.154101), Vector3(0.75336, -0.0220052, -0.0569686), Vector3(0.197001, -0.0254294, -0.0778273), Vector3(-0.725139, 0.0208802, -0.16861), Vector3(-1.04747, 0.164449, -0.332568), Vector3(-0.615715, 0.0640414, -0.209011), Vector3(0.0386459, 0.0410757, -0.0788683), Vector3(0.55508, 0.043005, -0.101942)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("pnTorso/pnRightShoulder:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.776333, -0.0641733, 0.0947885), Vector3(-0.61294, -0.0179771, 0.0344218), Vector3(-0.477872, -0.0165595, 0.0316954), Vector3(0.0445539, -0.026856, 0.0506203), Vector3(0.329972, -0.0288972, 0.104912), Vector3(0.844552, 0.0256248, 0.24064), Vector3(0.503837, 0.00521745, 0.200021), Vector3(0.0172459, 0.0111013, 0.114353), Vector3(-0.368531, -0.00107573, 0.145648)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("pnTorso/pnRightShoulder/pnRightHand:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.122647, -0.361186, 0.0785415), Vector3(0.126316, -0.375546, 0.136155), Vector3(0.124868, -0.360947, 0.0137927), Vector3(0.13027, -0.322469, -0.0846016), Vector3(0.13027, -0.322469, -0.0846016), Vector3(0.117965, -0.367994, -0.0418588), Vector3(0.118634, -0.367021, -0.0246587), Vector3(0.117855, -0.374695, -0.000582501), Vector3(0.117855, -0.374695, -0.000582516)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("pnTorso/pnRightShoulder/pnRightHand:rotation")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.344645, 0.000280805, -0.0116441), Vector3(0.325476, 0.00124729, -0.0136621), Vector3(0.412498, -0.00134687, -0.0150388), Vector3(0.395572, -0.000538181, -0.015595), Vector3(0.395572, -0.000538181, -0.015595), Vector3(0.197049, 0.00402497, -0.0570774), Vector3(0.20013, 0.00354336, -0.0499665), Vector3(0.225991, 0.000639043, -0.0499993), Vector3(0.311869, -0.00975856, -0.0570769)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("pnTorso/pnHead:rotation")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.176997, 0.000652538, -0.00590319)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("pnLeftFoot:rotation")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.372401, 0, 0), Vector3(-0.951519, 0, 0), Vector3(-1.11125, 0, 0), Vector3(-0.627306, 0, 0), Vector3(-0.0857132, 0, 0), Vector3(0.358212, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("pnTorso:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0.986913, -0.0951539), Vector3(0, 0.984353, -0.0808978), Vector3(0, 0.984938, -0.173304), Vector3(0, 0.945922, -0.156894), Vector3(0, 0.954391, -0.118195), Vector3(0, 0.993289, -0.124152), Vector3(0, 0.957689, -0.173323), Vector3(0, 0.962052, -0.125638), Vector3(0, 0.994431, -0.10168)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -214,7 +30,7 @@ _data = {
 "idle": ExtResource("3_qvgsh"),
 "in_air": ExtResource("4_dy3qm"),
 "run": ExtResource("5_uqns2"),
-"walk": SubResource("Animation_goxkl")
+"walk": ExtResource("8_dnsbo")
 }
 
 [sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_0gny3"]
@@ -228,7 +44,13 @@ input_1/name = "notAiming"
 input_1/auto_advance = false
 input_1/reset = true
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lk2no"]
+animation = &"flintlock_aim"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8jfl2"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qbt5p"]
 animation = &"idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oq02i"]
@@ -236,62 +58,39 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fbppp"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qd00s"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hgh8o"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_42aw6"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d5no0"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_edcej"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_pcidi"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_qd00s")
-blend_point_0/pos = Vector2(0, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_hgh8o")
-blend_point_1/pos = Vector2(-0.8, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_42aw6")
-blend_point_2/pos = Vector2(0, 0.8)
-blend_point_3/node = SubResource("AnimationNodeAnimation_d5no0")
-blend_point_3/pos = Vector2(0.8, 0)
-blend_point_4/node = SubResource("AnimationNodeAnimation_edcej")
-blend_point_4/pos = Vector2(0, -0.8)
-
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_prqdr"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mhqyy"]
-animation = &"run"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6x0x"]
+animation = &"walk"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5aoor"]
 
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_0t0c1"]
+filter_enabled = true
+filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(-32.8796, 612.124)
+graph_offset = Vector2(-106.159, 469.111)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
-nodes/IdleWalkRunBlend/position = Vector2(530, 670)
+nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
-nodes/aimTransition/position = Vector2(680, 520)
+nodes/aimTransition/position = Vector2(1050, 1220)
+nodes/aiming/node = SubResource("AnimationNodeAnimation_lk2no")
+nodes/aiming/position = Vector2(820, 1330)
 nodes/idle/node = SubResource("AnimationNodeAnimation_8jfl2")
-nodes/idle/position = Vector2(100, 510)
-nodes/output/position = Vector2(860, 530)
+nodes/idle/position = Vector2(630, 890)
+nodes/notAiming/node = SubResource("AnimationNodeAnimation_qbt5p")
+nodes/notAiming/position = Vector2(830, 1470)
+nodes/output/position = Vector2(1400, 1050)
 nodes/run/node = SubResource("AnimationNodeAnimation_oq02i")
-nodes/run/position = Vector2(100, 820)
+nodes/run/position = Vector2(630, 1170)
 nodes/runTimeScale/node = SubResource("AnimationNodeTimeScale_fbppp")
-nodes/runTimeScale/position = Vector2(300, 870)
-nodes/strafe/node = SubResource("AnimationNodeBlendSpace2D_pcidi")
-nodes/strafe/position = Vector2(100, 320)
-nodes/strafeTimeScale/node = SubResource("AnimationNodeTimeScale_prqdr")
-nodes/strafeTimeScale/position = Vector2(460, 440)
-nodes/walk/node = SubResource("AnimationNodeAnimation_mhqyy")
-nodes/walk/position = Vector2(100, 640)
+nodes/runTimeScale/position = Vector2(780, 1180)
+nodes/walk/node = SubResource("AnimationNodeAnimation_v6x0x")
+nodes/walk/position = Vector2(630, 1030)
 nodes/walkTimeScale/node = SubResource("AnimationNodeTimeScale_5aoor")
-nodes/walkTimeScale/position = Vector2(250, 720)
-node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"strafeTimeScale", &"aimTransition", 1, &"IdleWalkRunBlend", &"output", 0, &"aimTransition", &"runTimeScale", 0, &"run", &"strafeTimeScale", 0, &"strafe", &"walkTimeScale", 0, &"walk"]
+nodes/walkTimeScale/position = Vector2(770, 1030)
+nodes/weaponBlend/node = SubResource("AnimationNodeBlend2_0t0c1")
+nodes/weaponBlend/position = Vector2(1210, 1020)
+node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"aiming", &"aimTransition", 1, &"notAiming", &"output", 0, &"weaponBlend", &"runTimeScale", 0, &"run", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t31la"]
 size = Vector3(0.6, 1.7, 0.6)
@@ -321,9 +120,8 @@ parameters/aimTransition/current_state = "notAiming"
 parameters/aimTransition/transition_request = ""
 parameters/aimTransition/current_index = 1
 parameters/runTimeScale/scale = 2.0
-parameters/strafe/blend_position = Vector2(-0.138288, 0.174603)
-parameters/strafeTimeScale/scale = 1.0
 parameters/walkTimeScale/scale = 1.0
+parameters/weaponBlend/blend_amount = 0
 
 [node name="pnTorso" type="Node3D" parent="visuals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.942474, 0)
