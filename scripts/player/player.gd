@@ -3,6 +3,10 @@ extends CharacterBody3D
 @onready var camera_mount = $cameraMount
 @onready var animation_player = $visuals/AnimationPlayer
 
+# Player animation tree node paths
+var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
+var aimTransition = "parameters/aimTransition/transition_request"
+
 
 var SPEED = 5.0
 var sprintSpeed = 9.0
@@ -70,17 +74,17 @@ func _physics_process(delta):
 		if Input.is_action_pressed("Sprint"):
 			velocity.x = direction.x * sprintSpeed
 			velocity.z = direction.z * sprintSpeed
-			$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), 1.0, delta * acceleration))
+			$visuals/AnimationTree.set(idleWalkRun, lerp($visuals/AnimationTree.get(idleWalkRun), 1.0, delta * acceleration))
 			
 		else:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
-			$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), 0.0, delta * acceleration))
+			$visuals/AnimationTree.set(idleWalkRun, lerp($visuals/AnimationTree.get(idleWalkRun), 0.0, delta * acceleration))
 
 	else:
 		velocity.x = move_toward(velocity.x, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 		velocity.z = move_toward(velocity.z, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
-		$visuals/AnimationTree.set("parameters/IdleWalkRunBlend/blend_amount", lerp($visuals/AnimationTree.get("parameters/IdleWalkRunBlend/blend_amount"), -1.0, delta * acceleration))
+		$visuals/AnimationTree.set(idleWalkRun, lerp($visuals/AnimationTree.get(idleWalkRun), -1.0, delta * acceleration))
 
 
 	move_and_slide()

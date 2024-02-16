@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=33 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -52,37 +52,13 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fbppp"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qd00s"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hgh8o"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6x0x"]
 animation = &"walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_42aw6"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d5no0"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_edcej"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_pcidi"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_qd00s")
-blend_point_0/pos = Vector2(0, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_hgh8o")
-blend_point_1/pos = Vector2(-0.8, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_42aw6")
-blend_point_2/pos = Vector2(0, 0.8)
-blend_point_3/node = SubResource("AnimationNodeAnimation_d5no0")
-blend_point_3/pos = Vector2(0.8, 0)
-blend_point_4/node = SubResource("AnimationNodeAnimation_edcej")
-blend_point_4/pos = Vector2(0, -0.8)
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5aoor"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(0, 280.308)
+graph_offset = Vector2(-182.24, 218.612)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(530, 670)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -94,8 +70,8 @@ nodes/run/node = SubResource("AnimationNodeAnimation_oq02i")
 nodes/run/position = Vector2(100, 820)
 nodes/runTimeScale/node = SubResource("AnimationNodeTimeScale_fbppp")
 nodes/runTimeScale/position = Vector2(300, 870)
-nodes/walk/node = SubResource("AnimationNodeBlendSpace2D_pcidi")
-nodes/walk/position = Vector2(90, 640)
+nodes/walk/node = SubResource("AnimationNodeAnimation_v6x0x")
+nodes/walk/position = Vector2(60, 670)
 nodes/walkTimeScale/node = SubResource("AnimationNodeTimeScale_5aoor")
 nodes/walkTimeScale/position = Vector2(250, 720)
 node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 1, &"IdleWalkRunBlend", &"output", 0, &"aimTransition", &"runTimeScale", 0, &"run", &"walkTimeScale", 0, &"walk"]
@@ -128,7 +104,6 @@ parameters/aimTransition/current_state = "notAiming"
 parameters/aimTransition/transition_request = ""
 parameters/aimTransition/current_index = 1
 parameters/runTimeScale/scale = 2.0
-parameters/walk/blend_position = Vector2(-0.138288, 0.174603)
 parameters/walkTimeScale/scale = 1.0
 
 [node name="pnTorso" type="Node3D" parent="visuals"]
