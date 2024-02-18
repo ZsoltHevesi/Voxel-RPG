@@ -25,6 +25,26 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var maxStepDown = -0.51
 
 
+# Variables for the player health
+var maxHealth = 100
+var currentHealth = maxHealth
+
+func takeDamage(amount):
+	currentHealth -= amount
+	if currentHealth <= 0:
+		# Function to handle player death
+		die()
+		
+func die():
+	# Implementing logic for player death (death animations, resetting health etc.)
+	currentHealth = maxHealth
+
+func heal(amount):
+	currentHealth += amount
+	if currentHealth > maxHealth:
+		currentHealth = maxHealth
+
+
 # Capture Mouse
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -56,6 +76,12 @@ func _snap_down_stairs_check():
 
 
 func _physics_process(delta):
+
+	# Example: Check for player health and take damage if needed
+	if Input.is_action_just_pressed("takeDamage"):
+		# Amount of damage can be adjusted as needed
+		takeDamage(20) 
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
