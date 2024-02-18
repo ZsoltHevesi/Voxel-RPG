@@ -12,8 +12,8 @@ var weaponBlend = "parameters/weaponBlend/blend_amount"
 
 var weaponBlendTarget = 1.0
 
-var SPEED = 5.0
-var sprintSpeed = 9.0
+var SPEED = 6.0
+var sprintSpeed = 10.0
 var acceleration = 6
 var JUMP_VELOCITY = 6 # Jump height y-axis
 
@@ -96,3 +96,6 @@ func _physics_process(delta):
 
 	move_and_slide()
 	_snap_down_stairs_check()
+ # Camera movement logic
+
+

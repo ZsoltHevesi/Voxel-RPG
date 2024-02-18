@@ -1,9 +1,9 @@
+res://scripts/player
 res://scenes/player/playerAnimations
 res://scenes/player
 res://scenes/decorations/lamps
 res://scenes/decorations/furniture
 res://scenes/decorations
-res://scripts/player
 res://scripts
 res://scenes/levels
 res://assets/materials/emission
