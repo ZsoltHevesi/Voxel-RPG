@@ -116,6 +116,8 @@ func _physics_process(delta):
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
+		if Input.is_action_just_pressed("attack"):
+			animationTree.set("parameters/shootOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	else:
 		if animationTree.get(aimTransitionState) == "aiming":
 			animationTree.set(aimTransition, "notAiming")

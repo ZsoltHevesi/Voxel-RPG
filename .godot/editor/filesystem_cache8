@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708375442
+::res://::1708376515
 icon.svg::CompressedTexture2D::7874682967027633112::1708375426::1708375426::1::::<><>::
 Mixamo BoneMap.tres::BoneMap::669624810488455992::1708375426::0::1::::<><>::
 README.md::TextFile::-1::1708375426::0::1::::<><>::
@@ -7,28 +7,28 @@ Riggedclanger.glb::PackedScene::6014452313667334921::1708375426::1708375426::1::
 YbotPack.glb::PackedScene::6246404369877118417::1708375426::1708375426::1::::<><>::
 ::res://assets/::1708375426
 ::res://assets/materials/::1708375426
-::res://assets/materials/diffuse/::1708375426
-blackDIFF.tres::StandardMaterial3D::7061789021922251680::1708375426::0::1::::<><>::
-boneDIFF1.tres::StandardMaterial3D::5702512101255004082::1708375426::0::1::::<><>::
-boneDIFF2.tres::StandardMaterial3D::3301500030909191567::1708375426::0::1::::<><>::
-brownDIFF1.tres::StandardMaterial3D::1662401485794479580::1708375426::0::1::::<><>::
+::res://assets/materials/diffuse/::1708375511
+blackDIFF.tres::StandardMaterial3D::7061789021922251680::1708375511::0::1::::<><>::
+boneDIFF1.tres::StandardMaterial3D::5702512101255004082::1708375511::0::1::::<><>::
+boneDIFF2.tres::StandardMaterial3D::3301500030909191567::1708375511::0::1::::<><>::
+brownDIFF1.tres::StandardMaterial3D::1662401485794479580::1708375511::0::1::::<><>::
 brownDIFF2.tres::StandardMaterial3D::7104158218576586846::1708375426::0::1::::<><>::
-crimsonDIFF1.tres::StandardMaterial3D::3026176498718391385::1708375426::0::1::::<><>::
-greyDIFF1.tres::StandardMaterial3D::2812667022223416286::1708375426::0::1::::<><>::
-greyDIFF2.tres::StandardMaterial3D::6597826966785397404::1708375426::0::1::::<><>::
+crimsonDIFF1.tres::StandardMaterial3D::3026176498718391385::1708375511::0::1::::<><>::
+greyDIFF1.tres::StandardMaterial3D::2812667022223416286::1708375511::0::1::::<><>::
+greyDIFF2.tres::StandardMaterial3D::6597826966785397404::1708375511::0::1::::<><>::
 greyDIFF3.tres::StandardMaterial3D::2382949626769391079::1708375426::0::1::::<><>::
-::res://assets/materials/emission/::1708375426
+::res://assets/materials/emission/::1708375511
 purpleTransGlow.tres::StandardMaterial3D::7936931006352333640::1708375426::0::1::::<><>::
-yellowNeon1.tres::StandardMaterial3D::6437030225474439028::1708375426::0::1::::<><>::
-::res://assets/materials/metallic/::1708375426
-darkGreyMET1.tres::StandardMaterial3D::1045339703941166048::1708375426::0::1::::<><>::
-goldMET1.tres::StandardMaterial3D::7787410889374107880::1708375426::0::1::::<><>::
+yellowNeon1.tres::StandardMaterial3D::6437030225474439028::1708375511::0::1::::<><>::
+::res://assets/materials/metallic/::1708375511
+darkGreyMET1.tres::StandardMaterial3D::1045339703941166048::1708375510::0::1::::<><>::
+goldMET1.tres::StandardMaterial3D::7787410889374107880::1708375510::0::1::::<><>::
 goldMET2.tres::StandardMaterial3D::668837757639924551::1708375426::0::1::::<><>::
-greyMET1.tres::StandardMaterial3D::5414068544397215203::1708375426::0::1::::<><>::
-shinyGreyMET2.tres::StandardMaterial3D::2958856803884362847::1708375426::0::1::::<><>::
-::res://assets/materials/transparent/::1708375426
-clearGlass_Refr.tres::StandardMaterial3D::6223340776132225623::1708375426::0::1::::<><>::uid://cpleldlhj73w8::::res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
-clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1708375426::0::1::::<><>::
+greyMET1.tres::StandardMaterial3D::5414068544397215203::1708375511::0::1::::<><>::
+shinyGreyMET2.tres::StandardMaterial3D::2958856803884362847::1708375511::0::1::::<><>::
+::res://assets/materials/transparent/::1708375510
+clearGlass_Refr.tres::StandardMaterial3D::6223340776132225623::1708375510::0::1::::<><>::uid://cpleldlhj73w8::::res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
+clearGlass_Refr_NEXT.tres::StandardMaterial3D::5848644863849629997::1708375510::0::1::::<><>::
 ::res://assets/models/::1708375426
 ::res://assets/models/decor/::1708375426
 ::res://assets/models/decor/furniture/::1708375426
@@ -89,14 +89,14 @@ lightningLantern.tscn::PackedScene::7334916990659803629::1708375426::0::1::::<><
 ::res://scenes/enemies/clanger/::1708375426
 e_clanger.gd::GDScript::-1::1708375426::0::1::::<>CharacterBody3D<>::
 e_clanger.tscn::PackedScene::127975127388147698::1708375426::0::1::::<><>::uid://dc3g3quope3hs::::res://assets/models/enemy/clanger/head.obj<>uid://cbm3hdsxtec5w::::res://assets/models/enemy/clanger/leftFoot.obj<>uid://crvj6gkfr6cjt::::res://assets/models/enemy/clanger/leftLeg.obj<>uid://d1svghjfsliwn::::res://assets/models/enemy/clanger/leftShoulder.obj<>uid://i06l5voal8rl::::res://assets/models/enemy/clanger/rightFoot.obj<>uid://b548heicnbb6b::::res://assets/models/enemy/clanger/staff.obj<>uid://cvk3hmgn7vnit::::res://assets/models/enemy/clanger/rightLeg.obj<>uid://csrp5gm0ejr61::::res://assets/models/enemy/clanger/rightShoulder.obj<>uid://cxye7heyff71i::::res://assets/materials/emission/yellowNeon1.tres<>uid://cmm2syvbk1hv3::::res://assets/models/enemy/clanger/torso.obj<>uid://bgcqhkphvspe1::::res://assets/materials/diffuse/greyDIFF1.tres<>uid://bifj6615ofood::::res://assets/materials/metallic/shinyGreyMET2.tres<>uid://c1abimugnb35y::::res://assets/materials/diffuse/greyDIFF2.tres<>uid://cjeu6hd70w1o6::::res://assets/materials/metallic/greyMET1.tres
-::res://scenes/levels/::1708375426
-level1.tscn::PackedScene::5662476844370793964::1708375426::0::1::::<><>::uid://bqhd5qtvwp261::::res://scenes/tilesets/chateau scene/chateau.tscn<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn<>res://scripts/player/HealthBar.gd
+::res://scenes/levels/::1708376371
+level1.tscn::PackedScene::5662476844370793964::1708376371::0::1::::<><>::uid://bqhd5qtvwp261::::res://scenes/tilesets/chateau scene/chateau.tscn<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn<>res://scripts/player/HealthBar.gd
 ::res://scenes/levels/test/::1708375426
 test-area.tscn::PackedScene::8280896395346456651::1708375426::0::1::::<><>::uid://cnilsnt05jp4u::::res://assets/materials/diffuse/boneDIFF1.tres<>uid://bjd5xjvsg3ldh::::res://assets/materials/diffuse/crimsonDIFF1.tres<>uid://xxjrlc78o5oi::::res://assets/materials/diffuse/brownDIFF1.tres<>uid://87k3ka1johal::::res://assets/materials/diffuse/greyDIFF3.tres<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://dn0l71e7a6i0c::::res://scenes/decorations/furniture/woodRockingChair1.tscn<>uid://dcepdv2dfic5l::::res://scenes/levels/test/test-area.VoxelGI_data.res<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn
 test-area.VoxelGI_data.res::VoxelGIData::7308814506488196671::1708375426::0::1::::<><>::
-::res://scenes/player/::1708375426
+::res://scenes/player/::1708376371
 collisionBox.gd::GDScript::-1::1708375426::0::1::::<>CollisionShape3D<>::
-player.tscn::PackedScene::387203497611424142::1708375426::0::1::::<><>::res://scripts/player/player.gd<>uid://csjlj4qy7pktl::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn<>uid://580swu75bkg6::::res://scenes/player/playerAnimations/RESET.res<>uid://dggtc3s8ylkx7::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_hand.tscn<>uid://bq1gaamwyo1ea::::res://scenes/player/playerAnimations/idle.res<>uid://exqvanae0tiw::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_hand.tscn<>uid://csqukmapf6j6y::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_shoulder.tscn<>uid://dbiwxhjqqqafo::::res://scenes/player/playerAnimations/in_air.res<>uid://j6qguw7ipqp8::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_shoulder.tscn<>uid://cp6j2vgxxkd0v::::res://scenes/player/playerGear/weapons/longSword.tscn<>uid://bxsf23gvr3mmj::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_leg.tscn<>uid://cjihcbgf6347x::::res://scenes/player/playerAnimations/run.res<>uid://cvldq075pnnw5::::res://scenes/player/playerAnimations/flintlock_aim.res<>uid://frw2sjqaqako::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_foot.tscn<>uid://dmvwgewnlaygq::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_foot.tscn<>uid://dh42ns6gocqi1::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_torso.tscn<>uid://cf2yiqklalyaa::::res://scenes/player/playerGear/weapons/flintlockPistol.tscn<>uid://d0k7ko4t6bmrl::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn<>uid://b0p0qmyqg6as1::::res://scenes/player/playerAnimations/flintlock_shoot.res<>uid://b14fxosguxu7i::::res://scenes/player/playerAnimations/walk.res<>res://scripts/player/remoteTransforms.gd<>res://scripts/player/Camera3D.gd
+player.tscn::PackedScene::387203497611424142::1708376371::0::1::::<><>::res://scripts/player/player.gd<>uid://csjlj4qy7pktl::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn<>uid://580swu75bkg6::::res://scenes/player/playerAnimations/RESET.res<>uid://dggtc3s8ylkx7::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_hand.tscn<>uid://bq1gaamwyo1ea::::res://scenes/player/playerAnimations/idle.res<>uid://exqvanae0tiw::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_hand.tscn<>uid://csqukmapf6j6y::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_shoulder.tscn<>uid://dbiwxhjqqqafo::::res://scenes/player/playerAnimations/in_air.res<>uid://j6qguw7ipqp8::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_shoulder.tscn<>uid://cp6j2vgxxkd0v::::res://scenes/player/playerGear/weapons/longSword.tscn<>uid://bxsf23gvr3mmj::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_leg.tscn<>uid://cjihcbgf6347x::::res://scenes/player/playerAnimations/run.res<>uid://cvldq075pnnw5::::res://scenes/player/playerAnimations/flintlock_aim.res<>uid://frw2sjqaqako::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_foot.tscn<>uid://dmvwgewnlaygq::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_foot.tscn<>uid://dh42ns6gocqi1::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_torso.tscn<>uid://cf2yiqklalyaa::::res://scenes/player/playerGear/weapons/flintlockPistol.tscn<>uid://d0k7ko4t6bmrl::::res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn<>uid://b0p0qmyqg6as1::::res://scenes/player/playerAnimations/flintlock_shoot.res<>uid://b14fxosguxu7i::::res://scenes/player/playerAnimations/walk.res<>res://scripts/player/remoteTransforms.gd<>res://scripts/player/Camera3D.gd
 ::res://scenes/player/playerAnimations/::1708375426
 flintlock_aim.res::Animation::6269727326661446870::1708375426::0::1::::<><>::
 flintlock_shoot.res::Animation::4173654606568158806::1708375426::0::1::::<><>::
@@ -128,8 +128,8 @@ longSword.tscn::PackedScene::5890265515038198675::1708375426::0::1::::<><>::uid:
 chateau.tscn::PackedScene::3524129421684535260::1708375426::0::1::::<><>::uid://bcvl0f561a7qv::::res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res<>uid://rvrufjie5uab::::res://assets/models/tilesets/chateu/chateauCourtYard.obj<>uid://bnpmvc2xpkq2t::::res://assets/models/tilesets/chateu/chateauCourtyardMonument.obj<>uid://o5muet0ljals::::res://assets/materials/metallic/darkGreyMET1.tres<>uid://h2dbwolc7eba::::res://assets/models/tilesets/chateu/chateauGlow.obj<>uid://cequi45fibugi::::res://assets/models/tilesets/chateu/chateauRampart.obj<>uid://bj351h4yxmfyc::::res://assets/models/tilesets/chateu/chateauStairsUp.obj<>uid://dlcydg0remmp1::::res://assets/materials/emission/purpleTransGlow.tres<>uid://cjo8khtfdys4e::::res://assets/models/tilesets/chateu/chateauUpRoom.obj<>uid://dqcul60046wt0::::res://assets/models/tilesets/chateu/chateauUpstairsRoomWall.obj<>uid://dxj708a7421dv::::res://assets/models/tilesets/chateu/chateauWalls.obj<>uid://b4duoynpcs7it::::res://assets/models/tilesets/chateu/chateauWindows.obj<>uid://di7jrwwc4ikou::::res://assets/materials/metallic/goldMET1.tres<>uid://cuwvrpomvt3pb::::res://assets/materials/transparent/clearGlass_Refr.tres<>uid://x8hupu8xdx0c::::res://scenes/decorations/lamps/chandelier.tscn
 chateau.VoxelGI_data.res::VoxelGIData::2570863145976638261::1708375426::0::1::::<><>::
 ::res://scripts/::1708375426
-::res://scripts/player/::1708375426
-Camera3D.gd::GDScript::-1::1708375426::0::1::::<>Camera3D<>::
+::res://scripts/player/::1708376371
+Camera3D.gd::GDScript::-1::1708375510::0::1::::<>Camera3D<>::
 HealthBar.gd::GDScript::-1::1708375426::0::1::::<>Control<>::
-player.gd::GDScript::-1::1708375426::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1708376371::0::1::::<>CharacterBody3D<>::
 remoteTransforms.gd::GDScript::-1::1708375426::0::1::::<>Node3D<>::

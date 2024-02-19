@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=39 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -59,6 +59,12 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fbppp"]
 
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_50vrx"]
+filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_elg85"]
+animation = &"flintlock_shoot"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6x0x"]
 animation = &"walk"
 
@@ -69,29 +75,33 @@ filter_enabled = true
 filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(-188.42, 302.819)
+graph_offset = Vector2(-4.34009, 663.071)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
-nodes/aimTransition/position = Vector2(1050, 1220)
+nodes/aimTransition/position = Vector2(840, 1380)
 nodes/aiming/node = SubResource("AnimationNodeAnimation_lk2no")
-nodes/aiming/position = Vector2(820, 1330)
+nodes/aiming/position = Vector2(370, 1280)
 nodes/idle/node = SubResource("AnimationNodeAnimation_8jfl2")
 nodes/idle/position = Vector2(630, 890)
 nodes/notAiming/node = SubResource("AnimationNodeAnimation_qbt5p")
-nodes/notAiming/position = Vector2(830, 1470)
+nodes/notAiming/position = Vector2(510, 1560)
 nodes/output/position = Vector2(1400, 1050)
 nodes/run/node = SubResource("AnimationNodeAnimation_oq02i")
 nodes/run/position = Vector2(630, 1170)
 nodes/runTimeScale/node = SubResource("AnimationNodeTimeScale_fbppp")
 nodes/runTimeScale/position = Vector2(780, 1180)
+nodes/shootOneShot/node = SubResource("AnimationNodeOneShot_50vrx")
+nodes/shootOneShot/position = Vector2(610, 1300)
+nodes/shooting/node = SubResource("AnimationNodeAnimation_elg85")
+nodes/shooting/position = Vector2(410, 1420)
 nodes/walk/node = SubResource("AnimationNodeAnimation_v6x0x")
 nodes/walk/position = Vector2(630, 1030)
 nodes/walkTimeScale/node = SubResource("AnimationNodeTimeScale_5aoor")
 nodes/walkTimeScale/position = Vector2(770, 1030)
 nodes/weaponBlend/node = SubResource("AnimationNodeBlend2_0t0c1")
 nodes/weaponBlend/position = Vector2(1210, 1020)
-node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"aiming", &"aimTransition", 1, &"notAiming", &"output", 0, &"weaponBlend", &"runTimeScale", 0, &"run", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition"]
+node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"shootOneShot", &"aimTransition", 1, &"notAiming", &"output", 0, &"weaponBlend", &"runTimeScale", 0, &"run", &"shootOneShot", 0, &"aiming", &"shootOneShot", 1, &"shooting", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t31la"]
 size = Vector3(0.6, 1.7, 0.6)
@@ -117,12 +127,15 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_sxeqy")
 anim_player = NodePath("../AnimationPlayer")
 parameters/IdleWalkRunBlend/blend_amount = 0.0
-parameters/aimTransition/current_state = "notAiming"
+parameters/aimTransition/current_state = "aiming"
 parameters/aimTransition/transition_request = ""
-parameters/aimTransition/current_index = 1
+parameters/aimTransition/current_index = 0
 parameters/runTimeScale/scale = 2.0
+parameters/shootOneShot/active = false
+parameters/shootOneShot/internal_active = false
+parameters/shootOneShot/request = 0
 parameters/walkTimeScale/scale = 1.0
-parameters/weaponBlend/blend_amount = 0.0
+parameters/weaponBlend/blend_amount = 1.0
 
 [node name="pnTorso" type="Node3D" parent="visuals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.942474, 0)
