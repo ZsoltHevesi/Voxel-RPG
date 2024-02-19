@@ -69,6 +69,7 @@ filter_enabled = true
 filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
+graph_offset = Vector2(-188.42, 302.819)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -121,7 +122,7 @@ parameters/aimTransition/transition_request = ""
 parameters/aimTransition/current_index = 1
 parameters/runTimeScale/scale = 2.0
 parameters/walkTimeScale/scale = 1.0
-parameters/weaponBlend/blend_amount = 0
+parameters/weaponBlend/blend_amount = 0.0
 
 [node name="pnTorso" type="Node3D" parent="visuals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.942474, 0)
