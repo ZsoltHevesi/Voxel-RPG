@@ -10,7 +10,7 @@ var aimTransition = "parameters/aimTransition/transition_request"
 var aimTransitionState = "parameters/aimTransition/current_state"
 var weaponBlend = "parameters/weaponBlend/blend_amount"
 
-var weaponBlendTarget = 1.0
+var weaponBlendTarget = 0.0
 
 var SPEED = 6.0
 var sprintSpeed = 10.0
@@ -115,9 +115,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("aim"):
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
+			weaponBlendTarget = 1.0
+		if Input.is_action_just_pressed("attack"):
+			animationTree.set("parameters/shootOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	else:
 		if animationTree.get(aimTransitionState) == "aiming":
 			animationTree.set(aimTransition, "notAiming")
+			weaponBlendTarget = 0.0
 	animationTree.set(weaponBlend, lerp(float(animationTree.get(weaponBlend)), weaponBlendTarget, delta * 5))
 
 	move_and_slide()

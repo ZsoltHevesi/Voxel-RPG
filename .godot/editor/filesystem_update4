@@ -12,6 +12,8 @@ res://assets/materials/diffuse/crimsonDIFF1.tres
 res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
+res://scenes/player/playerAnimations/flintlock_shoot.res
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
+res://scripts/player/player.gd
 res://scenes/levels/level1.tscn
