@@ -23,9 +23,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Shadows OFF/ON"
 
+[node name="ssaoToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SSAO OFF/ON"
+
+[node name="glowToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Glow OFF/ON"
+
 [node name="backButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back"
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/shadowToggle" to="." method="_on_shadow_toggle_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ssaoToggle" to="." method="_on_ssao_toggle_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/glowToggle" to="." method="_on_glow_toggle_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/backButton" to="." method="_on_back_button_pressed"]
