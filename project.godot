@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VoxelGame"
-run/main_scene="res://scenes/levels/level1.tscn"
+run/main_scene="res://scenes/menus/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
