@@ -9,6 +9,7 @@ var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
 var aimTransition = "parameters/aimTransition/transition_request"
 var aimTransitionState = "parameters/aimTransition/current_state"
 var weaponBlend = "parameters/weaponBlend/blend_amount"
+var airGroundTransition = "parameters/airGroundTransition/transition_request"
 
 var weaponBlendTarget = 0.0
 
@@ -85,6 +86,10 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		animationTree.set(airGroundTransition, "inAir")
+		
+	if is_on_floor():
+		animationTree.set(airGroundTransition, "onGround")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

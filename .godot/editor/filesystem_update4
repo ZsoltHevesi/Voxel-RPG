@@ -14,6 +14,5 @@ res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
+res://scripts/player/player.gd
 res://scenes/levels/level1.tscn
-res://scripts/player/remoteTransforms.gd
-res://scenes/player/playerAnimations/in_air.res
