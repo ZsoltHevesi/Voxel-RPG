@@ -17,6 +17,7 @@ var SPEED = 6.0
 var sprintSpeed = 10.0
 var acceleration = 6
 var JUMP_VELOCITY = 6 # Jump height y-axis
+var airTime = 0
 
 @export var mouseSensitivity = 0.3
 
@@ -82,13 +83,15 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("takeDamage"):
 		# Amount of damage can be adjusted as needed
 		takeDamage(20) 
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		animationTree.set(airGroundTransition, "inAir")
+		airTime += delta
+		if airTime > 0.05:
+			animationTree.set(airGroundTransition, "inAir")
 		
 	if is_on_floor():
+		airTime = 0
 		animationTree.set(airGroundTransition, "onGround")
 
 	# Handle jump.
