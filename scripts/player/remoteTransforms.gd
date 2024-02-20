@@ -9,5 +9,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	parent_rotation = get_parent().rotation
-	set_rotation(- parent_rotation)
+	look_at(global_position + Vector3.FORWARD)

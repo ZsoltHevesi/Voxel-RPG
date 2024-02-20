@@ -75,7 +75,6 @@ filter_enabled = true
 filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(-4.34009, 663.071)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -149,7 +148,7 @@ transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 2.59618e-10, 0.35475
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.185, 0)
 
 [node name="pnRightHand" type="Node3D" parent="visuals/pnTorso/pnRightShoulder"]
-transform = Transform3D(0.949998, 0, 0, 0, 0.949998, 0, 0, 0, 0.949998, 0.12, -0.36, 0)
+transform = Transform3D(0.949998, 0, 0, 0, 0.949995, 0, 0, 0, 0.949998, 0.12, -0.36, 0)
 
 [node name="solomonRightHand" parent="visuals/pnTorso/pnRightShoulder/pnRightHand" instance=ExtResource("3_8wfcb")]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, 0, 0)
@@ -165,7 +164,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.113, -0.014468)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.185, 0)
 
 [node name="pnLeftHand" type="Node3D" parent="visuals/pnTorso/pnLeftShoulder"]
-transform = Transform3D(0.949998, 0, 0, 0, 0.949998, 0, 0, 0, 0.95, -0.12, -0.36, 0)
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.950001, -0.12, -0.36, 0)
 
 [node name="solomonLeftHand" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand" instance=ExtResource("3_x0gmy")]
 
@@ -183,7 +182,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 3.55271e-15, 1, 0, 8.74228e-08, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0)
 
 [node name="pnLeftLeg" type="Node3D" parent="visuals/pnLeftFoot"]
-transform = Transform3D(1, 0, 0, 0, 0.999248, 0.038754, 0, -0.038754, 0.999248, 0.005, 0.124, -5.96046e-08)
+transform = Transform3D(1, 0, 0, 0, 0.999248, 0.038754, 0, -0.038754, 0.999248, 0.00500001, 0.124, -7.45058e-08)
 
 [node name="solomonLeftLeg" parent="visuals/pnLeftFoot/pnLeftLeg" instance=ExtResource("5_4rcbk")]
 transform = Transform3D(-1, 0, -8.74228e-08, -8.88178e-16, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -195,7 +194,7 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.16, 0, 0)
 
 [node name="pnRightLeg" type="Node3D" parent="visuals/pnRightFoot"]
-transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.005, 0.124, -1.19209e-07)
+transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.00500003, 0.124, -1.19209e-07)
 
 [node name="solomonRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("7_ntxyt")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 7.45058e-09, 8.74228e-08, 7.45058e-09, -1, 0, 0, 0)
