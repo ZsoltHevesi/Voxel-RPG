@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=13 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tilesets/chateau scene/chateau.tscn" id="1_3vodl"]
+[ext_resource type="Script" path="res://scenes/levels/WorldEnvironmentSettings.gd" id="1_iluj8"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_1g6fl"]
+[ext_resource type="Script" path="res://scenes/levels/DirectionalLight3DSettings.gd" id="2_k6u3n"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_n32nu"]
 [ext_resource type="Script" path="res://scripts/player/HealthBar.gd" id="4_xbw4e"]
 
@@ -38,10 +40,12 @@ content_margin_bottom = 1.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8vil2")
+script = ExtResource("1_iluj8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
+script = ExtResource("2_k6u3n")
 
 [node name="map" type="Node3D" parent="."]
 
