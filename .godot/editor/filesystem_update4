@@ -14,5 +14,3 @@ res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
-res://scenes/player/player.tscn
-res://scripts/player/player.gd
