@@ -1,3 +1,8 @@
+Control
+Label
+GridContainer
+TextureRect
+PanelContainer
 MeshInstance3D
 SubViewport
 HSlider
@@ -5,10 +10,5 @@ CheckButton
 RichTextLabel
 OptionButton
 Button
-TextureRect
 VBoxContainer
 MarginContainer
-Control
-HBoxContainer
-SpringArm3D
-AnimationTree
