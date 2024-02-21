@@ -19,6 +19,8 @@ func _on_glow_toggle_toggled(toggled_on):
 	else:
 		Graphics.glow = 0
 
+func _on_scaling_slider_value_changed(value):
+	Graphics.scaling = value
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/mainMenu.tscn")
