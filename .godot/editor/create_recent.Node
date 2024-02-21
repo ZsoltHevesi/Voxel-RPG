@@ -1,3 +1,5 @@
+SubViewport
+HSlider
 CheckButton
 RichTextLabel
 OptionButton
@@ -11,4 +13,3 @@ MeshInstance3D
 SpringArm3D
 AnimationTree
 Node3D
-CollisionShape3D

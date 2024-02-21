@@ -11,3 +11,5 @@ func _ready():
 		environment.glow_enabled = true
 	else:
 		environment.glow_enabled = false
+
+	ProjectSettings.set_setting("rendering/scaling_3d/scale", Graphics.scaling)
