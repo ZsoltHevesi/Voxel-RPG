@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bi3gwnugk6oil"]
 
-[ext_resource type="ArrayMesh" uid="uid://bsyjs5l3yaulq" path="res://assets/models/decor/furniture/woodWardrobe.obj" id="1_50yhh"]
+[ext_resource type="ArrayMesh" uid="uid://bsyjs5l3yaulq" path="res://assets/models/decorations/furniture/woodWardrobe.obj" id="1_50yhh"]
+
 
 [node name="woodWardrobe" type="Node3D"]
 

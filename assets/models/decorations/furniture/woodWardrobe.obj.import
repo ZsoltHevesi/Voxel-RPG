@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsyjs5l3yaulq"
+path="res://.godot/imported/woodWardrobe.obj-bf65dbc580aef494f9361967b073b092.mesh"
+
+[deps]
+
+files=["res://.godot/imported/woodWardrobe.obj-bf65dbc580aef494f9361967b073b092.mesh"]
+
+source_file="res://assets/models/decorations/furniture/woodWardrobe.obj"
+dest_files=["res://.godot/imported/woodWardrobe.obj-bf65dbc580aef494f9361967b073b092.mesh", "res://.godot/imported/woodWardrobe.obj-bf65dbc580aef494f9361967b073b092.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8wcure045yhv"
+path="res://.godot/imported/rightLeg.obj-67ceac58e7530bc426a8de2ca9dcb745.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightLeg.obj-67ceac58e7530bc426a8de2ca9dcb745.mesh"]
+
+source_file="res://assets/models/player/armour/winter/rightLeg.obj"
+dest_files=["res://.godot/imported/rightLeg.obj-67ceac58e7530bc426a8de2ca9dcb745.mesh", "res://.godot/imported/rightLeg.obj-67ceac58e7530bc426a8de2ca9dcb745.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

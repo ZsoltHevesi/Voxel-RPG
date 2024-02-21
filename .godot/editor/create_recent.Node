@@ -1,3 +1,4 @@
+MeshInstance3D
 SubViewport
 HSlider
 CheckButton
@@ -9,7 +10,5 @@ VBoxContainer
 MarginContainer
 Control
 HBoxContainer
-MeshInstance3D
 SpringArm3D
 AnimationTree
-Node3D

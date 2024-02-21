@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpgn8rylqffyk"
+path="res://.godot/imported/rightHand.obj-40dfa2b9a93e7ea9d33a5fd1043ec6a6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightHand.obj-40dfa2b9a93e7ea9d33a5fd1043ec6a6.mesh"]
+
+source_file="res://assets/models/player/armour/winter/rightHand.obj"
+dest_files=["res://.godot/imported/rightHand.obj-40dfa2b9a93e7ea9d33a5fd1043ec6a6.mesh", "res://.godot/imported/rightHand.obj-40dfa2b9a93e7ea9d33a5fd1043ec6a6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
