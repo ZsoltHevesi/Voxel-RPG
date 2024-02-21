@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cedmt3fv1c4hj"
+path="res://.godot/imported/Torso.obj-03fdf6640317881f6a327185f9f2321a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Torso.obj-03fdf6640317881f6a327185f9f2321a.mesh"]
+
+source_file="res://assets/models/player/armour/winter/Torso.obj"
+dest_files=["res://.godot/imported/Torso.obj-03fdf6640317881f6a327185f9f2321a.mesh", "res://.godot/imported/Torso.obj-03fdf6640317881f6a327185f9f2321a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

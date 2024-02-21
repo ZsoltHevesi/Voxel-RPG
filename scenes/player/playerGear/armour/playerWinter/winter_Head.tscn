@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://pkfmlac7xfae"]
+
+[ext_resource type="ArrayMesh" uid="uid://u574x65wbbln" path="res://assets/models/player/armour/winter/head.obj" id="1_w1kda"]
+
+[node name="winterHead" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_w1kda")

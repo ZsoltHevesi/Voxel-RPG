@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dox8ih24dmnha"]
+
+[ext_resource type="ArrayMesh" uid="uid://cv55hpsf0w131" path="res://assets/models/player/armour/winter/leftShoulder.obj" id="1_00121"]
+
+[node name="winterLeftShoulder" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_00121")
