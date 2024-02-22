@@ -28,6 +28,10 @@ script = ExtResource("1_53fs5")
 [node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 
+[node name="fullscreenCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+text = "Fullscreen"
+
 [node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 min_value = 0.25
@@ -52,4 +56,5 @@ layout_mode = 2
 text = "Back"
 
 [connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
+[connection signal="toggled" from="HBoxContainer/optionSetting/fullscreenCheckBox" to="HBoxContainer/optionSetting" method="_on_fullscreen_check_box_toggled"]
 [connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]

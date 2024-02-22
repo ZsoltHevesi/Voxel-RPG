@@ -1,6 +1,8 @@
 extends VBoxContainer
 
 @onready var resolutionList = $resolutionList
+@onready var fullscreenCheckBox = $fullscreenCheckBox
+
 
 var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 								"1600x900" : Vector2i(1600, 900),
@@ -18,11 +20,24 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 
 func _ready():
 	addResolutions()
+	checkVariables()
+	
+func checkVariables():
+	var getWindow = get_window()
+	var mode = getWindow.get_mode()
+	
+	if mode == Window.MODE_FULLSCREEN:
+		fullscreenCheckBox.set_pressed_no_signal(true)
 
 
 func addResolutions():
+	var currentResolution = get_window().get_size()
+	var id = 0
 	for r in resolutions:
 		resolutionList.add_item(r)
+		if resolutions[r] == currentResolution:
+			resolutionList.select(id)
+		id += 1
 
 
 func _on_resolution_list_item_selected(index):
@@ -39,3 +54,10 @@ func centerScreen():
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/mainMenu.tscn")
+
+
+func _on_fullscreen_check_box_toggled(toggled_on):
+	if toggled_on:
+		get_window().set_mode(Window.MODE_FULLSCREEN)
+	else:
+		get_window().set_mode(Window.MODE_WINDOWED)
