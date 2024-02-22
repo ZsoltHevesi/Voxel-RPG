@@ -28,16 +28,25 @@ script = ExtResource("1_53fs5")
 [node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 
+[node name="scaleBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting/scaleBox"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = 50.0
+max_value = 200.0
+step = 5.0
+value = 100.0
+ticks_on_borders = true
+
+[node name="scalingLabel" type="Label" parent="HBoxContainer/optionSetting/scaleBox"]
+layout_mode = 2
+text = "100% - 1920x1080"
+
 [node name="fullscreenCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 text = "Fullscreen"
-
-[node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting"]
-layout_mode = 2
-min_value = 0.25
-max_value = 2.0
-step = 0.05
-value = 1.0
 
 [node name="shadowToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
@@ -56,5 +65,6 @@ layout_mode = 2
 text = "Back"
 
 [connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
+[connection signal="value_changed" from="HBoxContainer/optionSetting/scaleBox/scalingSlider" to="HBoxContainer/optionSetting" method="_on_scaling_slider_value_changed"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/fullscreenCheckBox" to="HBoxContainer/optionSetting" method="_on_fullscreen_check_box_toggled"]
 [connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]

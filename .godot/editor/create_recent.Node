@@ -1,9 +1,9 @@
+Label
+HBoxContainer
 CheckBox
 CenterContainer
 OptionButton
-HBoxContainer
 Control
-Label
 GridContainer
 TextureRect
 PanelContainer
@@ -12,4 +12,3 @@ SubViewport
 HSlider
 CheckButton
 RichTextLabel
-Button

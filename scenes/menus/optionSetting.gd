@@ -2,6 +2,9 @@ extends VBoxContainer
 
 @onready var resolutionList = $resolutionList
 @onready var fullscreenCheckBox = $fullscreenCheckBox
+@onready var scalingLabel = $scaleBox/scalingLabel
+@onready var scalingSlider = $scaleBox/scalingSlider
+
 
 
 var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
@@ -27,6 +30,7 @@ func checkVariables():
 	var mode = getWindow.get_mode()
 	
 	if mode == Window.MODE_FULLSCREEN:
+		resolutionList.set_disabled(true)
 		fullscreenCheckBox.set_pressed_no_signal(true)
 
 
@@ -57,7 +61,16 @@ func _on_back_button_pressed():
 
 
 func _on_fullscreen_check_box_toggled(toggled_on):
+	resolutionList.set_disabled(toggled_on)
 	if toggled_on:
 		get_window().set_mode(Window.MODE_FULLSCREEN)
 	else:
 		get_window().set_mode(Window.MODE_WINDOWED)
+
+
+func _on_scaling_slider_value_changed(value):
+	var resolutionScale = value/100.00
+	var resolutionText = str(round(get_window().get_size().x * resolutionScale)) + "x" + str(round(get_window().get_size().y * resolutionScale))
+	
+	scalingLabel.set_text(str(value)+"% - " + resolutionText)
+	get_viewport().set_scaling_3d_scale(resolutionScale)
