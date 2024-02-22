@@ -1,3 +1,6 @@
+CenterContainer
+OptionButton
+HBoxContainer
 Control
 Label
 GridContainer
@@ -8,7 +11,4 @@ SubViewport
 HSlider
 CheckButton
 RichTextLabel
-OptionButton
 Button
-VBoxContainer
-MarginContainer
