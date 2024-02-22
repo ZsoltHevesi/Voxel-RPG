@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://oskt4euxjg3l"]
 
-[ext_resource type="Script" path="res://scenes/menus/optionsMenu.gd" id="1_lrmko"]
+[ext_resource type="Script" path="res://scenes/menus/optionSetting.gd" id="1_53fs5"]
 
 [node name="optionsMenu" type="Control"]
 layout_mode = 3
@@ -9,41 +9,47 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lrmko")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="optionSetting" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+script = ExtResource("1_53fs5")
+
+[node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 
-[node name="shadowToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Shadows OFF/ON"
-
-[node name="ssaoToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "SSAO OFF/ON"
-
-[node name="glowToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Glow OFF/ON"
-
-[node name="scalingSlider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+[node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 min_value = 0.25
 max_value = 2.0
 step = 0.05
 value = 1.0
 
-[node name="backButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="shadowToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+text = "Shadows OFF/ON"
+
+[node name="ssaoToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+text = "SSAO OFF/ON"
+
+[node name="glowToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+text = "Glow OFF/ON"
+
+[node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 text = "Back"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/shadowToggle" to="." method="_on_shadow_toggle_toggled"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/ssaoToggle" to="." method="_on_ssao_toggle_toggled"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/glowToggle" to="." method="_on_glow_toggle_toggled"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/scalingSlider" to="." method="_on_scaling_slider_value_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/backButton" to="." method="_on_back_button_pressed"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
+[connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]

@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://drh5mxkvyiqon"]
 
 [ext_resource type="PackedScene" uid="uid://x3qxv5cjulff" path="res://scenes/menus/inventory/slot/slot.tscn" id="1_cronj"]
-[ext_resource type="Script" path="res://scenes/menus/inventory/slot/passive_slot.gd" id="2_7ouk2"]
+[ext_resource type="Script" path="res://scripts/inventory/passive_slot.gd" id="2_7ouk2"]
+
 
 [node name="passiveSlot" instance=ExtResource("1_cronj")]
 script = ExtResource("2_7ouk2")
