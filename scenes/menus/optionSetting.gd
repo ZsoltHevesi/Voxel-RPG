@@ -1,9 +1,12 @@
 extends VBoxContainer
 
-@onready var resolutionList = $resolutionList
+@onready var resolutionList = $resolutionBox/resolutionList
 @onready var fullscreenCheckBox = $fullscreenCheckBox
 @onready var scalingLabel = $scaleBox/scalingLabel
 @onready var scalingSlider = $scaleBox/scalingSlider
+@onready var scaleBox = $scaleBox
+@onready var fsrOptions = $fsrOptions
+@onready var vsyncOptions = $vsyncBox/vsyncOptions
 
 
 
@@ -28,10 +31,25 @@ func _ready():
 func checkVariables():
 	var getWindow = get_window()
 	var mode = getWindow.get_mode()
+	var vsyncMode = DisplayServer.window_get_vsync_mode()
 	
 	if mode == Window.MODE_FULLSCREEN:
 		resolutionList.set_disabled(true)
 		fullscreenCheckBox.set_pressed_no_signal(true)
+	
+	match vsyncMode:
+		DisplayServer.VSYNC_DISABLED:
+			vsyncOptions.select(0)
+			
+		DisplayServer.VSYNC_ENABLED:
+			vsyncOptions.select(1)
+			
+		DisplayServer.VSYNC_ADAPTIVE:
+			vsyncOptions.select(2)
+			
+		DisplayServer.VSYNC_MAILBOX:
+			vsyncOptions.select(3)
+			
 
 
 func addResolutions():
@@ -74,3 +92,51 @@ func _on_scaling_slider_value_changed(value):
 	
 	scalingLabel.set_text(str(value)+"% - " + resolutionText)
 	get_viewport().set_scaling_3d_scale(resolutionScale)
+
+
+func _on_scaling_mode_item_selected(index):
+	var getViewport = get_viewport()
+	match index:
+		0:
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+		1:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_BILINEAR)
+			scaleBox.show()
+			scalingSlider.set_editable(true)
+			fsrOptions.hide()
+		2:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR)
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+			fsrOptions.show()
+		3:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR2)
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+			fsrOptions.show()
+
+
+func _on_fsr_options_item_selected(index):
+	match index:
+		1:
+			_on_scaling_slider_value_changed(50.00)
+		2:
+			_on_scaling_slider_value_changed(59.00)
+		3:
+			_on_scaling_slider_value_changed(67.00)
+		4:
+			_on_scaling_slider_value_changed(77.00)
+
+
+
+func _on_vsync_options_item_selected(index):
+	match index:
+		0:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		1:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		2:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ADAPTIVE)
+		3:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX)

@@ -25,10 +25,41 @@ size_flags_horizontal = 4
 alignment = 1
 script = ExtResource("1_53fs5")
 
-[node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting"]
+[node name="resolutionBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 
+[node name="resolutionLabel" type="Label" parent="HBoxContainer/optionSetting/resolutionBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Resolution"
+
+[node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting/resolutionBox"]
+layout_mode = 2
+
+[node name="scaleModeBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="scalingModeLabel" type="Label" parent="HBoxContainer/optionSetting/scaleModeBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Scaling
+"
+
+[node name="scalingMode" type="OptionButton" parent="HBoxContainer/optionSetting/scaleModeBox"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "OFF"
+popup/item_0/id = 0
+popup/item_1/text = "Biliniar (Fastest)"
+popup/item_1/id = 1
+popup/item_2/text = "AMD FSR 1.0 (Fast)"
+popup/item_2/id = 2
+popup/item_3/text = "AMD FSR 2.2 (Slow)"
+popup/item_3/id = 3
+
 [node name="scaleBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+visible = false
 layout_mode = 2
 
 [node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting/scaleBox"]
@@ -44,27 +75,90 @@ ticks_on_borders = true
 layout_mode = 2
 text = "100% - 1920x1080"
 
+[node name="fsrOptions" type="OptionButton" parent="HBoxContainer/optionSetting"]
+visible = false
+layout_mode = 2
+item_count = 5
+selected = 0
+popup/item_0/text = "FSR options"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Performance"
+popup/item_1/id = 1
+popup/item_2/text = "Balanced"
+popup/item_2/id = 2
+popup/item_3/text = "Quality"
+popup/item_3/id = 3
+popup/item_4/text = "Ultra Quality"
+popup/item_4/id = 4
+
 [node name="fullscreenCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="shadowToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+[node name="vsyncBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
-text = "Shadows OFF/ON"
 
-[node name="ssaoToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+[node name="vsyncLabel" type="Label" parent="HBoxContainer/optionSetting/vsyncBox"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "SSAO OFF/ON"
+text = "VSync"
 
-[node name="glowToggle" type="CheckButton" parent="HBoxContainer/optionSetting"]
+[node name="vsyncOptions" type="OptionButton" parent="HBoxContainer/optionSetting/vsyncBox"]
 layout_mode = 2
-text = "Glow OFF/ON"
+item_count = 4
+selected = 0
+popup/item_0/text = "Disabled"
+popup/item_0/id = 0
+popup/item_1/text = "Enabled"
+popup/item_1/id = 1
+popup/item_2/text = "Adaptive"
+popup/item_2/id = 2
+popup/item_3/text = "Fast"
+popup/item_3/id = 3
+
+[node name="shadowBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="shadowLabel" type="Label" parent="HBoxContainer/optionSetting/shadowBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Shadows"
+
+[node name="shadowToggle" type="CheckButton" parent="HBoxContainer/optionSetting/shadowBox"]
+layout_mode = 2
+
+[node name="ssaoBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="ssaoLabel" type="Label" parent="HBoxContainer/optionSetting/ssaoBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "SSAO"
+
+[node name="ssaoToggle" type="CheckButton" parent="HBoxContainer/optionSetting/ssaoBox"]
+layout_mode = 2
+
+[node name="glowBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="glowLabel" type="Label" parent="HBoxContainer/optionSetting/glowBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Glow"
+
+[node name="glowToggle" type="CheckButton" parent="HBoxContainer/optionSetting/glowBox"]
+layout_mode = 2
 
 [node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 text = "Back"
 
-[connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionBox/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/scaleModeBox/scalingMode" to="HBoxContainer/optionSetting" method="_on_scaling_mode_item_selected"]
 [connection signal="value_changed" from="HBoxContainer/optionSetting/scaleBox/scalingSlider" to="HBoxContainer/optionSetting" method="_on_scaling_slider_value_changed"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/fsrOptions" to="HBoxContainer/optionSetting" method="_on_fsr_options_item_selected"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/fullscreenCheckBox" to="HBoxContainer/optionSetting" method="_on_fullscreen_check_box_toggled"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/vsyncBox/vsyncOptions" to="HBoxContainer/optionSetting" method="_on_vsync_options_item_selected"]
 [connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]
