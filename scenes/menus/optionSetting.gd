@@ -1,12 +1,13 @@
 extends VBoxContainer
 
 @onready var resolutionList = $resolutionBox/resolutionList
-@onready var fullscreenCheckBox = $fullscreenCheckBox
+@onready var fullscreenCheckBox = $fullscreenBox/fullscreenCheckBox
 @onready var scalingLabel = $scaleBox/scalingLabel
 @onready var scalingSlider = $scaleBox/scalingSlider
 @onready var scaleBox = $scaleBox
 @onready var fsrOptions = $fsrOptions
-@onready var vsyncOptions = $vsyncBox/vsyncOptions
+@onready var vsyncCheckBox = $vsyncBox/vsyncCheckBox
+
 
 
 
@@ -37,19 +38,8 @@ func checkVariables():
 		resolutionList.set_disabled(true)
 		fullscreenCheckBox.set_pressed_no_signal(true)
 	
-	match vsyncMode:
-		DisplayServer.VSYNC_DISABLED:
-			vsyncOptions.select(0)
-			
-		DisplayServer.VSYNC_ENABLED:
-			vsyncOptions.select(1)
-			
-		DisplayServer.VSYNC_ADAPTIVE:
-			vsyncOptions.select(2)
-			
-		DisplayServer.VSYNC_MAILBOX:
-			vsyncOptions.select(3)
-			
+	if vsyncMode == DisplayServer.VSYNC_ENABLED:
+		vsyncCheckBox.set_pressed_no_signal(true)
 
 
 func addResolutions():
@@ -129,14 +119,8 @@ func _on_fsr_options_item_selected(index):
 			_on_scaling_slider_value_changed(77.00)
 
 
-
-func _on_vsync_options_item_selected(index):
-	match index:
-		0:
-			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-		1:
+func _on_vsync_check_box_toggled(toggled_on):
+		if toggled_on:
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
-		2:
-			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ADAPTIVE)
-		3:
-			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX)
+		else:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)

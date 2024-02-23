@@ -1,4 +1,3 @@
 res://scenes/menus/optionsMenu.tscn
 res://scripts/player/Camera3D.gd
-res://scenes/menus/optionSetting.gd
-res://scenes/menus/mainMenu.tscn
+res://resources/userPreferences.gd

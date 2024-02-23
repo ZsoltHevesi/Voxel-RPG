@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708610597
+::res://::1708651973
 icon.svg::CompressedTexture2D::7874682967027633112::1708610583::1708610583::1::::<><>::
 Mixamo BoneMap.tres::BoneMap::669624810488455992::1708610583::0::1::::<><>::
 README.md::TextFile::-1::1708610583::0::1::::<><>::
@@ -88,6 +88,8 @@ chateauWindows.obj::Mesh::4429330904756026995::1708610583::1708610583::1::::<><>
 ::res://assets/models/weapon models/::1708610583
 flintLock.obj::Mesh::8876240095230149008::1708610583::1708610583::1::::<><>::
 longSword.obj::Mesh::6586511132633490956::1708610583::1708610583::1::::<><>::
+::res://resources/::1708631074
+userPreferences.gd::GDScript::-1::1708631074::0::1::::userPreferences<>Resource<>::
 ::res://scenes/::1708610583
 ::res://scenes/decorations/::1708610583
 ::res://scenes/decorations/furniture/::1708610583
@@ -107,10 +109,10 @@ level1.tscn::PackedScene::5662476844370793964::1708610583::0::1::::<><>::uid://b
 ::res://scenes/levels/test/::1708610583
 test-area.tscn::PackedScene::8280896395346456651::1708610583::0::1::::<><>::uid://cnilsnt05jp4u::::res://assets/materials/diffuse/boneDIFF1.tres<>uid://bjd5xjvsg3ldh::::res://assets/materials/diffuse/crimsonDIFF1.tres<>uid://xxjrlc78o5oi::::res://assets/materials/diffuse/brownDIFF1.tres<>uid://87k3ka1johal::::res://assets/materials/diffuse/greyDIFF3.tres<>uid://frtgj5uj6n7s::::res://scenes/player/player.tscn<>uid://dn0l71e7a6i0c::::res://scenes/decorations/furniture/woodRockingChair1.tscn<>uid://dcepdv2dfic5l::::res://scenes/levels/test/test-area.VoxelGI_data.res<>uid://b28y412e8tws::::res://scenes/enemies/clanger/e_clanger.tscn
 test-area.VoxelGI_data.res::VoxelGIData::7308814506488196671::1708610583::0::1::::<><>::
-::res://scenes/menus/::1708610583
-mainMenu.tscn::PackedScene::260163532246954956::1708610583::0::1::::<><>::res://scripts/menu/mainMenu.gd
-optionSetting.gd::GDScript::-1::1708610583::0::1::::<>VBoxContainer<>::
-optionsMenu.tscn::PackedScene::1020445240813564691::1708610583::0::1::::<><>::res://scenes/menus/optionSetting.gd
+::res://scenes/menus/::1708629942
+mainMenu.tscn::PackedScene::260163532246954956::1708618180::0::1::::<><>::res://scripts/menu/mainMenu.gd
+optionSetting.gd::GDScript::-1::1708629817::0::1::::<>VBoxContainer<>::
+optionsMenu.tscn::PackedScene::1020445240813564691::1708629942::0::1::::<><>::res://scenes/menus/optionSetting.gd
 ::res://scenes/menus/inventory/::1708610583
 inventory.tscn::PackedScene::2976407383753479003::1708610583::0::1::::<><>::uid://x3qxv5cjulff::::res://scenes/menus/inventory/slot/slot.tscn<>uid://drh5mxkvyiqon::::res://scenes/menus/inventory/slot/passive_slot.tscn
 ::res://scenes/menus/inventory/slot/::1708610583
@@ -164,8 +166,8 @@ slot.gd::GDScript::-1::1708610583::0::1::::Slot<>PanelContainer<>::
 stats.gd::GDScript::-1::1708610583::0::1::::<>TextureRect<>::
 ::res://scripts/menu/::1708610583
 mainMenu.gd::GDScript::-1::1708610583::0::1::::<>Control<>::
-::res://scripts/player/::1708610583
-Camera3D.gd::GDScript::-1::1708610583::0::1::::<>Camera3D<>::
+::res://scripts/player/::1708610737
+Camera3D.gd::GDScript::-1::1708610737::0::1::::<>Camera3D<>::
 HealthBar.gd::GDScript::-1::1708610583::0::1::::<>Control<>::
 player.gd::GDScript::-1::1708610583::0::1::::<>CharacterBody3D<>::
 remoteTransforms.gd::GDScript::-1::1708610583::0::1::::<>Node3D<>::
