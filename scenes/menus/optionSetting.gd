@@ -1,6 +1,15 @@
 extends VBoxContainer
 
-@onready var resolutionList = $resolutionList
+@onready var resolutionList = $resolutionBox/resolutionList
+@onready var fullscreenCheckBox = $fullscreenBox/fullscreenCheckBox
+@onready var scalingLabel = $scaleBox/scalingLabel
+@onready var scalingSlider = $scaleBox/scalingSlider
+@onready var scaleBox = $scaleBox
+@onready var fsrOptions = $fsrOptions
+@onready var vsyncCheckBox = $vsyncBox/vsyncCheckBox
+
+
+
 
 var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 								"1600x900" : Vector2i(1600, 900),
@@ -18,11 +27,29 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 
 func _ready():
 	addResolutions()
+	checkVariables()
+	
+func checkVariables():
+	var getWindow = get_window()
+	var mode = getWindow.get_mode()
+	var vsyncMode = DisplayServer.window_get_vsync_mode()
+	
+	if mode == Window.MODE_FULLSCREEN:
+		resolutionList.set_disabled(true)
+		fullscreenCheckBox.set_pressed_no_signal(true)
+	
+	if vsyncMode == DisplayServer.VSYNC_ENABLED:
+		vsyncCheckBox.set_pressed_no_signal(true)
 
 
 func addResolutions():
+	var currentResolution = get_window().get_size()
+	var id = 0
 	for r in resolutions:
 		resolutionList.add_item(r)
+		if resolutions[r] == currentResolution:
+			resolutionList.select(id)
+		id += 1
 
 
 func _on_resolution_list_item_selected(index):
@@ -39,3 +66,61 @@ func centerScreen():
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/mainMenu.tscn")
+
+
+func _on_fullscreen_check_box_toggled(toggled_on):
+	resolutionList.set_disabled(toggled_on)
+	if toggled_on:
+		get_window().set_mode(Window.MODE_FULLSCREEN)
+	else:
+		get_window().set_mode(Window.MODE_WINDOWED)
+
+
+func _on_scaling_slider_value_changed(value):
+	var resolutionScale = value/100.00
+	var resolutionText = str(round(get_window().get_size().x * resolutionScale)) + "x" + str(round(get_window().get_size().y * resolutionScale))
+	
+	scalingLabel.set_text(str(value)+"% - " + resolutionText)
+	get_viewport().set_scaling_3d_scale(resolutionScale)
+
+
+func _on_scaling_mode_item_selected(index):
+	var getViewport = get_viewport()
+	match index:
+		0:
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+		1:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_BILINEAR)
+			scaleBox.show()
+			scalingSlider.set_editable(true)
+			fsrOptions.hide()
+		2:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR)
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+			fsrOptions.show()
+		3:
+			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR2)
+			scaleBox.hide()
+			scalingSlider.set_editable(false)
+			fsrOptions.show()
+
+
+func _on_fsr_options_item_selected(index):
+	match index:
+		1:
+			_on_scaling_slider_value_changed(50.00)
+		2:
+			_on_scaling_slider_value_changed(59.00)
+		3:
+			_on_scaling_slider_value_changed(67.00)
+		4:
+			_on_scaling_slider_value_changed(77.00)
+
+
+func _on_vsync_check_box_toggled(toggled_on):
+		if toggled_on:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		else:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
