@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://bqhd5qtvwp261"]
 
-[ext_resource type="VoxelGIData" uid="uid://bcvl0f561a7qv" path="res://scenes/tilesets/chateau scene/chateau.VoxelGI_data.res" id="1_p7sj4"]
+[ext_resource type="VoxelGIData" uid="uid://bcvl0f561a7qv" path="res://scenes/tiles/chateau scene/chateau.VoxelGI_data.res" id="1_p7sj4"]
 [ext_resource type="ArrayMesh" uid="uid://rvrufjie5uab" path="res://assets/models/tilesets/chateu/chateauCourtYard.obj" id="1_xnssj"]
 [ext_resource type="ArrayMesh" uid="uid://bnpmvc2xpkq2t" path="res://assets/models/tilesets/chateu/chateauCourtyardMonument.obj" id="2_mllu3"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="3_341ty"]
@@ -49,6 +49,8 @@ data = ExtResource("1_p7sj4")
 mesh = ExtResource("1_xnssj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="courtYard"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="courtYard/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_i0mbg")
@@ -58,6 +60,8 @@ mesh = ExtResource("2_mllu3")
 surface_material_override/0 = ExtResource("3_341ty")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="courtyardMonument"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="courtyardMonument/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_0woa3")
@@ -73,6 +77,8 @@ mesh = ExtResource("4_fq6lf")
 mesh = ExtResource("5_884uf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsUP"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsUP/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_k0wdo")
@@ -81,6 +87,8 @@ shape = SubResource("ConcavePolygonShape3D_k0wdo")
 mesh = ExtResource("6_7ba18")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="roomUP"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="roomUP/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sgvof")
@@ -89,6 +97,8 @@ shape = SubResource("ConcavePolygonShape3D_sgvof")
 mesh = ExtResource("7_wk0o2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="roomUPWall"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="roomUPWall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_xy6ou")
@@ -98,6 +108,8 @@ mesh = ExtResource("8_0e38v")
 surface_material_override/0 = ExtResource("10_6ddhp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="castleWALLS"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="castleWALLS/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_xfule")
@@ -107,6 +119,8 @@ mesh = ExtResource("9_efejh")
 surface_material_override/0 = ExtResource("12_fnwgq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="windows"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="windows/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_yxdpd")

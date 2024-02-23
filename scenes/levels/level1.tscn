@@ -1,9 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
 
-[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tilesets/chateau scene/chateau.tscn" id="1_3vodl"]
+[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_3vodl"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_1g6fl"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_n32nu"]
 [ext_resource type="Script" path="res://scripts/player/HealthBar.gd" id="4_xbw4e"]
+
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

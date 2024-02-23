@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=39 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn" id="7_ntxyt"]
 [ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="7_uxe3y"]
 [ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="8_dnsbo"]
-[ext_resource type="Script" path="res://scripts/player/remoteTransforms.gd" id="13_vfudf"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -117,10 +116,11 @@ nodes/weaponBlend/node = SubResource("AnimationNodeBlend2_0t0c1")
 nodes/weaponBlend/position = Vector2(1210, 1020)
 node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"shootOneShot", &"aimTransition", 1, &"notAiming", &"airGroundTransition", 0, &"inAir", &"airGroundTransition", 1, &"weaponBlend", &"output", 0, &"airGroundTransition", &"runTimeScale", 0, &"run", &"shootOneShot", 0, &"aiming", &"shootOneShot", 1, &"shooting", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_t31la"]
-size = Vector3(0.6, 1.7, 0.6)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk1wm"]
+radius = 0.38
+height = 1.75
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_501mk"]
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_6gw00"]
 length = 0.51
 
 [node name="Player" type="CharacterBody3D"]
@@ -223,83 +223,36 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 7.45058e-09, 8.74228e-08, 7.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="cameraMount"]
-transform = Transform3D(0.948324, 0, 0.317305, 0, 1, 0, -0.317305, 0, 0.948324, 0, 0.7, 0)
-spring_length = 2.43
+transform = Transform3D(0.948324, -0.0550994, 0.312484, 0, 0.984808, 0.173648, -0.317305, -0.164675, 0.933917, 0, 0.270261, 0)
+collision_mask = 2
+spring_length = 2.47
 
 [node name="Camera3D" type="Camera3D" parent="cameraMount/SpringArm3D"]
-transform = Transform3D(0.948323, 0, -0.317305, 0, 1, 0, 0.317305, 0, 0.948323, 0.003, 0, 2.426)
+transform = Transform3D(0.948323, -7.45057e-09, -0.317305, -0.0550994, 0.984808, -0.164675, 0.312484, 0.173648, 0.933916, 0.00300051, 0.00194001, 2.46377)
 
-[node name="remoteTransforms" type="Node3D" parent="."]
-script = ExtResource("13_vfudf")
+[node name="collisionCapsule" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+shape = SubResource("CapsuleShape3D_rk1wm")
 
-[node name="collisionBoxRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
-remote_path = NodePath("../../collisionBox")
+[node name="sepRayLeft" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
 
-[node name="frontLeftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, -0.31)
-remote_path = NodePath("../../frontLeftSepRay")
+[node name="sepRayFL" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
 
-[node name="frontRightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, -0.31)
-remote_path = NodePath("../../frontRightSepRay")
+[node name="sepRayFront" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
 
-[node name="frontRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.31)
-remote_path = NodePath("../../frontSepRay")
+[node name="sepRayFR" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
 
-[node name="backLeftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0.31)
-remote_path = NodePath("../../backLeftSepRay")
+[node name="sepRayRight" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
 
-[node name="leftRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0)
-remote_path = NodePath("../../leftSepRay")
-
-[node name="backRightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0.31)
-remote_path = NodePath("../../backRightSepRay")
-
-[node name="rightRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0)
-remote_path = NodePath("../../rightSepRay")
-
-[node name="backRemTrans" type="RemoteTransform3D" parent="remoteTransforms"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, 0.31)
-remote_path = NodePath("../../backSepRay")
-
-[node name="collisionBox" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
-shape = SubResource("BoxShape3D_t31la")
-
-[node name="frontLeftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="frontSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="frontRightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, -0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backLeftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="leftSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.31, 0.51, 0)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="backRightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0.31)
-shape = SubResource("SeparationRayShape3D_501mk")
-
-[node name="rightSepRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.31, 0.51, 0)
-shape = SubResource("SeparationRayShape3D_501mk")
+[node name="checkStairsRayCast" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.5, 0)
