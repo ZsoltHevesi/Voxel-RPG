@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bin1826yyqi48"]
+[gd_scene load_steps=6 format=3 uid="uid://bin1826yyqi48"]
 
 [ext_resource type="PackedScene" uid="uid://x3qxv5cjulff" path="res://scenes/menus/inventory/slot/slot.tscn" id="1_kp8mv"]
 [ext_resource type="PackedScene" uid="uid://drh5mxkvyiqon" path="res://scenes/menus/inventory/slot/passive_slot.tscn" id="2_drikf"]
+[ext_resource type="Script" path="res://scripts/inventory/character.gd" id="2_gywao"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fsbjk"]
 
@@ -217,6 +218,7 @@ layout_mode = 2
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("2_gywao")
 
 [node name="passiveSlot" parent="UI/character" instance=ExtResource("2_drikf")]
 layout_mode = 0
@@ -297,6 +299,16 @@ offset_top = 792.0
 offset_right = 324.0
 offset_bottom = 912.0
 slot_type = 9
+
+[node name="DMG" type="Label" parent="UI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 55.0
+offset_right = 136.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 40
 
 [editable path="UI/inventory/slot1"]
 [editable path="UI/inventory/slot2"]

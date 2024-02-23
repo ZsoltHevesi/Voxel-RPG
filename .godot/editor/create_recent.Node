@@ -1,7 +1,7 @@
+Label
 RayCast3D
 CollisionShape3D
 CheckBox
-Label
 HBoxContainer
 OptionButton
 CenterContainer
@@ -12,4 +12,3 @@ PanelContainer
 MeshInstance3D
 SubViewport
 HSlider
-CheckButton
