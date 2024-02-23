@@ -8,6 +8,10 @@ extends TextureRect
 	set(value):
 		dmg = value
 		%debug.text = str(dmg)
+		
+		# Calculate for any change in DMG, in PassiveSlot
+		if get_parent() is PassiveSlot:
+			get_parent().get_parent().calculate()
 
 # Dictionary for properties
 @onready var property: Dictionary = {"TEXTURE": texture,

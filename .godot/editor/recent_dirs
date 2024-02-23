@@ -1,5 +1,6 @@
+F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/AutoLoad
+res://scripts/inventory
 res://scenes/menus/inventory/slot
-res://scripts/settings
 res://scenes/menus
 res://scenes
 res://scenes/decorations/lamps
@@ -13,7 +14,6 @@ res://scenes/levels
 res://assets/materials/emission
 res://assets/materials/transparent
 res://assets/materials/metallic
-C:/Users/Zslot/Desktop/me folder/somePrograms/Godot v4.2/FBX2glTF-windows-x86_64
 res://assets/materials/diffuse
 res://assets/materials
 res://assets/models

@@ -15,7 +15,8 @@ class_name Slot
 			 "RIGHT_LEG:8",
 			 "LEFT_FOOT:9",
 			 "RIGHT_FOOT:10",
-			 "ACTIVE:11") var slot_type : int
+			 "MELEE:11",
+			 "GUN:12") var slot_type : int
 
 
 # Return drag data
@@ -36,6 +37,7 @@ func _drop_data(_pos, data):
 	texture_rect.property = data.property
 	data.property = temp
 
+
 # Get preview of texture while dragging
 func get_preview():
 	var preview_texture = TextureRect.new() #New instance of TextureRect
@@ -50,3 +52,7 @@ func get_preview():
 	preview.add_child(preview_texture)
 	
 	return preview
+
+# 
+func get_DMG():
+	return texture_rect.dmg

@@ -15,3 +15,10 @@ res://scenes/tiles/chateau scene/chateau.tscn
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
+res://scenes/menus/inventory/inventory.tscn
+res://scripts/inventory/character.gd
+res://scenes/menus/inventory/slot/slot.tscn
+res://scripts/inventory/slot.gd
+res://scripts/inventory/stats.gd
+res://scenes/menus/inventory/slot/passive_slot.tscn
+res://AutoLoad/database.json
