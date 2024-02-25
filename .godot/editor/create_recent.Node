@@ -1,6 +1,9 @@
+CollisionShape3D
+NavigationAgent3D
+NavigationRegion3D
+MeshInstance3D
 Label
 RayCast3D
-CollisionShape3D
 CheckBox
 HBoxContainer
 OptionButton
@@ -9,6 +12,3 @@ Control
 GridContainer
 TextureRect
 PanelContainer
-MeshInstance3D
-SubViewport
-HSlider

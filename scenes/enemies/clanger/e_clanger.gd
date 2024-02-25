@@ -1,27 +1,37 @@
 extends CharacterBody3D
 
-# Variables for the player health
-var maxHealth = 100
-var currentHealth = maxHealth
+var speed = 5
+var accel = 15
+var JUMP_VELOCITY = 6 # Jump height y-axis
 
-func takeDamage(amount):
-	currentHealth -= amount
-	if currentHealth <= 0:
-		# Function to handle player death
-		die()
-		
-func die():
-	# Implementing logic for player death (death animations, resetting health etc.)
-	currentHealth = maxHealth
+@onready var nav: NavigationAgent3D = $NavigationAgent3D
+@onready var player = $"../Player"
 
-func heal(amount):
-	currentHealth += amount
-	if currentHealth > maxHealth:
-		currentHealth = maxHealth
-		
+func _ready():
+	# Assuming the player is assigned under the name "Player" in the editor
+	if player:
+		print("Player assigned successfully.")
+	else:
+		print("Player not found or assigned.")
 
 func _physics_process(delta):
-	# Example: Check for player health and take damage if needed
-	if Input.is_action_just_pressed("takeDamage"):
-		# Amount of damage can be adjusted as needed
-		takeDamage(20) 
+	
+	
+#AI pathfinding logic
+	if player:
+		# Set the player's position as the target position for navigation
+		nav.target_position = player.global_transform.origin
+		
+		# Calculate direction towards the player
+		var direction = nav.target_position - global_position
+		direction = direction.normalized()
+		
+		# Apply movement
+		velocity = velocity.lerp(direction * speed, accel * delta)
+			
+		move_and_slide()
+		
+		look_at(player.global_transform.origin, Vector3.UP)
+		
+	else:
+		print("Player not assigned or found.")

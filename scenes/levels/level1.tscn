@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=13 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_3vodl"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_1g6fl"]
+[ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="3_bmkbk"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_n32nu"]
 [ext_resource type="Script" path="res://scripts/player/HealthBar.gd" id="4_xbw4e"]
-
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -23,6 +23,9 @@ glow_enabled = true
 fog_light_color = Color(0.941176, 0.94902, 0.956863, 1)
 fog_density = 0.0002
 volumetric_fog_density = 0.008
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uj5s5"]
+size = Vector3(1, 1.5, 1)
 
 [sub_resource type="Theme" id="Theme_gps74"]
 
@@ -51,10 +54,24 @@ shadow_enabled = true
 [node name="Chateau" parent="map/tilesets" instance=ExtResource("1_3vodl")]
 
 [node name="clanger" parent="map" instance=ExtResource("3_n32nu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 64.5, 0.236501)
+transform = Transform3D(-0.156435, 0, -0.987688, 0, 1, 0, 0.987688, 0, -0.156435, -29.7809, 66.9022, -0.860325)
+script = ExtResource("3_bmkbk")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="map/clanger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.805099, 0)
+shape = SubResource("BoxShape3D_uj5s5")
 
 [node name="clanger2" parent="map" instance=ExtResource("3_n32nu")]
-transform = Transform3D(0.995214, 0, -0.0977222, 0, 1, 0, 0.0977222, 0, 0.995214, 0.606, 66, 36.773)
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, 26.4344, 66.1622, -0.683856)
+script = ExtResource("3_bmkbk")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger2"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="map/clanger2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.805099, 0)
+shape = SubResource("BoxShape3D_uj5s5")
 
 [node name="Player" parent="map" instance=ExtResource("2_1g6fl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
