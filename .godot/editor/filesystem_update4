@@ -14,6 +14,6 @@ res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
+res://scenes/enemies/clanger/e_clanger.gd
 res://scenes/player/player.tscn
 res://scenes/tiles/chateau scene/chateau.tscn
-res://scenes/enemies/clanger/e_clanger.gd
