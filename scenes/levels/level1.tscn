@@ -54,7 +54,7 @@ shadow_enabled = true
 [node name="Chateau" parent="map/tilesets" instance=ExtResource("1_3vodl")]
 
 [node name="clanger" parent="map" instance=ExtResource("3_n32nu")]
-transform = Transform3D(-0.156435, 0, -0.987688, 0, 1, 0, 0.987688, 0, -0.156435, -29.7809, 66.9022, -0.860325)
+transform = Transform3D(-0.951056, 0, -0.309017, 0, 1, 0, 0.309017, 0, -0.951056, 7.25202, 63.5816, -2.50055)
 script = ExtResource("3_bmkbk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger"]
@@ -64,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.805099, 0)
 shape = SubResource("BoxShape3D_uj5s5")
 
 [node name="clanger2" parent="map" instance=ExtResource("3_n32nu")]
-transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, 26.4344, 66.1622, -0.683856)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.380249, 65.3052, 34.0394)
 script = ExtResource("3_bmkbk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger2"]

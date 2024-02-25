@@ -1,4 +1,4 @@
-res://scenes/menus/optionsMenu.tscn
+res://scenes/levels/level1.tscn
 res://scripts/player/Camera3D.gd
 res://assets/materials/metallic/greyMET1.tres
 res://assets/materials/diffuse/greyDIFF1.tres
@@ -12,12 +12,8 @@ res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
-res://scenes/player/player.tscn
-res://scenes/tiles/chateau scene/chateau.tscn
-res://scenes/menus/inventory/slot/passive_slot.tscn
-res://scenes/menus/inventory/inventory.tscn
-res://scenes/menus/inventory/slot/slot.tscn
-res://scenes/levels/level1.tscn
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
+res://scenes/player/player.tscn
+res://scenes/tiles/chateau scene/chateau.tscn
 res://scenes/enemies/clanger/e_clanger.gd
