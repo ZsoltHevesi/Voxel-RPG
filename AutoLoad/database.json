@@ -2,62 +2,62 @@
 	"0" : {
 		"texture" : "solomonHead.png",
 		"slot_type" : 1,
-		"dmg" : 3
+		"dmg" : 20
 	},
 	"1" : {
 		"texture" : "solomonTorso.png",
 		"slot_type" : 2,
-		"dmg" : 5
+		"dmg" : 20
 	},
 	"2" : {
 		"texture" : "solomonLeftShoulder.png",
 		"slot_type" : 3,
-		"dmg" : 2
+		"dmg" : 20
 	},
 	"3" : {
 		"texture" : "solomonRightShoulder.png",
 		"slot_type" : 4,
-		"dmg" : 2
+		"dmg" : 20
 	},
 	"4" : {
 		"texture" : "solomonLeftHand.png",
 		"slot_type" : 5,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"5" : {
 		"texture" : "solomonRightHand.png",
 		"slot_type" : 6,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"6" : {
 		"texture" : "solomonLeftLeg.png",
 		"slot_type" : 7,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"7" : {
 		"texture" : "solomonRightLeg.png",
 		"slot_type" : 8,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"8" : {
 		"texture" : "solomonLeftFoot.png",
 		"slot_type" : 9,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"9" : {
 		"texture" : "solomonRightFoot.png",
 		"slot_type" : 10,
-		"dmg" : 1
+		"dmg" : 20
 	},
 	"10" : {
 		"texture" : "longSword.png",
 		"slot_type" : 11,
-		"dmg" : 15
+		"dmg" : 30
 	},
 	"11" : {
 		"texture" : "flintlock.png",
 		"slot_type" : 11,
-		"dmg" : 30
+		"dmg" : 60
 	},
 	
 }

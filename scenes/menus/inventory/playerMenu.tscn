@@ -1,0 +1,302 @@
+[gd_scene load_steps=6 format=3 uid="uid://bin1826yyqi48"]
+
+[ext_resource type="Script" path="res://scripts/inventory/UI.gd" id="1_yg07x"]
+[ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="2_a624s"]
+[ext_resource type="PackedScene" uid="uid://x3qxv5cjulff" path="res://scenes/menus/inventory/slot/slot.tscn" id="3_rwh5q"]
+[ext_resource type="Script" path="res://scripts/inventory/character.gd" id="4_k6ifo"]
+[ext_resource type="PackedScene" uid="uid://drh5mxkvyiqon" path="res://scenes/menus/inventory/slot/passive_slot.tscn" id="5_rii7g"]
+
+[node name="playerMenu" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yg07x")
+
+[node name="inventory" type="GridContainer" parent="UI"]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 172.0
+offset_right = 1726.0
+offset_bottom = 912.0
+columns = 10
+script = ExtResource("2_a624s")
+
+[node name="slot1" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot2" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot5" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot6" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot7" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot8" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot9" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot10" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot11" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot12" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot13" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot14" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot15" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot16" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot17" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot18" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot19" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot20" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot21" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot22" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot23" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot24" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot25" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot26" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot27" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot28" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot29" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot30" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot31" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot32" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot33" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot34" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot35" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot36" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot37" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot38" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot39" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot40" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot41" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot42" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot43" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot44" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot45" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot46" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot47" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot48" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot49" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot50" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot51" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot52" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot53" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot54" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot55" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot56" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot57" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot58" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot59" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot60" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="character" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_k6ifo")
+
+[node name="passiveSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 255.0
+offset_right = 395.0
+offset_bottom = 375.0
+slot_type = 1
+
+[node name="passiveSlot2" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 427.0
+offset_right = 401.0
+offset_bottom = 547.0
+slot_type = 2
+
+[node name="passiveSlot3" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 371.0
+offset_right = 535.0
+offset_bottom = 491.0
+slot_type = 3
+
+[node name="passiveSlot4" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 380.0
+offset_right = 266.0
+offset_bottom = 500.0
+slot_type = 4
+
+[node name="passiveSlot5" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 512.0
+offset_right = 264.0
+offset_bottom = 632.0
+slot_type = 6
+
+[node name="passiveSlot6" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 515.0
+offset_right = 533.0
+offset_bottom = 635.0
+slot_type = 5
+
+[node name="passiveSlot7" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 649.0
+offset_right = 484.0
+offset_bottom = 769.0
+slot_type = 7
+
+[node name="passiveSlot10" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 792.0
+offset_right = 481.0
+offset_bottom = 912.0
+slot_type = 9
+
+[node name="passiveSlot8" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 648.0
+offset_right = 320.0
+offset_bottom = 768.0
+slot_type = 8
+
+[node name="passiveSlot9" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 792.0
+offset_right = 324.0
+offset_bottom = 912.0
+slot_type = 10
+
+[node name="DMG" type="Label" parent="UI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 55.0
+offset_right = 136.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 40

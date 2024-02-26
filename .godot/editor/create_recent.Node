@@ -1,11 +1,11 @@
+CollisionShape3D
+Area3D
 NavigationRegion3D
 NavigationAgent3D
 Node3D
 MeshInstance3D
 OccluderInstance3D
-Area3D
 ProgressBar
-CollisionShape3D
 Label
 RayCast3D
 CheckBox

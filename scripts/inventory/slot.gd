@@ -18,6 +18,8 @@ class_name Slot
 			 "MELEE:11",
 			 "GUN:12") var slot_type : int
 
+var filled : bool = false
+
 
 # Return drag data
 func _get_drag_data(at_position):
@@ -53,6 +55,14 @@ func get_preview():
 	
 	return preview
 
-# 
+# Get damage
 func get_DMG():
 	return texture_rect.dmg
+
+func set_property(data):
+	texture_rect.property = data
+	
+	if data["TEXTURE"] == null:
+		filled = false
+	else:
+		filled = true
