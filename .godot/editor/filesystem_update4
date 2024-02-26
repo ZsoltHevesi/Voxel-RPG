@@ -1,4 +1,3 @@
-res://scenes/enemies/clanger/e_clanger.gd
 res://scenes/player/player.tscn
 res://scripts/player/Camera3D.gd
 res://assets/materials/metallic/greyMET1.tres
@@ -12,5 +11,8 @@ res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
-res://scripts/player/player.gd
 res://scenes/enemies/clanger/e_clanger.tscn
+res://scenes/levels/level1.tscn
+res://assets/materials/metallic/goldMET1.tres
+res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
+res://assets/materials/transparent/clearGlass_Refr.tres

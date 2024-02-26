@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=9 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_3vodl"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_1g6fl"]
-[ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="3_bmkbk"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_n32nu"]
 [ext_resource type="Script" path="res://scripts/player/HealthBar.gd" id="4_xbw4e"]
 
@@ -27,17 +26,6 @@ volumetric_fog_density = 0.008
 [sub_resource type="BoxShape3D" id="BoxShape3D_uj5s5"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="Theme" id="Theme_gps74"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxaq8"]
-bg_color = Color(0.913725, 0.121569, 0, 1)
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_hfhkw"]
-content_margin_left = 1.0
-content_margin_top = 1.0
-content_margin_right = 1.0
-content_margin_bottom = 1.0
-
 [node name="world" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -55,7 +43,6 @@ shadow_enabled = true
 
 [node name="clanger" parent="map" instance=ExtResource("3_n32nu")]
 transform = Transform3D(-0.951056, 0, -0.309017, 0, 1, 0, 0.309017, 0, -0.951056, 7.25202, 63.5816, -2.50055)
-script = ExtResource("3_bmkbk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger"]
 
@@ -65,7 +52,6 @@ shape = SubResource("BoxShape3D_uj5s5")
 
 [node name="clanger2" parent="map" instance=ExtResource("3_n32nu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.380249, 65.3052, 34.0394)
-script = ExtResource("3_bmkbk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="map/clanger2"]
 
@@ -84,13 +70,3 @@ offset_bottom = 40.0
 script = ExtResource("4_xbw4e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="HealthBar"]
-
-[node name="HealthBar" type="ProgressBar" parent="HealthBar/CanvasLayer"]
-layout_direction = 2
-offset_right = 172.0
-offset_bottom = 14.0
-theme = SubResource("Theme_gps74")
-theme_override_styles/background = SubResource("StyleBoxFlat_lxaq8")
-theme_override_styles/fill = SubResource("StyleBoxLine_hfhkw")
-step = 1.0
-show_percentage = false
