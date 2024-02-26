@@ -32,7 +32,11 @@ var maxHealth = 100
 var currentHealth = maxHealth
 
 func takeDamage(amount):
-	currentHealth -= amount
+	if amount < maxHealth:
+		currentHealth -= amount
+	else:
+		maxHealth = 0
+	$cameraMount/SpringArm3D/Camera3D/HealthBar.value = maxHealth
 	if currentHealth <= 0:
 		# Function to handle player death
 		die()

@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=17 format=3 uid="uid://b28y412e8tws"]
 
+[ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="1_fbqvk"]
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
 [ext_resource type="ArrayMesh" uid="uid://cbm3hdsxtec5w" path="res://assets/models/enemy/clanger/leftFoot.obj" id="2_1jy03"]
 [ext_resource type="ArrayMesh" uid="uid://crvj6gkfr6cjt" path="res://assets/models/enemy/clanger/leftLeg.obj" id="3_6lqky"]
@@ -19,6 +20,7 @@
 size = Vector3(0.6, 1.7, 0.6)
 
 [node name="clanger" type="CharacterBody3D"]
+script = ExtResource("1_fbqvk")
 
 [node name="visuals" type="Node3D" parent="."]
 
@@ -111,3 +113,11 @@ surface_material_override/3 = ExtResource("12_ofklv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("BoxShape3D_smcg0")
+
+[node name="HitBox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("BoxShape3D_smcg0")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
