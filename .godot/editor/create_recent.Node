@@ -1,3 +1,5 @@
+Area3D
+ProgressBar
 CollisionShape3D
 NavigationAgent3D
 NavigationRegion3D
@@ -11,4 +13,3 @@ CenterContainer
 Control
 GridContainer
 TextureRect
-PanelContainer

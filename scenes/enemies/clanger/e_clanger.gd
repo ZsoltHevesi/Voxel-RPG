@@ -23,6 +23,10 @@ func heal(amount):
 	currentHealth += amount
 	if currentHealth > maxHealth:
 		currentHealth = maxHealth
+		
+func _on_hit_box_body_entered(body):
+	if body.is_in_group("player"):
+		body.call("takeDamage", 10)  # Adjust the amount of damage as needed
 
 
 func _ready():
@@ -64,3 +68,4 @@ func _physics_process(delta):
 			velocity = Vector3.ZERO
 	else:
 		print("Player not assigned or found.")
+
