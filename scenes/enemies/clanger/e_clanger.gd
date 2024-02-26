@@ -125,6 +125,7 @@ func _physics_process(delta):
 			
 			_rotate_sep_ray()
 			move_and_slide()
+			_snap_down_stairs_check()
 			
 			look_at(player.global_transform.origin, Vector3.UP)
 		else:
