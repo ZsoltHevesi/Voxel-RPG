@@ -26,3 +26,14 @@ res://scenes/decorations/lamps/biggerChandelier.tscn
 res://scenes/tiles/chateau scene/chateau.VoxelGI_data.res
 res://scripts/player/player.gd
 res://scenes/enemies/clanger/e_clanger.gd
+res://scenes/menus/inventory/inventory.tscn
+res://AutoLoad/database.gd
+res://scripts/inventory/inventory.gd
+res://scripts/inventory/slot.gd
+res://scenes/menus/inventory/slot/slot.tscn
+res://scenes/menus/inventory/slot/passive_slot.tscn
+res://AutoLoad/database.json
+res://scripts/inventory/UI.gd
+res://scenes/menus/inventory/playerMenu.tscn
+res://scenes/pickUp_Items/pickUp_Armour/pickUp_Solomon/pickUp_SolomonHead.tscn
+res://scripts/inventory/abstractItem.gd
