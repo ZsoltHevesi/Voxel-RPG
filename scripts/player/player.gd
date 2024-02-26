@@ -13,8 +13,8 @@ var airGroundTransition = "parameters/airGroundTransition/transition_request"
 
 var weaponBlendTarget = 0.0
 
-var SPEED = 6.0
-var sprintSpeed = 10.0
+var SPEED = 5.5
+var sprintSpeed = 9.0
 var acceleration = 6
 var JUMP_VELOCITY = 6 # Jump height y-axis
 var airTime = 0
@@ -23,8 +23,6 @@ var airTime = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-
-var maxStepDown = -0.51
 
 
 # Variables for the player health
@@ -65,8 +63,11 @@ func _input(event):
 
 
 # Go down stairs
+var maxStepDown = -0.51
+
 var _on_floor_last_frame = false
 var _snapped_to_stairs_last_frame = false
+
 func _snap_down_stairs_check():
 	var did_snap = false
 	
