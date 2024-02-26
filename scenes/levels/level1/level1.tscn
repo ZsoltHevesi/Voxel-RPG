@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmw7fwjm363s7"]
+
+[ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_f1ho0"]
+[ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_cy5vs"]
+[ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_f8dnu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_wwcv2"]
+sky_material = SubResource("ProceduralSkyMaterial_3hgwl")
+
+[sub_resource type="Environment" id="Environment_8vil2"]
+background_mode = 2
+sky = SubResource("Sky_wwcv2")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+fog_light_color = Color(0.941176, 0.94902, 0.956863, 1)
+fog_density = 0.0002
+volumetric_fog_density = 0.008
+
+[node name="world" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8vil2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="tiles" type="Node3D" parent="map"]
+
+[node name="Chateau" parent="map/tiles" instance=ExtResource("1_f1ho0")]
+
+[node name="Player" parent="map" instance=ExtResource("2_cy5vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
+
+[node name="clanger" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 63.5, -2)
+
+[node name="clanger2" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 66, 38.75)
