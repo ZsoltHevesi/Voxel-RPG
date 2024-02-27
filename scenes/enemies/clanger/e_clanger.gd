@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-var speed = 6
+var speed = 5
 var accel = 10
-var chaseRange = 15
+var chaseRange = 20
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var player = $"../Player"
 
@@ -99,32 +99,42 @@ func _ready():
 	else:
 		print("Player not found or assigned.")
 
+# Define a separate maximum height value
+var maxEnemyHeight = 0.5  # Adjust as needed
+
 func _physics_process(delta):
-	# Example: Check for player health and take damage if needed
-	if Input.is_action_just_pressed("takeDamage"):
-		# Amount of damage can be adjusted as needed
-		takeDamage(20) 
-		
-		
 	# AI pathfinding logic
 	if player:
-
-		var distanceToPlayer = global_position.distance_to(player.global_position)
+		var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
 		
-
 		if distanceToPlayer <= chaseRange:
-
-			nav.target_position = player.global_transform.origin
-			
 			# Calculate direction towards the player
-			var direction = nav.target_position - global_position
-			direction = direction.normalized()
+			var direction = player.global_transform.origin - global_position
+			direction.y = 0  # Ignore vertical component
+			
+			if direction.length() > 0:
+				direction = direction.normalized()
+			
+			# Set the desired distance from the player
+			var desiredDistance = 1.5 # Adjust as needed
+			
+			# Adjust the target position to stop 1 meter away from the player
+			var targetPosition = player.global_transform.origin - direction * desiredDistance
 			
 			# Apply movement
-			velocity = velocity.lerp(direction * speed, accel * delta)
+			velocity = velocity.lerp((targetPosition - global_position).normalized() * speed, accel * delta)
 			
 			_rotate_sep_ray()
 			move_and_slide()
+			
+			# Limit enemy height
+			var minHeight = global_position.y - 1.0  # Adjust as needed
+			var maxHeight = global_position.y + maxEnemyHeight  # Use the separate maximum height value
+			
+			if global_position.y < minHeight:
+				global_position.y = minHeight
+			elif global_position.y > maxHeight:
+				global_position.y = maxHeight
 			
 			look_at(player.global_transform.origin, Vector3.UP)
 		else:
@@ -132,3 +142,7 @@ func _physics_process(delta):
 			velocity = Vector3.ZERO
 	else:
 		print("Player not assigned or found.")
+		
+
+
+

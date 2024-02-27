@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var animation_player = $visuals/AnimationPlayer
 @onready var animationTree = $visuals/AnimationTree
 
+
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
 var aimTransition = "parameters/aimTransition/transition_request"
@@ -122,6 +123,8 @@ func _rotate_sep_ray():
 	var xz_fr_ray_pos = xz_front_ray_pos.rotated(Vector3(0,1.0,0), deg_to_rad(-25))
 	$sepRayFR.global_position.x = self.global_position.x + xz_fr_ray_pos.x
 	$sepRayFR.global_position.z = self.global_position.z + xz_fr_ray_pos.z
+
+
 
 
 func _physics_process(delta):
