@@ -100,7 +100,7 @@ func _ready():
 		print("Player not found or assigned.")
 
 # Define a separate maximum height value
-var maxEnemyHeight = 0.5  # Adjust as needed
+var maxEnemyHeight = 0.5 
 
 func _physics_process(delta):
 	# AI pathfinding logic
@@ -110,15 +110,15 @@ func _physics_process(delta):
 		if distanceToPlayer <= chaseRange:
 			# Calculate direction towards the player
 			var direction = player.global_transform.origin - global_position
-			direction.y = 0  # Ignore vertical component
+			#direction.y = 0  
 			
 			if direction.length() > 0:
 				direction = direction.normalized()
 			
 			# Set the desired distance from the player
-			var desiredDistance = 1.5 # Adjust as needed
+			var desiredDistance = 1.5 
 			
-			# Adjust the target position to stop 1 meter away from the player
+
 			var targetPosition = player.global_transform.origin - direction * desiredDistance
 			
 			# Apply movement
@@ -126,6 +126,7 @@ func _physics_process(delta):
 			
 			_rotate_sep_ray()
 			move_and_slide()
+			_snap_down_stairs_check()
 			
 			# Limit enemy height
 			var minHeight = global_position.y - 1.0  # Adjust as needed

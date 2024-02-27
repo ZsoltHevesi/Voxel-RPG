@@ -21,3 +21,4 @@ res://scenes/menus/optionsMenu.tscn
 res://scenes/menus/mainMenu.tscn
 res://scenes/enemies/clanger/e_clanger.gd
 res://scripts/player/player.gd
+res://AutoLoad/database.json

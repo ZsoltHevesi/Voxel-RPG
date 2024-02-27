@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 Node3D
 RayCast3D
+=======
+CollisionShape3D
+Area3D
+>>>>>>> fef8f41f830fbc8f8b6eaf431800cd39e774f8f6
 NavigationRegion3D
 NavigationAgent3D
 MeshInstance3D
 OccluderInstance3D
-Area3D
 ProgressBar
-CollisionShape3D
 Label
 CheckBox
 HBoxContainer

@@ -240,6 +240,7 @@ spring_length = 2.47
 
 [node name="Camera3D" type="Camera3D" parent="cameraMount/SpringArm3D"]
 transform = Transform3D(0.948323, -7.45057e-09, -0.317305, -0.0550994, 0.984808, -0.164675, 0.312484, 0.173648, 0.933916, 0.00300051, 0.00194001, 2.46377)
+current = true
 
 [node name="HealthBar" type="ProgressBar" parent="cameraMount/SpringArm3D/Camera3D"]
 offset_right = 197.0
