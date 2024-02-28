@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg21b1lue3yu7"]
+
+[ext_resource type="Script" path="res://scripts/inventory/abstractItem.gd" id="1_iqbx6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfo65"]
+
+[node name="abstractItem" type="Node3D"]
+script = ExtResource("1_iqbx6")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_bfo65")
+
+[node name="itemNode" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

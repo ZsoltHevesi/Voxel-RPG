@@ -19,3 +19,12 @@ res://scenes/levels/level1/level1.tscn
 res://scripts/inventory/abstractItem.gd
 res://scenes/menus/mainMenu.tscn
 res://scenes/menus/optionsMenu.tscn
+res://scripts/player/player.gd
+res://scenes/pickUp_Items/pickUp_Armour/pickUp_Solomon/pickUp_SolomonHead.tscn
+res://AutoLoad/database.json
+res://scenes/menus/inventory/slot/slot.tscn
+res://scenes/menus/inventory/slot/passive_slot.tscn
+res://scripts/inventory/inventory.gd
+res://scenes/player/playerGear_Scenes/longSword.tscn
+res://AutoLoad/database.gd
+res://scenes/pickUp_Items/pickUp_abstractItem.tscn

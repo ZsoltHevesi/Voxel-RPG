@@ -1,25 +1,25 @@
 [gd_scene load_steps=42 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
-[ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
 [ext_resource type="Animation" uid="uid://580swu75bkg6" path="res://scenes/player/playerAnimations/RESET.res" id="2_ktsl2"]
-[ext_resource type="PackedScene" uid="uid://dggtc3s8ylkx7" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_hand.tscn" id="3_8wfcb"]
 [ext_resource type="Animation" uid="uid://bq1gaamwyo1ea" path="res://scenes/player/playerAnimations/idle.res" id="3_qvgsh"]
-[ext_resource type="PackedScene" uid="uid://exqvanae0tiw" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_hand.tscn" id="3_x0gmy"]
-[ext_resource type="PackedScene" uid="uid://csqukmapf6j6y" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_shoulder.tscn" id="4_diqbd"]
 [ext_resource type="Animation" uid="uid://dbiwxhjqqqafo" path="res://scenes/player/playerAnimations/in_air.res" id="4_dy3qm"]
-[ext_resource type="PackedScene" uid="uid://j6qguw7ipqp8" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_shoulder.tscn" id="4_hlefo"]
-[ext_resource type="PackedScene" uid="uid://cp6j2vgxxkd0v" path="res://scenes/player/playerGear/weapons/longSword.tscn" id="4_wwvhn"]
-[ext_resource type="PackedScene" uid="uid://bxsf23gvr3mmj" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_leg.tscn" id="5_4rcbk"]
 [ext_resource type="Animation" uid="uid://cjihcbgf6347x" path="res://scenes/player/playerAnimations/run.res" id="5_uqns2"]
 [ext_resource type="Animation" uid="uid://cvldq075pnnw5" path="res://scenes/player/playerAnimations/flintlock_aim.res" id="6_bravj"]
-[ext_resource type="PackedScene" uid="uid://frw2sjqaqako" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_left_foot.tscn" id="6_fyuxa"]
-[ext_resource type="PackedScene" uid="uid://dmvwgewnlaygq" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_foot.tscn" id="7_0k2ed"]
-[ext_resource type="PackedScene" uid="uid://dh42ns6gocqi1" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_torso.tscn" id="7_7cmkj"]
-[ext_resource type="PackedScene" uid="uid://cf2yiqklalyaa" path="res://scenes/player/playerGear/weapons/flintlockPistol.tscn" id="7_8lmmm"]
-[ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn" id="7_ntxyt"]
 [ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="7_uxe3y"]
 [ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="8_dnsbo"]
+[ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear_Scenes/p_solomon_head.tscn" id="9_sg8fs"]
+[ext_resource type="PackedScene" uid="uid://dggtc3s8ylkx7" path="res://scenes/player/playerGear_Scenes/p_solomon_right_hand.tscn" id="10_wweih"]
+[ext_resource type="PackedScene" uid="uid://cp6j2vgxxkd0v" path="res://scenes/player/playerGear_Scenes/longSword.tscn" id="11_bvvvj"]
+[ext_resource type="PackedScene" uid="uid://csqukmapf6j6y" path="res://scenes/player/playerGear_Scenes/p_solomon_right_shoulder.tscn" id="12_d8ynq"]
+[ext_resource type="PackedScene" uid="uid://exqvanae0tiw" path="res://scenes/player/playerGear_Scenes/p_solomon_left_hand.tscn" id="13_j6l1g"]
+[ext_resource type="PackedScene" uid="uid://cf2yiqklalyaa" path="res://scenes/player/playerGear_Scenes/flintlockPistol.tscn" id="14_jgvn7"]
+[ext_resource type="PackedScene" uid="uid://j6qguw7ipqp8" path="res://scenes/player/playerGear_Scenes/p_solomon_left_shoulder.tscn" id="15_avywm"]
+[ext_resource type="PackedScene" uid="uid://dh42ns6gocqi1" path="res://scenes/player/playerGear_Scenes/p_solomon_torso.tscn" id="16_ssdgj"]
+[ext_resource type="PackedScene" uid="uid://bxsf23gvr3mmj" path="res://scenes/player/playerGear_Scenes/p_solomon_left_leg.tscn" id="17_5i5hc"]
+[ext_resource type="PackedScene" uid="uid://frw2sjqaqako" path="res://scenes/player/playerGear_Scenes/p_solomon_left_foot.tscn" id="18_aml2i"]
+[ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear_Scenes/p_solomon_right_leg.tscn" id="19_2o758"]
+[ext_resource type="PackedScene" uid="uid://dmvwgewnlaygq" path="res://scenes/player/playerGear_Scenes/p_solomon_right_foot.tscn" id="20_r235g"]
 [ext_resource type="PackedScene" uid="uid://bin1826yyqi48" path="res://scenes/menus/inventory/playerMenu.tscn" id="21_ulrtq"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
@@ -172,7 +172,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.942474, 0)
 [node name="pnHead" type="Node3D" parent="visuals/pnTorso"]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 2.59618e-10, 0.354758, -0.010039)
 
-[node name="solomonHead" parent="visuals/pnTorso/pnHead" instance=ExtResource("2_eel4o")]
+[node name="solomonHead" parent="visuals/pnTorso/pnHead" instance=ExtResource("9_sg8fs")]
 
 [node name="pnRightShoulder" type="Node3D" parent="visuals/pnTorso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.185, 0)
@@ -180,15 +180,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.185, 0)
 [node name="pnRightHand" type="Node3D" parent="visuals/pnTorso/pnRightShoulder"]
 transform = Transform3D(0.949998, 0, 0, 0, 0.949995, 0, 0, 0, 0.949998, 0.12, -0.36, 0)
 
-[node name="solomonRightHand" parent="visuals/pnTorso/pnRightShoulder/pnRightHand" instance=ExtResource("3_8wfcb")]
+[node name="solomonRightHand" parent="visuals/pnTorso/pnRightShoulder/pnRightHand" instance=ExtResource("10_wweih")]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="pnRightWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.113, -0.014468)
 
-[node name="LongSword" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot" instance=ExtResource("4_wwvhn")]
+[node name="LongSword" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot" instance=ExtResource("11_bvvvj")]
 
-[node name="solomonRightShoulder" parent="visuals/pnTorso/pnRightShoulder" instance=ExtResource("4_diqbd")]
+[node name="solomonRightShoulder" parent="visuals/pnTorso/pnRightShoulder" instance=ExtResource("12_d8ynq")]
 
 [node name="pnLeftShoulder" type="Node3D" parent="visuals/pnTorso"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.185, 0)
@@ -196,17 +196,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.185, 0)
 [node name="pnLeftHand" type="Node3D" parent="visuals/pnTorso/pnLeftShoulder"]
 transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.950001, -0.12, -0.36, 0)
 
-[node name="solomonLeftHand" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand" instance=ExtResource("3_x0gmy")]
+[node name="solomonLeftHand" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand" instance=ExtResource("13_j6l1g")]
 
 [node name="pnLeftWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.11, 0)
 
-[node name="FlintlockPistol" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot" instance=ExtResource("7_8lmmm")]
+[node name="FlintlockPistol" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot" instance=ExtResource("14_jgvn7")]
 
-[node name="solomonLeftShoulder" parent="visuals/pnTorso/pnLeftShoulder" instance=ExtResource("4_hlefo")]
+[node name="solomonLeftShoulder" parent="visuals/pnTorso/pnLeftShoulder" instance=ExtResource("15_avywm")]
 transform = Transform3D(-1, 0, -8.74228e-08, 3.55271e-15, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="solomonTorso" parent="visuals/pnTorso" instance=ExtResource("7_7cmkj")]
+[node name="solomonTorso" parent="visuals/pnTorso" instance=ExtResource("16_ssdgj")]
 
 [node name="pnLeftFoot" type="Node3D" parent="visuals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0)
@@ -214,10 +214,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0)
 [node name="pnLeftLeg" type="Node3D" parent="visuals/pnLeftFoot"]
 transform = Transform3D(1, 0, 0, 0, 0.999248, 0.038754, 0, -0.038754, 0.999248, 0.00500001, 0.124, -7.45058e-08)
 
-[node name="solomonLeftLeg" parent="visuals/pnLeftFoot/pnLeftLeg" instance=ExtResource("5_4rcbk")]
+[node name="solomonLeftLeg" parent="visuals/pnLeftFoot/pnLeftLeg" instance=ExtResource("17_5i5hc")]
 transform = Transform3D(-1, 0, -8.74228e-08, -8.88178e-16, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="solomonLeftFoot" parent="visuals/pnLeftFoot" instance=ExtResource("6_fyuxa")]
+[node name="solomonLeftFoot" parent="visuals/pnLeftFoot" instance=ExtResource("18_aml2i")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="pnRightFoot" type="Node3D" parent="visuals"]
@@ -226,10 +226,10 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.16, 0, 0)
 [node name="pnRightLeg" type="Node3D" parent="visuals/pnRightFoot"]
 transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.00500003, 0.124, -1.19209e-07)
 
-[node name="solomonRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("7_ntxyt")]
+[node name="solomonRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("19_2o758")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 7.45058e-09, 8.74228e-08, 7.45058e-09, -1, 0, 0, 0)
 
-[node name="solomonRightFoot" parent="visuals/pnRightFoot" instance=ExtResource("7_0k2ed")]
+[node name="solomonRightFoot" parent="visuals/pnRightFoot" instance=ExtResource("20_r235g")]
 
 [node name="cameraMount" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
