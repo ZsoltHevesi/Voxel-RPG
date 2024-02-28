@@ -18,3 +18,6 @@ func get_dmg(ID = "0"):
 	
 func get_slot_type(ID = "0"):
 	return content[ID]["slot_type"]
+	
+func get_scene(ID = "0"):
+	return content[ID]["item_scene"]

@@ -1,4 +1,4 @@
-res://scenes/menus/optionsMenu.tscn
+res://scenes/menus/inventory/playerMenu.tscn
 res://scripts/player/Camera3D.gd
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/metallic/goldMET1.tres
@@ -14,3 +14,17 @@ res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
+res://scenes/player/player.tscn
+res://scenes/levels/level1/level1.tscn
+res://scripts/inventory/abstractItem.gd
+res://scenes/menus/mainMenu.tscn
+res://scenes/menus/optionsMenu.tscn
+res://scripts/player/player.gd
+res://scenes/pickUp_Items/pickUp_Armour/pickUp_Solomon/pickUp_SolomonHead.tscn
+res://AutoLoad/database.json
+res://scenes/menus/inventory/slot/slot.tscn
+res://scenes/menus/inventory/slot/passive_slot.tscn
+res://scripts/inventory/inventory.gd
+res://scenes/player/playerGear_Scenes/longSword.tscn
+res://AutoLoad/database.gd
+res://scenes/pickUp_Items/pickUp_abstractItem.tscn
