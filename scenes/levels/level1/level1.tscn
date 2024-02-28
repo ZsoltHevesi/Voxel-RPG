@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=8 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_f1ho0"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_cy5vs"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_f8dnu"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_Armour/pickUp_Solomon/pickUp_SolomonHead.tscn" id="4_who58"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -45,3 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 63.5, -2)
 
 [node name="clanger2" parent="map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 66, 38.75)
+
+[node name="PickUpSolomonHead" parent="map" instance=ExtResource("4_who58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98248, 64.8678, -4.1)

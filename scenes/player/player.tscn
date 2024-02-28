@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=42 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="PackedScene" uid="uid://csjlj4qy7pktl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_head.tscn" id="2_eel4o"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear/armour/playerSolomon/p_solomon_right_leg.tscn" id="7_ntxyt"]
 [ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="7_uxe3y"]
 [ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="8_dnsbo"]
+[ext_resource type="PackedScene" uid="uid://bin1826yyqi48" path="res://scenes/menus/inventory/playerMenu.tscn" id="21_ulrtq"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -275,3 +276,5 @@ shape = SubResource("SeparationRayShape3D_6gw00")
 
 [node name="checkStairsRayCast" type="RayCast3D" parent="."]
 target_position = Vector3(0, -0.5, 0)
+
+[node name="playerMenu" parent="." instance=ExtResource("21_ulrtq")]
