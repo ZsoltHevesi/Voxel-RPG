@@ -9,8 +9,6 @@ extends VBoxContainer
 @onready var vsyncCheckBox = $vsyncBox/vsyncCheckBox
 
 
-
-
 var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 								"1600x900" : Vector2i(1600, 900),
 								"1680x1050" : Vector2i(1600, 1050),
@@ -27,19 +25,6 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 
 func _ready():
 	addResolutions()
-	checkVariables()
-	
-func checkVariables():
-	var getWindow = get_window()
-	var mode = getWindow.get_mode()
-	var vsyncMode = DisplayServer.window_get_vsync_mode()
-	
-	if mode == Window.MODE_FULLSCREEN:
-		resolutionList.set_disabled(true)
-		fullscreenCheckBox.set_pressed_no_signal(true)
-	
-	if vsyncMode == DisplayServer.VSYNC_ENABLED:
-		vsyncCheckBox.set_pressed_no_signal(true)
 
 
 func addResolutions():
@@ -124,3 +109,14 @@ func _on_vsync_check_box_toggled(toggled_on):
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 		else:
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+
+func _on_shadow_toggle_toggled(toggled_on):
+	pass # Replace with function body.
+
+
+func _on_ssao_toggle_toggled(toggled_on):
+	pass # Replace with function body.
+
+
+func _on_glow_toggle_toggled(toggled_on):
+	pass # Replace with function body.
