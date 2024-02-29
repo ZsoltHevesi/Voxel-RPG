@@ -63,13 +63,10 @@ popup/item_3/text = "AMD FSR 2.2 (Slow)"
 popup/item_3/id = 3
 
 [node name="scaleBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="scalingLabel" type="Label" parent="HBoxContainer/optionSetting/scaleBox"]
-layout_mode = 2
-text = "100% - 1920x1080"
 
 [node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting/scaleBox"]
 custom_minimum_size = Vector2(200, 0)
@@ -82,7 +79,12 @@ step = 5.0
 value = 100.0
 ticks_on_borders = true
 
+[node name="scalingLabel" type="Label" parent="HBoxContainer/optionSetting/scaleBox"]
+layout_mode = 2
+text = "100% - 1920x1080"
+
 [node name="fsrOptions" type="OptionButton" parent="HBoxContainer/optionSetting"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 item_count = 5

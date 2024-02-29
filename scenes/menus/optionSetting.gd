@@ -8,6 +8,7 @@ extends VBoxContainer
 @onready var fsrOptions = $fsrOptions
 @onready var vsyncCheckBox = $vsyncBox/vsyncCheckBox
 
+var config = ConfigFile.new()
 
 var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 								"1600x900" : Vector2i(1600, 900),
@@ -26,6 +27,9 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 
 func _ready():
 	addResolutions()
+	var err = config.load("user://config.cfg")
+	if err != OK:
+		return
 
 
 func addResolutions():
@@ -52,6 +56,7 @@ func centerScreen():
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/mainMenu.tscn")
+	config.save("user://config.cfg")
 
 
 func _on_fullscreen_check_box_toggled(toggled_on):
@@ -76,6 +81,7 @@ func _on_scaling_mode_item_selected(index):
 		0:
 			scaleBox.hide()
 			scalingSlider.set_editable(false)
+			fsrOptions.hide()
 		1:
 			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_BILINEAR)
 			scaleBox.show()
@@ -108,16 +114,27 @@ func _on_fsr_options_item_selected(index):
 func _on_vsync_check_box_toggled(toggled_on):
 		if toggled_on:
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+			config.set_value("options", "vsync", true)
 		else:
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+			config.set_value("options", "vsync", false)
 
 func _on_shadow_toggle_toggled(toggled_on):
-	pass # Replace with function body.
+	if toggled_on:
+		config.set_value("options", "shadows", true)
+	else:
+		config.set_value("options", "shadows", false)
 
 
 func _on_ssao_toggle_toggled(toggled_on):
-	pass # Replace with function body.
+	if toggled_on:
+		config.set_value("options", "ssao", true)
+	else:
+		config.set_value("options", "ssao", false)
 
 
 func _on_glow_toggle_toggled(toggled_on):
-	pass # Replace with function body.
+	if toggled_on:
+		config.set_value("options", "glow", true)
+	else:
+		config.set_value("options", "glow", false)

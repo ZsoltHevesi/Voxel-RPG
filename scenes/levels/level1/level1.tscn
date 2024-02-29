@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=10 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="1_36uwt"]
+[ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_f1ho0"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_cy5vs"]
+[ext_resource type="Script" path="res://scenes/levels/level1/graphicsDirectionalLight3D.gd" id="2_nrich"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_f8dnu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
@@ -27,10 +29,12 @@ volumetric_fog_density = 0.008
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8vil2")
+script = ExtResource("1_d7ia6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
+script = ExtResource("2_nrich")
 
 [node name="map" type="Node3D" parent="."]
 
