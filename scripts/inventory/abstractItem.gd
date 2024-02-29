@@ -7,7 +7,7 @@ func _ready():
 	var scene = load("res://scenes/player/playerGear_Scenes/" + ItemData.get_scene(ID))
 	var instance = scene.instantiate()
 	
-	add_child(instance)
+	get_node("itemNode").add_child(instance)
 
 # If player enters, add item to inventory
 func _on_body_entered(body):
