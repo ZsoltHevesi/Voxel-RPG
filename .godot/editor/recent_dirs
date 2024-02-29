@@ -1,3 +1,4 @@
+res://assets/materials/emission
 res://scripts/menu
 res://scripts/inventory
 res://AutoLoad
@@ -14,7 +15,6 @@ res://scenes/decorations/furniture
 res://scenes/decorations
 res://scripts
 res://scenes/levels
-res://assets/materials/emission
 res://assets/materials/transparent
 res://assets/materials/metallic
 res://assets/materials/diffuse
