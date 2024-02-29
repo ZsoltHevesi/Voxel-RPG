@@ -20,37 +20,30 @@ grow_vertical = 2
 alignment = 1
 
 [node name="optionSetting" type="VBoxContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 25
 alignment = 1
 script = ExtResource("1_53fs5")
 
 [node name="resolutionBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="resolutionLabel" type="Label" parent="HBoxContainer/optionSetting/resolutionBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "Resolution"
 
 [node name="resolutionList" type="OptionButton" parent="HBoxContainer/optionSetting/resolutionBox"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
 
 [node name="scaleModeBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="scalingModeLabel" type="Label" parent="HBoxContainer/optionSetting/scaleModeBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "Scaling
 "
 
@@ -58,7 +51,6 @@ text = "Scaling
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
 item_count = 4
 selected = 0
 popup/item_0/text = "OFF"
@@ -71,19 +63,16 @@ popup/item_3/text = "AMD FSR 2.2 (Slow)"
 popup/item_3/id = 3
 
 [node name="scaleBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 50
 
 [node name="scalingLabel" type="Label" parent="HBoxContainer/optionSetting/scaleBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "100% - 1920x1080"
 
 [node name="scalingSlider" type="HSlider" parent="HBoxContainer/optionSetting/scaleBox"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -94,10 +83,8 @@ value = 100.0
 ticks_on_borders = true
 
 [node name="fsrOptions" type="OptionButton" parent="HBoxContainer/optionSetting"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 30
 item_count = 5
 selected = 0
 popup/item_0/text = "FSR options"
@@ -114,13 +101,10 @@ popup/item_4/text = "Ultra Quality"
 popup/item_4/id = 4
 
 [node name="fullscreenBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
-theme_override_constants/separation = 50
 
 [node name="fullscreenLabel" type="Label" parent="HBoxContainer/optionSetting/fullscreenBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "Fullscreen"
 
 [node name="fullscreenCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting/fullscreenBox"]
@@ -129,13 +113,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="vsyncBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
-theme_override_constants/separation = 50
 
 [node name="vsyncLabel" type="Label" parent="HBoxContainer/optionSetting/vsyncBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "VSync"
 
 [node name="vsyncCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting/vsyncBox"]
@@ -144,13 +125,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="shadowBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
-theme_override_constants/separation = 50
 
 [node name="shadowLabel" type="Label" parent="HBoxContainer/optionSetting/shadowBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "Shadows"
 
 [node name="shadowToggle" type="CheckButton" parent="HBoxContainer/optionSetting/shadowBox"]
@@ -159,13 +137,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="ssaoBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
-theme_override_constants/separation = 50
 
 [node name="ssaoLabel" type="Label" parent="HBoxContainer/optionSetting/ssaoBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "SSAO"
 
 [node name="ssaoToggle" type="CheckButton" parent="HBoxContainer/optionSetting/ssaoBox"]
@@ -174,13 +149,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="glowBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
-theme_override_constants/separation = 50
 
 [node name="glowLabel" type="Label" parent="HBoxContainer/optionSetting/glowBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "Glow"
 
 [node name="glowToggle" type="CheckButton" parent="HBoxContainer/optionSetting/glowBox"]
@@ -191,7 +163,6 @@ size_flags_vertical = 4
 [node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
 text = "Back"
 
 [connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionBox/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
