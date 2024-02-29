@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxsf23gvr3mmj"]
 
 [ext_resource type="ArrayMesh" uid="uid://b6xlgopjrgjbi" path="res://assets/models/player/armour/solomon/leftLeg.obj" id="1_w2qa5"]
-[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="2_4ljhd"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="2_4ljhd"]
 [ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_1ax8x"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_d5ry4"]
+
 
 
 [node name="solomonLeftLeg" type="Node3D"]

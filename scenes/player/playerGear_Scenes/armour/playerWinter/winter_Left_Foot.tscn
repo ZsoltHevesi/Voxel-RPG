@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://t6a8qacmxolk"]
+[gd_scene load_steps=4 format=3 uid="uid://t6a8qacmxolk"]
 
 [ext_resource type="ArrayMesh" uid="uid://bnyqiu2lsm7w" path="res://assets/models/player/armour/winter/leftFoot.obj" id="1_co81o"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_thqiy"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_l7nv0"]
 
 [node name="winterLeftFoot" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_co81o")
+surface_material_override/0 = ExtResource("2_thqiy")
+surface_material_override/1 = ExtResource("3_l7nv0")

@@ -58,16 +58,10 @@ func _ready():
 
 # Rotate Player and Camera
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(deg_to_rad(- event.relative.x * mouseSensitivity))
 		camera_mount.rotate_x(deg_to_rad(- event.relative.y * mouseSensitivity))
-		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	
-	if event.is_action_pressed("inventory"):
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		
-	if event.is_action_pressed("inventory"):
-		Input.mouse_mode = Input.MOUSE_MODE_CONFINED                                                                     
+		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(90))                                                                 
 
 # Go down stairs
 var maxStepDown = -0.51

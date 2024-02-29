@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjuost8cst6kh"]
+[gd_scene load_steps=5 format=3 uid="uid://cjuost8cst6kh"]
 
 [ext_resource type="ArrayMesh" uid="uid://d26uygnjvcijv" path="res://assets/models/player/armour/winter/leftHand.obj" id="1_484mw"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="2_ckpl3"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="2_hahke"]
+[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDIFF2.tres" id="4_l1c0l"]
 
 [node name="winterLeftHand" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_484mw")
+surface_material_override/0 = ExtResource("2_hahke")
+surface_material_override/1 = ExtResource("2_ckpl3")
+surface_material_override/2 = ExtResource("4_l1c0l")
