@@ -3,8 +3,9 @@
 [ext_resource type="ArrayMesh" uid="uid://ctr8o6cym2xki" path="res://assets/models/player/armour/solomon/head.obj" id="1_ar4dq"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_sb4mf"]
 [ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_h7jno"]
-[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="4_y6ylv"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_y6ylv"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="5_1k0nw"]
+
 
 
 [node name="solomonHead" type="Node3D"]

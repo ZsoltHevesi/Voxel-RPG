@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cf2yiqklalyaa"]
 
 [ext_resource type="ArrayMesh" uid="uid://dypym3otwetsa" path="res://assets/models/weapon models/flintLock.obj" id="1_kv7uf"]
-[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_1h4gd"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_1h4gd"]
 [ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="3_0y0vd"]
-[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="4_tc0on"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_tc0on"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="5_j8rma"]
+
 
 [node name="FlintlockPistol" type="Node3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)

@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyaunbber0x4e"]
+[gd_scene load_steps=4 format=3 uid="uid://dyaunbber0x4e"]
 
 [ext_resource type="ArrayMesh" uid="uid://dmi81uoioh7h1" path="res://assets/models/player/armour/winter/rightShoulder.obj" id="1_el5f6"]
+[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF1.tres" id="2_iwrmp"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_3aj8r"]
 
 [node name="winterRightShoulder" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_el5f6")
+surface_material_override/0 = ExtResource("2_iwrmp")
+surface_material_override/1 = ExtResource("3_3aj8r")

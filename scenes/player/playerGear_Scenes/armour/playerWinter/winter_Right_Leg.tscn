@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://wlg5d7v3nj03"]
+[gd_scene load_steps=5 format=3 uid="uid://wlg5d7v3nj03"]
 
 [ext_resource type="ArrayMesh" uid="uid://8wcure045yhv" path="res://assets/models/player/armour/winter/rightLeg.obj" id="1_bkwmx"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_esj6f"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_c1dvf"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_noxyy"]
 
 [node name="winterRightLeg" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_bkwmx")
+surface_material_override/0 = ExtResource("2_esj6f")
+surface_material_override/1 = ExtResource("3_c1dvf")
+surface_material_override/2 = ExtResource("4_noxyy")

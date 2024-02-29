@@ -2,12 +2,13 @@
 
 [ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="1_sb3sa"]
 [ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="2_d8g4b"]
-[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_ybuow"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_ybuow"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="4_8r2g5"]
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="5_3y5jj"]
 [ext_resource type="PackedScene" uid="uid://dn0l71e7a6i0c" path="res://scenes/decorations/furniture/woodRockingChair1.tscn" id="6_5y8qx"]
 [ext_resource type="VoxelGIData" uid="uid://dcepdv2dfic5l" path="res://scenes/levels/test/test-area.VoxelGI_data.res" id="7_6sjvy"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="17_xpiuv"]
+
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y72el"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

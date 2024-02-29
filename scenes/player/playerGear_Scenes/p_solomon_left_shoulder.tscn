@@ -2,7 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://b4f60slxjgb4x" path="res://assets/models/player/armour/solomon/leftShoulder.obj" id="1_vfv4g"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_1i2ll"]
-[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET2.tres" id="3_is74s"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="3_is74s"]
+
 
 
 [node name="solomonLeftShoulder" type="Node3D"]
