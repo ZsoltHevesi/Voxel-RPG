@@ -19,6 +19,7 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 								"2560x1600" : Vector2i(2560, 1600),
 								"2880x1800" : Vector2i(2880, 1800),
 								"3440x1440" : Vector2i(3440, 1440),
+								"3072x1920" : Vector2i(3072, 1920),
 								"3840x2160" : Vector2i(3840, 2160),
 								"5120x1440" : Vector2i(5120, 1440)}
 
@@ -56,7 +57,7 @@ func _on_back_button_pressed():
 func _on_fullscreen_check_box_toggled(toggled_on):
 	resolutionList.set_disabled(toggled_on)
 	if toggled_on:
-		get_window().set_mode(Window.MODE_FULLSCREEN)
+		get_window().set_mode(Window.MODE_EXCLUSIVE_FULLSCREEN)
 	else:
 		get_window().set_mode(Window.MODE_WINDOWED)
 
