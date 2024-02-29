@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var camera_mount = $cameraMount
 @onready var animation_player = $visuals/AnimationPlayer
 @onready var animationTree = $visuals/AnimationTree
+@onready var crosshair = $cameraMount/SpringArm3D/Camera3D/UI/crosshair
 
 
 # Player animation tree node paths
@@ -35,7 +36,7 @@ func takeDamage(amount):
 		currentHealth -= amount
 	else:
 		maxHealth = 0
-	$cameraMount/SpringArm3D/Camera3D/HealthBar.value = maxHealth
+	$cameraMount/SpringArm3D/Camera3D/UI/HealthBar.value = maxHealth
 	if currentHealth <= 0:
 		# Function to handle player death
 		die()
@@ -179,12 +180,14 @@ func _physics_process(delta):
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
+			crosshair.visible = true
 		if Input.is_action_just_pressed("attack"):
 			animationTree.set("parameters/shootOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	else:
 		if animationTree.get(aimTransitionState) == "aiming":
 			animationTree.set(aimTransition, "notAiming")
 			weaponBlendTarget = 0.0
+			crosshair.visible = false
 	animationTree.set(weaponBlend, lerp(float(animationTree.get(weaponBlend)), weaponBlendTarget, delta * 5))
 
 	_rotate_sep_ray() # call this before move_and_slide()
