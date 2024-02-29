@@ -16,4 +16,6 @@ res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
 res://scenes/menus/optionsMenu.tscn
 res://scenes/levels/level1/level1.tscn
-res://scenes/menus/optionSetting.gd
+res://scenes/player/player.tscn
+res://scenes/menus/fps_Counter.tscn
+res://scripts/menu/FPSMeter.gd

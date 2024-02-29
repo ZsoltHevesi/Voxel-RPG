@@ -1,3 +1,6 @@
+Label
+CanvasLayer
+Control
 Node3D
 RayCast3D
 CollisionShape3D
@@ -7,8 +10,5 @@ NavigationAgent3D
 MeshInstance3D
 OccluderInstance3D
 ProgressBar
-Label
 CheckBox
 HBoxContainer
-OptionButton
-CenterContainer

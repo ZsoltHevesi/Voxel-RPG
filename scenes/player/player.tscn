@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://frtgj5uj6n7s"]
+[gd_scene load_steps=43 format=3 uid="uid://frtgj5uj6n7s"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dq0rt"]
 [ext_resource type="Animation" uid="uid://580swu75bkg6" path="res://scenes/player/playerAnimations/RESET.res" id="2_ktsl2"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d0k7ko4t6bmrl" path="res://scenes/player/playerGear_Scenes/p_solomon_right_leg.tscn" id="19_2o758"]
 [ext_resource type="PackedScene" uid="uid://dmvwgewnlaygq" path="res://scenes/player/playerGear_Scenes/p_solomon_right_foot.tscn" id="20_r235g"]
 [ext_resource type="PackedScene" uid="uid://bin1826yyqi48" path="res://scenes/menus/inventory/playerMenu.tscn" id="21_ulrtq"]
+[ext_resource type="PackedScene" uid="uid://bo8x680nsp1ry" path="res://scenes/menus/fps_Counter.tscn" id="22_428v5"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -278,3 +279,5 @@ shape = SubResource("SeparationRayShape3D_6gw00")
 target_position = Vector3(0, -0.5, 0)
 
 [node name="playerMenu" parent="." instance=ExtResource("21_ulrtq")]
+
+[node name="FPS_Counter" parent="." instance=ExtResource("22_428v5")]
