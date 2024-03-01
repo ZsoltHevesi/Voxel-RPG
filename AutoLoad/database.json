@@ -9,7 +9,7 @@
 		"texture" : "solomonTorso.png",
 		"slot_type" : 2,
 		"dmg" : 20,
-		"item_scene" : "p_solomon_torso.tscn"
+		"item_scene" : "p_solomon_torso.tscn",
 	},
 	"2" : {
 		"texture" : "solomonLeftShoulder.png",

@@ -59,6 +59,11 @@ func get_preview():
 func get_DMG():
 	return texture_rect.dmg
 
+
+func get_item_scene():
+	return texture_rect.item_scene
+
+
 func set_property(data):
 	texture_rect.property = data
 	

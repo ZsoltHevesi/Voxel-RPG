@@ -9,7 +9,7 @@ offset_bottom = 40.0
 script = ExtResource("1_jq8co")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(120, 120)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 1
 script = ExtResource("2_pymu2")
