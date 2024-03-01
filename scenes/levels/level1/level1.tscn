@@ -48,6 +48,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.5, 0)
 [node name="clanger" parent="map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 63.5, -2)
 
+[node name="clanger9" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 63.5, 1.38869)
+
+[node name="clanger10" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6558, 63.5, 6.30627)
+
+[node name="clanger11" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(-0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, -0.573576, 2.21514, 63.5, -17.4031)
+
 [node name="clanger6" parent="map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.521, 66, -30.231)
 
