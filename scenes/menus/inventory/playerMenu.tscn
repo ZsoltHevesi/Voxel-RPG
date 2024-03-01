@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bin1826yyqi48"]
+[gd_scene load_steps=7 format=3 uid="uid://bin1826yyqi48"]
 
 [ext_resource type="Script" path="res://scripts/inventory/UI.gd" id="1_yg07x"]
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="2_a624s"]
 [ext_resource type="PackedScene" uid="uid://x3qxv5cjulff" path="res://scenes/menus/inventory/slot/slot.tscn" id="3_rwh5q"]
 [ext_resource type="Script" path="res://scripts/inventory/character.gd" id="4_k6ifo"]
 [ext_resource type="PackedScene" uid="uid://drh5mxkvyiqon" path="res://scenes/menus/inventory/slot/passive_slot.tscn" id="5_rii7g"]
+[ext_resource type="PackedScene" uid="uid://bc6x7swp66omi" path="res://scenes/menus/inventory/slot/active_slot.tscn" id="6_13del"]
 
 [node name="playerMenu" type="Node2D"]
 
@@ -18,10 +19,10 @@ script = ExtResource("1_yg07x")
 
 [node name="inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
-offset_left = 614.0
-offset_top = 172.0
-offset_right = 1726.0
-offset_bottom = 912.0
+offset_left = 819.0
+offset_top = 202.0
+offset_right = 1855.0
+offset_bottom = 948.0
 columns = 10
 script = ExtResource("2_a624s")
 
@@ -205,91 +206,129 @@ layout_mode = 2
 [node name="slot60" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
 layout_mode = 2
 
+[node name="slot61" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot62" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot63" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot64" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot65" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot66" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot67" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot68" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot69" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
+[node name="slot70" parent="UI/inventory" instance=ExtResource("3_rwh5q")]
+layout_mode = 2
+
 [node name="character" type="Control" parent="UI"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_k6ifo")
 
-[node name="passiveSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="headSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 275.0
+offset_left = 280.0
 offset_top = 255.0
-offset_right = 395.0
+offset_right = 400.0
 offset_bottom = 375.0
 slot_type = 1
 
-[node name="passiveSlot2" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="torsoSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 281.0
+offset_left = 280.0
 offset_top = 427.0
-offset_right = 401.0
+offset_right = 400.0
 offset_bottom = 547.0
 slot_type = 2
 
-[node name="passiveSlot3" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="leftShoulderSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
 offset_left = 415.0
-offset_top = 371.0
+offset_top = 380.0
 offset_right = 535.0
-offset_bottom = 491.0
+offset_bottom = 500.0
 slot_type = 3
 
-[node name="passiveSlot4" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="rightShoulderSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 146.0
+offset_left = 145.0
 offset_top = 380.0
-offset_right = 266.0
+offset_right = 265.0
 offset_bottom = 500.0
 slot_type = 4
 
-[node name="passiveSlot5" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="rightHandSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 512.0
-offset_right = 264.0
-offset_bottom = 632.0
+offset_left = 145.0
+offset_top = 515.0
+offset_right = 265.0
+offset_bottom = 635.0
 slot_type = 6
 
-[node name="passiveSlot6" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="leftHandSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 413.0
+offset_left = 415.0
 offset_top = 515.0
-offset_right = 533.0
+offset_right = 535.0
 offset_bottom = 635.0
 slot_type = 5
 
-[node name="passiveSlot7" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="leftLegSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 364.0
-offset_top = 649.0
-offset_right = 484.0
-offset_bottom = 769.0
+offset_left = 365.0
+offset_top = 650.0
+offset_right = 485.0
+offset_bottom = 770.0
 slot_type = 7
 
-[node name="passiveSlot10" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="leftFootSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 361.0
-offset_top = 792.0
-offset_right = 481.0
-offset_bottom = 912.0
+offset_left = 365.0
+offset_top = 795.0
+offset_right = 485.0
+offset_bottom = 915.0
 slot_type = 9
 
-[node name="passiveSlot8" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="rightLegSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 648.0
-offset_right = 320.0
-offset_bottom = 768.0
+offset_left = 195.0
+offset_top = 650.0
+offset_right = 315.0
+offset_bottom = 770.0
 slot_type = 8
 
-[node name="passiveSlot9" parent="UI/character" instance=ExtResource("5_rii7g")]
+[node name="rightFootSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 792.0
-offset_right = 324.0
-offset_bottom = 912.0
+offset_left = 195.0
+offset_top = 795.0
+offset_right = 315.0
+offset_bottom = 915.0
 slot_type = 10
+
+[node name="meleeSlot" parent="UI/character" instance=ExtResource("6_13del")]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 657.0
+offset_right = 138.0
+offset_bottom = 777.0
+slot_type = 11
 
 [node name="DMG" type="Label" parent="UI"]
 unique_name_in_owner = true

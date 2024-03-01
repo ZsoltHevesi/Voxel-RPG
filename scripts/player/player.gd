@@ -5,6 +5,17 @@ extends CharacterBody3D
 @onready var animationTree = $visuals/AnimationTree
 @onready var crosshair = $cameraMount/SpringArm3D/Camera3D/UI/crosshair
 
+@onready var inv_head = $playerMenu/UI/character/headSlot/TextureRect
+@onready var inv_torso = $playerMenu/UI/character/torsoSlot/TextureRect
+@onready var inv_leftShoulder = $playerMenu/UI/character/leftShoulderSlot/TextureRect
+@onready var inv_rightShoulder = $playerMenu/UI/character/rightShoulderSlot/TextureRect
+@onready var inv_leftHand = $playerMenu/UI/character/leftHandSlot/TextureRect
+@onready var inv_rightHand = $playerMenu/UI/character/rightHandSlot/TextureRect
+@onready var inv_leftLeg = $playerMenu/UI/character/leftLegSlot/TextureRect
+@onready var inv_rightLeg = $playerMenu/UI/character/rightLegSlot/TextureRect
+@onready var inv_leftFoot = $playerMenu/UI/character/leftFootSlot/TextureRect
+@onready var inv_rightFoot = $playerMenu/UI/character/rightFootSlot/TextureRect
+
 
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
@@ -30,6 +41,54 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 # Variables for the player health
 var maxHealth = 100
 var currentHealth = maxHealth
+
+# Handle equipping armour
+var instance
+func equip_armour():
+	if inv_head.texture != null:
+		instance = inv_head.item_scene.instantiate()
+		find_child("pnHead").add_child(instance)
+		
+	if inv_torso.texture != null:
+		instance = inv_torso.item_scene.instantiate()
+		find_child("pnTorso").add_child(instance)
+		
+	if inv_leftShoulder.texture != null:
+		instance = inv_leftShoulder.item_scene.instantiate()
+		find_child("pnLeftShoulder").add_child(instance)
+		
+	if inv_rightShoulder.texture != null:
+		instance = inv_rightShoulder.item_scene.instantiate()
+		find_child("pnRightShoulder").add_child(instance)
+		
+	if inv_leftHand.texture != null:
+		instance = inv_leftHand.item_scene.instantiate()
+		find_child("pnLeftHand").add_child(instance)
+		
+	if inv_rightHand.texture != null:
+		instance = inv_rightHand.item_scene.instantiate()
+		find_child("pnRightHand").add_child(instance)
+		
+	if inv_leftLeg.texture != null:
+		instance = inv_leftLeg.item_scene.instantiate()
+		find_child("pnLeftLeg").add_child(instance)
+		
+	if inv_rightLeg.texture != null:
+		instance = inv_rightLeg.item_scene.instantiate()
+		find_child("pnRightLeg").add_child(instance)
+		
+	if inv_leftFoot.texture != null:
+		instance = inv_leftFoot.item_scene.instantiate()
+		find_child("pnLeftFoot").add_child(instance)
+		
+	if inv_rightFoot.texture != null:
+		instance = inv_rightFoot.item_scene.instantiate()
+		find_child("pnRightFoot").add_child(instance)
+
+
+func unequip_armour():
+		print("empty")
+	
 
 func takeDamage(amount):
 	if amount < maxHealth:
