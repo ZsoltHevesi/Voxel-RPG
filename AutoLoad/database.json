@@ -63,12 +63,12 @@
 		"texture" : "longSword.png",
 		"slot_type" : 11,
 		"dmg" : 30,
-		"item_scene" : "flintlockPistol.tscn"
+		"item_scene" : "longSword.tscn"
 	},
 	"11" : {
 		"texture" : "flintlock.png",
 		"slot_type" : 11,
 		"dmg" : 60,
-		"item_scene" : "longSword.tscn"
+		"item_scene" : "flintlockPistol.tscn"
 	}
 }

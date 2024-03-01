@@ -1,5 +1,5 @@
-res://scenes/player/player.tscn
-res://scripts/player/Camera3D.gd
+res://scenes/menus/optionsMenu.tscn
+res://assets/materials/emission/blueTransGlow.tres
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
@@ -15,16 +15,7 @@ res://assets/materials/diffuse/greyDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://assets/materials/emission/yellowNeon1.tres
-res://scripts/player/player.gd
 res://scenes/menus/mainMenu.tscn
-res://scenes/menus/optionsMenu.tscn
 res://scenes/levels/level1/level1.tscn
-res://scenes/enemies/clanger/e_clanger.tscn
-res://scenes/menus/inventory/playerMenu.tscn
-res://scenes/menus/inventory/slot/slot.tscn
-res://scenes/menus/inventory/slot/passive_slot.tscn
-res://scripts/inventory/passive_slot.gd
-res://scripts/inventory/slot.gd
-res://scenes/pickUp_Items/pickUp_abstractItem.tscn
-res://assets/materials/emission/blueTransGlow.tres
-res://scenes/tiles/chateau scene/chateau.tscn
+res://scenes/player/player.tscn
+res://AutoLoad/database.json
