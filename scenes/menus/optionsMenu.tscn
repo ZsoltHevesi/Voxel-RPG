@@ -83,24 +83,23 @@ ticks_on_borders = true
 layout_mode = 2
 text = "100% - 1920x1080"
 
-[node name="fsrOptions" type="OptionButton" parent="HBoxContainer/optionSetting"]
+[node name="fsrBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="fsrOptions" type="OptionButton" parent="HBoxContainer/optionSetting/fsrBox"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 0
-item_count = 5
-selected = 0
-popup/item_0/text = "FSR options"
+item_count = 4
+selected = 1
+popup/item_0/text = "Performance"
 popup/item_0/id = 0
-popup/item_0/disabled = true
-popup/item_0/separator = true
-popup/item_1/text = "Performance"
+popup/item_1/text = "Balanced"
 popup/item_1/id = 1
-popup/item_2/text = "Balanced"
+popup/item_2/text = "Quality"
 popup/item_2/id = 2
-popup/item_3/text = "Quality"
+popup/item_3/text = "Ultra Quality"
 popup/item_3/id = 3
-popup/item_4/text = "Ultra Quality"
-popup/item_4/id = 4
 
 [node name="fullscreenBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
@@ -170,7 +169,7 @@ text = "Back"
 [connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionBox/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
 [connection signal="item_selected" from="HBoxContainer/optionSetting/scaleModeBox/scalingMode" to="HBoxContainer/optionSetting" method="_on_scaling_mode_item_selected"]
 [connection signal="value_changed" from="HBoxContainer/optionSetting/scaleBox/scalingSlider" to="HBoxContainer/optionSetting" method="_on_scaling_slider_value_changed"]
-[connection signal="item_selected" from="HBoxContainer/optionSetting/fsrOptions" to="HBoxContainer/optionSetting" method="_on_fsr_options_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/optionSetting/fsrBox/fsrOptions" to="HBoxContainer/optionSetting" method="_on_fsr_options_item_selected"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/fullscreenBox/fullscreenCheckBox" to="HBoxContainer/optionSetting" method="_on_fullscreen_check_box_toggled"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/vsyncBox/vsyncCheckBox" to="HBoxContainer/optionSetting" method="_on_vsync_check_box_toggled"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/shadowBox/shadowToggle" to="HBoxContainer/optionSetting" method="_on_shadow_toggle_toggled"]

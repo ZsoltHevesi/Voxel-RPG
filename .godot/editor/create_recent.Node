@@ -1,3 +1,4 @@
+HBoxContainer
 MeshInstance3D
 Label
 GPUParticles3D
@@ -12,4 +13,3 @@ RayCast3D
 CollisionShape3D
 Area3D
 NavigationRegion3D
-NavigationAgent3D
