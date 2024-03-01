@@ -7,8 +7,8 @@
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_rvf3r"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_4srie"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6mf1r"]
-points = PackedVector3Array(0.0523185, 0.121174, 1.46394, -0.0456653, -0.0419867, -0.495665, 0.0523185, -0.0419867, -0.495665, -0.0456653, 0.268246, 0.272032, -0.0456653, -0.0419867, 1.54567, 0.0523185, -0.270665, 0.272032, 0.0523185, 0.268246, 0.173921, 0.0523185, -0.123646, 1.46394, -0.0456653, -0.270665, 0.272032, -0.0456653, 0.121174, 1.46394, -0.0456653, 0.0395146, -0.495665, -0.0456653, -0.123646, 1.46394, 0.0523185, 0.0395146, -0.495665, 0.0523185, -0.270665, 0.173921, 0.0523185, 0.0395146, 1.54567, 0.0523185, 0.268246, 0.272032, -0.0456653, 0.0395146, 1.54567, 0.0523185, -0.0419867, 1.54567)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0nwua"]
+radius = 0.2
 
 [node name="LongSword" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -25,6 +25,7 @@ surface_material_override/3 = ExtResource("5_4srie")
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/longSwordHitBox"]
-shape = SubResource("ConvexPolygonShape3D_6mf1r")
+transform = Transform3D(1, -8.74228e-08, 8.74228e-08, 8.74228e-08, -4.37114e-08, -1, 8.74228e-08, 1, -4.37114e-08, -6.48093e-08, 0, 0.741331)
+shape = SubResource("CapsuleShape3D_0nwua")
 
 [connection signal="area_entered" from="MeshInstance3D/longSwordHitBox" to="." method="_on_long_sword_hit_box_area_entered"]
