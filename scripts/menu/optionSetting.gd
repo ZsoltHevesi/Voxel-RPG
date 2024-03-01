@@ -5,8 +5,12 @@ extends VBoxContainer
 @onready var scalingLabel = $scaleBox/scalingLabel
 @onready var scalingSlider = $scaleBox/scalingSlider
 @onready var scaleBox = $scaleBox
-@onready var fsrOptions = $fsrOptions
 @onready var vsyncCheckBox = $vsyncBox/vsyncCheckBox
+@onready var shadowToggle = $shadowBox/shadowToggle
+@onready var ssaoToggle = $ssaoBox/ssaoToggle
+@onready var glowToggle = $glowBox/glowToggle
+@onready var scalingMode = $scaleModeBox/scalingMode
+@onready var fsrOptions = $fsrBox/fsrOptions
 
 var config = ConfigFile.new()
 
@@ -30,7 +34,29 @@ func _ready():
 	var err = config.load("user://config.cfg")
 	if err != OK:
 		return
-
+	if config.get_value("options", "fullscreen"):
+		fullscreenCheckBox.set_pressed_no_signal(true)
+	if config.get_value("options", "vsync"):
+		vsyncCheckBox.set_pressed_no_signal(true)
+	if config.get_value("options", "shadows"):
+		shadowToggle.set_pressed_no_signal(true)
+	if config.get_value("options", "ssao"):
+		ssaoToggle.set_pressed_no_signal(true)
+	if config.get_value("options", "glow"):
+		glowToggle.set_pressed_no_signal(true)
+	scalingMode.select(config.get_value("options", "scaling_mode"))
+	scalingSlider.value = config.get_value("options", "scaling_value")
+	fsrOptions.select(config.get_value("options", "fsr"))
+	if scalingMode.selected == 2 or scalingMode.selected == 3:
+		fsrOptions.show()
+	else:
+		fsrOptions.hide()
+	if scalingMode.selected == 1:
+		scaleBox.show()
+	else:
+		scaleBox.hide()
+	
+	
 
 func addResolutions():
 	var currentResolution = get_window().get_size()
@@ -41,11 +67,21 @@ func addResolutions():
 			resolutionList.select(id)
 		id += 1
 
+func resolutionCheck():
+	var currentResolution = get_window().get_size()
+	var id = 0
+	for r in resolutions:
+		if resolutions[r] == currentResolution:
+			resolutionList.select(id)
+		id += 1
+
 
 func _on_resolution_list_item_selected(index):
 	var id = resolutionList.get_item_text(index)
 	get_window().set_size(resolutions[id])
 	centerScreen()
+	config.set_value("options", "resolution_width", resolutions[id].x)
+	config.set_value("options", "resolution_height", resolutions[id].y)
 
 
 func centerScreen():
@@ -63,8 +99,11 @@ func _on_fullscreen_check_box_toggled(toggled_on):
 	resolutionList.set_disabled(toggled_on)
 	if toggled_on:
 		get_window().set_mode(Window.MODE_EXCLUSIVE_FULLSCREEN)
+		config.set_value("options", "fullscreen", true)
 	else:
 		get_window().set_mode(Window.MODE_WINDOWED)
+		config.set_value("options", "fullscreen", false)
+	resolutionCheck()
 
 
 func _on_scaling_slider_value_changed(value):
@@ -73,42 +112,55 @@ func _on_scaling_slider_value_changed(value):
 	
 	scalingLabel.set_text(str(value)+"% - " + resolutionText)
 	get_viewport().set_scaling_3d_scale(resolutionScale)
+	config.set_value("options", "scaling_value", value)
 
 
 func _on_scaling_mode_item_selected(index):
 	var getViewport = get_viewport()
 	match index:
 		0:
+			scalingSlider.value = 100.00
 			scaleBox.hide()
-			scalingSlider.set_editable(false)
+			fsrOptions.select(0)
 			fsrOptions.hide()
+			config.set_value("options", "scaling_mode", 0)
+			config.set_value("options", "scaling_value", scalingSlider.value)
 		1:
 			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_BILINEAR)
+			fsrOptions.select(0)
 			scaleBox.show()
-			scalingSlider.set_editable(true)
+			scalingSlider.value = 100.00
 			fsrOptions.hide()
+			config.set_value("options", "scaling_mode", 1)
+			config.set_value("options", "scaling_value", scalingSlider.value)
 		2:
 			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR)
 			scaleBox.hide()
-			scalingSlider.set_editable(false)
 			fsrOptions.show()
+			config.set_value("options", "scaling_mode", 2)
+			config.set_value("options", "scaling_value", scalingSlider.value)
 		3:
 			getViewport.set_scaling_3d_mode(Viewport.SCALING_3D_MODE_FSR2)
 			scaleBox.hide()
-			scalingSlider.set_editable(false)
 			fsrOptions.show()
+			config.set_value("options", "scaling_mode", 3)
+			config.set_value("options", "scaling_value", scalingSlider.value)
 
 
 func _on_fsr_options_item_selected(index):
 	match index:
-		1:
+		0:
 			_on_scaling_slider_value_changed(50.00)
-		2:
+			config.set_value("options", "fsr", 0)
+		1:
 			_on_scaling_slider_value_changed(59.00)
-		3:
+			config.set_value("options", "fsr", 1)
+		2:
 			_on_scaling_slider_value_changed(67.00)
-		4:
+			config.set_value("options", "fsr", 2)
+		3:
 			_on_scaling_slider_value_changed(77.00)
+			config.set_value("options", "fsr", 3)
 
 
 func _on_vsync_check_box_toggled(toggled_on):
