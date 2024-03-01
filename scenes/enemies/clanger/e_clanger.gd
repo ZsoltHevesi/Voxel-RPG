@@ -5,9 +5,14 @@ var accel = 10
 var chaseRange = 20
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var player = $"../Player"
+@onready var clanger = $"."
 
 var maxHealth = 100
 var currentHealth = maxHealth
+
+var lootInstance
+var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
+var lootPool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 
 # Go down stairs
 var maxStepDown = -0.51
@@ -147,3 +152,12 @@ func _physics_process(delta):
 
 
 
+
+
+func _on_hit_box_area_entered(area):
+	if area.is_in_group("playerWeapon"):
+		lootInstance = loot.instantiate()
+		lootInstance.ID = lootPool[randi() % lootPool.size()]
+		lootInstance.position = clanger.position
+		get_parent().add_child(lootInstance)
+		queue_free()

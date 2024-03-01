@@ -1,3 +1,6 @@
+Area3D
+CollisionShape3D
+RayCast3D
 HBoxContainer
 MeshInstance3D
 Label
@@ -9,7 +12,3 @@ Control
 Marker3D
 AnimationPlayer
 CanvasLayer
-RayCast3D
-CollisionShape3D
-Area3D
-NavigationRegion3D

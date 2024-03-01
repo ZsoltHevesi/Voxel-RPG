@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp6j2vgxxkd0v"]
+[gd_scene load_steps=7 format=3 uid="uid://cp6j2vgxxkd0v"]
 
 [ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="1_uft40"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_7hxkq"]
@@ -6,6 +6,8 @@
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_rvf3r"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_4srie"]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6mf1r"]
+points = PackedVector3Array(0.0523185, 0.121174, 1.46394, -0.0456653, -0.0419867, -0.495665, 0.0523185, -0.0419867, -0.495665, -0.0456653, 0.268246, 0.272032, -0.0456653, -0.0419867, 1.54567, 0.0523185, -0.270665, 0.272032, 0.0523185, 0.268246, 0.173921, 0.0523185, -0.123646, 1.46394, -0.0456653, -0.270665, 0.272032, -0.0456653, 0.121174, 1.46394, -0.0456653, 0.0395146, -0.495665, -0.0456653, -0.123646, 1.46394, 0.0523185, 0.0395146, -0.495665, 0.0523185, -0.270665, 0.173921, 0.0523185, 0.0395146, 1.54567, 0.0523185, 0.268246, 0.272032, -0.0456653, 0.0395146, 1.54567, 0.0523185, -0.0419867, 1.54567)
 
 [node name="LongSword" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -16,3 +18,9 @@ surface_material_override/0 = ExtResource("2_7hxkq")
 surface_material_override/1 = ExtResource("3_a3fnc")
 surface_material_override/2 = ExtResource("4_rvf3r")
 surface_material_override/3 = ExtResource("5_4srie")
+
+[node name="longSwordHitBox" type="Area3D" parent="MeshInstance3D" groups=["playerWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/longSwordHitBox"]
+shape = SubResource("ConvexPolygonShape3D_6mf1r")

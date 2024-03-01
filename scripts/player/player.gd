@@ -37,6 +37,8 @@ extends CharacterBody3D
 @onready var pnRightLeg = $visuals/pnRightFoot/pnRightLeg
 @onready var pnLeftFoot = $visuals/pnLeftFoot
 @onready var pnRightFoot = $visuals/pnRightFoot
+@onready var longSword = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/LongSword
+
 
 
 # Player animation tree node paths
@@ -306,8 +308,15 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, (sprintSpeed if Input.is_action_pressed("Sprint") else SPEED))
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
+	
+	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim"):
+		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = true
+	else:
+		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
+	
 	# Handle aiming
-	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
