@@ -38,6 +38,9 @@ func _ready():
 		fullscreenCheckBox.set_pressed_no_signal(true)
 	if config.get_value("options", "vsync"):
 		vsyncCheckBox.set_pressed_no_signal(true)
+		resolutionList.set_disabled(true)
+	else:
+		resolutionList.set_disabled(false)
 	if config.get_value("options", "shadows"):
 		shadowToggle.set_pressed_no_signal(true)
 	if config.get_value("options", "ssao"):

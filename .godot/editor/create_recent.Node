@@ -1,7 +1,11 @@
-HBoxContainer
-MeshInstance3D
-Label
+Timer
+RayCast3D
 GPUParticles3D
+Area3D
+MeshInstance3D
+CollisionShape3D
+HBoxContainer
+Label
 Node3D
 Line2D
 Node2D
@@ -9,7 +13,3 @@ Control
 Marker3D
 AnimationPlayer
 CanvasLayer
-RayCast3D
-CollisionShape3D
-Area3D
-NavigationRegion3D

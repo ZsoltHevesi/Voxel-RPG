@@ -126,7 +126,7 @@ surface_material_override/3 = ExtResource("12_ofklv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 shape = SubResource("CapsuleShape3D_qjic2")
 
-[node name="HitBox" type="Area3D" parent="."]
+[node name="HitBox" type="Area3D" parent="." groups=["enemy"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00991707, 0.887244, 0.172538)
@@ -161,5 +161,4 @@ shape = SubResource("SeparationRayShape3D_2iukr")
 [node name="checkStairsRayCast" type="RayCast3D" parent="."]
 target_position = Vector3(0, -0.5, 0)
 
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
