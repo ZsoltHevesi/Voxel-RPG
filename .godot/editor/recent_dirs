@@ -1,8 +1,9 @@
+res://scenes/player
+res://assets/materials/emission
 res://scenes/player/playerAnimations
 res://AutoLoad
 res://scripts/inventory
 res://scenes/menus/inventory/slot
-res://assets/materials/emission
 res://scripts/menu
 res://scenes/levels/level1
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/AutoLoad
@@ -10,7 +11,6 @@ res://scenes/menus
 res://scenes
 res://scenes/decorations/lamps
 res://scripts/player
-res://scenes/player
 res://scenes/decorations/furniture
 res://scenes/decorations
 res://scripts
@@ -19,4 +19,3 @@ res://assets/materials/transparent
 res://assets/materials/metallic
 res://assets/materials/diffuse
 res://assets/materials
-res://assets/models

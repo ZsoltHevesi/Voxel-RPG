@@ -8,7 +8,7 @@ var chaseRange = 20
 @onready var clanger = $"."
 
 var maxHealth = 100
-var currentHealth = maxHealth
+@export var currentHealth = maxHealth
 
 var lootInstance
 var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
@@ -77,25 +77,17 @@ func _rotate_sep_ray():
 	$sepRayFR.global_position.z = self.global_position.z + xz_fr_ray_pos.z
 
 
-func takeDamage(amount):
-	currentHealth -= amount
-	if currentHealth <= 0:
-		# Function to handle player death
-		die()
-
 func die():
-	# Implementing logic for player death (death animations, resetting health etc.)
-	currentHealth = maxHealth
+		lootInstance = loot.instantiate()
+		lootInstance.ID = lootPool[randi() % lootPool.size()]
+		lootInstance.position = clanger.position
+		get_parent().add_child(lootInstance)
+		queue_free()
 
 func heal(amount):
 	currentHealth += amount
 	if currentHealth > maxHealth:
 		currentHealth = maxHealth
-		
-func _on_hit_box_body_entered(body):
-	if body.is_in_group("player"):
-		body.call("takeDamage", 10)  # Adjust the amount of damage as needed
-
 
 func _ready():
 
@@ -108,6 +100,8 @@ func _ready():
 var maxEnemyHeight = 0.5
 
 func _physics_process(delta):
+	if currentHealth <= 0:
+		die()
 	# AI pathfinding logic
 	if player:
 		var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
@@ -149,15 +143,3 @@ func _physics_process(delta):
 	else:
 		print("Player not assigned or found.")
 		
-
-
-
-
-
-func _on_hit_box_area_entered(area):
-	if area.is_in_group("playerWeapon"):
-		lootInstance = loot.instantiate()
-		lootInstance.ID = lootPool[randi() % lootPool.size()]
-		lootInstance.position = clanger.position
-		get_parent().add_child(lootInstance)
-		queue_free()

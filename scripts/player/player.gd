@@ -39,7 +39,9 @@ extends CharacterBody3D
 @onready var pnRightFoot = $visuals/pnRightFoot
 @onready var longSword = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/LongSword
 
-
+var bullet = load("res://scenes/player/bullet.tscn")
+var bulletInstance
+@onready var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot/FlintlockPistol/barrel
 
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
@@ -268,6 +270,7 @@ func _rotate_sep_ray():
 
 func _physics_process(delta):
 
+	longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
 	# Example: Check for player health and take damage if needed
 	if Input.is_action_just_pressed("takeDamage"):
 		# Amount of damage can be adjusted as needed
@@ -312,8 +315,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim"):
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = true
-	else:
-		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
 	
 	# Handle aiming
 	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
@@ -322,6 +323,10 @@ func _physics_process(delta):
 			weaponBlendTarget = 1.0
 			crosshair.visible = true
 		if Input.is_action_just_pressed("attack"):
+			bulletInstance = bullet.instantiate()
+			bulletInstance.position = barrel.global_position
+			bulletInstance.transform.basis = barrel.global_transform.basis
+			get_parent().add_child(bulletInstance)
 			animationTree.set("parameters/shootOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	else:
 		if animationTree.get(aimTransitionState) == "aiming":

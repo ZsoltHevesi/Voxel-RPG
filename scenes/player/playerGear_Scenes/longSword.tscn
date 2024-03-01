@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp6j2vgxxkd0v"]
+[gd_scene load_steps=8 format=3 uid="uid://cp6j2vgxxkd0v"]
 
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/longSword.gd" id="1_kuld3"]
 [ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="1_uft40"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_7hxkq"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_a3fnc"]
@@ -11,6 +12,7 @@ points = PackedVector3Array(0.0523185, 0.121174, 1.46394, -0.0456653, -0.0419867
 
 [node name="LongSword" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_kuld3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_uft40")
@@ -24,3 +26,5 @@ monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/longSwordHitBox"]
 shape = SubResource("ConvexPolygonShape3D_6mf1r")
+
+[connection signal="area_entered" from="MeshInstance3D/longSwordHitBox" to="." method="_on_long_sword_hit_box_area_entered"]

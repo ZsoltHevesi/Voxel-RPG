@@ -161,6 +161,4 @@ shape = SubResource("SeparationRayShape3D_2iukr")
 [node name="checkStairsRayCast" type="RayCast3D" parent="."]
 target_position = Vector3(0, -0.5, 0)
 
-[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

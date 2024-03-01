@@ -1,10 +1,11 @@
-Area3D
-CollisionShape3D
+Timer
 RayCast3D
-HBoxContainer
-MeshInstance3D
-Label
 GPUParticles3D
+Area3D
+MeshInstance3D
+CollisionShape3D
+HBoxContainer
+Label
 Node3D
 Line2D
 Node2D
