@@ -24,4 +24,4 @@ res://scenes/player/bullet.tscn
 res://scenes/player/playerGear_Scenes/longSword.tscn
 res://scenes/enemies/clanger/e_clanger.tscn
 res://scenes/pickUp_Items/pickUp_abstractItem.tscn
-res://AutoLoad/config.gd
+res://scenes/player/bullet.gd

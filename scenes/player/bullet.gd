@@ -5,6 +5,7 @@ const speed = 40.0
 @onready var mesh = $MeshInstance3D
 @onready var hitParticles = $hitParticles
 @onready var bulletCast = $bulletCast
+@onready var bulletDamage = 80
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,4 +30,4 @@ func _on_timer_timeout():
 
 func _on_bullet_hit_box_area_entered(area):
 	if area.is_in_group("enemy"):
-		area.get_parent().currentHealth -= 20
+		area.get_parent().currentHealth -= bulletDamage
