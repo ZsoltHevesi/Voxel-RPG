@@ -2,6 +2,7 @@ extends PanelContainer
 class_name Slot
 
 @onready var texture_rect = $TextureRect
+@onready var playerNode = find_parent("Player")
 
 # Export different slot types
 @export_enum("NONE:0",
@@ -38,6 +39,8 @@ func _drop_data(_pos, data):
 	var temp = texture_rect.property
 	texture_rect.property = data.property
 	data.property = temp
+	
+	playerNode.equip_armour()
 
 
 # Get preview of texture while dragging
