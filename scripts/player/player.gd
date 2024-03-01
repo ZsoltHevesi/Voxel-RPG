@@ -229,7 +229,7 @@ func _physics_process(delta):
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
 	# Handle aiming
-	if Input.is_action_pressed("aim"):
+	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
