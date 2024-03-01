@@ -1,8 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg21b1lue3yu7"]
+[gd_scene load_steps=8 format=3 uid="uid://cg21b1lue3yu7"]
 
 [ext_resource type="Script" path="res://scripts/inventory/abstractItem.gd" id="1_iqbx6"]
+[ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/blueTransGlow.tres" id="2_rupty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bfo65"]
+
+[sub_resource type="Animation" id="Animation_qa8qs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("itemNode:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("itemNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.4, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_7yixx"]
 resource_name = "item_float"
@@ -30,34 +58,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.05, 0), Vector3(0, 0.1, 0), Vector3(0, 0.15, 0), Vector3(0, 0.2, 0), Vector3(0, 0.15, 0), Vector3(0, 0.1, 0), Vector3(0, 0.05, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qa8qs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("itemNode:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("itemNode:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0.4, 0), Vector3(0, 0.45, 0), Vector3(0, 0.5, 0), Vector3(0, 0.55, 0), Vector3(0, 0.6, 0), Vector3(0, 0.55, 0), Vector3(0, 0.5, 0), Vector3(0, 0.45, 0), Vector3(0, 0.4, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lae6k"]
@@ -65,6 +66,11 @@ _data = {
 "RESET": SubResource("Animation_qa8qs"),
 "item_float": SubResource("Animation_7yixx")
 }
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jkgaw"]
+top_radius = 0.0
+bottom_radius = 0.02
+height = 0.6
 
 [node name="abstractItem" type="Node3D"]
 script = ExtResource("1_iqbx6")
@@ -78,6 +84,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_bfo65")
 
 [node name="itemNode" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -85,5 +92,10 @@ libraries = {
 }
 autoplay = "item_float"
 speed_scale = 0.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("CylinderMesh_jkgaw")
+surface_material_override/0 = ExtResource("2_rupty")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

@@ -64,5 +64,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52414, 64.9191, -4.51149)
 ID = "2"
 
 [node name="abstractItem4" parent="map" instance=ExtResource("1_36uwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.703086, 64.9191, -4.51149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.703086, 64.5035, -4.51149)
 ID = "3"
