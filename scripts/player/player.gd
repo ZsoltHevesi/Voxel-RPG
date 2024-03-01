@@ -312,7 +312,7 @@ func _physics_process(delta):
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
 	
-	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim"):
+	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = true
 	
