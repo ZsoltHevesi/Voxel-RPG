@@ -35,8 +35,8 @@ extends CharacterBody3D
 @onready var pnRightHand = $visuals/pnTorso/pnRightShoulder/pnRightHand
 @onready var pnLeftLeg = $visuals/pnLeftFoot/pnLeftLeg
 @onready var pnRightLeg = $visuals/pnRightFoot/pnRightLeg
-@onready var pnLeftFoot = $visuals/pnLeftFoot/winterLeftFoot
-@onready var pnRightFoot = $visuals/pnRightFoot/winterRightFoot
+@onready var pnLeftFoot = $visuals/pnLeftFoot
+@onready var pnRightFoot = $visuals/pnRightFoot
 
 
 # Player animation tree node paths
@@ -149,21 +149,21 @@ func equip_armour():
 	
 	# Equip Left Foot
 	if inv_leftFoot.texture != null:
-		pnLeftFoot.get_child(0).queue_free()
+		pnLeftFoot.get_child(1).queue_free()
 		instance = inv_leftFoot.item_scene.instantiate()
 		pnLeftFoot.add_child(instance)
 	else:
-		pnLeftFoot.get_child(0).queue_free()
+		pnLeftFoot.get_child(1).queue_free()
 		instance = default_leftFoot.instantiate()
 		pnLeftFoot.add_child(instance)
 	
 	# Equip Right Foot
 	if inv_rightFoot.texture != null:
-		pnRightFoot.get_child(0).queue_free()
+		pnRightFoot.get_child(1).queue_free()
 		instance = inv_rightFoot.item_scene.instantiate()
 		pnRightFoot.add_child(instance)
 	else:
-		pnRightFoot.get_child(0).queue_free()
+		pnRightFoot.get_child(1).queue_free()
 		instance = default_rightFoot.instantiate()
 		pnRightFoot.add_child(instance)
 

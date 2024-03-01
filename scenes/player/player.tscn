@@ -232,6 +232,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, 
 [node name="winterRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("19_66p2e")]
 
 [node name="winterRightFoot" parent="visuals/pnRightFoot" instance=ExtResource("18_hi46x")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="cameraMount" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
