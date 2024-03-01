@@ -27,3 +27,4 @@ res://scenes/enemies/clanger/e_clanger.tscn
 res://scenes/player/bullet.gd
 res://scenes/pickUp_Items/pickUp_abstractItem.tscn
 res://scripts/player/player.gd
+res://scripts/menu/optionSetting.gd

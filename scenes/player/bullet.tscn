@@ -29,7 +29,9 @@ shape = SubResource("ConvexPolygonShape3D_upj34")
 
 [node name="hitParticles" type="GPUParticles3D" parent="."]
 cast_shadow = 0
+emitting = false
 amount = 10
+one_shot = true
 explosiveness = 1.0
 process_material = ExtResource("2_slpcl")
 draw_pass_1 = SubResource("BoxMesh_5dhp8")
