@@ -25,3 +25,5 @@ res://scenes/menus/inventory/slot/slot.tscn
 res://scenes/menus/inventory/slot/passive_slot.tscn
 res://scripts/inventory/passive_slot.gd
 res://scripts/inventory/slot.gd
+res://scenes/pickUp_Items/pickUp_abstractItem.tscn
+res://assets/materials/emission/blueTransGlow.tres
