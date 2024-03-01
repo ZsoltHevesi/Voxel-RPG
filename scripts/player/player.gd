@@ -16,6 +16,28 @@ extends CharacterBody3D
 @onready var inv_leftFoot = $playerMenu/UI/character/leftFootSlot/TextureRect
 @onready var inv_rightFoot = $playerMenu/UI/character/rightFootSlot/TextureRect
 
+@onready var default_head = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Head.tscn")
+@onready var default_torso = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Torso.tscn")
+@onready var default_leftShoulder = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Shoulder.tscn")
+@onready var default_rightShoulder = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Shoulder.tscn")
+@onready var default_leftHand = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Hand.tscn")
+@onready var default_rightHand = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Hand.tscn")
+@onready var default_leftLeg = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Leg.tscn")
+@onready var default_rightLeg = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Leg.tscn")
+@onready var default_leftFoot = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Foot.tscn")
+@onready var default_rightFoot = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Foot.tscn")
+
+@onready var pnHead = $visuals/pnTorso/pnHead
+@onready var pnTorso = $visuals/pnTorso
+@onready var pnLeftShoulder = $visuals/pnTorso/pnLeftShoulder
+@onready var pnRightShoulder = $visuals/pnTorso/pnRightShoulder
+@onready var pnLeftHand = $visuals/pnTorso/pnLeftShoulder/pnLeftHand
+@onready var pnRightHand = $visuals/pnTorso/pnRightShoulder/pnRightHand
+@onready var pnLeftLeg = $visuals/pnLeftFoot/pnLeftLeg
+@onready var pnRightLeg = $visuals/pnRightFoot/pnRightLeg
+@onready var pnLeftFoot = $visuals/pnLeftFoot/winterLeftFoot
+@onready var pnRightFoot = $visuals/pnRightFoot/winterRightFoot
+
 
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
@@ -45,50 +67,106 @@ var currentHealth = maxHealth
 # Handle equipping armour
 var instance
 func equip_armour():
+	# Equip head
 	if inv_head.texture != null:
+		pnHead.get_child(0).queue_free()
 		instance = inv_head.item_scene.instantiate()
-		find_child("pnHead").add_child(instance)
+		pnHead.add_child(instance)
+	else:
+		pnHead.get_child(0).queue_free()
+		instance = default_head.instantiate()
+		pnHead.add_child(instance)
 		
+	# Equip torso
 	if inv_torso.texture != null:
+		pnTorso.get_child(3).queue_free()
 		instance = inv_torso.item_scene.instantiate()
-		find_child("pnTorso").add_child(instance)
+		pnTorso.add_child(instance)
+	else:
+		pnTorso.get_child(3).queue_free()
+		instance = default_torso.instantiate()
+		pnTorso.add_child(instance)
 		
+	# Equip Left Shoulder
 	if inv_leftShoulder.texture != null:
+		pnLeftShoulder.get_child(1).queue_free()
 		instance = inv_leftShoulder.item_scene.instantiate()
-		find_child("pnLeftShoulder").add_child(instance)
-		
-	if inv_rightShoulder.texture != null:
-		instance = inv_rightShoulder.item_scene.instantiate()
-		find_child("pnRightShoulder").add_child(instance)
-		
-	if inv_leftHand.texture != null:
-		instance = inv_leftHand.item_scene.instantiate()
-		find_child("pnLeftHand").add_child(instance)
-		
-	if inv_rightHand.texture != null:
-		instance = inv_rightHand.item_scene.instantiate()
-		find_child("pnRightHand").add_child(instance)
-		
-	if inv_leftLeg.texture != null:
-		instance = inv_leftLeg.item_scene.instantiate()
-		find_child("pnLeftLeg").add_child(instance)
-		
-	if inv_rightLeg.texture != null:
-		instance = inv_rightLeg.item_scene.instantiate()
-		find_child("pnRightLeg").add_child(instance)
-		
-	if inv_leftFoot.texture != null:
-		instance = inv_leftFoot.item_scene.instantiate()
-		find_child("pnLeftFoot").add_child(instance)
-		
-	if inv_rightFoot.texture != null:
-		instance = inv_rightFoot.item_scene.instantiate()
-		find_child("pnRightFoot").add_child(instance)
-
-
-func unequip_armour():
-		print("empty")
+		pnLeftShoulder.add_child(instance)
+	else:
+		pnLeftShoulder.get_child(1).queue_free()
+		instance = default_leftShoulder.instantiate()
+		pnLeftShoulder.add_child(instance)
 	
+	# Equip Right Shoulder
+	if inv_rightShoulder.texture != null:
+		pnRightShoulder.get_child(1).queue_free()
+		instance = inv_rightShoulder.item_scene.instantiate()
+		pnRightShoulder.add_child(instance)
+	else:
+		pnRightShoulder.get_child(1).queue_free()
+		instance = default_rightShoulder.instantiate()
+		pnRightShoulder.add_child(instance)
+	
+	# Equip Left Hand
+	if inv_leftHand.texture != null:
+		pnLeftHand.get_child(1).queue_free()
+		instance = inv_leftHand.item_scene.instantiate()
+		pnLeftHand.add_child(instance)
+	else:
+		pnLeftHand.get_child(1).queue_free()
+		instance = default_leftHand.instantiate()
+		pnLeftHand.add_child(instance)
+	
+	# Equip Right Hand
+	if inv_rightHand.texture != null:
+		pnRightHand.get_child(1).queue_free()
+		instance = inv_rightHand.item_scene.instantiate()
+		pnRightHand.add_child(instance)
+	else:
+		pnRightHand.get_child(1).queue_free()
+		instance = default_rightHand.instantiate()
+		pnRightHand.add_child(instance)
+	
+	# Equip Left Leg
+	if inv_leftLeg.texture != null:
+		pnLeftLeg.get_child(0).queue_free()
+		instance = inv_leftLeg.item_scene.instantiate()
+		pnLeftLeg.add_child(instance)
+	else:
+		pnLeftLeg.get_child(0).queue_free()
+		instance = default_leftLeg.instantiate()
+		pnLeftLeg.add_child(instance)
+	
+	# Equip Right Leg
+	if inv_rightLeg.texture != null:
+		pnRightLeg.get_child(0).queue_free()
+		instance = inv_rightLeg.item_scene.instantiate()
+		pnRightLeg.add_child(instance)
+	else:
+		pnRightLeg.get_child(0).queue_free()
+		instance = default_rightLeg.instantiate()
+		pnRightLeg.add_child(instance)
+	
+	# Equip Left Foot
+	if inv_leftFoot.texture != null:
+		pnLeftFoot.get_child(0).queue_free()
+		instance = inv_leftFoot.item_scene.instantiate()
+		pnLeftFoot.add_child(instance)
+	else:
+		pnLeftFoot.get_child(0).queue_free()
+		instance = default_leftFoot.instantiate()
+		pnLeftFoot.add_child(instance)
+	
+	# Equip Right Foot
+	if inv_rightFoot.texture != null:
+		pnRightFoot.get_child(0).queue_free()
+		instance = inv_rightFoot.item_scene.instantiate()
+		pnRightFoot.add_child(instance)
+	else:
+		pnRightFoot.get_child(0).queue_free()
+		instance = default_rightFoot.instantiate()
+		pnRightFoot.add_child(instance)
+
 
 func takeDamage(amount):
 	if amount < maxHealth:
