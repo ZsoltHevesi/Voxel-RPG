@@ -1,5 +1,4 @@
-res://scenes/player/playerGear_Scenes/longSword.tscn
-res://assets/materials/emission/blueTransGlow.tres
+res://scenes/menus/mainMenu.tscn
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
@@ -17,14 +16,12 @@ res://assets/materials/diffuse/brownDIFF3.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/emission/yellowGlow.tres
 res://assets/particles/bulletHit.tres
-res://scenes/player/playerGear_Scenes/longSword.gd
-res://scenes/menus/mainMenu.tscn
+res://assets/materials/emission/blueTransGlow.tres
 res://scenes/menus/optionsMenu.tscn
 res://scenes/levels/level1/level1.tscn
 res://scenes/player/player.tscn
 res://scenes/player/bullet.tscn
+res://scenes/player/playerGear_Scenes/longSword.tscn
 res://scenes/enemies/clanger/e_clanger.tscn
-res://scenes/player/bullet.gd
 res://scenes/pickUp_Items/pickUp_abstractItem.tscn
-res://scripts/player/player.gd
-res://scripts/menu/optionSetting.gd
+res://AutoLoad/config.gd
