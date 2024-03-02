@@ -6,7 +6,6 @@
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_tc0on"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="5_j8rma"]
 
-
 [node name="FlintlockPistol" type="Node3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
@@ -16,3 +15,7 @@ surface_material_override/0 = ExtResource("2_1h4gd")
 surface_material_override/1 = ExtResource("3_0y0vd")
 surface_material_override/2 = ExtResource("4_tc0on")
 surface_material_override/3 = ExtResource("5_j8rma")
+
+[node name="barrel" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.26784e-08, 0.222308, 0.488184)
+target_position = Vector3(0, 0, 0.5)
