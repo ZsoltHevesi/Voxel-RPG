@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccwtsij7thi3e"
+path="res://.godot/imported/stainedGlass1.obj-8bd54e2b565ff9f923877c1de497da0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stainedGlass1.obj-8bd54e2b565ff9f923877c1de497da0c.mesh"]
+
+source_file="res://assets/models/tiles/hallways/hallwayCastle1/stainedGlass1.obj"
+dest_files=["res://.godot/imported/stainedGlass1.obj-8bd54e2b565ff9f923877c1de497da0c.mesh", "res://.godot/imported/stainedGlass1.obj-8bd54e2b565ff9f923877c1de497da0c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
