@@ -1,8 +1,8 @@
+MeshInstance3D
 RayCast3D
 Timer
 GPUParticles3D
 Area3D
-MeshInstance3D
 CollisionShape3D
 HBoxContainer
 Label
