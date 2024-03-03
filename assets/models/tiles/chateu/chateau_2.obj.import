@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0ibcltvl2ppe"
+path="res://.godot/imported/chateau_2.obj-098850bac73c85ccc6fea3673dda29ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chateau_2.obj-098850bac73c85ccc6fea3673dda29ea.mesh"]
+
+source_file="res://assets/models/tiles/chateu/chateau_2.obj"
+dest_files=["res://.godot/imported/chateau_2.obj-098850bac73c85ccc6fea3673dda29ea.mesh", "res://.godot/imported/chateau_2.obj-098850bac73c85ccc6fea3673dda29ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://u574x65wbbln" path="res://assets/models/player/armour/winter/head.obj" id="1_w1kda"]
 [ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="2_wm00x"]
-[ext_resource type="Material" uid="uid://beq3y7wcpswha" path="res://assets/materials/diffuse/brownPastelDIFF1.tres" id="3_oyhad"]
+[ext_resource type="Material" uid="uid://beq3y7wcpswha" path="res://assets/materials/diffuse/brownPastelDIFF3.tres" id="3_oyhad"]
 [ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="4_k6iv0"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="5_f627e"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="6_yv2r5"]
