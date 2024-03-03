@@ -9,7 +9,6 @@
 [ext_resource type="VoxelGIData" uid="uid://dcepdv2dfic5l" path="res://scenes/levels/test/test-area.VoxelGI_data.res" id="7_6sjvy"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="17_xpiuv"]
 
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y72el"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
