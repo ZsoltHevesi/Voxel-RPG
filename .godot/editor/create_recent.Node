@@ -1,10 +1,10 @@
-StaticBody3D
-Area3D
 CollisionShape3D
+StaticBody3D
 MeshInstance3D
 RayCast3D
 Timer
 GPUParticles3D
+Area3D
 HBoxContainer
 Label
 Node3D

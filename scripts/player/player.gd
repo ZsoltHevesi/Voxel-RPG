@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 @onready var camera_mount = $cameraMount
 @onready var animation_player = $visuals/AnimationPlayer
 @onready var animationTree = $visuals/AnimationTree
@@ -183,17 +182,12 @@ func takeDamage(amount):
 	print("Current Health:", currentHealth)
 	$cameraMount/SpringArm3D/Camera3D/UI/HealthBar.value = currentHealth
 	if currentHealth <= 0:
-
-
 		# Function to handle player death
 		die()
 		
 func die():
 	# Implementing logic for player death (death animations, resetting health etc.)
-	#currentHealth = maxHealth
-	pass
-
-
+	currentHealth = maxHealth
 
 func heal(amount):
 	currentHealth += amount
@@ -204,8 +198,6 @@ func heal(amount):
 # Capture Mouse
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
-
 
 
 # Rotate Player and Camera
@@ -349,10 +341,3 @@ func _physics_process(delta):
 	_rotate_sep_ray() # call this before move_and_slide()
 	move_and_slide()
 	_snap_down_stairs_check()
-# Collision shape name
-
-func _on_Fallbarrier_body_entered(body):
-	if body.name == "Player":
-		# Reduce player's health
-		takeDamage(currentHealth)
-
