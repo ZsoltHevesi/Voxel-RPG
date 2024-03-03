@@ -96,7 +96,6 @@ filter_enabled = true
 filters = ["pnTorso/pnRightShoulder/pnRightHand:position", "pnTorso/pnRightShoulder/pnRightHand:rotation", "pnTorso/pnRightShoulder:position", "pnTorso/pnRightShoulder:rotation", "pnTorso:position", "pnTorso:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(-141.678, 229.709)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -168,7 +167,6 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="visuals"]
-active = false
 libraries = {
 "": SubResource("AnimationLibrary_g6ovt")
 }
