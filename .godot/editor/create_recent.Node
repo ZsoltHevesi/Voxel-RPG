@@ -1,9 +1,10 @@
+CollisionShape3D
+StaticBody3D
 MeshInstance3D
 RayCast3D
 Timer
 GPUParticles3D
 Area3D
-CollisionShape3D
 HBoxContainer
 Label
 Node3D
@@ -11,4 +12,3 @@ Line2D
 Node2D
 Control
 Marker3D
-AnimationPlayer
