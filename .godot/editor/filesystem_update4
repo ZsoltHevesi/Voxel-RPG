@@ -14,4 +14,8 @@ res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/crimsonDIFF1.tres
 res://scenes/player/player.tscn
 res://scenes/levels/test/test-area.tscn
-res://scripts/player/player.gd
+res://scenes/levels/level1/level1.tscn
+res://assets/materials/metallic/goldMET1.tres
+res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
+res://assets/materials/transparent/clearGlass_Refr.tres
+res://assets/materials/diffuse/boneDIFF2.tres
