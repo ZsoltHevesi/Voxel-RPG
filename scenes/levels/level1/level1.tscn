@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=10 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="PackedScene" uid="uid://bqhd5qtvwp261" path="res://scenes/tiles/chateau scene/chateau.tscn" id="1_f1ho0"]
@@ -27,6 +27,9 @@ fog_light_color = Color(0.941176, 0.94902, 0.956863, 1)
 fog_density = 0.0002
 volumetric_fog_density = 0.008
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ti16y"]
+size = Vector3(500, 1, 500)
+
 [node name="world" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -40,6 +43,7 @@ shadow_enabled = true
 script = ExtResource("2_nrich")
 
 [node name="map" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.183, 0)
 
 [node name="tiles" type="Node3D" parent="map"]
 
@@ -48,35 +52,49 @@ script = ExtResource("2_nrich")
 [node name="Player" parent="map" instance=ExtResource("2_cy5vs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="clanger" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="map"]
 
-[node name="clanger2" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, -29.5329)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="map/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1843, -18.6197, -7.81985)
+shape = SubResource("BoxShape3D_ti16y")
 
-[node name="clanger3" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8643, 3.5, -29.5329)
+[node name="Area3D" type="Area3D" parent="map"]
 
-[node name="clanger4" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, 3.5, -29.5329)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="map/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1843, -18.6197, -7.81985)
+shape = SubResource("BoxShape3D_ti16y")
 
-[node name="clanger5" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, 3.5, -0.394085)
+[node name="clanger" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, -8.68301, 0)
 
-[node name="clanger6" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, 3.5, 29.3553)
+[node name="clanger2" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, -8.68301, -29.5329)
 
-[node name="clanger7" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1728, 3.5, 29.3553)
+[node name="clanger3" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8643, -8.68301, -29.5329)
 
-[node name="clanger8" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777195, 3.5, 38.3587)
+[node name="clanger4" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, -8.68301, -29.5329)
 
-[node name="clanger9" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777, 22, 38.359)
+[node name="clanger5" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, -8.68301, -0.394085)
 
-[node name="clanger10" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60836, 22, 38.359)
+[node name="clanger6" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, -8.68301, 29.3553)
 
-[node name="clanger11" parent="." instance=ExtResource("3_f8dnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22692, 22, 38.359)
+[node name="clanger7" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1728, -8.68301, 29.3553)
+
+[node name="clanger8" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777195, -8.68301, 38.3587)
+
+[node name="clanger9" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777, 9.81699, 38.359)
+
+[node name="clanger10" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60836, 9.81699, 38.359)
+
+[node name="clanger11" parent="map" instance=ExtResource("3_f8dnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22692, 9.81699, 38.359)
+
+[connection signal="body_entered" from="map/Area3D" to="map/Player" method="_on_Fallbarrier_body_entered"]
