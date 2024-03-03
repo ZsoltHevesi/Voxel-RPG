@@ -356,3 +356,7 @@ func _on_Fallbarrier_body_entered(body):
 		# Reduce player's health
 		takeDamage(currentHealth)
 
+func _on_ClangerSword_body_entered(body):
+	if body.name == "Player":
+		# Reduce player's health
+		takeDamage(5) # Or whatever amount of damage you want to inflict

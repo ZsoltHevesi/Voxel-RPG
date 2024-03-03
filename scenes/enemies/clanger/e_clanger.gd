@@ -149,3 +149,10 @@ func _physics_process(delta):
 	else:
 		print("Player not assigned or found.")
 		
+
+
+func _on_clanger_sword_body_entered(body):
+	if body.name == "Player":
+		# Deal damage to the player
+		body.takeDamage(5)
+

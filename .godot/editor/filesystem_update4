@@ -17,5 +17,4 @@ res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/boneDIFF2.tres
 res://scenes/levels/level1/level1.tscn
-res://scripts/player/player.gd
-res://scenes/levels/level1/Area3D.gd
+res://scenes/enemies/clanger/e_clanger.tscn

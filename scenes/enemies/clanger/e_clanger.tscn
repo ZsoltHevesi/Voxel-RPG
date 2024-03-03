@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=21 format=3 uid="uid://b28y412e8tws"]
 
 [ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="1_fbqvk"]
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
@@ -29,6 +29,9 @@ height = 1.75
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_2iukr"]
 length = 0.51
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6ih2"]
+size = Vector3(0.2, 0.2, 2.5)
 
 [node name="clanger" type="CharacterBody3D"]
 disable_mode = 2
@@ -161,4 +164,19 @@ shape = SubResource("SeparationRayShape3D_2iukr")
 [node name="checkStairsRayCast" type="RayCast3D" parent="."]
 target_position = Vector3(0, -0.5, 0)
 
+[node name="ClangerSword" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClangerSword"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.351826, 0.609564, -0.401053)
+shape = SubResource("BoxShape3D_y6ih2")
+
+[node name="ClangerSword2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.748978, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClangerSword2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.351826, 0.609564, -0.401053)
+shape = SubResource("BoxShape3D_y6ih2")
+
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="body_entered" from="ClangerSword" to="." method="_on_clanger_sword_body_entered"]
+[connection signal="body_entered" from="ClangerSword2" to="." method="_on_clanger_sword_body_entered"]
