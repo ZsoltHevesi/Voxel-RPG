@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr8i60blyh5fv"
+path="res://.godot/imported/castlePit_1.obj-cee1e85aae37eca7cf6cce0255398866.mesh"
+
+[deps]
+
+files=["res://.godot/imported/castlePit_1.obj-cee1e85aae37eca7cf6cce0255398866.mesh"]
+
+source_file="res://assets/models/tiles/castlePit/castlePit_1.obj"
+dest_files=["res://.godot/imported/castlePit_1.obj-cee1e85aae37eca7cf6cce0255398866.mesh", "res://.godot/imported/castlePit_1.obj-cee1e85aae37eca7cf6cce0255398866.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

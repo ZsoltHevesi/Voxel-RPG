@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkpp3n4nf4q44"
+path="res://.godot/imported/hallwayStone1.obj-06268b969bf9254baad6cffb8ce3d2b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hallwayStone1.obj-06268b969bf9254baad6cffb8ce3d2b1.mesh"]
+
+source_file="res://assets/models/tiles/hallways/castleHallways/hallwayStone1.obj"
+dest_files=["res://.godot/imported/hallwayStone1.obj-06268b969bf9254baad6cffb8ce3d2b1.mesh", "res://.godot/imported/hallwayStone1.obj-06268b969bf9254baad6cffb8ce3d2b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

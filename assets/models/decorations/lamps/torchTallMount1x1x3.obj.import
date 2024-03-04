@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0rr3e7okk6tn"
+path="res://.godot/imported/torchTallMount1x1x3.obj-df28426ac3a0f494bc5248c98edf3040.mesh"
+
+[deps]
+
+files=["res://.godot/imported/torchTallMount1x1x3.obj-df28426ac3a0f494bc5248c98edf3040.mesh"]
+
+source_file="res://assets/models/decorations/lamps/torchTallMount1x1x3.obj"
+dest_files=["res://.godot/imported/torchTallMount1x1x3.obj-df28426ac3a0f494bc5248c98edf3040.mesh", "res://.godot/imported/torchTallMount1x1x3.obj-df28426ac3a0f494bc5248c98edf3040.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
