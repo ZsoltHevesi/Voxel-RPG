@@ -145,7 +145,7 @@ func _on_clanger_hitbox_area_exited(area):
 
 
 func _on_area_3d_body_entered(body):
-	if body.name == "Player" and leftStaffArea == visible:
+	if body.name == "Player" and leftStaffArea.visible:
 		# Deal damage to the player
 		body.takeDamage(5)
 
