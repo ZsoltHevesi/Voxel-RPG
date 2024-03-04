@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=35 format=3 uid="uid://b28y412e8tws"]
 
 [ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="1_fbqvk"]
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
@@ -868,9 +868,6 @@ length = 0.51
 [sub_resource type="BoxShape3D" id="BoxShape3D_hmrak"]
 size = Vector3(0.87, 1.75, 0.87)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_88tde"]
-size = Vector3(0.2, 0.2, 2.5)
-
 [node name="clanger" type="CharacterBody3D" groups=["enemies"]]
 disable_mode = 2
 script = ExtResource("1_fbqvk")
@@ -1055,21 +1052,8 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("BoxShape3D_hmrak")
 
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349654, 1.01196, -0.842402)
-shape = SubResource("BoxShape3D_88tde")
-
-[node name="Area3D2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.750766, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349654, 1.01196, -0.842402)
-shape = SubResource("BoxShape3D_88tde")
-
 [connection signal="area_exited" from="clangerHitbox" to="." method="_on_clanger_hitbox_area_exited"]
+[connection signal="body_entered" from="visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="visuals/enTorso/enRightShoulder/enRightStaff/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_clanger_sword_body_entered"]
-[connection signal="body_entered" from="Area3D2" to="." method="_on_clanger_sword_body_entered"]

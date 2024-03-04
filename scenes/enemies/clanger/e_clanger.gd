@@ -139,7 +139,8 @@ func _on_clanger_hitbox_area_exited(area):
 		meleeImmunity = false
 
 
-func _on_clanger_sword_body_entered(body):
+func _on_area_3d_body_entered(body):
 	if body.name == "Player":
 		# Deal damage to the player
 		body.takeDamage(5)
+
