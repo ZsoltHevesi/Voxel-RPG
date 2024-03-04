@@ -29,5 +29,5 @@ func _on_timer_timeout():
 
 
 func _on_bullet_hit_box_area_entered(area):
-	if area.is_in_group("enemy"):
+	if area.is_in_group("enemies"):
 		area.get_parent().currentHealth -= bulletDamage

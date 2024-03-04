@@ -21,7 +21,7 @@ surface_material_override/1 = ExtResource("3_a3fnc")
 surface_material_override/2 = ExtResource("4_rvf3r")
 surface_material_override/3 = ExtResource("5_4srie")
 
-[node name="longSwordHitBox" type="Area3D" parent="MeshInstance3D" groups=["playerWeapon"]]
+[node name="longSwordHitBox" type="Area3D" parent="MeshInstance3D" groups=["playerMeleeWeapon"]]
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/longSwordHitBox"]
