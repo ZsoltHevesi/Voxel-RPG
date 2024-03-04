@@ -953,16 +953,14 @@ shape = SubResource("BoxShape3D_lceas")
 [node name="visuals" type="Node3D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals"]
-deterministic = true
+active = false
+reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_2kn50")
 }
 autoplay = "idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="visuals"]
-active = false
-deterministic = false
-reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_2kn50")
 }

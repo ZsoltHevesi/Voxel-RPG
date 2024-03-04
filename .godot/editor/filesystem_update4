@@ -22,3 +22,5 @@ res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://scenes/levels/level1/level1.tscn
+res://scenes/player/player.tscn
+res://scenes/menus/fps_Counter.tscn
