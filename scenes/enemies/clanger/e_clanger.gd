@@ -12,6 +12,7 @@ var lootPool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 var chaseRange = 20
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var SPEED = 3.0
+var desiredDistance = 1.25
 
 var maxHealth = 100
 @export var currentHealth = maxHealth
@@ -84,7 +85,7 @@ func _physics_process(delta):
 	# AI pathfinding
 	var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
 	
-	if distanceToPlayer <= chaseRange:
+	if distanceToPlayer <= chaseRange and position.distance_to(player.global_position) > desiredDistance:
 		var currentLocation = global_transform.origin
 		var nextLocation = navAgent.get_next_path_position()
 		var newVelocity = (nextLocation - currentLocation).normalized() * SPEED
