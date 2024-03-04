@@ -1,9 +1,9 @@
+CollisionShape3D
+StaticBody3D
 NavigationAgent3D
 Node
 OmniLight3D
 MeshInstance3D
-CollisionShape3D
-StaticBody3D
 RayCast3D
 Timer
 GPUParticles3D
@@ -12,4 +12,3 @@ HBoxContainer
 Label
 Node3D
 Line2D
-Node2D

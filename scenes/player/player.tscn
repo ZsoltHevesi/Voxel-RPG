@@ -154,8 +154,8 @@ height = 1.75
 length = 0.51
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 9
-collision_mask = 9
+collision_layer = 13
+collision_mask = 13
 script = ExtResource("1_dq0rt")
 
 [node name="visuals" type="Node3D" parent="."]
