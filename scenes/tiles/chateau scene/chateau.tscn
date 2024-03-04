@@ -168,3 +168,15 @@ surface_material_override/5 = ExtResource("9_s3lg4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D9/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ntnjh")
+
+[node name="exitCast3" type="RayCast3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3.5, -35.25)
+target_position = Vector3(0, 0, 0)
+
+[node name="exitCast2" type="RayCast3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -36.25, 3.5, 0)
+target_position = Vector3(0, 0, 0)
+
+[node name="exitCast1" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.25, 3.5, 0)
+target_position = Vector3(0, 0, 0)
