@@ -7,6 +7,11 @@ extends CharacterBody3D
 var idleRunBlend = "parameters/IdleRunBLend/blend_amount"
 var attackOneShot = "parameters/attackOneShot/request"
 
+@onready var leftStaffArea = $visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D
+@onready var rightStaffArea = $visuals/enTorso/enRightShoulder/enRightStaff/Area3D
+
+
+
 # Loot to spawn after death
 var lootInstance
 var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
@@ -139,7 +144,8 @@ func _on_clanger_hitbox_area_exited(area):
 		meleeImmunity = false
 
 
-func _on_clanger_sword_body_entered(body):
-	if body.name == "Player":
+func _on_area_3d_body_entered(body):
+	if body.name == "Player" and leftStaffArea == visible:
 		# Deal damage to the player
 		body.takeDamage(5)
+

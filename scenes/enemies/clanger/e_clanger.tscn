@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=35 format=3 uid="uid://b28y412e8tws"]
 
 [ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="1_fbqvk"]
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
@@ -261,6 +261,30 @@ tracks/19/keys = {
 "update": 0,
 "values": [Vector3(-0.357792, 3.10669, 2.96706)]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("enTorso/enRightShoulder/enRightStaff/Area3D:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_gy0wj"]
 resource_name = "attack"
@@ -384,6 +408,30 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0.3, 0.2, 0), Vector3(0.3, 0.2, 0), Vector3(0.3, 0.2, 0), Vector3(0.3, 0.2, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("enTorso/enRightShoulder/enRightStaff/Area3D:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_0kc8m"]
@@ -630,6 +678,30 @@ tracks/19/keys = {
 "update": 0,
 "values": [Vector3(-0.589459, 0.3302, -0.408722), Vector3(-0.494655, 0.311221, -0.371978)]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("enTorso/enRightShoulder/enRightStaff/Area3D:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_32xkf"]
 resource_name = "run"
@@ -832,7 +904,6 @@ animation = &"run"
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_cdo6h"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_w8lwl"]
-graph_offset = Vector2(-401.133, 32.419)
 nodes/IdleRunBLend/node = SubResource("AnimationNodeBlend2_6lybw")
 nodes/IdleRunBLend/position = Vector2(80, 130)
 nodes/attack/node = SubResource("AnimationNodeAnimation_7jdha")
@@ -868,9 +939,6 @@ length = 0.51
 [sub_resource type="BoxShape3D" id="BoxShape3D_hmrak"]
 size = Vector3(0.87, 1.75, 0.87)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_88tde"]
-size = Vector3(0.2, 0.2, 2.5)
-
 [node name="clanger" type="CharacterBody3D" groups=["enemies"]]
 disable_mode = 2
 script = ExtResource("1_fbqvk")
@@ -892,6 +960,9 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="visuals"]
+active = false
+deterministic = false
+reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_2kn50")
 }
@@ -972,6 +1043,7 @@ surface_material_override/2 = ExtResource("10_axpor")
 surface_material_override/3 = ExtResource("12_ofklv")
 
 [node name="Area3D" type="Area3D" parent="visuals/enTorso/enLeftShoulder/enLeftStaff"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D"]
 transform = Transform3D(1, -1.49012e-08, -4.00469e-08, -1.21072e-08, -4.47035e-08, -1, -1.49012e-08, 1, -6.70552e-08, 0, -0.1, 0.2)
@@ -995,6 +1067,7 @@ surface_material_override/2 = ExtResource("10_axpor")
 surface_material_override/3 = ExtResource("12_ofklv")
 
 [node name="Area3D" type="Area3D" parent="visuals/enTorso/enRightShoulder/enRightStaff"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/enTorso/enRightShoulder/enRightStaff/Area3D"]
 transform = Transform3D(1, -1.49012e-08, -4.00469e-08, -1.21072e-08, -4.47035e-08, -1, -1.49012e-08, 1, -6.70552e-08, 0, -0.1, 0.2)
@@ -1055,21 +1128,8 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("BoxShape3D_hmrak")
 
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349654, 1.01196, -0.842402)
-shape = SubResource("BoxShape3D_88tde")
-
-[node name="Area3D2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.750766, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349654, 1.01196, -0.842402)
-shape = SubResource("BoxShape3D_88tde")
-
 [connection signal="area_exited" from="clangerHitbox" to="." method="_on_clanger_hitbox_area_exited"]
+[connection signal="body_entered" from="visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="visuals/enTorso/enRightShoulder/enRightStaff/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_clanger_sword_body_entered"]
-[connection signal="body_entered" from="Area3D2" to="." method="_on_clanger_sword_body_entered"]
