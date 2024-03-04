@@ -58,3 +58,10 @@ func _ready():
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+	centerScreen()
+
+func centerScreen():
+	var screenCenter = DisplayServer.screen_get_position() + DisplayServer.screen_get_size()/2
+	var windowSize = get_window().get_size_with_decorations()
+	get_window().set_position(screenCenter - windowSize/2)

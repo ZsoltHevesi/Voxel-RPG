@@ -38,6 +38,7 @@ extends CharacterBody3D
 @onready var pnLeftFoot = $visuals/pnLeftFoot
 @onready var pnRightFoot = $visuals/pnRightFoot
 @onready var longSword = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/LongSword
+@onready var weaponCast = $cameraMount/SpringArm3D/weaponCast
 
 var bullet = load("res://scenes/player/bullet.tscn")
 var bulletInstance
@@ -51,6 +52,7 @@ var weaponBlend = "parameters/weaponBlend/blend_amount"
 var airGroundTransition = "parameters/airGroundTransition/transition_request"
 
 var weaponBlendTarget = 0.0
+var weaponCastTip = Vector3()
 
 var SPEED = 5.5
 var sprintSpeed = 9.0
@@ -272,6 +274,12 @@ func _rotate_sep_ray():
 
 
 func _physics_process(delta):
+	
+	if weaponCast.is_colliding() && (weaponCast.get_collision_point() - weaponCast.global_transform.origin).length() > 0.2:
+		weaponCastTip = weaponCast.get_collision_point()
+	else:
+		weaponCastTip = (weaponCast.target_position.z * weaponCast.global_transform.basis.z) + weaponCast.global_transform.origin
+	barrel.look_at(weaponCastTip)
 
 	longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
 	# Example: Check for player health and take damage if needed
