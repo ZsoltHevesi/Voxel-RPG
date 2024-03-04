@@ -1,9 +1,11 @@
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
+F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG
+res://AutoLoad
+F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/tools
 res://scenes/tiles/hallways
 res://scenes/player
 res://assets/materials/emission
 res://scenes/player/playerAnimations
-res://AutoLoad
 res://scripts/inventory
 res://scenes/menus/inventory/slot
 res://scripts/menu
@@ -19,5 +21,3 @@ res://scripts
 res://scenes/levels
 res://assets/materials/transparent
 res://assets/materials/metallic
-res://assets/materials/diffuse
-res://assets/materials

@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ItemData="*res://AutoLoad/database.gd"
 Config="*res://AutoLoad/config.gd"
+ItemData="*res://AutoLoad/database.gd"
 
 [display]
 

@@ -3,7 +3,7 @@ extends Node
 var content : Dictionary
 
 func _ready():
-	var file = FileAccess.open("res://Autoload/database.json", FileAccess.READ)
+	var file = FileAccess.open("res://database/database.json", FileAccess.READ)
 	
 	content = JSON.parse_string(file.get_as_text())
 	
