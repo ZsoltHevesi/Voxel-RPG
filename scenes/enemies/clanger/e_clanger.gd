@@ -87,10 +87,10 @@ func _rotate_sep_ray():
 func _physics_process(delta):
 	if currentHealth <= 0:
 		die()
-	
 	# AI pathfinding
 	var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
-	
+	if distanceToPlayer > chaseRange:
+		animationTree.set(idleRunBlend, lerp(animationTree.get(idleRunBlend), 0.0, delta * SPEED))
 	if distanceToPlayer <= chaseRange and position.distance_to(player.global_position) > desiredDistance:
 		var currentLocation = global_transform.origin
 		var nextLocation = navAgent.get_next_path_position()
@@ -103,9 +103,6 @@ func _physics_process(delta):
 		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	else:
 		navAgent.set_velocity(Vector3.ZERO)
-		animationTree.set(idleRunBlend, lerp(animationTree.get(idleRunBlend), 0.0, delta * SPEED))
-	
-	if targetInRange():
 		animationTree.set(attackOneShot, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
@@ -128,9 +125,6 @@ func update_target_location(target_location):
 
 func _on_navigation_agent_3d_target_reached():
 	print("in range")
-
-func targetInRange():
-	return global_position.direction_to(player.global_position) < attack_range
 
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 0.25)
