@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ki47uapq5iqk"
+path="res://.godot/imported/tower1.obj-e905adf537457078a3d644432d2ab8db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tower1.obj-e905adf537457078a3d644432d2ab8db.mesh"]
+
+source_file="res://assets/models/tiles/backdrop/tower1.obj"
+dest_files=["res://.godot/imported/tower1.obj-e905adf537457078a3d644432d2ab8db.mesh", "res://.godot/imported/tower1.obj-e905adf537457078a3d644432d2ab8db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

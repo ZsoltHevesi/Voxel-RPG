@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cae731p1ceum1"
+path="res://.godot/imported/pillar_4.obj-f8a45186bc639158ec673afc9ca96658.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar_4.obj-f8a45186bc639158ec673afc9ca96658.mesh"]
+
+source_file="res://assets/models/tiles/castleMonarch/pillar_4.obj"
+dest_files=["res://.godot/imported/pillar_4.obj-f8a45186bc639158ec673afc9ca96658.mesh", "res://.godot/imported/pillar_4.obj-f8a45186bc639158ec673afc9ca96658.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

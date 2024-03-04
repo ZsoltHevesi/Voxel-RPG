@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hto0b683b035"
+path="res://.godot/imported/castleHallwayLong.obj-47045203fdb83e871488ea5d1da89b6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/castleHallwayLong.obj-47045203fdb83e871488ea5d1da89b6f.mesh"]
+
+source_file="res://assets/models/tiles/hallways/castleHallways/castleHallwayLong.obj"
+dest_files=["res://.godot/imported/castleHallwayLong.obj-47045203fdb83e871488ea5d1da89b6f.mesh", "res://.godot/imported/castleHallwayLong.obj-47045203fdb83e871488ea5d1da89b6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

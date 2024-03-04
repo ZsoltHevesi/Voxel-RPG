@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwjtly7shqmfy"
+path="res://.godot/imported/lingningLantern_1x1x1.obj-eba572c6c4131513e2cf3412cbd0c2d3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lingningLantern_1x1x1.obj-eba572c6c4131513e2cf3412cbd0c2d3.mesh"]
+
+source_file="res://assets/models/decorations/lamps/lingningLantern_1x1x1.obj"
+dest_files=["res://.godot/imported/lingningLantern_1x1x1.obj-eba572c6c4131513e2cf3412cbd0c2d3.mesh", "res://.godot/imported/lingningLantern_1x1x1.obj-eba572c6c4131513e2cf3412cbd0c2d3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

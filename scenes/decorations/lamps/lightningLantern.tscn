@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcrdam64ph4ov"]
 
-[ext_resource type="ArrayMesh" uid="uid://cw3rdtvtlxgl8" path="res://assets/models/decorations/regal/LightningLantern.obj" id="1_085fd"]
+[ext_resource type="ArrayMesh" uid="uid://cw3rdtvtlxgl8" path="res://assets/models/decorations/lamps/LightningLantern.obj" id="1_085fd"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="2_4xtqk"]
 [ext_resource type="Material" uid="uid://dlcydg0remmp1" path="res://assets/materials/emission/purpleTransGlow.tres" id="2_dgj38"]
 [ext_resource type="Material" uid="uid://jr8wpesdcr88" path="res://assets/materials/metallic/goldMET2.tres" id="3_itk3c"]
+
 
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j00t0"]

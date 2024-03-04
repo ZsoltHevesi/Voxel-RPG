@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wybyr7h1ptj"
+path="res://.godot/imported/torch_1x1x1.obj-a86b85f2ab506ca6ea74bc4d4130c425.mesh"
+
+[deps]
+
+files=["res://.godot/imported/torch_1x1x1.obj-a86b85f2ab506ca6ea74bc4d4130c425.mesh"]
+
+source_file="res://assets/models/decorations/lamps/torch_1x1x1.obj"
+dest_files=["res://.godot/imported/torch_1x1x1.obj-a86b85f2ab506ca6ea74bc4d4130c425.mesh", "res://.godot/imported/torch_1x1x1.obj-a86b85f2ab506ca6ea74bc4d4130c425.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
