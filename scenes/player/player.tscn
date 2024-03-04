@@ -358,4 +358,3 @@ target_position = Vector3(0, -0.5, 0)
 [node name="playerMenu" parent="." instance=ExtResource("21_ulrtq")]
 
 [node name="FPS_Counter" parent="playerMenu" instance=ExtResource("22_428v5")]
-visible = false

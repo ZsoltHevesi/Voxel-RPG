@@ -5,6 +5,7 @@ extends Node3D
 
 func _ready():
 	var scene = load("res://scenes/player/playerGear_Scenes/" + ItemData.get_scene(ID))
+	
 	var instance = scene.instantiate()
 	
 	get_node("itemNode").add_child(instance)

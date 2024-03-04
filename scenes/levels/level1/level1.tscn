@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=13 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scenes/levels/level1/level1.gd" id="1_ems3p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="2_cy5vs"]
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsDirectionalLight3D.gd" id="2_nrich"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="3_f8dnu"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="7_n13p5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
@@ -106,5 +107,9 @@ shape = SubResource("BoxShape3D_ouqtc")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="map/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 shape = SubResource("BoxShape3D_ouqtc")
+
+[node name="abstractItem" parent="map" instance=ExtResource("7_n13p5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17082, 3.00159, 0)
+ID = "2"
 
 [connection signal="body_entered" from="map/Area3D" to="map/Player" method="_on_Fallbarrier_body_entered"]
