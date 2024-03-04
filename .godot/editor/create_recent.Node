@@ -1,4 +1,5 @@
 CollisionShape3D
+Area3D
 StaticBody3D
 NavigationAgent3D
 Node
@@ -7,7 +8,6 @@ MeshInstance3D
 RayCast3D
 Timer
 GPUParticles3D
-Area3D
 HBoxContainer
 Label
 Node3D

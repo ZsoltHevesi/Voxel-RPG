@@ -161,6 +161,8 @@ script = ExtResource("1_dq0rt")
 [node name="visuals" type="Node3D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals"]
+active = false
+reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_g6ovt")
 }
@@ -201,7 +203,7 @@ transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 2.59618e-10, 0.35475
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.185, 0)
 
 [node name="pnRightHand" type="Node3D" parent="visuals/pnTorso/pnRightShoulder"]
-transform = Transform3D(0.95, 0, 0, 0, 0.949996, 0, 0, 0, 0.95, 0.12, -0.36, 0)
+transform = Transform3D(0.95, 0, 0, 0, 0.949996, 0, 0, 0, 0.949998, 0.12, -0.36, 0)
 
 [node name="pnRightWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.113, -0.014468)
