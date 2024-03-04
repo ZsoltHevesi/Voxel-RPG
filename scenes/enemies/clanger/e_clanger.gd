@@ -1,25 +1,27 @@
 extends CharacterBody3D
 
-var speed = 5
-var accel = 10
-var chaseRange = 20
-@onready var nav: NavigationAgent3D = $NavigationAgent3D
-@onready var player = $"../Player"
+@onready var navAgent = $NavigationAgent3D
 @onready var clanger = $"."
+@onready var player = get_parent().get_node("Player")
 
-var maxHealth = 100
-@export var currentHealth = maxHealth
-
+# Loot to spawn after death
 var lootInstance
 var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
 var lootPool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 
+var chaseRange = 20
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var SPEED = 3.0
+
+var maxHealth = 100
+@export var currentHealth = maxHealth
+
 # Go down stairs
 var maxStepDown = -0.51
 
+
 var _on_floor_last_frame = false
 var _snapped_to_stairs_last_frame = false
-
 func _snap_down_stairs_check():
 	var did_snap = false
 	
@@ -43,8 +45,6 @@ func _snap_down_stairs_check():
 # Rotate separation rays in direction of velocity
 @onready var _initial_sep_ray_dist = abs($sepRayFront.position.z)
 var _last_xz_vel : Vector3 = Vector3(0,0,0)
-
-
 func _rotate_sep_ray():
 	var xz_vel = velocity * Vector3(1,0,1)
 	
@@ -77,6 +77,26 @@ func _rotate_sep_ray():
 	$sepRayFR.global_position.z = self.global_position.z + xz_fr_ray_pos.z
 
 
+func _physics_process(delta):
+	if currentHealth <= 0:
+		die()
+	
+	# AI pathfinding
+	var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
+	
+	if distanceToPlayer <= chaseRange:
+		var currentLocation = global_transform.origin
+		var nextLocation = navAgent.get_next_path_position()
+		var newVelocity = (nextLocation - currentLocation).normalized() * SPEED
+		
+		navAgent.set_velocity(newVelocity)
+		
+		# Rotate enemy to face player
+		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
+	else:
+		navAgent.set_velocity(Vector3.ZERO)
+
+
 func die():
 		lootInstance = loot.instantiate()
 		lootInstance.ID = lootPool[randi() % lootPool.size()]
@@ -90,62 +110,18 @@ func heal(amount):
 		currentHealth = maxHealth
 
 
-func _on_Hitbox_body_entered(body):
-	if body.is_in_group("Player"):
-		body.takeDamage(10)
+
+func update_target_location(target_location):
+	navAgent.set_target_position(target_location)
 
 
-func _ready():
+func _on_navigation_agent_3d_target_reached():
+	print("in range")
 
-	if player:
-		print("Player assigned successfully.")
-	else:
-		print("Player not found or assigned.")
 
-# Define a separate maximum height value
-var maxEnemyHeight = 0.5
-
-func _physics_process(delta):
-	if currentHealth <= 0:
-		die()
-	# AI pathfinding logic
-	if player:
-		var distanceToPlayer = global_position.distance_to(player.global_position) - 1.0
-		
-		if distanceToPlayer <= chaseRange:
-			# Calculate direction towards the player
-			var direction = player.global_transform.origin - global_position
-			direction.y = 0  
-			
-			if direction.length() > 0:
-				direction = direction.normalized()
-			
-			# Set the desired distance from the player
-			var desiredDistance = 2
-			
-
-			var targetPosition = player.global_transform.origin - direction * desiredDistance
-			
-			# Apply movement
-			velocity = velocity.lerp((targetPosition - global_position).normalized() * speed, accel * delta)
-			
-			_rotate_sep_ray()
-			move_and_slide()
-			_snap_down_stairs_check()
-			
-			# Limit enemy height
-			var minHeight = global_position.y -1
-			var maxHeight = global_position.y + maxEnemyHeight 
-			
-			if global_position.y < minHeight:
-				global_position.y = minHeight
-			elif global_position.y > maxHeight:
-				global_position.y = maxHeight 
-			
-			look_at(player.global_transform.origin, Vector3.UP)
-		else:
-			# If the player is outside the chase range, stop moving
-			velocity = Vector3.ZERO
-	else:
-		print("Player not assigned or found.")
-		
+func _on_navigation_agent_3d_velocity_computed(safe_velocity):
+	velocity = velocity.move_toward(safe_velocity, 0.25)
+	
+	_rotate_sep_ray() # call this before move_and_slide()
+	move_and_slide()
+	_snap_down_stairs_check()

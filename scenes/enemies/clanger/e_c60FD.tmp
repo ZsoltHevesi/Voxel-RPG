@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b28y412e8tws"]
+[gd_scene load_steps=19 format=3 uid="uid://b28y412e8tws"]
 
 [ext_resource type="Script" path="res://scenes/enemies/clanger/e_clanger.gd" id="1_fbqvk"]
 [ext_resource type="ArrayMesh" uid="uid://dc3g3quope3hs" path="res://assets/models/enemy/clanger/head.obj" id="1_g3qjx"]
@@ -15,15 +15,6 @@
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="10_1pv5p"]
 [ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDIFF2.tres" id="10_axpor"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="12_ofklv"]
-
-[sub_resource type="Animation" id="Animation_0kc8m"]
-resource_name = "idle"
-loop_mode = 1
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2kn50"]
-_data = {
-"idle": SubResource("Animation_0kc8m")
-}
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qjic2"]
 radius = 0.4
@@ -127,11 +118,6 @@ surface_material_override/2 = ExtResource("10_axpor")
 surface_material_override/3 = ExtResource("12_ofklv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals"]
-deterministic = true
-libraries = {
-"": SubResource("AnimationLibrary_2kn50")
-}
-autoplay = "idle"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)

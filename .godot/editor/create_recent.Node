@@ -1,3 +1,5 @@
+NavigationAgent3D
+Node
 OmniLight3D
 MeshInstance3D
 CollisionShape3D
@@ -11,5 +13,3 @@ Label
 Node3D
 Line2D
 Node2D
-Control
-Marker3D
