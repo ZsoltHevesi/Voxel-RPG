@@ -6,7 +6,7 @@ Trial Vox - a TUD voxel RPG game project
 
 Trailer:
 
-https://youtu.be/dmLDlVRioho
+[![TrialVoxTrailer](https://img.youtube.com/vi/dmLDlVRioho/0.jpg)](https://www.youtube.com/watch?v=dmLDlVRioho)
 
 Game Design Doc:
 
