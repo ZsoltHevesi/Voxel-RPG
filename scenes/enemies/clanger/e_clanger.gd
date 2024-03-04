@@ -89,12 +89,6 @@ func heal(amount):
 	if currentHealth > maxHealth:
 		currentHealth = maxHealth
 
-
-func _on_Hitbox_body_entered(body):
-	if body.is_in_group("Player"):
-		body.takeDamage(10)
-
-
 func _ready():
 
 	if player:

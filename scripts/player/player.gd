@@ -179,7 +179,6 @@ func takeDamage(amount):
 		currentHealth -= amount
 	else:
 		currentHealth = 0
-	print("Current Health:", currentHealth)
 	$cameraMount/SpringArm3D/Camera3D/UI/HealthBar.value = currentHealth
 	if currentHealth <= 0:
 		# Function to handle player death
