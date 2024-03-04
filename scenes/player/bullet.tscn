@@ -37,8 +37,8 @@ process_material = ExtResource("2_slpcl")
 draw_pass_1 = SubResource("BoxMesh_5dhp8")
 
 [node name="bulletCast" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.97475)
-target_position = Vector3(0, 0, 4.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.97475)
+target_position = Vector3(0, 0, 3.5)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

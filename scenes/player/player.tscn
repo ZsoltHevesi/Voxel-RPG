@@ -261,6 +261,10 @@ transform = Transform3D(0.948324, -0.0550994, 0.312484, 0, 0.984808, 0.173648, -
 collision_mask = 2
 spring_length = 2.47
 
+[node name="weaponCast" type="RayCast3D" parent="cameraMount/SpringArm3D"]
+transform = Transform3D(0.948323, 1.99978e-07, -0.317304, -0.0550994, 0.984808, -0.164674, 0.312484, 0.173648, 0.933916, 0.00300061, 0.00194013, 2.46377)
+target_position = Vector3(0, 0, 100)
+
 [node name="Camera3D" type="Camera3D" parent="cameraMount/SpringArm3D"]
 transform = Transform3D(0.948323, -7.45057e-09, -0.317305, -0.0550994, 0.984808, -0.164675, 0.312484, 0.173648, 0.933916, 0.00300051, 0.00194001, 2.46377)
 current = true
