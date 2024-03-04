@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=12 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scenes/levels/level1/level1.gd" id="1_ems3p"]
@@ -34,6 +34,9 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(6, 5, 3), PackedInt32Arr
 cell_height = 0.51
 agent_height = 2.0
 agent_max_climb = 0.51
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ouqtc"]
+size = Vector3(500, 1, 500)
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_ems3p")
@@ -72,3 +75,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8643, 3.5, -29.5329)
 
 [node name="clanger4" parent="map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, 3.5, -29.5329)
+
+[node name="Area3D" type="Area3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49414, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="map/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -43.5809, 0)
+shape = SubResource("BoxShape3D_ouqtc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="map"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="map/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
+shape = SubResource("BoxShape3D_ouqtc")
+
+[connection signal="body_entered" from="map/Area3D" to="map/Player" method="_on_Fallbarrier_body_entered"]

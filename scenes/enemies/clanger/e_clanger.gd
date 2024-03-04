@@ -137,3 +137,9 @@ func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 func _on_clanger_hitbox_area_exited(area):
 	if area.is_in_group("playerMeleeWeapon"):
 		meleeImmunity = false
+
+
+func _on_clanger_sword_body_entered(body):
+	if body.name == "Player":
+		# Deal damage to the player
+		body.takeDamage(5)

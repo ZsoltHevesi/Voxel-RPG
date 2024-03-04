@@ -349,3 +349,9 @@ func _physics_process(delta):
 	_rotate_sep_ray() # call this before move_and_slide()
 	move_and_slide()
 	_snap_down_stairs_check()
+	
+func _on_Fallbarrier_body_entered(body):
+			if body.name == "Player":
+				# Reduce player's health
+				takeDamage(currentHealth)
+

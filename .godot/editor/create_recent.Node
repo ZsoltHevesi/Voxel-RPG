@@ -1,8 +1,8 @@
 CollisionShape3D
 Area3D
+StaticBody3D
 NavigationRegion3D
 VoxelGI
-StaticBody3D
 RayCast3D
 MeshInstance3D
 AnimationTree
