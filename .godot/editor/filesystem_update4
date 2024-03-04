@@ -1,8 +1,9 @@
-res://scenes/levels/level1/level1.tscn
+res://scenes/tiles/chateau scene/chateau.tscn
 res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/crimsonDIFF1.tres
 res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/blackDIFF.tres
+res://assets/materials/diffuse/brownPastelDIFF1.tres
 res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/greyDIFF2.tres
 res://assets/materials/metallic/greyMET1.tres
@@ -11,21 +12,19 @@ res://assets/materials/diffuse/greyDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://assets/materials/emission/yellowNeon1.tres
-res://assets/materials/diffuse/whiteDIFF.tres
-res://assets/materials/diffuse/greyDIFF5.tres
-res://assets/materials/diffuse/greyDIFF4.tres
-res://assets/materials/diffuse/greyDIFF6.tres
 res://assets/materials/metallic/goldMET1.tres
 res://assets/materials/transparent/clearGlass_Refr_NEXT.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
-res://assets/materials/diffuse/brownPastelDIFF1.tres
-res://assets/materials/diffuse/brownPastelDIFF0.tres
-res://assets/materials/diffuse/brownPastelDIFF2.tres
-res://assets/materials/diffuse/brownPastelDIFF4.tres
+res://assets/materials/diffuse/boneDIFF2.tres
+res://scenes/levels/level1/level1.tscn
 res://scenes/levels/test/test-area.tscn
-res://scenes/tiles/chateau scene/chateau.tscn
+res://scenes/tiles/chateau scene/chateau.VoxelGI_data.res
+res://assets/materials/diffuse/whiteDIFF.tres
+res://assets/materials/diffuse/greyDIFF4.tres
+res://assets/materials/diffuse/greyDIFF5.tres
+res://assets/materials/diffuse/greyDIFF6.tres
+res://assets/materials/diffuse/brownPastelDIFF2.tres
+res://assets/materials/diffuse/brownPastelDIFF0.tres
 res://scenes/player/player.tscn
-res://scripts/inventory/abstractItem.gd
-res://scripts/player/player.gd
-res://scenes/enemies/clanger/e_clanger.tscn
-res://scenes/enemies/clanger/e_clanger.gd
+res://assets/materials/diffuse/brownPastelDIFF4.tres
+res://assets/materials/diffuse/greyDIFF4.5.tres
