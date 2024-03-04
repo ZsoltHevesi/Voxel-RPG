@@ -3,6 +3,9 @@ extends CharacterBody3D
 @onready var navAgent = $NavigationAgent3D
 @onready var clanger = $"."
 @onready var player = get_parent().get_node("Player")
+@onready var animationTree = $visuals/AnimationTree
+var idleRunBlend = "parameters/IdleRunBLend/blend_amount"
+var attackOneShot = "parameters/attackOneShot/request"
 
 # Loot to spawn after death
 var lootInstance
@@ -16,9 +19,12 @@ var desiredDistance = 1.25
 
 var maxHealth = 100
 @export var currentHealth = maxHealth
+@export var meleeImmunity = false
 
 # Go down stairs
 var maxStepDown = -0.51
+
+var attack_range = Vector3(15, 15, 15)
 
 
 var _on_floor_last_frame = false
@@ -89,6 +95,7 @@ func _physics_process(delta):
 		var currentLocation = global_transform.origin
 		var nextLocation = navAgent.get_next_path_position()
 		var newVelocity = (nextLocation - currentLocation).normalized() * SPEED
+		animationTree.set(idleRunBlend, lerp(animationTree.get(idleRunBlend), 1.0, delta * SPEED))
 		
 		navAgent.set_velocity(newVelocity)
 		
@@ -96,6 +103,10 @@ func _physics_process(delta):
 		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	else:
 		navAgent.set_velocity(Vector3.ZERO)
+		animationTree.set(idleRunBlend, lerp(animationTree.get(idleRunBlend), 0.0, delta * SPEED))
+	
+	if targetInRange():
+		animationTree.set(attackOneShot, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
 func die():
@@ -111,7 +122,6 @@ func heal(amount):
 		currentHealth = maxHealth
 
 
-
 func update_target_location(target_location):
 	navAgent.set_target_position(target_location)
 
@@ -119,6 +129,8 @@ func update_target_location(target_location):
 func _on_navigation_agent_3d_target_reached():
 	print("in range")
 
+func targetInRange():
+	return global_position.direction_to(player.global_position) < attack_range
 
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 0.25)
@@ -126,3 +138,8 @@ func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	_rotate_sep_ray() # call this before move_and_slide()
 	move_and_slide()
 	_snap_down_stairs_check()
+
+
+func _on_clanger_hitbox_area_exited(area):
+	if area.is_in_group("playerMeleeWeapon"):
+		meleeImmunity = false

@@ -1,14 +1,14 @@
-CollisionShape3D
 Area3D
+MeshInstance3D
+AnimationTree
+CollisionShape3D
 StaticBody3D
 NavigationAgent3D
 Node
 OmniLight3D
-MeshInstance3D
 RayCast3D
 Timer
 GPUParticles3D
 HBoxContainer
 Label
 Node3D
-Line2D
