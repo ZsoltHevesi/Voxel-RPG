@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://beyjim20er5sa"]
 
 [ext_resource type="Script" path="res://scenes/player/bullet.gd" id="1_4mtkv"]
-[ext_resource type="Material" uid="uid://bs13g6yca77cj" path="res://assets/materials/emission/yellowGlow.tres" id="1_specm"]
+[ext_resource type="Material" uid="uid://bs13g6yca77cj" path="res://assets/materials/emission/yellowGlow2.tres" id="1_specm"]
 [ext_resource type="Material" uid="uid://cactoj26f7uaj" path="res://assets/particles/bulletHit.tres" id="2_slpcl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f6uy7"]

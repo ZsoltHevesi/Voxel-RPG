@@ -101,5 +101,7 @@ common/physics_jitter_fix=2.0
 textures/canvas_textures/default_texture_filter=0
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 global_illumination/gi/use_half_resolution=true
+global_illumination/sdfgi/probe_ray_count=0
+global_illumination/sdfgi/frames_to_converge=3
 anti_aliasing/quality/msaa_3d=1
 occlusion_culling/use_occlusion_culling=true
