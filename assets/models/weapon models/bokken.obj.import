@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mj7olkmqgcxa"
+path="res://.godot/imported/bokken.obj-19949386291b182ed1b2fcddf9240351.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bokken.obj-19949386291b182ed1b2fcddf9240351.mesh"]
+
+source_file="res://assets/models/weapon models/bokken.obj"
+dest_files=["res://.godot/imported/bokken.obj-19949386291b182ed1b2fcddf9240351.mesh", "res://.godot/imported/bokken.obj-19949386291b182ed1b2fcddf9240351.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

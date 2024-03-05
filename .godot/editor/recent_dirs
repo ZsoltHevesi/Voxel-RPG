@@ -1,3 +1,4 @@
+res://scenes/player/playerGear_Scenes
 res://scenes/tile scenes/closedSpawn
 res://scenes/tile scenes/spawn
 res://assets/materials/transparent
@@ -19,4 +20,3 @@ res://scenes/menus
 res://scenes
 res://scenes/decorations/lamps
 res://scripts/player
-res://scenes/decorations/furniture

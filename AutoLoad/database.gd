@@ -16,6 +16,9 @@ func get_texture(ID = "0"):
 func get_dmg(ID = "0"):
 	return content[ID]["dmg"]
 	
+func get_def(ID = "0"):
+	return content[ID]["def"]
+	
 func get_slot_type(ID = "0"):
 	return content[ID]["slot_type"]
 	

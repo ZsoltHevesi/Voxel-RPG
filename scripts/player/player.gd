@@ -15,6 +15,7 @@ extends CharacterBody3D
 @onready var inv_rightLeg = $playerMenu/UI/character/rightLegSlot/TextureRect
 @onready var inv_leftFoot = $playerMenu/UI/character/leftFootSlot/TextureRect
 @onready var inv_rightFoot = $playerMenu/UI/character/rightFootSlot/TextureRect
+@onready var inv_melee = $playerMenu/UI/character/meleeSlot/TextureRect
 
 @onready var default_head = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Head.tscn")
 @onready var default_torso = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Torso.tscn")
@@ -26,6 +27,7 @@ extends CharacterBody3D
 @onready var default_rightLeg = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Leg.tscn")
 @onready var default_leftFoot = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Foot.tscn")
 @onready var default_rightFoot = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Foot.tscn")
+@onready var default_melee = load("res://scenes/player/playerGear_Scenes/bokken.tscn")
 
 @onready var pnHead = $visuals/pnTorso/pnHead
 @onready var pnTorso = $visuals/pnTorso
@@ -37,7 +39,9 @@ extends CharacterBody3D
 @onready var pnRightLeg = $visuals/pnRightFoot/pnRightLeg
 @onready var pnLeftFoot = $visuals/pnLeftFoot
 @onready var pnRightFoot = $visuals/pnRightFoot
-@onready var longSword = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/LongSword
+@onready var pnRightWeaponSlot = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot
+
+
 @onready var weaponCast = $cameraMount/SpringArm3D/weaponCast
 
 var bullet = load("res://scenes/player/bullet.tscn")
@@ -52,6 +56,8 @@ var aimTransition = "parameters/aimTransition/transition_request"
 var aimTransitionState = "parameters/aimTransition/current_state"
 var weaponBlend = "parameters/weaponBlend/blend_amount"
 var airGroundTransition = "parameters/airGroundTransition/transition_request"
+
+var meleeAnimFinished = true
 
 var weaponBlendTarget = 0.0
 var weaponCastTip = Vector3()
@@ -73,10 +79,13 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var maxHealth = 100
 var currentHealth = maxHealth
 
+var defense_stat = 0
+var attack_stat = 0
+
 
 # Handle equipping armour
 var instance
-func equip_armour():
+func equip_gear():
 	# Equip head
 	if inv_head.texture != null:
 		pnHead.get_child(0).queue_free()
@@ -176,11 +185,25 @@ func equip_armour():
 		pnRightFoot.get_child(1).queue_free()
 		instance = default_rightFoot.instantiate()
 		pnRightFoot.add_child(instance)
+	
+	# Equip right weapon
+	if inv_melee.texture != null:
+		pnRightWeaponSlot.get_child(0).queue_free()
+		instance = inv_melee.item_scene.instantiate()
+		pnRightWeaponSlot.add_child(instance)
+	else:
+		pnRightWeaponSlot.get_child(0).queue_free()
+		instance = default_melee.instantiate()
+		pnRightWeaponSlot.add_child(instance)
+	
+	# Change stats to match gear
+	defense_stat = int($playerMenu/UI/DEF.text)
+	print(defense_stat)
 
 
 func takeDamage(amount):
 	if amount < currentHealth:
-		currentHealth -= amount
+		currentHealth -= (amount - defense_stat * 0.1)
 	else:
 		currentHealth = 0
 	healthBar.value = currentHealth
@@ -285,8 +308,6 @@ func _physics_process(delta):
 		weaponCastTip = (weaponCast.target_position.z * weaponCast.global_transform.basis.z) + weaponCast.global_transform.origin
 	barrel.look_at(weaponCastTip)
 
-	longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
-
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -324,12 +345,14 @@ func _physics_process(delta):
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
 	
-	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
+	
+	if Input.is_action_just_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and meleeAnimFinished == true:
+		meleeAnimFinished = false
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = true
 	
 	# Handle aiming
 	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
+		var rangedAnimFinished = false
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
@@ -364,3 +387,8 @@ func _on_try_again_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
+
+
+
+func _on_animation_tree_animation_finished(swordAttack1):
+	meleeAnimFinished = true

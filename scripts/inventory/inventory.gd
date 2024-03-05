@@ -7,10 +7,12 @@ func add_item(ID = "0"):
 	var item_scene = load("res://scenes/player/playerGear_Scenes/" + ItemData.get_scene(ID))
 	
 	var item_slot_type = ItemData.get_slot_type(ID)
+	var item_def = ItemData.get_def(ID)
 	var item_dmg = ItemData.get_dmg(ID)
 	
 	
 	var item_data = {"TEXTURE": item_texture,
+					 "DEF": item_def,
 					 "DMG": item_dmg,
 					 "SLOT_TYPE": item_slot_type,
 					 "ITEM_SCENE": item_scene}

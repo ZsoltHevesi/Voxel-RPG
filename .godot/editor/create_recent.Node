@@ -1,5 +1,6 @@
-MeshInstance3D
 CollisionShape3D
+Area3D
+MeshInstance3D
 StaticBody3D
 GPUParticles3D
 HBoxContainer
@@ -10,5 +11,4 @@ ColorRect
 OmniLight3D
 VoxelGI
 OccluderInstance3D
-Area3D
 NavigationRegion3D
