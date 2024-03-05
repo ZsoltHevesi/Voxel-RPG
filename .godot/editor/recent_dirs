@@ -1,3 +1,5 @@
+res://scenes/tile scenes/closedSpawn
+res://scenes/tile scenes/spawn
 res://assets/materials/transparent
 res://scripts/pickUpScripts
 res://scenes/tile scenes/hallways/castleHallways
@@ -18,5 +20,3 @@ res://scenes
 res://scenes/decorations/lamps
 res://scripts/player
 res://scenes/decorations/furniture
-res://scenes/decorations
-res://scripts

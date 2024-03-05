@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=19 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scripts/levelWorld.gd" id="1_ems3p"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bshwh664qojd0" path="res://scenes/tile scenes/hallways/castleHallways/castleHallway.tscn" id="6_xm1sj"]
 [ext_resource type="PackedScene" uid="uid://cks8ixvw7ii0c" path="res://scenes/tile scenes/hallways/castleHallways/hallwayCastleGlass.tscn" id="7_dpfig"]
 [ext_resource type="PackedScene" uid="uid://6u6el5n2ap0i" path="res://scenes/tile scenes/hallways/castleHallways/castleDeadEND.tscn" id="8_6vogf"]
+[ext_resource type="PackedScene" uid="uid://h2bwuc13ene5" path="res://scenes/tile scenes/closedSpawn/closed_spawn.tscn" id="9_kg68d"]
+[ext_resource type="PackedScene" uid="uid://bmiieijs6iwbw" path="res://scenes/tile scenes/spawn/spawn.tscn" id="10_rm33y"]
 [ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="11_8mh61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
@@ -92,8 +94,14 @@ transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 0, 3, 
 [node name="CastleDeadEnd" parent="map/NavigationRegion3D/tiles" instance=ExtResource("8_6vogf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.25, 2.5, 0)
 
+[node name="closedSpawn" parent="map/NavigationRegion3D/tiles" instance=ExtResource("9_kg68d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.75, 2.5, 0)
+
+[node name="spawn" parent="map/NavigationRegion3D/tiles" instance=ExtResource("10_rm33y")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.5, -95.75)
+
 [node name="Player" parent="map" instance=ExtResource("2_cy5vs")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.5, -66.2)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.5, -114.611)
 
 [node name="clanger" parent="map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, 0)
