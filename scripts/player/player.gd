@@ -181,7 +181,6 @@ func takeDamage(amount):
 		currentHealth -= amount
 	else:
 		currentHealth = 0
-	print("Current Health:", currentHealth)
 	healthBar.value = currentHealth
 	if currentHealth <= 0:
 		# Function to handle player death
