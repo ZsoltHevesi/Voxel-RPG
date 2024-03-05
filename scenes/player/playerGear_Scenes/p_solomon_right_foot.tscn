@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmvwgewnlaygq"]
 
 [ext_resource type="ArrayMesh" uid="uid://b57b057mox3xk" path="res://assets/models/player/armour/solomon/rightFoot.obj" id="1_esjx7"]
-[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="2_u8153"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="2_u8153"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_qidg0"]
+
 
 [node name="solomonRightFoot" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

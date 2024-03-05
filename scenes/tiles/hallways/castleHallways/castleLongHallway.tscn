@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdfyr10a5tduu"]
+
+[ext_resource type="VoxelGIData" uid="uid://ds1bqv4tatt3p" path="res://scenes/tiles/hallways/castleHallways/castleLongHallway.VoxelGI_data.res" id="1_f2wb3"]
+[ext_resource type="ArrayMesh" uid="uid://hto0b683b035" path="res://assets/models/tiles/hallways/castleHallways/castleHallwayLong.obj" id="1_jqw0s"]
+
+[node name="CastleLongHallway" type="Node3D"]
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00636292, 11.8423, 0)
+subdiv = 0
+size = Vector3(35.53, 23, 20)
+data = ExtResource("1_f2wb3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_jqw0s")

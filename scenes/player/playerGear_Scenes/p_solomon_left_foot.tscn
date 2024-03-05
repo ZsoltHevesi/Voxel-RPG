@@ -2,7 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://0fwgh1sc4bkw" path="res://assets/models/player/armour/solomon/leftFoot.obj" id="1_rf4cu"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_p01t0"]
-[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_erbyg"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="3_erbyg"]
+
 
 [node name="solomonLeftFoot" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

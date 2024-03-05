@@ -2,8 +2,9 @@
 
 [ext_resource type="ArrayMesh" uid="uid://np2qfm20xteq" path="res://assets/models/player/armour/solomon/rightHand.obj" id="1_ttwno"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_bxyj5"]
-[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="3_iuqvs"]
-[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_rtdah"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="3_iuqvs"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="3_rtdah"]
+
 
 
 [node name="solomonRightHand" type="Node3D"]

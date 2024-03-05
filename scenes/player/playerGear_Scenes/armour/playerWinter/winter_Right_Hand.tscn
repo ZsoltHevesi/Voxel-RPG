@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0oj72pxi7wqb"]
 
 [ext_resource type="ArrayMesh" uid="uid://cpgn8rylqffyk" path="res://assets/models/player/armour/winter/rightHand.obj" id="1_jh84o"]
-[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="2_m1s7b"]
-[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="3_nx0fo"]
-[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDIFF2.tres" id="4_jod2l"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="2_m1s7b"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="3_nx0fo"]
+[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDarkDIFF2.tres" id="4_jod2l"]
 
 [node name="winterRightHand" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

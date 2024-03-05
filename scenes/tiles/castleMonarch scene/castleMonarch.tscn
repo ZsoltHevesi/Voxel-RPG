@@ -1,0 +1,54 @@
+[gd_scene load_steps=15 format=3 uid="uid://lm5l1jt61fnm"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8n6hqsxmieuy" path="res://assets/models/tiles/castleMonarch/castleMonarch_1.obj" id="1_ywsyr"]
+[ext_resource type="ArrayMesh" uid="uid://dt5i4bnovs4sx" path="res://assets/models/tiles/castleMonarch/castleMonarch_2.obj" id="2_mqobj"]
+[ext_resource type="ArrayMesh" uid="uid://d0bdwi41u2tt0" path="res://assets/models/tiles/castleMonarch/castleMonarch_3.obj" id="3_2effx"]
+[ext_resource type="Material" uid="uid://ck0jsv7ftiwof" path="res://assets/materials/diffuse/greyDIFF1.tres" id="3_8npuw"]
+[ext_resource type="Material" uid="uid://cuhf7hywudauh" path="res://assets/materials/diffuse/greyDIFF2.tres" id="4_j08cs"]
+[ext_resource type="ArrayMesh" uid="uid://c03rvglmy2wcx" path="res://assets/models/tiles/castleMonarch/castleMonarch_4.obj" id="4_yjwal"]
+[ext_resource type="ArrayMesh" uid="uid://cw0qgsntcqsv2" path="res://assets/models/tiles/castleMonarch/castleMonarch_5.obj" id="5_vg2mi"]
+[ext_resource type="Material" uid="uid://boxds4ylio230" path="res://assets/materials/diffuse/greyDIFF4.tres" id="6_wja32"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="7_3mx3d"]
+[ext_resource type="Material" uid="uid://dxrof17nqhxc7" path="res://assets/materials/diffuse/marbleDIFF1.tres" id="9_2a547"]
+[ext_resource type="Material" uid="uid://16axgl0yba6u" path="res://assets/materials/diffuse/brownPastelDIFF2.tres" id="10_24v71"]
+[ext_resource type="Material" uid="uid://c68568pftbi2c" path="res://assets/materials/diffuse/brownPastelDIFF4.tres" id="11_woudd"]
+[ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="13_kwwxb"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="14_45vc1"]
+
+[node name="CastleMonarch" type="Node3D"]
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ywsyr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_mqobj")
+surface_material_override/0 = ExtResource("3_8npuw")
+surface_material_override/1 = ExtResource("4_j08cs")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_2effx")
+surface_material_override/0 = ExtResource("3_8npuw")
+surface_material_override/1 = ExtResource("6_wja32")
+surface_material_override/2 = ExtResource("7_3mx3d")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_yjwal")
+surface_material_override/0 = ExtResource("9_2a547")
+surface_material_override/1 = ExtResource("10_24v71")
+surface_material_override/2 = ExtResource("11_woudd")
+surface_material_override/3 = ExtResource("3_8npuw")
+surface_material_override/4 = ExtResource("4_j08cs")
+surface_material_override/5 = ExtResource("6_wja32")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_vg2mi")
+surface_material_override/0 = ExtResource("9_2a547")
+surface_material_override/1 = ExtResource("13_kwwxb")
+surface_material_override/2 = ExtResource("10_24v71")
+surface_material_override/3 = ExtResource("11_woudd")
+surface_material_override/4 = ExtResource("4_j08cs")
+surface_material_override/5 = ExtResource("14_45vc1")
+surface_material_override/6 = ExtResource("3_8npuw")
+surface_material_override/7 = ExtResource("4_j08cs")
