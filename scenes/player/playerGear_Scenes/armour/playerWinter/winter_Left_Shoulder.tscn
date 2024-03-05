@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dox8ih24dmnha"]
 
 [ext_resource type="ArrayMesh" uid="uid://cv55hpsf0w131" path="res://assets/models/player/armour/winter/leftShoulder.obj" id="1_00121"]
-[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF1.tres" id="2_bwkrw"]
+[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF2.tres" id="2_bwkrw"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_vurpm"]
 
 [node name="winterLeftShoulder" type="Node3D"]

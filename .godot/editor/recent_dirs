@@ -1,3 +1,4 @@
+res://scenes/levels/level1
 res://scenes/tiles/hallways/castleHallways
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG
@@ -10,7 +11,6 @@ res://scenes/player/playerAnimations
 res://scripts/inventory
 res://scenes/menus/inventory/slot
 res://scripts/menu
-res://scenes/levels/level1
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/AutoLoad
 res://scenes/menus
 res://scenes

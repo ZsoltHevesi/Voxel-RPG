@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://oqug3mdrl50y"]
 
 [ext_resource type="ArrayMesh" uid="uid://cedmt3fv1c4hj" path="res://assets/models/player/armour/winter/Torso.obj" id="1_45sgk"]
-[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF1.tres" id="2_g3qmx"]
+[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF2.tres" id="2_g3qmx"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_mntn1"]
 [ext_resource type="Material" uid="uid://c8hkph2oir44i" path="res://assets/materials/diffuse/brownDIFF3.tres" id="4_i2hvk"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="5_xqyvd"]
