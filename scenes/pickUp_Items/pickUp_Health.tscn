@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=3 uid="uid://c8ekcp1gti707"]
+
+[ext_resource type="Script" path="res://scripts/pickUpScripts/healthPickup.gd" id="1_ogl83"]
+[ext_resource type="ArrayMesh" uid="uid://cajexid2ysms5" path="res://assets/models/pickUps/healthPickup.obj" id="2_vgd76"]
+[ext_resource type="Material" uid="uid://cuwvrpomvt3pb" path="res://assets/materials/transparent/clearGlass_Refr.tres" id="3_ndr8k"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="4_uei4b"]
+[ext_resource type="Material" uid="uid://cxsyvq40xw1aq" path="res://assets/materials/emission/redNeon1.tres" id="5_88f26"]
+[ext_resource type="Material" uid="uid://d1hkp5ogslqaj" path="res://assets/materials/emission/tealGlow1.tres" id="6_5fvh2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfo65"]
+
+[sub_resource type="Animation" id="Animation_qa8qs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("itemNode:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("itemNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7yixx"]
+resource_name = "item_float"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("itemNode:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -4.71239, 0), Vector3(0, -6.28319, 0), Vector3(0, -7.85398, 0), Vector3(0, -9.42478, 0), Vector3(0, -10.9956, 0), Vector3(0, -12.5664, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("itemNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.4, 0), Vector3(0, 0.45, 0), Vector3(0, 0.5, 0), Vector3(0, 0.55, 0), Vector3(0, 0.6, 0), Vector3(0, 0.55, 0), Vector3(0, 0.5, 0), Vector3(0, 0.45, 0), Vector3(0, 0.4, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lae6k"]
+_data = {
+"RESET": SubResource("Animation_qa8qs"),
+"item_float": SubResource("Animation_7yixx")
+}
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jkgaw"]
+top_radius = 0.0
+bottom_radius = 0.02
+height = 0.6
+
+[node name="healthPickup" type="Node3D"]
+script = ExtResource("1_ogl83")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_bfo65")
+
+[node name="itemNode" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="itemNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.317302, 0)
+mesh = ExtResource("2_vgd76")
+surface_material_override/0 = ExtResource("3_ndr8k")
+surface_material_override/1 = ExtResource("4_uei4b")
+surface_material_override/2 = ExtResource("5_88f26")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lae6k")
+}
+autoplay = "item_float"
+speed_scale = 0.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("CylinderMesh_jkgaw")
+surface_material_override/0 = ExtResource("6_5fvh2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

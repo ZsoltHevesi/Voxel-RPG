@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlr88mjtr3573"
+path="res://.godot/imported/castleDeadEND.obj-ced410fae5c30b447f13d81a1d31f79f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/castleDeadEND.obj-ced410fae5c30b447f13d81a1d31f79f.mesh"]
+
+source_file="res://assets/models/tiles/hallways/castleHallways/castleDeadEND.obj"
+dest_files=["res://.godot/imported/castleDeadEND.obj-ced410fae5c30b447f13d81a1d31f79f.mesh", "res://.godot/imported/castleDeadEND.obj-ced410fae5c30b447f13d81a1d31f79f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

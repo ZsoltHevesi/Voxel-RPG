@@ -4,7 +4,6 @@
 [ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="2_0nsrb"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_u5wc6"]
 
-
 [node name="chandelier" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
