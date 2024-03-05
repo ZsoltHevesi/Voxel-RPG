@@ -40,7 +40,7 @@ func _drop_data(_pos, data):
 	texture_rect.property = data.property
 	data.property = temp
 	
-	playerNode.equip_armour()
+	playerNode.equip_gear()
 
 
 # Get preview of texture while dragging
@@ -61,6 +61,10 @@ func get_preview():
 # Get damage
 func get_DMG():
 	return texture_rect.dmg
+
+
+func get_DEF():
+	return texture_rect.def
 
 
 func get_item_scene():

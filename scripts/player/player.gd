@@ -53,6 +53,8 @@ var aimTransitionState = "parameters/aimTransition/current_state"
 var weaponBlend = "parameters/weaponBlend/blend_amount"
 var airGroundTransition = "parameters/airGroundTransition/transition_request"
 
+var meleeAnimFinished = true
+
 var weaponBlendTarget = 0.0
 var weaponCastTip = Vector3()
 
@@ -73,10 +75,13 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var maxHealth = 100
 var currentHealth = maxHealth
 
+var defense_stat = 0
+var attack_stat = 0
+
 
 # Handle equipping armour
 var instance
-func equip_armour():
+func equip_gear():
 	# Equip head
 	if inv_head.texture != null:
 		pnHead.get_child(0).queue_free()
@@ -176,11 +181,15 @@ func equip_armour():
 		pnRightFoot.get_child(1).queue_free()
 		instance = default_rightFoot.instantiate()
 		pnRightFoot.add_child(instance)
+	
+	# Change stats to match gear
+	defense_stat = int($playerMenu/UI/DEF.text)
+	print(defense_stat)
 
 
 func takeDamage(amount):
 	if amount < currentHealth:
-		currentHealth -= amount
+		currentHealth -= (amount - defense_stat * 0.1)
 	else:
 		currentHealth = 0
 	healthBar.value = currentHealth
@@ -285,7 +294,7 @@ func _physics_process(delta):
 		weaponCastTip = (weaponCast.target_position.z * weaponCast.global_transform.basis.z) + weaponCast.global_transform.origin
 	barrel.look_at(weaponCastTip)
 
-	longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
+	longSword.get_node("hitBox").monitoring = false
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -324,12 +333,15 @@ func _physics_process(delta):
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
 	
-	if Input.is_action_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
+	
+	if Input.is_action_just_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and meleeAnimFinished == true:
+		meleeAnimFinished = false
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-		longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = true
+		longSword.get_node("hitBox").monitoring = true
 	
 	# Handle aiming
 	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
+		var rangedAnimFinished = false
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")
 			weaponBlendTarget = 1.0
@@ -364,3 +376,8 @@ func _on_try_again_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
+
+
+
+func _on_animation_tree_animation_finished(swordAttack1):
+	meleeAnimFinished = true

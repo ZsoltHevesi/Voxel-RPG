@@ -14,8 +14,13 @@ layout_mode = 2
 expand_mode = 1
 script = ExtResource("2_pymu2")
 
-[node name="debug" type="Label" parent="."]
+[node name="debugDMG" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 horizontal_alignment = 2
+
+[node name="debugDEF" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0

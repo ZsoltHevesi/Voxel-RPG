@@ -96,7 +96,6 @@ filter_enabled = true
 filters = ["pnTorso/pnRightShoulder/pnRightHand:position", "pnTorso/pnRightShoulder/pnRightHand:rotation", "pnTorso/pnRightShoulder:position", "pnTorso/pnRightShoulder:rotation", "pnTorso:position", "pnTorso:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(299.451, 504.655)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -424,5 +423,6 @@ target_position = Vector3(0, -0.5, 0)
 
 [node name="FPS_Counter" parent="playerMenu" instance=ExtResource("22_428v5")]
 
+[connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton" to="." method="_on_exit_button_pressed"]

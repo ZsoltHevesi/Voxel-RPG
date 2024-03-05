@@ -334,8 +334,41 @@ slot_type = 11
 unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 60)
 layout_mode = 0
-offset_left = 16.0
+offset_left = 220.0
+offset_top = 120.0
+offset_right = 340.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="DMGLabel" type="Label" parent="UI"]
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 140.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 40
+text = "Damage:"
+
+[node name="DEF" type="Label" parent="UI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 0
+offset_left = 220.0
 offset_top = 55.0
-offset_right = 136.0
+offset_right = 340.0
 offset_bottom = 115.0
 theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="DEFLabel" type="Label" parent="UI"]
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 177.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 40
+text = "Defense
+"

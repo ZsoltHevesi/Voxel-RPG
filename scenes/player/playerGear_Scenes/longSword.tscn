@@ -14,6 +14,13 @@ radius = 0.2
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_kuld3")
 
+[node name="hitBox" type="Area3D" parent="." groups=["playerMeleeWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
+transform = Transform3D(1, -8.74228e-08, 8.74228e-08, 8.74228e-08, -4.37114e-08, -1, 8.74228e-08, 1, -4.37114e-08, -6.48093e-08, 0, 0.741331)
+shape = SubResource("CapsuleShape3D_0nwua")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_uft40")
 surface_material_override/0 = ExtResource("2_7hxkq")
@@ -21,11 +28,4 @@ surface_material_override/1 = ExtResource("3_a3fnc")
 surface_material_override/2 = ExtResource("4_rvf3r")
 surface_material_override/3 = ExtResource("5_4srie")
 
-[node name="longSwordHitBox" type="Area3D" parent="MeshInstance3D" groups=["playerMeleeWeapon"]]
-monitoring = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/longSwordHitBox"]
-transform = Transform3D(1, -8.74228e-08, 8.74228e-08, 8.74228e-08, -4.37114e-08, -1, 8.74228e-08, 1, -4.37114e-08, -6.48093e-08, 0, 0.741331)
-shape = SubResource("CapsuleShape3D_0nwua")
-
-[connection signal="area_entered" from="MeshInstance3D/longSwordHitBox" to="." method="_on_long_sword_hit_box_area_entered"]
+[connection signal="area_entered" from="hitBox" to="." method="_on_long_sword_hit_box_area_entered"]
