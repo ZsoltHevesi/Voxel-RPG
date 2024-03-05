@@ -1,10 +1,58 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvxwvkv5ko5xy"]
+[gd_scene load_steps=17 format=3 uid="uid://cvxwvkv5ko5xy"]
 
 [ext_resource type="ArrayMesh" uid="uid://b0rr3e7okk6tn" path="res://assets/models/decorations/lamps/torchTallMount1x1x3.obj" id="1_2pm7l"]
 [ext_resource type="ArrayMesh" uid="uid://c61et2dya56af" path="res://assets/models/decorations/lamps/torchTall_1x1x3.obj" id="2_bvc8u"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_mmsy3"]
 [ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_l18sg"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="4_igpvg"]
+
+[sub_resource type="Gradient" id="Gradient_11w3n"]
+offsets = PackedFloat32Array(0, 0.189895, 0.418118, 0.881533)
+colors = PackedColorArray(0.972549, 0.972549, 0, 1, 1, 0.564706, 0, 1, 0.717647, 0.196078, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0fp6w"]
+gradient = SubResource("Gradient_11w3n")
+
+[sub_resource type="Curve" id="Curve_vt1ix"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hdnpx"]
+curve = SubResource("Curve_vt1ix")
+
+[sub_resource type="Curve" id="Curve_snub0"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.498418, 0.778074), 0.0, 0.0, 0, 0, Vector2(0.76424, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_ndn7v"]
+curve = SubResource("Curve_snub0")
+
+[sub_resource type="Curve" id="Curve_c1d6g"]
+_data = [Vector2(0, 0.309949), 0.0, 0.0, 0, 0, Vector2(1, 0.847426), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_rp7he"]
+curve = SubResource("Curve_c1d6g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6mclt"]
+emission_shape = 3
+emission_box_extents = Vector3(0.1, 0.05, 0.1)
+direction = Vector3(0, 1, 0)
+spread = 30.0
+velocity_limit_curve = SubResource("CurveTexture_rp7he")
+gravity = Vector3(0, 1, 0)
+scale_curve = SubResource("CurveTexture_ndn7v")
+color = Color(1, 0.741176, 0, 0.686275)
+color_ramp = SubResource("GradientTexture1D_0fp6w")
+emission_curve = SubResource("CurveTexture_hdnpx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0l20"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_qq8j3"]
+material = SubResource("StandardMaterial3D_c0l20")
+size = Vector3(0.05, 0.05, 0.05)
 
 [node name="CastleTorchTallMounted" type="Node3D"]
 
@@ -22,6 +70,13 @@ surface_material_override/2 = ExtResource("4_igpvg")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240263, 1.25839, 0)
-light_color = Color(1, 0.756863, 0.392157, 1)
-light_energy = 2.0
+light_color = Color(1, 0.619608, 0.392157, 1)
+light_energy = 4.0
 omni_range = 15.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.227678, 1.26085, 0)
+amount = 40
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_6mclt")
+draw_pass_1 = SubResource("BoxMesh_qq8j3")
