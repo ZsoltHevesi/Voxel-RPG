@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scripts/menu/FPSMeter.gd" id="1_oy6ya"]
 
 [node name="FPS_Counter" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,10 +11,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="FPSMeter" type="Label" parent="CanvasLayer"]
-visible = false
 custom_minimum_size = Vector2(100, 40)
 anchors_preset = 1
 anchor_left = 1.0
