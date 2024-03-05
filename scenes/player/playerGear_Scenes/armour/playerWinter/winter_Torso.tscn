@@ -4,9 +4,9 @@
 [ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF1.tres" id="2_g3qmx"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_mntn1"]
 [ext_resource type="Material" uid="uid://c8hkph2oir44i" path="res://assets/materials/diffuse/brownDIFF3.tres" id="4_i2hvk"]
-[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDIFF3.tres" id="5_xqyvd"]
-[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDIFF2.tres" id="6_qq501"]
-[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDIFF1.tres" id="7_0radf"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="5_xqyvd"]
+[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDarkDIFF2.tres" id="6_qq501"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="7_0radf"]
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="8_vv2fq"]
 
 [node name="winterTorso" type="Node3D"]

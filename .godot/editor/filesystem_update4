@@ -1,4 +1,4 @@
-res://scenes/levels/level1/level1.tscn
+res://scenes/tiles/chateau scene/chateau.tscn
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/diffuse/whiteDIFF.tres
 res://assets/materials/diffuse/greyDIFF5.tres
@@ -10,7 +10,6 @@ res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/brownPastelDIFF1.tres
 res://assets/materials/diffuse/brownPastelDIFF0.tres
-res://assets/materials/diffuse/brownPastelDIFF2.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/diffuse/brownPastelDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
@@ -20,9 +19,8 @@ res://assets/materials/diffuse/greyDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://assets/materials/emission/yellowNeon1.tres
-res://assets/materials/emission/blueTransGlow.tres
+res://assets/materials/diffuse/greyDIFF8.tres
+res://assets/materials/diffuse/brownPastelDIFF6.tres
+res://scenes/tiles/castleMonarch scene/castleMonarch.tscn
+res://assets/materials/diffuse/crimsonDIFF1.tres
 res://scenes/enemies/clanger/e_clanger.tscn
-res://scenes/player/player.tscn
-res://scenes/pickUp_Items/pickUp_abstractItem.tscn
-res://scripts/inventory/abstractItem.gd
-res://AutoLoad/database.gd

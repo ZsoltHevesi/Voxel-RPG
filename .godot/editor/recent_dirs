@@ -1,3 +1,4 @@
+res://scenes/tiles/hallways/castleHallways
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG
 res://AutoLoad
@@ -19,5 +20,3 @@ res://scenes/decorations/furniture
 res://scenes/decorations
 res://scripts
 res://scenes/levels
-res://assets/materials/transparent
-res://assets/materials/metallic
