@@ -1,4 +1,5 @@
 OccluderInstance3D
+OmniLight3D
 MeshInstance3D
 VoxelGI
 CollisionShape3D
@@ -9,7 +10,5 @@ RayCast3D
 AnimationTree
 NavigationAgent3D
 Node
-OmniLight3D
 Timer
 GPUParticles3D
-HBoxContainer

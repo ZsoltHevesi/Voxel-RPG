@@ -31,3 +31,16 @@ res://scenes/player/player.tscn
 res://scenes/decorations/plants/deadTree1.tscn
 res://scenes/menus/fps_Counter.tscn
 res://scenes/levels/level1/level1.occ
+res://scenes/tiles/hallways/castleHallways/castleHallway.tscn
+res://scenes/tiles/hallways/castleHallways/hallwayCastleGlass.tscn
+res://scenes/tiles/hallways/castleHallways/hallwayCastleGlass.VoxelGI_data.res
+res://scenes/player/bullet.tscn
+res://assets/particles/bulletHit.tres
+res://assets/materials/emission/yellowGlow1.tres
+res://assets/materials/emission/redGlow1.tres
+res://assets/materials/emission/purpleTransGlow1.tres
+res://assets/materials/emission/blueGlow1.tres
+res://assets/materials/emission/orangeGlow1.tres
+res://assets/materials/emission/tealGlow1.tres
+res://scenes/tiles/hallways/castleHallways/castleHallway.VoxelGI_data.res
+res://scenes/tiles/chateau scene/chateau.VoxelGI_data.res

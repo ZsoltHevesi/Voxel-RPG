@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cg21b1lue3yu7"]
 
 [ext_resource type="Script" path="res://scripts/inventory/abstractItem.gd" id="1_iqbx6"]
-[ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/blueTransGlow.tres" id="2_rupty"]
+[ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/purpleTransGlow1.tres" id="2_rupty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bfo65"]
 
