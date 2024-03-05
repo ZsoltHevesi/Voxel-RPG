@@ -10,7 +10,7 @@
 [ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="8_dnsbo"]
 [ext_resource type="Animation" uid="uid://c1o74vddyg1dy" path="res://scenes/player/playerAnimations/swordAttack1.res" id="9_qufvc"]
 [ext_resource type="PackedScene" uid="uid://pkfmlac7xfae" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Head.tscn" id="9_wwbiw"]
-[ext_resource type="PackedScene" uid="uid://cp6j2vgxxkd0v" path="res://scenes/player/playerGear_Scenes/longSword.tscn" id="11_bvvvj"]
+[ext_resource type="PackedScene" uid="uid://dcua2pl7oajwm" path="res://scenes/player/playerGear_Scenes/bokken.tscn" id="11_44sk1"]
 [ext_resource type="PackedScene" uid="uid://d0oj72pxi7wqb" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Hand.tscn" id="11_iev23"]
 [ext_resource type="PackedScene" uid="uid://dyaunbber0x4e" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Shoulder.tscn" id="12_yp338"]
 [ext_resource type="PackedScene" uid="uid://cjuost8cst6kh" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Hand.tscn" id="14_7fmnn"]
@@ -211,7 +211,7 @@ transform = Transform3D(0.95, 0, 0, 0, 0.949996, 0, 0, 0, 0.949998, 0.12, -0.36,
 [node name="pnRightWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.113, -0.014468)
 
-[node name="LongSword" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot" instance=ExtResource("11_bvvvj")]
+[node name="Bokken" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot" instance=ExtResource("11_44sk1")]
 
 [node name="winterRightHand" parent="visuals/pnTorso/pnRightShoulder/pnRightHand" instance=ExtResource("11_iev23")]
 

@@ -36,3 +36,6 @@ res://scenes/player/playerGear_Scenes/longSword.tscn
 res://scenes/menus/inventory/playerMenu.tscn
 res://scenes/menus/inventory/slot/slot.tscn
 res://scenes/pickUp_Items/pickUp_Health.tscn
+res://scenes/player/playerGear_Scenes/bokken.tscn
+res://scenes/player/playerGear_Scenes/longSword.gd
+res://assets/materials/emission/purpleTransGlow1.tres

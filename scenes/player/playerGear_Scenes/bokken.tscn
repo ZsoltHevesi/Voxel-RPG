@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcua2pl7oajwm"]
+
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/longSword.gd" id="1_h58a7"]
+[ext_resource type="ArrayMesh" uid="uid://mj7olkmqgcxa" path="res://assets/models/weapon models/bokken.obj" id="1_yit83"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_yoo4v"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_50gf0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_blanj"]
+size = Vector3(0.075, 0.3, 1)
+
+[node name="Bokken" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+script = ExtResource("1_h58a7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_yit83")
+surface_material_override/0 = ExtResource("2_yoo4v")
+surface_material_override/1 = ExtResource("3_50gf0")
+
+[node name="hitBox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.038, 0.735746)
+shape = SubResource("BoxShape3D_blanj")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

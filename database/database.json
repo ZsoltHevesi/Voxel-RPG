@@ -78,7 +78,7 @@
 	},
 	"11" : {
 		"texture" : "flintlock.png",
-		"slot_type" : 11,
+		"slot_type" : 12,
 		"def" : 0,
 		"dmg" : 60,
 		"item_scene" : "flintlockPistol.tscn"
