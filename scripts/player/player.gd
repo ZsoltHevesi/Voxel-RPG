@@ -286,10 +286,7 @@ func _physics_process(delta):
 	barrel.look_at(weaponCastTip)
 
 	longSword.get_node("MeshInstance3D/longSwordHitBox").monitoring = false
-	# Example: Check for player health and take damage if needed
-	if Input.is_action_just_pressed("takeDamage"):
-		# Amount of damage can be adjusted as needed
-		takeDamage(20) 
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
