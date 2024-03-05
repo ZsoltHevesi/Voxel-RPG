@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://blqj6udtf266j"]
+
+[ext_resource type="ArrayMesh" uid="uid://cyv0u4hw7e5mp" path="res://assets/models/decorations/lamps/torchMount_1x1x1.obj" id="1_livbj"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_acdr3"]
+[ext_resource type="ArrayMesh" uid="uid://wybyr7h1ptj" path="res://assets/models/decorations/lamps/torch_1x1x1.obj" id="2_l0nj6"]
+[ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="3_k5wg2"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="4_k5hlo"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_fkn1n"]
+
+[node name="CastleTorchMounted" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_livbj")
+surface_material_override/0 = ExtResource("2_acdr3")
+surface_material_override/1 = ExtResource("5_fkn1n")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.990724, 0.135888, 0, -0.135888, 0.990724, 0, 0, 0, 1, 0.110711, 0.0614828, 0)
+mesh = ExtResource("2_l0nj6")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_k5wg2")
+surface_material_override/1 = ExtResource("4_k5hlo")
+surface_material_override/2 = ExtResource("5_fkn1n")

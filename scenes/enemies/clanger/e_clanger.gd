@@ -129,7 +129,7 @@ func update_target_location(target_location):
 
 
 func _on_navigation_agent_3d_target_reached():
-	print("in range")
+	pass
 
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 0.25)
@@ -145,7 +145,7 @@ func _on_clanger_hitbox_area_exited(area):
 
 
 func _on_area_3d_body_entered(body):
-	if body.name == "Player" and leftStaffArea.visible:
+	if body.name == "Player":
 		# Deal damage to the player
 		body.takeDamage(5)
 

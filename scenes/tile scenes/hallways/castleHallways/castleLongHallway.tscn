@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdfyr10a5tduu"]
 
-[ext_resource type="VoxelGIData" uid="uid://ds1bqv4tatt3p" path="res://scenes/tiles/hallways/castleHallways/castleLongHallway.VoxelGI_data.res" id="1_f2wb3"]
+[ext_resource type="VoxelGIData" uid="uid://ds1bqv4tatt3p" path="res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.VoxelGI_data.res" id="1_f2wb3"]
 [ext_resource type="ArrayMesh" uid="uid://hto0b683b035" path="res://assets/models/tiles/hallways/castleHallways/castleHallwayLong.obj" id="1_jqw0s"]
 
 [node name="CastleLongHallway" type="Node3D"]

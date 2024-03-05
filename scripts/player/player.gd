@@ -67,9 +67,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
 # Variables for the player health
+@onready var healthBar = $cameraMount/SpringArm3D/Camera3D/UI/HealthBar
 var maxHealth = 100
 var currentHealth = maxHealth
-
 
 
 # Handle equipping armour
@@ -182,7 +182,7 @@ func takeDamage(amount):
 	else:
 		currentHealth = 0
 	print("Current Health:", currentHealth)
-	$cameraMount/SpringArm3D/Camera3D/UI/HealthBar.value = currentHealth
+	healthBar.value = currentHealth
 	if currentHealth <= 0:
 		# Function to handle player death
 		die()
@@ -193,6 +193,7 @@ func die():
 
 func heal(amount):
 	currentHealth += amount
+	healthBar.value = currentHealth
 	if currentHealth > maxHealth:
 		currentHealth = maxHealth
 

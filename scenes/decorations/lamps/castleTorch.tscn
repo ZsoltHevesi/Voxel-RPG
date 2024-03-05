@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://do5asdiya0jmj"]
+
+[ext_resource type="ArrayMesh" uid="uid://wybyr7h1ptj" path="res://assets/models/decorations/lamps/torch_1x1x1.obj" id="1_oluov"]
+[ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="2_ib3r1"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="2_w66yk"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_wpeja"]
+
+[node name="CastleTorch" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_oluov")
+surface_material_override/0 = ExtResource("2_ib3r1")
+surface_material_override/1 = ExtResource("3_wpeja")
+surface_material_override/2 = ExtResource("2_w66yk")

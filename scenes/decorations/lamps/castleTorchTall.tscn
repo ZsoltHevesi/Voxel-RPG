@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://jld07wu4v7vj"]
+
+[ext_resource type="ArrayMesh" uid="uid://c61et2dya56af" path="res://assets/models/decorations/lamps/torchTall_1x1x3.obj" id="1_m4ko2"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="2_gqfvs"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_tr0yp"]
+
+[node name="CastleTorchTall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_m4ko2")
+surface_material_override/1 = ExtResource("2_tr0yp")
+surface_material_override/2 = ExtResource("2_gqfvs")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13237, 0)
+visible = false
+light_color = Color(1, 0.756863, 0.392157, 1)
+light_energy = 2.0
+omni_range = 15.0

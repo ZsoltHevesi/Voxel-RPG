@@ -1,10 +1,10 @@
+res://scripts/pickUpScripts
+res://scenes/tile scenes/hallways/castleHallways
 res://scenes/levels/level1
-res://scenes/tiles/hallways/castleHallways
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG
 res://AutoLoad
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/tools
-res://scenes/tiles/hallways
 res://scenes/player
 res://assets/materials/emission
 res://scenes/player/playerAnimations

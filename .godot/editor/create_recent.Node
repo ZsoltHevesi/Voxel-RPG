@@ -1,7 +1,7 @@
-OccluderInstance3D
-OmniLight3D
 MeshInstance3D
+OmniLight3D
 VoxelGI
+OccluderInstance3D
 CollisionShape3D
 Area3D
 StaticBody3D

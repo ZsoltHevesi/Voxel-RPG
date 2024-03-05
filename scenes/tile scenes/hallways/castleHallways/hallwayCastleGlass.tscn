@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cks8ixvw7ii0c"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkpp3n4nf4q44" path="res://assets/models/tiles/hallways/castleHallways/castleHallwayGlass.obj" id="1_q4vle"]
-[ext_resource type="VoxelGIData" uid="uid://dqus6j87dmjl3" path="res://scenes/tiles/hallways/castleHallways/hallwayCastleGlass.VoxelGI_data.res" id="1_uj86a"]
+[ext_resource type="VoxelGIData" uid="uid://dqus6j87dmjl3" path="res://scenes/tile scenes/hallways/castleHallways/hallwayCastleGlass.VoxelGI_data.res" id="1_uj86a"]
 [ext_resource type="ArrayMesh" uid="uid://ccwtsij7thi3e" path="res://assets/models/tiles/hallways/castleHallways/stainedGlass1.obj" id="2_qb4fe"]
 [ext_resource type="Material" uid="uid://cuhf7hywudauh" path="res://assets/materials/diffuse/greyDIFF2.tres" id="3_gqtq2"]
 [ext_resource type="Material" uid="uid://16axgl0yba6u" path="res://assets/materials/diffuse/brownPastelDIFF2.tres" id="3_h6n70"]
@@ -52,11 +52,3 @@ collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stainedGlass/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ra4g5")
-
-[node name="exitCast2" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75, 0.5, 0)
-target_position = Vector3(0, 0, 0)
-
-[node name="exitCast1" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75, 0.5, 0)
-target_position = Vector3(0, 0, 0)
