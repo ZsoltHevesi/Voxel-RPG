@@ -43,7 +43,9 @@ extends CharacterBody3D
 var bullet = load("res://scenes/player/bullet.tscn")
 var bulletInstance
 @onready var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot/FlintlockPistol/barrel
-
+@onready var game_over_screen = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen
+@onready var try_again_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton
+@onready var exit_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
 var aimTransition = "parameters/aimTransition/transition_request"
@@ -187,8 +189,9 @@ func takeDamage(amount):
 		die()
 		
 func die():
-	# Implementing logic for player death (death animations, resetting health etc.)
-	currentHealth = maxHealth
+	game_over_screen.visible = true
+	get_tree().paused = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func heal(amount):
 	currentHealth += amount
@@ -200,6 +203,7 @@ func heal(amount):
 # Capture Mouse
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	get_tree().paused = false
 
 
 # Rotate Player and Camera
@@ -355,3 +359,11 @@ func _on_Fallbarrier_body_entered(body):
 				# Reduce player's health
 				takeDamage(currentHealth)
 
+
+
+func _on_try_again_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/levels/level1/level1.tscn")
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()
