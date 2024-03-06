@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1uin1lhtl7gr"
+path="res://.godot/imported/guardianRightFoot.obj-c8d571885a386ff5d3c048f95ec7d9af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/guardianRightFoot.obj-c8d571885a386ff5d3c048f95ec7d9af.mesh"]
+
+source_file="res://assets/models/player/armour/guardian/guardianRightFoot.obj"
+dest_files=["res://.godot/imported/guardianRightFoot.obj-c8d571885a386ff5d3c048f95ec7d9af.mesh", "res://.godot/imported/guardianRightFoot.obj-c8d571885a386ff5d3c048f95ec7d9af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

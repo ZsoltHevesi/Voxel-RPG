@@ -1,0 +1,279 @@
+[gd_scene load_steps=45 format=3 uid="uid://3xoln0dfc6j0"]
+
+[ext_resource type="Animation" uid="uid://580swu75bkg6" path="res://scenes/player/playerAnimations/RESET.res" id="2_y1epm"]
+[ext_resource type="Animation" uid="uid://cvldq075pnnw5" path="res://scenes/player/playerAnimations/flintlock_aim.res" id="3_4gloh"]
+[ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="4_eburv"]
+[ext_resource type="Animation" uid="uid://bq1gaamwyo1ea" path="res://scenes/player/playerAnimations/idle.res" id="5_uc7qg"]
+[ext_resource type="Animation" uid="uid://dbiwxhjqqqafo" path="res://scenes/player/playerAnimations/in_air.res" id="6_f3nj7"]
+[ext_resource type="Animation" uid="uid://cjihcbgf6347x" path="res://scenes/player/playerAnimations/run.res" id="7_0r1kw"]
+[ext_resource type="Animation" uid="uid://c1o74vddyg1dy" path="res://scenes/player/playerAnimations/swordAttack1.res" id="8_2rk56"]
+[ext_resource type="Animation" uid="uid://b14fxosguxu7i" path="res://scenes/player/playerAnimations/walk.res" id="9_0eq5q"]
+[ext_resource type="PackedScene" uid="uid://b6dpjmm4jbt20" path="res://scenes/player/playerGear_Scenes/guardianHead.tscn" id="9_6rqco"]
+[ext_resource type="PackedScene" uid="uid://bdt5ril3orhpu" path="res://scenes/player/playerGear_Scenes/guardianLeftHand.tscn" id="10_fpvd6"]
+[ext_resource type="PackedScene" uid="uid://blbnpbekstu5l" path="res://scenes/player/playerGear_Scenes/guardianLeftShoulder.tscn" id="10_hn83l"]
+[ext_resource type="PackedScene" uid="uid://kwg4ecvoio7t" path="res://scenes/player/playerGear_Scenes/guardianTorso.tscn" id="10_pg0g5"]
+[ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="10_qqcm4"]
+[ext_resource type="PackedScene" uid="uid://dis70734be8ks" path="res://scenes/player/playerGear_Scenes/guardianRightHand.tscn" id="10_slv7h"]
+[ext_resource type="PackedScene" uid="uid://cbeja27b7q8q2" path="res://scenes/player/playerGear_Scenes/guardianRightShoulder.tscn" id="11_8xlyg"]
+[ext_resource type="PackedScene" uid="uid://gsm811sokvyu" path="res://scenes/player/playerGear_Scenes/guardianLeftFoot.tscn" id="11_33rw0"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="11_wct8g"]
+[ext_resource type="PackedScene" uid="uid://dbxnldoc34jqw" path="res://scenes/player/playerGear_Scenes/guardianLeftLeg.tscn" id="12_brml5"]
+[ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/purpleTransGlow1.tres" id="12_cuhts"]
+[ext_resource type="Material" uid="uid://dlcydg0remmp1" path="res://assets/materials/emission/purpleTransGlow2.tres" id="13_7otxe"]
+[ext_resource type="PackedScene" uid="uid://dik5vni4f6o6y" path="res://scenes/player/playerGear_Scenes/guardianRightFoot.tscn" id="13_8sfcx"]
+[ext_resource type="PackedScene" uid="uid://dbrreqpdxs362" path="res://scenes/player/playerGear_Scenes/guardianRightLeg.tscn" id="14_8dw20"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="14_c58lj"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
+_data = {
+"RESET": ExtResource("2_y1epm"),
+"flintlock_aim": ExtResource("3_4gloh"),
+"flintlock_shoot": ExtResource("4_eburv"),
+"idle": ExtResource("5_uc7qg"),
+"in_air": ExtResource("6_f3nj7"),
+"run": ExtResource("7_0r1kw"),
+"swordAttack1": ExtResource("8_2rk56"),
+"walk": ExtResource("9_0eq5q")
+}
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_0gny3"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_8id78"]
+xfade_time = 0.1
+input_0/name = "aiming"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "notAiming"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lk2no"]
+animation = &"flintlock_aim"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_06fuu"]
+xfade_time = 0.2
+input_0/name = "inAir"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "onGround"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8jfl2"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7hdex"]
+animation = &"in_air"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qbt5p"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oq02i"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fbppp"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_50vrx"]
+filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_elg85"]
+animation = &"flintlock_shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eaw8d"]
+animation = &"swordAttack1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6x0x"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5aoor"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_0t0c1"]
+filter_enabled = true
+filters = ["pnTorso/pnLeftShoulder", "pnTorso/pnLeftShoulder/pnLeftHand:position", "pnTorso/pnLeftShoulder/pnLeftHand:rotation", "pnTorso/pnLeftShoulder:position", "pnTorso/pnLeftShoulder:rotation"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_rlxe0"]
+filter_enabled = true
+filters = ["pnTorso/pnRightShoulder/pnRightHand:position", "pnTorso/pnRightShoulder/pnRightHand:rotation", "pnTorso/pnRightShoulder:position", "pnTorso/pnRightShoulder:rotation", "pnTorso:position", "pnTorso:rotation"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
+nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
+nodes/IdleWalkRunBlend/position = Vector2(940, 900)
+nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
+nodes/aimTransition/position = Vector2(840, 1380)
+nodes/aiming/node = SubResource("AnimationNodeAnimation_lk2no")
+nodes/aiming/position = Vector2(370, 1280)
+nodes/airGroundTransition/node = SubResource("AnimationNodeTransition_06fuu")
+nodes/airGroundTransition/position = Vector2(1540, 990)
+nodes/idle/node = SubResource("AnimationNodeAnimation_8jfl2")
+nodes/idle/position = Vector2(630, 890)
+nodes/inAir/node = SubResource("AnimationNodeAnimation_7hdex")
+nodes/inAir/position = Vector2(1163.76, 825.71)
+nodes/notAiming/node = SubResource("AnimationNodeAnimation_qbt5p")
+nodes/notAiming/position = Vector2(510, 1560)
+nodes/output/position = Vector2(1770, 1060)
+nodes/run/node = SubResource("AnimationNodeAnimation_oq02i")
+nodes/run/position = Vector2(630, 1170)
+nodes/runTimeScale/node = SubResource("AnimationNodeTimeScale_fbppp")
+nodes/runTimeScale/position = Vector2(780, 1180)
+nodes/shootOneShot/node = SubResource("AnimationNodeOneShot_50vrx")
+nodes/shootOneShot/position = Vector2(610, 1300)
+nodes/shooting/node = SubResource("AnimationNodeAnimation_elg85")
+nodes/shooting/position = Vector2(410, 1420)
+nodes/swordAttack1/node = SubResource("AnimationNodeAnimation_eaw8d")
+nodes/swordAttack1/position = Vector2(1210, 1250)
+nodes/walk/node = SubResource("AnimationNodeAnimation_v6x0x")
+nodes/walk/position = Vector2(630, 1030)
+nodes/walkTimeScale/node = SubResource("AnimationNodeTimeScale_5aoor")
+nodes/walkTimeScale/position = Vector2(770, 1030)
+nodes/weaponBlend/node = SubResource("AnimationNodeBlend2_0t0c1")
+nodes/weaponBlend/position = Vector2(1210, 1020)
+nodes/weaponOneShot/node = SubResource("AnimationNodeOneShot_rlxe0")
+nodes/weaponOneShot/position = Vector2(1370.62, 1102.18)
+node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"shootOneShot", &"aimTransition", 1, &"notAiming", &"airGroundTransition", 0, &"inAir", &"airGroundTransition", 1, &"weaponOneShot", &"output", 0, &"airGroundTransition", &"runTimeScale", 0, &"run", &"shootOneShot", 0, &"aiming", &"shootOneShot", 1, &"shooting", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition", &"weaponOneShot", 0, &"weaponBlend", &"weaponOneShot", 1, &"swordAttack1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
+radius = 0.15
+height = 1.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk1wm"]
+radius = 0.38
+height = 1.75
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_6gw00"]
+length = 0.51
+
+[node name="e_Guardian" type="CharacterBody3D"]
+collision_layer = 13
+collision_mask = 13
+
+[node name="visuals" type="Node3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="visuals"]
+active = false
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_g6ovt")
+}
+autoplay = "idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="visuals"]
+libraries = {
+"": SubResource("AnimationLibrary_g6ovt")
+}
+tree_root = SubResource("AnimationNodeBlendTree_sxeqy")
+anim_player = NodePath("../AnimationPlayer")
+parameters/IdleWalkRunBlend/blend_amount = -1.0
+parameters/aimTransition/current_state = "aiming"
+parameters/aimTransition/transition_request = ""
+parameters/aimTransition/current_index = 0
+parameters/airGroundTransition/current_state = "onGround"
+parameters/airGroundTransition/transition_request = ""
+parameters/airGroundTransition/current_index = 1
+parameters/runTimeScale/scale = 2.0
+parameters/shootOneShot/active = false
+parameters/shootOneShot/internal_active = false
+parameters/shootOneShot/request = 0
+parameters/walkTimeScale/scale = 1.0
+parameters/weaponBlend/blend_amount = 0.0
+parameters/weaponOneShot/active = false
+parameters/weaponOneShot/internal_active = false
+parameters/weaponOneShot/request = 0
+
+[node name="pnTorso" type="Node3D" parent="visuals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.942474, 0)
+
+[node name="pnHead" type="Node3D" parent="visuals/pnTorso"]
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 2.59618e-10, 0.354758, -0.010039)
+
+[node name="GuardianHead" parent="visuals/pnTorso/pnHead" instance=ExtResource("9_6rqco")]
+
+[node name="pnRightShoulder" type="Node3D" parent="visuals/pnTorso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.185, 0)
+
+[node name="pnRightHand" type="Node3D" parent="visuals/pnTorso/pnRightShoulder"]
+transform = Transform3D(0.95, 0, 0, 0, 0.949996, 0, 0, 0, 0.949998, 0.12, -0.36, 0)
+
+[node name="pnRightWeaponSlot" type="Node3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.113, -0.014468)
+
+[node name="longSwordMagic" type="Node3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic"]
+mesh = ExtResource("10_qqcm4")
+surface_material_override/0 = ExtResource("11_wct8g")
+surface_material_override/1 = ExtResource("12_cuhts")
+surface_material_override/2 = ExtResource("13_7otxe")
+surface_material_override/3 = ExtResource("14_c58lj")
+
+[node name="hitBox" type="Area3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic" groups=["playerMeleeWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/hitBox"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
+shape = SubResource("CapsuleShape3D_q4wyj")
+
+[node name="GuardianRightHand" parent="visuals/pnTorso/pnRightShoulder/pnRightHand" instance=ExtResource("10_slv7h")]
+
+[node name="GuardianRightShoulder" parent="visuals/pnTorso/pnRightShoulder" instance=ExtResource("11_8xlyg")]
+
+[node name="pnLeftShoulder" type="Node3D" parent="visuals/pnTorso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.185, 0)
+
+[node name="pnLeftHand" type="Node3D" parent="visuals/pnTorso/pnLeftShoulder"]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.950001, -0.12, -0.36, 0)
+
+[node name="GuardianLeftHand" parent="visuals/pnTorso/pnLeftShoulder/pnLeftHand" instance=ExtResource("10_fpvd6")]
+
+[node name="GuardianLeftShoulder" parent="visuals/pnTorso/pnLeftShoulder" instance=ExtResource("10_hn83l")]
+
+[node name="GuardianTorso" parent="visuals/pnTorso" instance=ExtResource("10_pg0g5")]
+
+[node name="pnLeftFoot" type="Node3D" parent="visuals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0)
+
+[node name="GuardianLeftFoot" parent="visuals/pnLeftFoot" instance=ExtResource("11_33rw0")]
+
+[node name="pnLeftLeg" type="Node3D" parent="visuals/pnLeftFoot"]
+transform = Transform3D(1, 0, 0, 0, 0.999248, 0.038754, 0, -0.038754, 0.999248, 0.00500001, 0.124, -7.45058e-08)
+
+[node name="GuardianLeftLeg" parent="visuals/pnLeftFoot/pnLeftLeg" instance=ExtResource("12_brml5")]
+
+[node name="pnRightFoot" type="Node3D" parent="visuals"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.16, 0, 0)
+
+[node name="GuardianRightFoot" parent="visuals/pnRightFoot" instance=ExtResource("13_8sfcx")]
+
+[node name="pnRightLeg" type="Node3D" parent="visuals/pnRightFoot"]
+transform = Transform3D(1, 0, 0, 0, 0.999249, 0.038754, 0, -0.038754, 0.999249, -0.00500003, 0.124, -1.19209e-07)
+
+[node name="GuardianRightLeg" parent="visuals/pnRightFoot/pnRightLeg" instance=ExtResource("14_8dw20")]
+
+[node name="collisionCapsule" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+shape = SubResource("CapsuleShape3D_rk1wm")
+
+[node name="sepRayLeft" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
+
+[node name="sepRayFL" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
+
+[node name="sepRayFront" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
+
+[node name="sepRayFR" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
+
+[node name="sepRayRight" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.51, -0.42)
+shape = SubResource("SeparationRayShape3D_6gw00")
+
+[node name="checkStairsRayCast" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.5, 0)
+
+[connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
