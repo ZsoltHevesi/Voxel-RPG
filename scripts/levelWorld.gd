@@ -23,7 +23,6 @@ func _ready():
 	'''
 
 func _physics_process(delta):
-	if pauseNav == false:
 		get_tree().call_group("enemies", "update_target_location", player.global_transform.origin)
 
 
@@ -36,3 +35,5 @@ func _on_next_level_area_body_entered(body):
 		nextLevel = next_level.instantiate()
 		world.add_child(nextLevel)
 		pauseNav = false
+		body.position.x = 0
+		body.position.z = 0

@@ -1,3 +1,5 @@
+F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
+res://scenes/tile scenes/castleMonarch scene
 res://scenes/tile scenes/castlePit
 res://scenes/tile scenes/backdrop
 res://scenes/decorations/lamps
@@ -10,7 +12,6 @@ res://assets/materials/transparent
 res://scripts/pickUpScripts
 res://scenes/tile scenes/hallways/castleHallways
 res://scenes/levels/level1
-F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG
 res://AutoLoad
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/tools
@@ -19,5 +20,3 @@ res://assets/materials/emission
 res://scenes/player/playerAnimations
 res://scripts/inventory
 res://scenes/menus/inventory/slot
-res://scripts/menu
-F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/AutoLoad
