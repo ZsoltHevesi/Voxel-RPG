@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3g8x4rck5f82"]
+
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_wqre3"]
+[ext_resource type="ArrayMesh" uid="uid://bi3ki6p2m6rhb" path="res://assets/models/weapon models/scimitar.obj" id="2_ycrfv"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_8c61e"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="4_xjb6s"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="5_nwigx"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="6_4ufh0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
+radius = 0.15
+height = 1.5
+
+[node name="Bokken" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+script = ExtResource("1_wqre3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("2_ycrfv")
+surface_material_override/0 = ExtResource("3_8c61e")
+surface_material_override/1 = ExtResource("4_xjb6s")
+surface_material_override/2 = ExtResource("5_nwigx")
+surface_material_override/3 = ExtResource("6_4ufh0")
+
+[node name="hitBox" type="Area3D" parent="." groups=["playerMeleeWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
+shape = SubResource("CapsuleShape3D_q4wyj")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]
