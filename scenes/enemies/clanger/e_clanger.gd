@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @onready var navAgent = $NavigationAgent3D
 @onready var clanger = $"."
-@onready var player = get_parent().get_node("Player")
+@onready var player = get_tree().get_root().get_node("world/Player")
 @onready var animationTree = $visuals/AnimationTree
 var idleRunBlend = "parameters/IdleRunBLend/blend_amount"
 var attackOneShot = "parameters/attackOneShot/request"

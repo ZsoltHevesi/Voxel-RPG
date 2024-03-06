@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=21 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scripts/levelWorld.gd" id="1_ems3p"]
@@ -20,14 +20,14 @@ sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
 sky_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_wwcv2"]
+[sub_resource type="Sky" id="Sky_rdy4a"]
 sky_material = SubResource("ProceduralSkyMaterial_3hgwl")
 
 [sub_resource type="Environment" id="Environment_8vil2"]
 background_mode = 2
 background_color = Color(0.646029, 0.646029, 0.646029, 1)
 background_energy_multiplier = 0.8
-sky = SubResource("Sky_wwcv2")
+sky = SubResource("Sky_rdy4a")
 tonemap_mode = 2
 ssao_enabled = true
 sdfgi_use_occlusion = true
@@ -46,117 +46,129 @@ cell_height = 0.51
 agent_height = 2.0
 agent_max_climb = 0.51
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x5k3p"]
+size = Vector3(26, 25, 20)
+
 [node name="world" type="Node3D"]
 script = ExtResource("1_ems3p")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="Player" parent="." instance=ExtResource("2_cy5vs")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -87.3, 3.5, 1.789)
+
+[node name="level1" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="level1"]
 environment = SubResource("Environment_8vil2")
 script = ExtResource("1_d7ia6")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="level1"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 light_energy = 0.8
 shadow_enabled = true
 shadow_opacity = 0.9
 script = ExtResource("2_nrich")
 
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="level1"]
 visible = false
 occluder = ExtResource("4_jsvvb")
 bake_simplification_distance = 0.05
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="level1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -67.7337, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level1/Area3D"]
 shape = SubResource("BoxShape3D_ouqtc")
 
-[node name="map" type="Node3D" parent="."]
+[node name="map" type="Node3D" parent="level1"]
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="map"]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="level1/map"]
 navigation_mesh = SubResource("NavigationMesh_6mn4r")
 
-[node name="tiles" type="Node3D" parent="map/NavigationRegion3D"]
+[node name="tiles" type="Node3D" parent="level1/map/NavigationRegion3D"]
 
-[node name="Chateau" parent="map/NavigationRegion3D/tiles" instance=ExtResource("1_f1ho0")]
+[node name="Chateau" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("1_f1ho0")]
 
-[node name="CastleHallway" parent="map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
+[node name="CastleHallway" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 3, 0)
 
-[node name="CastleHallway2" parent="map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
+[node name="CastleHallway2" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3, -41)
 
-[node name="CastleHallway3" parent="map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
+[node name="CastleHallway3" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("6_xm1sj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3, -64)
 
-[node name="castleHallwayGlass" parent="map/NavigationRegion3D/tiles" instance=ExtResource("7_dpfig")]
+[node name="castleHallwayGlass" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("7_dpfig")]
 transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 0, 3, -52.5)
 
-[node name="CastleDeadEnd" parent="map/NavigationRegion3D/tiles" instance=ExtResource("8_6vogf")]
+[node name="CastleDeadEnd" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("8_6vogf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.25, 2.5, 0)
 
-[node name="closedSpawn" parent="map/NavigationRegion3D/tiles" instance=ExtResource("9_kg68d")]
+[node name="closedSpawn" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("9_kg68d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.75, 2.5, 0)
 
-[node name="spawn" parent="map/NavigationRegion3D/tiles" instance=ExtResource("10_rm33y")]
+[node name="spawn" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("10_rm33y")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.5, -95.75)
 
-[node name="Player" parent="map" instance=ExtResource("2_cy5vs")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -87.3, 3.5, 1.789)
+[node name="nextLevelArea" type="Area3D" parent="level1/map/NavigationRegion3D/tiles/spawn"]
 
-[node name="clanger" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.149551, 8.45313, 26.4649)
+shape = SubResource("BoxShape3D_x5k3p")
+
+[node name="clanger" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, 0)
 
-[node name="clanger2" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger2" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, -29.5329)
 
-[node name="clanger9" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger9" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(-0.923846, 0, 0.382764, 0, 1, 0, -0.382764, 0, -0.923846, -0.408, 1, -16.394)
 
-[node name="clanger10" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger10" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(-0.125835, 0, -0.992051, 0, 1, 0, 0.992051, 0, -0.125835, -5.68679, 1, -15.0374)
 
-[node name="clanger3" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger3" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8643, 3.5, -29.5329)
 
-[node name="clanger4" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger4" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6447, 3.5, -29.5329)
 
-[node name="clanger5" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger5" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64485, 3.5, 37.6105)
 
-[node name="clanger6" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger6" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645, 22, 37.61)
 
-[node name="clanger7" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger7" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9263, 22, 37.61)
 
-[node name="clanger8" parent="map" instance=ExtResource("3_f8dnu")]
+[node name="clanger8" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17657, 22, 37.61)
 
-[node name="healthPickup" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 3.70607, -31.6)
 
-[node name="healthPickup2" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup2" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0877, 3.70607, -31.6)
 
-[node name="healthPickup3" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup3" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0877, 3.70607, 30.3347)
 
-[node name="healthPickup4" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup4" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7488, 3.70607, 30.3347)
 
-[node name="healthPickup5" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup5" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -38.2126)
 
-[node name="healthPickup6" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup6" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -53.1507)
 
-[node name="healthPickup7" parent="map" instance=ExtResource("11_8mh61")]
+[node name="healthPickup7" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -64.8012)
 
-[node name="abstractItem" parent="map" instance=ExtResource("14_jbrvl")]
+[node name="abstractItem" parent="level1/map" instance=ExtResource("14_jbrvl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.8, 3.7, 1.3)
 ID = "11"
 
-[connection signal="body_entered" from="Area3D" to="map/Player" method="_on_Fallbarrier_body_entered"]
+[connection signal="body_entered" from="level1/Area3D" to="Player" method="_on_Fallbarrier_body_entered"]
+[connection signal="body_entered" from="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea" to="." method="_on_next_level_area_body_entered"]
