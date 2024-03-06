@@ -80,7 +80,98 @@
 		"texture" : "flintlock.png",
 		"slot_type" : 12,
 		"def" : 0,
-		"dmg" : 60,
+		"dmg" : 30,
 		"item_scene" : "flintlockPistol.tscn"
-	}
+	},
+	"12" : {
+		"texture" : "guardianHead.png",
+		"slot_type" : 1,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianHead.tscn"
+	},
+	"13" : {
+		"texture" : "guardianTorso.png",
+		"slot_type" : 2,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianTorso.tscn"
+	},
+	"14" : {
+		"texture" : "guardianLeftShoulder.png",
+		"slot_type" : 3,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianLeftShoulder.tscn"
+	},
+	"15" : {
+		"texture" : "guardianRightShoulder.png",
+		"slot_type" : 4,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianRightShoulder.tscn"
+	},
+	"16" : {
+		"texture" : "guardianLeftHand.png",
+		"slot_type" : 5,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianLeftHand.tscn"
+	},
+	"17" : {
+		"texture" : "guardianRightHand.png",
+		"slot_type" : 6,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianRightHand.tscn"
+	},
+	"18" : {
+		"texture" : "guardianLeftLeg.png",
+		"slot_type" : 7,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianLeftLeg.tscn"
+	},
+	"19" : {
+		"texture" : "guardianRightLeg.png",
+		"slot_type" : 8,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianRightLeg.tscn"
+	},
+	"20" : {
+		"texture" : "guardianLeftFoot.png",
+		"slot_type" : 9,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianLeftFoot.tscn"
+	},
+	"21" : {
+		"texture" : "guardianLeftFoot.png",
+		"slot_type" : 10,
+		"def" : 10,
+		"dmg" : 0,
+		"item_scene" : "guardianLeftFoot.tscn"
+	},
+	"22" : {
+		"texture" : "scimitar.png",
+		"slot_type" : 11,
+		"def" : 0,
+		"dmg" : 50,
+		"item_scene" : "scimitar.tscn"
+	},
+	"23" : {
+		"texture" : "katana.png",
+		"slot_type" : 11,
+		"def" : 0,
+		"dmg" : 40,
+		"item_scene" : "katana.tscn"
+	},
+	"24" : {
+		"texture" : "machete.png",
+		"slot_type" : 11,
+		"def" : 0,
+		"dmg" : 20,
+		"item_scene" : "machete.tscn"
+	},
 }

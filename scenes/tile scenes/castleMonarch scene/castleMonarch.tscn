@@ -125,6 +125,12 @@ shape = SubResource("ConcavePolygonShape3D_gjil4")
 [node name="lightningLanternTall" parent="." instance=ExtResource("20_uj0mu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 6.5, -32)
 
+[node name="lightningLanternTall3" parent="." instance=ExtResource("20_uj0mu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 9, 29.5)
+
+[node name="lightningLanternTall4" parent="." instance=ExtResource("20_uj0mu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 9, 29.5)
+
 [node name="lightningLanternTall2" parent="." instance=ExtResource("20_uj0mu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 6.5, -32)
 

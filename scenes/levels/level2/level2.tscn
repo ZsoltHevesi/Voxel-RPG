@@ -107,6 +107,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -68.8)
 [node name="clanger2" parent="map" instance=ExtResource("12_ncokg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3, 1, -68.8)
 
+[node name="clanger11" parent="map" instance=ExtResource("12_ncokg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3, 1, -34.8155)
+
+[node name="clanger12" parent="map" instance=ExtResource("12_ncokg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05337, 1, -34.8155)
+
 [node name="clanger3" parent="map" instance=ExtResource("12_ncokg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, -2, -85.9)
 

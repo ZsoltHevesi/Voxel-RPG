@@ -20,9 +20,9 @@ res://assets/materials/diffuse/whiteDIFF.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/brownPastelDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
+res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/brownDIFF3.tres
-res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
 res://assets/materials/emission/purpleTransGlow1.tres
@@ -30,7 +30,7 @@ res://scenes/levels/level2/level2.tscn
 res://scenes/player/player.tscn
 res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
 res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
-res://assets/materials/diffuse/boneDIFF1.tres
-res://assets/materials/diffuse/crimsonDIFF1.tres
-res://assets/particles/bulletHit.tres
-res://scripts/levelWorld.gd
+res://scenes/tile scenes/chateau scene/chateau.tscn
+res://scenes/enemies/clanger/e_clanger.tscn
+res://scenes/player/playerGear_Scenes/katana.tscn
+res://scenes/decorations/plants/plant.tscn

@@ -1,8 +1,8 @@
+MeshInstance3D
 Node3D
 VoxelGI
 CollisionShape3D
 Area3D
-MeshInstance3D
 GPUParticles3D
 StaticBody3D
 HBoxContainer
