@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://h2bwuc13ene5" path="res://scenes/tile scenes/closedSpawn/closed_spawn.tscn" id="9_kg68d"]
 [ext_resource type="PackedScene" uid="uid://bmiieijs6iwbw" path="res://scenes/tile scenes/spawn/spawn.tscn" id="10_rm33y"]
 [ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="11_8mh61"]
-[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="14_jbrvl"]
+[ext_resource type="PackedScene" uid="uid://crawnocbn8e3e" path="res://scenes/tile scenes/backdrop/tower.tscn" id="12_jke7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
@@ -112,8 +112,14 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.5
 [node name="nextLevelArea" type="Area3D" parent="level1/map/NavigationRegion3D/tiles/spawn"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.149551, 8.45313, 26.4649)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.149552, 8.45313, 16.0727)
 shape = SubResource("BoxShape3D_x5k3p")
+
+[node name="tower" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("12_jke7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.6641, 13.9923, 15.2394)
+
+[node name="tower2" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("12_jke7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2736, 26.5307, -39.7088)
 
 [node name="clanger" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, 0)
@@ -165,10 +171,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -53.1507
 
 [node name="healthPickup7" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -64.8012)
-
-[node name="abstractItem" parent="level1/map" instance=ExtResource("14_jbrvl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.8, 3.7, 1.3)
-ID = "11"
 
 [connection signal="body_entered" from="level1/Area3D" to="Player" method="_on_Fallbarrier_body_entered"]
 [connection signal="body_entered" from="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea" to="." method="_on_next_level_area_body_entered"]

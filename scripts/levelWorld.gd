@@ -36,3 +36,5 @@ func _on_next_level_area_body_entered(body):
 		nextLevel = next_level.instantiate()
 		world.add_child(nextLevel)
 		pauseNav = false
+		body.position.x = 0
+		body.position.z = 0
