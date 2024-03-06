@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cw6qlcx2gndot"
+path="res://.godot/imported/guardianLeftHand.obj-6a88144ea8bdf53433cd4dbc93b7271e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/guardianLeftHand.obj-6a88144ea8bdf53433cd4dbc93b7271e.mesh"]
+
+source_file="res://assets/models/player/armour/guardian/guardianLeftHand.obj"
+dest_files=["res://.godot/imported/guardianLeftHand.obj-6a88144ea8bdf53433cd4dbc93b7271e.mesh", "res://.godot/imported/guardianLeftHand.obj-6a88144ea8bdf53433cd4dbc93b7271e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,23 @@
+[gd_scene load_steps=9 format=3 uid="uid://kwg4ecvoio7t"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd6y5rpq1ltiv" path="res://assets/models/player/armour/guardian/guardianTorso.obj" id="1_qdwqn"]
+[ext_resource type="Material" uid="uid://jr8wpesdcr88" path="res://assets/materials/metallic/goldMET2.tres" id="2_5qt02"]
+[ext_resource type="Material" uid="uid://bgcqhkphvspe1" path="res://assets/materials/diffuse/greyDarkDIFF1.tres" id="2_hhuw0"]
+[ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_6t0f3"]
+[ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDarkDIFF2.tres" id="3_nqisg"]
+[ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="4_36768"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_fme4t"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="5_ke7bq"]
+
+[node name="GuardianTorso" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_qdwqn")
+surface_material_override/0 = ExtResource("2_hhuw0")
+surface_material_override/1 = ExtResource("3_nqisg")
+surface_material_override/2 = ExtResource("4_36768")
+surface_material_override/3 = ExtResource("2_5qt02")
+surface_material_override/4 = ExtResource("3_6t0f3")
+surface_material_override/5 = ExtResource("4_fme4t")
+surface_material_override/6 = ExtResource("5_ke7bq")

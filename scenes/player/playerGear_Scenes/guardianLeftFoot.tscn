@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=3 uid="uid://gsm811sokvyu"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2kui6l2ilj3o" path="res://assets/models/player/armour/guardian/guardianLeftFoot.obj" id="1_5u23y"]
+[ext_resource type="Material" uid="uid://ck0jsv7ftiwof" path="res://assets/materials/diffuse/greyDIFF1.tres" id="2_f8xva"]
+[ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="2_ho7pp"]
+[ext_resource type="Material" uid="uid://jr8wpesdcr88" path="res://assets/materials/metallic/goldMET2.tres" id="2_wybsy"]
+[ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_8ruxg"]
+[ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_ieu4m"]
+
+[node name="GuardianLeftFoot" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_5u23y")
+surface_material_override/0 = ExtResource("2_f8xva")
+surface_material_override/1 = ExtResource("2_wybsy")
+surface_material_override/2 = ExtResource("3_ieu4m")
+surface_material_override/3 = ExtResource("2_ho7pp")
+surface_material_override/4 = ExtResource("3_8ruxg")
