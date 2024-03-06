@@ -50,6 +50,7 @@ var bulletInstance
 @onready var game_over_screen = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen
 @onready var try_again_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton
 @onready var exit_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton
+
 # Player animation tree node paths
 var idleWalkRun = "parameters/IdleWalkRunBlend/blend_amount"
 var aimTransition = "parameters/aimTransition/transition_request"
@@ -83,7 +84,7 @@ var defense_stat = 0
 var attack_stat = 0
 
 
-# Handle equipping armour
+# Handle equipping armour. If no gear equipped, use default scenes
 var instance
 func equip_gear():
 	# Equip head
@@ -236,6 +237,7 @@ func _input(event):
 		camera_mount.rotate_x(deg_to_rad(- event.relative.y * mouseSensitivity))
 		camera_mount.rotation.x = clamp(camera_mount.rotation.x, deg_to_rad(-90), deg_to_rad(90))                                                                 
 
+
 # Go down stairs
 var maxStepDown = -0.51
 
@@ -298,8 +300,6 @@ func _rotate_sep_ray():
 	$sepRayFR.global_position.z = self.global_position.z + xz_fr_ray_pos.z
 
 
-
-
 func _physics_process(delta):
 	
 	if weaponCast.is_colliding() && (weaponCast.get_collision_point() - weaponCast.global_transform.origin).length() > 0.2:
@@ -349,6 +349,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and meleeAnimFinished == true:
 		meleeAnimFinished = false
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		if animation_player.get_current_animation_position() >= 0.1:
+			pnRightWeaponSlot.get_child(0).get_node("hitBox").monitoring = true
+		else:
+			pnRightWeaponSlot.get_child(0).get_node("hitBox").monitoring = false
 	
 	# Handle aiming
 	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():

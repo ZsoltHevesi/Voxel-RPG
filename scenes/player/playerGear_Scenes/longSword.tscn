@@ -1,22 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp6j2vgxxkd0v"]
+[gd_scene load_steps=8 format=3 uid="uid://c7icj6kdtuvt3"]
 
-[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/longSword.gd" id="1_kuld3"]
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_sgp54"]
 [ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="1_uft40"]
-[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_7hxkq"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_2r065"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="3_a3fnc"]
 [ext_resource type="Material" uid="uid://bifj6615ofood" path="res://assets/materials/metallic/shinyGreyMET1.tres" id="4_rvf3r"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_4srie"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0nwua"]
-radius = 0.2
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
+radius = 0.15
+height = 1.5
 
-[node name="LongSword" type="Node3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-script = ExtResource("1_kuld3")
+[node name="Bokken" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+script = ExtResource("1_sgp54")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_uft40")
-surface_material_override/0 = ExtResource("2_7hxkq")
+surface_material_override/0 = ExtResource("3_2r065")
 surface_material_override/1 = ExtResource("3_a3fnc")
 surface_material_override/2 = ExtResource("4_rvf3r")
 surface_material_override/3 = ExtResource("5_4srie")
@@ -25,7 +26,7 @@ surface_material_override/3 = ExtResource("5_4srie")
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
-transform = Transform3D(1, -8.74228e-08, 8.74228e-08, 8.74228e-08, -4.37114e-08, -1, 8.74228e-08, 1, -4.37114e-08, -6.48093e-08, 0, 0.741331)
-shape = SubResource("CapsuleShape3D_0nwua")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
+shape = SubResource("CapsuleShape3D_q4wyj")
 
-[connection signal="area_entered" from="hitBox" to="." method="_on_long_sword_hit_box_area_entered"]
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

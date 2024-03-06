@@ -6,10 +6,11 @@ extends CharacterBody3D
 @onready var animationTree = $visuals/AnimationTree
 var idleRunBlend = "parameters/IdleRunBLend/blend_amount"
 var attackOneShot = "parameters/attackOneShot/request"
+var attackAnimFinished = true
 
 @onready var leftStaffArea = $visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D
 @onready var rightStaffArea = $visuals/enTorso/enRightShoulder/enRightStaff/Area3D
-
+@export var enemyDamage = 10
 
 
 # Loot to spawn after death
@@ -24,7 +25,7 @@ var desiredDistance = 1.25
 
 var maxHealth = 100
 @export var currentHealth = maxHealth
-@export var meleeImmunity = false
+var meleeImmunity = false
 
 # Go down stairs
 var maxStepDown = -0.51
@@ -108,7 +109,6 @@ func _physics_process(delta):
 		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	else:
 		navAgent.set_velocity(Vector3.ZERO)
-		animationTree.set(attackOneShot, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 
 func die():
@@ -129,7 +129,9 @@ func update_target_location(target_location):
 
 
 func _on_navigation_agent_3d_target_reached():
-	pass
+	if attackAnimFinished == true:
+		animationTree.set(attackOneShot, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		attackAnimFinished = false
 
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 0.25)
@@ -147,5 +149,9 @@ func _on_clanger_hitbox_area_exited(area):
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
 		# Deal damage to the player
-		body.takeDamage(5)
+		body.takeDamage(enemyDamage)
 
+
+
+func _on_animation_tree_animation_finished(attack):
+	attackAnimFinished = true

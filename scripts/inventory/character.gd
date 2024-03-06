@@ -4,6 +4,7 @@ extends Control
 @onready var def = %DEF
 
 
+
 func calculate_def():
 	var sumDEF = 0
 	

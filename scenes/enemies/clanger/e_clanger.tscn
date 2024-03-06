@@ -16,8 +16,8 @@
 [ext_resource type="Material" uid="uid://c1abimugnb35y" path="res://assets/materials/diffuse/greyDarkDIFF2.tres" id="10_axpor"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="12_ofklv"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lceas"]
-size = Vector3(1, 1.31152, 1.09137)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jfr2w"]
+radius = 0.7
 
 [sub_resource type="Animation" id="Animation_d3a0i"]
 length = 0.001
@@ -285,6 +285,18 @@ tracks/21/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D/CollisionShape3D:disabled")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_gy0wj"]
 resource_name = "attack"
@@ -412,26 +424,14 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D:visible")
+tracks/10/path = NodePath("enTorso/enLeftShoulder/enLeftStaff/Area3D/CollisionShape3D:disabled")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.9),
+"times": PackedFloat32Array(0, 0.2, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("enTorso/enRightShoulder/enRightStaff/Area3D:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_0kc8m"]
@@ -904,6 +904,7 @@ animation = &"run"
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_cdo6h"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_w8lwl"]
+graph_offset = Vector2(-546.111, 262.167)
 nodes/IdleRunBLend/node = SubResource("AnimationNodeBlend2_6lybw")
 nodes/IdleRunBLend/position = Vector2(80, 130)
 nodes/attack/node = SubResource("AnimationNodeAnimation_7jdha")
@@ -947,8 +948,8 @@ script = ExtResource("1_fbqvk")
 transform = Transform3D(-1, -1.40489e-06, -9.13549e-07, 3.45924e-07, 0.360348, -0.932817, 1.6397e-06, -0.932817, -0.360348, 0, 0.722063, -0.0124978)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="clangerHitbox"]
-transform = Transform3D(1, -1.63208e-07, -1.82598e-08, 1.62792e-07, 0.999796, -0.0205567, 2.16124e-08, 0.0205567, 0.999796, -3.14249e-08, 0.148971, 0.286538)
-shape = SubResource("BoxShape3D_lceas")
+transform = Transform3D(1, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_jfr2w")
 
 [node name="visuals" type="Node3D" parent="."]
 
@@ -1046,6 +1047,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D"]
 transform = Transform3D(1, -1.49012e-08, -4.00469e-08, -1.21072e-08, -4.47035e-08, -1, -1.49012e-08, 1, -6.70552e-08, 0, -0.1, 0.2)
 shape = SubResource("CapsuleShape3D_mrbcc")
+disabled = true
 
 [node name="enRightShoulder" type="MeshInstance3D" parent="visuals/enTorso"]
 transform = Transform3D(0.982086, 0.185577, 0.0326858, 0.162651, -0.922443, 0.350207, 0.0951411, -0.338617, -0.936102, -0.3, 0.2, -2.38419e-07)
@@ -1070,6 +1072,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/enTorso/enRightShoulder/enRightStaff/Area3D"]
 transform = Transform3D(1, -1.49012e-08, -4.00469e-08, -1.21072e-08, -4.47035e-08, -1, -1.49012e-08, 1, -6.70552e-08, 0, -0.1, 0.2)
 shape = SubResource("CapsuleShape3D_mrbcc")
+disabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
@@ -1127,6 +1130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("BoxShape3D_hmrak")
 
 [connection signal="area_exited" from="clangerHitbox" to="." method="_on_clanger_hitbox_area_exited"]
+[connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="body_entered" from="visuals/enTorso/enLeftShoulder/enLeftStaff/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="visuals/enTorso/enRightShoulder/enRightStaff/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
