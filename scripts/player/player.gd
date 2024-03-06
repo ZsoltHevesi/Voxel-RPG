@@ -15,7 +15,9 @@ extends CharacterBody3D
 @onready var inv_rightLeg = $playerMenu/UI/character/rightLegSlot/TextureRect
 @onready var inv_leftFoot = $playerMenu/UI/character/leftFootSlot/TextureRect
 @onready var inv_rightFoot = $playerMenu/UI/character/rightFootSlot/TextureRect
+
 @onready var inv_melee = $playerMenu/UI/character/meleeSlot/TextureRect
+@onready var inv_ranged = $playerMenu/UI/character/gunSlot/TextureRect
 
 @onready var default_head = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Head.tscn")
 @onready var default_torso = load("res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Torso.tscn")
@@ -39,14 +41,16 @@ extends CharacterBody3D
 @onready var pnRightLeg = $visuals/pnRightFoot/pnRightLeg
 @onready var pnLeftFoot = $visuals/pnLeftFoot
 @onready var pnRightFoot = $visuals/pnRightFoot
+
 @onready var pnRightWeaponSlot = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot
+@onready var pnLeftWeaponSlot = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot
 
 
 @onready var weaponCast = $cameraMount/SpringArm3D/weaponCast
 
 var bullet = load("res://scenes/player/bullet.tscn")
 var bulletInstance
-@onready var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot/FlintlockPistol/barrel
+
 @onready var game_over_screen = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen
 @onready var try_again_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton
 @onready var exit_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton
@@ -196,6 +200,15 @@ func equip_gear():
 		pnRightWeaponSlot.get_child(0).queue_free()
 		instance = default_melee.instantiate()
 		pnRightWeaponSlot.add_child(instance)
+		
+	# Equip left weapon
+	if inv_ranged.texture != null:
+		if pnLeftWeaponSlot.get_child_count() > 0:
+			pnLeftWeaponSlot.get_child(0).queue_free()
+		instance = inv_ranged.item_scene.instantiate()
+		pnLeftWeaponSlot.add_child(instance)
+	else:
+		pnRightWeaponSlot.get_child(0).queue_free()
 	
 	# Change stats to match gear
 	defense_stat = int($playerMenu/UI/DEF.text)
@@ -301,12 +314,13 @@ func _rotate_sep_ray():
 
 
 func _physics_process(delta):
-	
-	if weaponCast.is_colliding() && (weaponCast.get_collision_point() - weaponCast.global_transform.origin).length() > 0.2:
-		weaponCastTip = weaponCast.get_collision_point()
-	else:
-		weaponCastTip = (weaponCast.target_position.z * weaponCast.global_transform.basis.z) + weaponCast.global_transform.origin
-	barrel.look_at(weaponCastTip)
+	if pnLeftWeaponSlot.get_child_count() > 0:
+		var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot.get_child(0).get_child(1)
+		if weaponCast.is_colliding() && (weaponCast.get_collision_point() - weaponCast.global_transform.origin).length() > 0.2:
+			weaponCastTip = weaponCast.get_collision_point()
+		else:
+			weaponCastTip = (weaponCast.target_position.z * weaponCast.global_transform.basis.z) + weaponCast.global_transform.origin
+		barrel.look_at(weaponCastTip)
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -355,7 +369,8 @@ func _physics_process(delta):
 			pnRightWeaponSlot.get_child(0).get_node("hitBox").monitoring = false
 	
 	# Handle aiming
-	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor():
+	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and pnLeftWeaponSlot.get_child_count() > 0:
+		var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot.get_child(0).get_child(1)
 		var rangedAnimFinished = false
 		if animationTree.get(aimTransitionState) == "notAiming":
 			animationTree.set(aimTransition, "aiming")

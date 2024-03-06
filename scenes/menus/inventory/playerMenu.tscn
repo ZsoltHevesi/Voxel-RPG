@@ -329,6 +329,14 @@ offset_right = 145.0
 offset_bottom = 759.0
 slot_type = 11
 
+[node name="gunSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 633.0
+offset_right = 667.0
+offset_bottom = 753.0
+slot_type = 12
+
 [node name="DMG" type="Label" parent="UI"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 60)
