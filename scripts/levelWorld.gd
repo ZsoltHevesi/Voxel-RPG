@@ -23,7 +23,6 @@ func _ready():
 	'''
 
 func _physics_process(delta):
-	if pauseNav == false:
 		get_tree().call_group("enemies", "update_target_location", player.global_transform.origin)
 
 

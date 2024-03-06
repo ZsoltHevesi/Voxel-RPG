@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=22 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scripts/levelWorld.gd" id="1_ems3p"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bmiieijs6iwbw" path="res://scenes/tile scenes/spawn/spawn.tscn" id="10_rm33y"]
 [ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="11_8mh61"]
 [ext_resource type="PackedScene" uid="uid://crawnocbn8e3e" path="res://scenes/tile scenes/backdrop/tower.tscn" id="12_jke7u"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="15_jk0ho"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
@@ -171,6 +172,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -53.1507
 
 [node name="healthPickup7" parent="level1/map" instance=ExtResource("11_8mh61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -64.8012)
+
+[node name="abstractItem" parent="level1/map" instance=ExtResource("15_jk0ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+ID = "11"
 
 [connection signal="body_entered" from="level1/Area3D" to="Player" method="_on_Fallbarrier_body_entered"]
 [connection signal="body_entered" from="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea" to="." method="_on_next_level_area_body_entered"]

@@ -1,4 +1,4 @@
-res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
+res://scenes/levels/level1/level1.tscn
 res://assets/materials/emission/orangeGlow1.tres
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
@@ -6,28 +6,31 @@ res://assets/materials/diffuse/greyDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
 res://assets/materials/diffuse/brownPastelDIFF2.tres
 res://assets/materials/diffuse/brownDIFF1.tres
+res://assets/materials/diffuse/greenDIFF2.tres
+res://assets/materials/metallic/goldMET2.tres
+res://assets/materials/metallic/goldMET1.tres
+res://assets/materials/metallic/greyMET1.tres
+res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/emission/redGlow1.tres
 res://assets/materials/emission/tealGlow1.tres
 res://assets/materials/emission/blueGlow1.tres
 res://assets/materials/diffuse/brownPastelDIFF4.tres
-res://assets/materials/metallic/goldMET1.tres
-res://assets/materials/metallic/darkGreyMET1.tres
+res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/whiteDIFF.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/brownPastelDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
-res://assets/materials/metallic/greyMET1.tres
 res://assets/materials/diffuse/brownDIFF2.tres
-res://assets/materials/diffuse/greenDIFF2.tres
 res://assets/materials/diffuse/brownDIFF3.tres
-res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
-res://assets/materials/metallic/goldMET2.tres
-res://scenes/tile scenes/castleMonarch scene/castleMonarch.VoxelGI_data.res
-res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
+res://assets/materials/emission/purpleTransGlow1.tres
 res://scenes/levels/level2/level2.tscn
-res://scenes/levels/level2/level2.gd
-res://scenes/levels/level1/level1.tscn
 res://scenes/player/player.tscn
+res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
+res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
+res://assets/materials/diffuse/boneDIFF1.tres
+res://assets/materials/diffuse/crimsonDIFF1.tres
+res://assets/particles/bulletHit.tres
+res://scripts/levelWorld.gd
