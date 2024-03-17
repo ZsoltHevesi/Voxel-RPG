@@ -32,5 +32,5 @@ res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
 res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
 res://scenes/tile scenes/chateau scene/chateau.tscn
 res://scenes/enemies/clanger/e_clanger.tscn
-res://scenes/player/playerGear_Scenes/katana.tscn
-res://scenes/decorations/plants/plant.tscn
+res://scenes/enemies/clanger/e_clanger.gd
+res://scripts/player/player.gd
