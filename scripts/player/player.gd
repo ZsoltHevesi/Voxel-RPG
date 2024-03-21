@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 # Camera and hud nodes
 @onready var camera_mount = $cameraMount
 @onready var crosshair = $cameraMount/SpringArm3D/Camera3D/UI/crosshair

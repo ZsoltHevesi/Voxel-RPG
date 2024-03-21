@@ -388,6 +388,13 @@ width_curve = SubResource("Curve_srsje")
 default_color = Color(1, 1, 1, 0.639216)
 antialiased = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+
+[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/CanvasLayer"]
+offset_left = 1.0
+offset_right = 1921.0
+offset_bottom = 1082.0
+
 [node name="collisionCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("CapsuleShape3D_rk1wm")
