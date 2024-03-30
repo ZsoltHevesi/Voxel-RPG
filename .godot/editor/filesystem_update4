@@ -27,3 +27,4 @@ res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
 res://assets/materials/emission/purpleTransGlow1.tres
 res://scripts/player/player.gd
+res://scenes/menus/optionsMenu.tscn

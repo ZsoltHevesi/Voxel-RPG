@@ -73,7 +73,7 @@ var airGroundTransition = "parameters/airGroundTransition/transition_request"
 # Var for melee animation finish state
 var meleeAnimFinished = true
 
-# Var
+# Vars for weapon handling
 var weaponBlendTarget = 0.0
 var weaponCastTip = Vector3()
 
@@ -298,7 +298,7 @@ func _on_Fallbarrier_body_entered(body):
 				takeDamage(currentHealth)
 
 
-
+# Handle player death UI
 func _on_try_again_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level1/level1.tscn")
 
@@ -307,7 +307,7 @@ func _on_exit_button_pressed():
 	get_tree().quit()
 
 
-
+# Check for melee animation finish
 func _on_animation_tree_animation_finished(swordAttack1):
 	meleeAnimFinished = true
 
