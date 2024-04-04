@@ -73,7 +73,7 @@ var airGroundTransition = "parameters/airGroundTransition/transition_request"
 # Var for melee animation finish state
 var meleeAnimFinished = true
 
-# Var
+# Vars for weapon handling
 var weaponBlendTarget = 0.0
 var weaponCastTip = Vector3()
 
@@ -117,6 +117,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	# Ranged weapon code
 	if pnLeftWeaponSlot.get_child_count() > 0:
 		var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot.get_child(0).get_child(1)
 		if weaponCast.is_colliding() && (weaponCast.get_collision_point() - weaponCast.global_transform.origin).length() > 0.2:
@@ -128,10 +129,12 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		# Count air time to disallow the animation to play on stairs
 		airTime += delta
 		if airTime > 0.05:
 			animationTree.set(airGroundTransition, "inAir")
-		
+	
+	# Reset air time and set the right animation when on ground
 	if is_on_floor():
 		airTime = 0
 		animationTree.set(airGroundTransition, "onGround")
@@ -162,7 +165,7 @@ func _physics_process(delta):
 		animationTree.set(idleWalkRun, lerp(animationTree.get(idleWalkRun), -1.0, delta * acceleration))
 	
 	
-	
+	# Handle melee attack
 	if Input.is_action_just_pressed("attack") and !Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and meleeAnimFinished == true:
 		meleeAnimFinished = false
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
@@ -171,7 +174,7 @@ func _physics_process(delta):
 		else:
 			pnRightWeaponSlot.get_child(0).get_node("hitBox").monitoring = false
 	
-	# Handle aiming
+	# Handle aiming and shooting
 	if Input.is_action_pressed("aim") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and is_on_floor() and pnLeftWeaponSlot.get_child_count() > 0:
 		var barrel = $visuals/pnTorso/pnLeftShoulder/pnLeftHand/pnLeftWeaponSlot.get_child(0).get_child(1)
 		var rangedAnimFinished = false
@@ -295,7 +298,7 @@ func _on_Fallbarrier_body_entered(body):
 				takeDamage(currentHealth)
 
 
-
+# Handle player death UI
 func _on_try_again_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level1/level1.tscn")
 
@@ -304,7 +307,7 @@ func _on_exit_button_pressed():
 	get_tree().quit()
 
 
-
+# Check for melee animation finish
 func _on_animation_tree_animation_finished(swordAttack1):
 	meleeAnimFinished = true
 
