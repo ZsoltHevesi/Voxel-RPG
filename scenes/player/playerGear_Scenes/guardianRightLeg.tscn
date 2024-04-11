@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbrreqpdxs362"]
 
-[ext_resource type="ArrayMesh" uid="uid://dawyu5442ie77" path="res://assets/models/player/armour/guardian/guardianLeftLeg.obj" id="1_tt2wo"]
+[ext_resource type="ArrayMesh" uid="uid://bmsbmrtmq8jds" path="res://assets/models/player/armour/guardian/guardianRightLeg.obj" id="1_xsh7l"]
 [ext_resource type="Material" uid="uid://87k3ka1johal" path="res://assets/materials/diffuse/greyDarkDIFF3.tres" id="2_rros5"]
 [ext_resource type="Material" uid="uid://jr8wpesdcr88" path="res://assets/materials/metallic/goldMET2.tres" id="3_1siys"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="4_ux2ph"]
@@ -11,7 +11,7 @@
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_tt2wo")
+mesh = ExtResource("1_xsh7l")
 surface_material_override/0 = ExtResource("2_rros5")
 surface_material_override/1 = ExtResource("3_1siys")
 surface_material_override/2 = ExtResource("4_ux2ph")

@@ -1,4 +1,4 @@
-res://scenes/player/player.tscn
+res://scenes/player/playerGear_Scenes/guardianRightLeg.tscn
 res://assets/materials/emission/orangeGlow1.tres
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
@@ -23,9 +23,12 @@ res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
 res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/brownDIFF3.tres
+res://scenes/player/menuTitle.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
 res://assets/materials/emission/purpleTransGlow1.tres
-res://scripts/player/player.gd
-res://scripts/menu/optionSetting.gd
+res://scenes/levels/level1/level1.tscn
+res://scenes/player/player.tscn
+res://scenes/menus/mainMenu.tscn
 res://scenes/menus/optionsMenu.tscn
+res://scenes/player/playerGear_Scenes/guardianLeftLeg.tscn
