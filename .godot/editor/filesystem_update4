@@ -32,3 +32,5 @@ res://scenes/player/player.tscn
 res://scenes/menus/mainMenu.tscn
 res://scenes/menus/optionsMenu.tscn
 res://scenes/player/playerGear_Scenes/guardianLeftLeg.tscn
+res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
+res://scenes/levels/level2/level2.tscn
