@@ -11,8 +11,6 @@ extends VBoxContainer
 @onready var glowToggle = $glowBox/glowToggle
 @onready var scalingMode = $scaleModeBox/scalingMode
 @onready var fsrOptions = $fsrBox/fsrOptions
-@onready var color_rect = get_node("res://scenes/player/player.tscn/cameraMount/SpringArm3D/Camera3D/UI/CanvasLayer/ColorRect")
-
 
 var config = ConfigFile.new()
 
@@ -32,9 +30,7 @@ var resolutions : Dictionary = {"1440x900" : Vector2i(1440, 900),
 
 
 func _ready():
-	var brightness_slider = get_node("HBoxContainer/optionSetting/BrightnessBox/BrightnessSlider") # Adjust the path as necessary
-	brightness_slider.connect("value_changed", Callable(self, "_on_brightness_slider_changed"))
-	
+		
 	addResolutions()
 	var err = config.load("user://config.cfg")
 	if err != OK:
@@ -198,8 +194,4 @@ func _on_glow_toggle_toggled(toggled_on):
 		config.set_value("options", "glow", true)
 	else:
 		config.set_value("options", "glow", false)
-
-func _on_brightness_slider_changed(value):
-	var brightness = Color(value, value, value, 1) # Assuming value is between 0 and 1
-	color_rect.color = brightness
 

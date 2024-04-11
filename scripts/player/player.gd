@@ -56,8 +56,11 @@ var bulletInstance
 
 # Vars for ui screens
 @onready var game_over_screen = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen
-@onready var try_again_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton
-@onready var exit_button = $cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton
+@onready var win_fail_buttons = $cameraMount/SpringArm3D/Camera3D/UI/winFailButtons
+@onready var try_again_button = $cameraMount/SpringArm3D/Camera3D/UI/winFailButtons/tryAgainButton
+@onready var exit_button = $cameraMount/SpringArm3D/Camera3D/UI/winFailButtons/exitButton
+@onready var win_screen = $cameraMount/SpringArm3D/Camera3D/UI/winScreen
+
 
 # Vars for animation related nodes
 @onready var animation_player = $visuals/AnimationPlayer
