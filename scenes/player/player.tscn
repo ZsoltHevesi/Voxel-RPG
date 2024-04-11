@@ -393,14 +393,6 @@ width_curve = SubResource("Curve_srsje")
 default_color = Color(1, 1, 1, 0.639216)
 antialiased = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/CanvasLayer"]
-offset_left = 1.0
-offset_right = 1921.0
-offset_bottom = 1082.0
-
 [node name="winFailButtons" type="HBoxContainer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
 visible = false
 layout_mode = 1

@@ -166,9 +166,16 @@ layout_mode = 2
 
 [node name="brightnessLabel" type="Label" parent="HBoxContainer/optionSetting/BrightnessBox"]
 layout_mode = 2
+text = "Brightness"
 
 [node name="BrightnessSlider" type="HSlider" parent="HBoxContainer/optionSetting/BrightnessBox"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/optionSetting/BrightnessBox"]
+layout_mode = 2
+text = "100"
 
 [node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
