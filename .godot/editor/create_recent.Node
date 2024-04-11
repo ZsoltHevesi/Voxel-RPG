@@ -1,7 +1,9 @@
-ColorRect
-HSlider
-Label
+Button
 HBoxContainer
+Label
+ColorRect
+Control
+HSlider
 CanvasLayer
 MeshInstance3D
 Node3D
@@ -10,5 +12,3 @@ CollisionShape3D
 Area3D
 GPUParticles3D
 StaticBody3D
-Button
-Control

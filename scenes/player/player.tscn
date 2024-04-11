@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://n2ofeo8i6n5b" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Left_Leg.tscn" id="17_wf4om"]
 [ext_resource type="PackedScene" uid="uid://co3v65jb76vm3" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Foot.tscn" id="18_hi46x"]
 [ext_resource type="PackedScene" uid="uid://wlg5d7v3nj03" path="res://scenes/player/playerGear_Scenes/armour/playerWinter/winter_Right_Leg.tscn" id="19_66p2e"]
+[ext_resource type="LabelSettings" uid="uid://bqyslxspneurc" path="res://scenes/player/menuTitle.tres" id="21_l6858"]
 [ext_resource type="PackedScene" uid="uid://bin1826yyqi48" path="res://scenes/menus/inventory/playerMenu.tscn" id="21_ulrtq"]
 [ext_resource type="PackedScene" uid="uid://bo8x680nsp1ry" path="res://scenes/menus/fps_Counter.tscn" id="22_428v5"]
 
@@ -129,9 +130,6 @@ nodes/weaponBlend/position = Vector2(1210, 1020)
 nodes/weaponOneShot/node = SubResource("AnimationNodeOneShot_rlxe0")
 nodes/weaponOneShot/position = Vector2(1370.62, 1102.18)
 node_connections = [&"IdleWalkRunBlend", 0, &"idle", &"IdleWalkRunBlend", 1, &"walkTimeScale", &"IdleWalkRunBlend", 2, &"runTimeScale", &"aimTransition", 0, &"shootOneShot", &"aimTransition", 1, &"notAiming", &"airGroundTransition", 0, &"inAir", &"airGroundTransition", 1, &"weaponOneShot", &"output", 0, &"airGroundTransition", &"runTimeScale", 0, &"run", &"shootOneShot", 0, &"aiming", &"shootOneShot", 1, &"shooting", &"walkTimeScale", 0, &"walk", &"weaponBlend", 0, &"IdleWalkRunBlend", &"weaponBlend", 1, &"aimTransition", &"weaponOneShot", 0, &"weaponBlend", &"weaponOneShot", 1, &"swordAttack1"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_uhhj0"]
-font_size = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7qui"]
 bg_color = Color(0.027451, 0.643137, 0.913725, 1)
@@ -308,34 +306,41 @@ offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "You died!"
-label_settings = SubResource("LabelSettings_uhhj0")
+label_settings = ExtResource("21_l6858")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen"]
+[node name="winScreen" type="Control" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.254902, 0.568627)
+
+[node name="Label" type="Label" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -126.0
-offset_top = 94.0
-offset_right = 126.0
-offset_bottom = 219.0
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
-
-[node name="tryAgainButton" type="Button" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer"]
-custom_minimum_size = Vector2(150, 130)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Try again"
-
-[node name="exitButton" type="Button" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer"]
-custom_minimum_size = Vector2(150, 130)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Exit"
+text = "Victory!"
+label_settings = ExtResource("21_l6858")
 
 [node name="HealthBar" type="ProgressBar" parent="cameraMount/SpringArm3D/Camera3D/UI"]
 layout_mode = 1
@@ -389,11 +394,40 @@ default_color = Color(1, 1, 1, 0.639216)
 antialiased = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/CanvasLayer"]
 offset_left = 1.0
 offset_right = 1921.0
 offset_bottom = 1082.0
+
+[node name="winFailButtons" type="HBoxContainer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 91.5
+offset_right = 175.0
+offset_bottom = 221.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="tryAgainButton" type="Button" parent="cameraMount/SpringArm3D/Camera3D/UI/winFailButtons"]
+custom_minimum_size = Vector2(150, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Try again"
+
+[node name="exitButton" type="Button" parent="cameraMount/SpringArm3D/Camera3D/UI/winFailButtons"]
+custom_minimum_size = Vector2(150, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit"
 
 [node name="collisionCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
@@ -427,5 +461,5 @@ target_position = Vector3(0, -0.5, 0)
 [node name="FPS_Counter" parent="playerMenu" instance=ExtResource("22_428v5")]
 
 [connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
-[connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/tryAgainButton" to="." method="_on_try_again_button_pressed"]
-[connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen/HBoxContainer/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/winFailButtons/tryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="cameraMount/SpringArm3D/Camera3D/UI/winFailButtons/exitButton" to="." method="_on_exit_button_pressed"]
