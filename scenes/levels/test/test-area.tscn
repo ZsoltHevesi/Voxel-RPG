@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dp8lfh1ccvefj"]
+[gd_scene load_steps=16 format=3 uid="uid://dp8lfh1ccvefj"]
 
 [ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="1_sb3sa"]
 [ext_resource type="Material" uid="uid://bjd5xjvsg3ldh" path="res://assets/materials/diffuse/crimsonDIFF1.tres" id="2_d8g4b"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://frtgj5uj6n7s" path="res://scenes/player/player.tscn" id="5_3y5jj"]
 [ext_resource type="PackedScene" uid="uid://dn0l71e7a6i0c" path="res://scenes/decorations/furniture/woodRockingChair1.tscn" id="6_5y8qx"]
 [ext_resource type="VoxelGIData" uid="uid://dcepdv2dfic5l" path="res://scenes/levels/test/test-area.VoxelGI_data.res" id="7_6sjvy"]
+[ext_resource type="PackedScene" uid="uid://3xoln0dfc6j0" path="res://scenes/enemies/guardian/guardianEnemy.tscn" id="9_fmbhl"]
+[ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="10_3qvih"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="12_lq518"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="17_xpiuv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y72el"]
@@ -24,6 +27,8 @@ glow_enabled = true
 fog_enabled = true
 fog_density = 0.001
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g7xlb"]
+
 [node name="world" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -32,6 +37,8 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_cccls")
+
+[node name="Player" parent="." instance=ExtResource("5_3y5jj")]
 
 [node name="map" type="Node3D" parent="."]
 
@@ -88,8 +95,6 @@ material_override = ExtResource("4_8r2g5")
 use_collision = true
 size = Vector3(2, 2, 2)
 
-[node name="Player" parent="map" instance=ExtResource("5_3y5jj")]
-
 [node name="CSGBox3D" type="CSGBox3D" parent="map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -3.75)
 use_collision = true
@@ -123,10 +128,127 @@ size = Vector3(0.5, 0.5, 0.5)
 [node name="woodRockingChair1" parent="map" instance=ExtResource("6_5y8qx")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.25, 0.5, -4)
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_g7xlb")
+
 [node name="clanger" parent="." instance=ExtResource("17_xpiuv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.95703, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.957, 0, 0)
+
+[node name="e_Guardian" parent="." instance=ExtResource("9_fmbhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.222, 0, 0)
 
 [node name="VoxelGI" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.57776, 0)
-size = Vector3(50, 20, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.57776, -3.68365)
+size = Vector3(100, 20, 100)
 data = ExtResource("7_6sjvy")
+
+[node name="healthPickup" parent="." instance=ExtResource("10_3qvih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80808, 0, 0)
+
+[node name="abstractItem0" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 0)
+
+[node name="abstractItem1" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0)
+ID = "1"
+
+[node name="abstractItem2" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 0)
+ID = "2"
+
+[node name="abstractItem3" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0)
+ID = "3"
+
+[node name="abstractItem4" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -4)
+ID = "4"
+
+[node name="abstractItem5" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -4)
+ID = "5"
+
+[node name="abstractItem6" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4)
+ID = "6"
+
+[node name="abstractItem7" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -4)
+ID = "7"
+
+[node name="abstractItem8" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -8)
+ID = "8"
+
+[node name="abstractItem9" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -8)
+ID = "9"
+
+[node name="abstractItem10" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8)
+ID = "10"
+
+[node name="abstractItem11" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -8)
+ID = "11"
+
+[node name="abstractItem12" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -12)
+ID = "12"
+
+[node name="abstractItem13" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -12)
+ID = "13"
+
+[node name="abstractItem14" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12)
+ID = "14"
+
+[node name="abstractItem15" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -12)
+ID = "15"
+
+[node name="abstractItem16" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -16)
+ID = "16"
+
+[node name="abstractItem17" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -16)
+ID = "17"
+
+[node name="abstractItem18" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16)
+ID = "18"
+
+[node name="abstractItem19" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -16)
+ID = "19"
+
+[node name="abstractItem20" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -20)
+ID = "20"
+
+[node name="abstractItem21" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -20)
+ID = "21"
+
+[node name="abstractItem22" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20)
+ID = "22"
+
+[node name="abstractItem23" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -20)
+ID = "23"
+
+[node name="abstractItem24" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -24)
+ID = "24"
+
+[node name="abstractItem25" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -24)
+
+[node name="abstractItem26" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -24)
+
+[node name="abstractItem27" parent="." instance=ExtResource("12_lq518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -24)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://clpxkdiunkt4j"]
+[gd_scene load_steps=18 format=3 uid="uid://clpxkdiunkt4j"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="2_715bw"]
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsDirectionalLight3D.gd" id="3_jr7sw"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6u6el5n2ap0i" path="res://scenes/tile scenes/hallways/castleHallways/castleDeadEND.tscn" id="8_2ib6a"]
 [ext_resource type="PackedScene" uid="uid://lm5l1jt61fnm" path="res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn" id="8_u5ja6"]
 [ext_resource type="PackedScene" uid="uid://h2bwuc13ene5" path="res://scenes/tile scenes/closedSpawn/closed_spawn.tscn" id="9_6l6ib"]
+[ext_resource type="PackedScene" uid="uid://3xoln0dfc6j0" path="res://scenes/enemies/guardian/guardianEnemy.tscn" id="12_87tuh"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="12_ncokg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbcio"]
@@ -136,3 +137,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -17.4557, -103.7)
 
 [node name="clanger10" parent="map" instance=ExtResource("12_ncokg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -17.4557, -146.4)
+
+[node name="e_Guardian" parent="map" instance=ExtResource("12_87tuh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.066, 1, -70.456)
+
+[node name="e_Guardian2" parent="map" instance=ExtResource("12_87tuh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.23, 1, -126.607)
+
+[node name="e_Guardian3" parent="map" instance=ExtResource("12_87tuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.647, -17, -124.393)
+
+[node name="e_Guardian4" parent="map" instance=ExtResource("12_87tuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8065, -17, -124.393)

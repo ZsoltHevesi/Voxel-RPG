@@ -273,75 +273,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="gameOverScreen" type="Control" parent="cameraMount/SpringArm3D/Camera3D/UI"]
-process_mode = 2
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.772549, 0, 0, 0.568627)
-
-[node name="diedLabel" type="Label" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -27.5
-offset_right = 89.0
-offset_bottom = 27.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "You died!"
-label_settings = ExtResource("21_l6858")
-
-[node name="winScreen" type="Control" parent="cameraMount/SpringArm3D/Camera3D/UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 1, 0.254902, 0.568627)
-
-[node name="Label" type="Label" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Victory!"
-label_settings = ExtResource("21_l6858")
-
 [node name="HealthBar" type="ProgressBar" parent="cameraMount/SpringArm3D/Camera3D/UI"]
 layout_mode = 1
 offset_right = 197.0
@@ -393,7 +324,78 @@ width_curve = SubResource("Curve_srsje")
 default_color = Color(1, 1, 1, 0.639216)
 antialiased = true
 
+[node name="winScreen" type="Control" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+process_mode = 2
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.254902, 0.568627)
+
+[node name="Label" type="Label" parent="cameraMount/SpringArm3D/Camera3D/UI/winScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Victory!"
+label_settings = ExtResource("21_l6858")
+
+[node name="gameOverScreen" type="Control" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+process_mode = 2
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.772549, 0, 0, 0.568627)
+
+[node name="diedLabel" type="Label" parent="cameraMount/SpringArm3D/Camera3D/UI/gameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -27.5
+offset_right = 89.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You died!"
+label_settings = ExtResource("21_l6858")
+
 [node name="winFailButtons" type="HBoxContainer" parent="cameraMount/SpringArm3D/Camera3D/UI"]
+process_mode = 2
 visible = false
 layout_mode = 1
 anchors_preset = 8

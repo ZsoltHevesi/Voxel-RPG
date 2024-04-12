@@ -1,5 +1,6 @@
-[gd_scene load_steps=45 format=3 uid="uid://3xoln0dfc6j0"]
+[gd_scene load_steps=47 format=3 uid="uid://3xoln0dfc6j0"]
 
+[ext_resource type="Script" path="res://scenes/enemies/guardian/guardianEnemy.gd" id="1_b0dsg"]
 [ext_resource type="Animation" uid="uid://580swu75bkg6" path="res://scenes/player/playerAnimations/RESET.res" id="2_y1epm"]
 [ext_resource type="Animation" uid="uid://cvldq075pnnw5" path="res://scenes/player/playerAnimations/flintlock_aim.res" id="3_4gloh"]
 [ext_resource type="Animation" uid="uid://b0p0qmyqg6as1" path="res://scenes/player/playerAnimations/flintlock_shoot.res" id="4_eburv"]
@@ -23,6 +24,9 @@
 [ext_resource type="PackedScene" uid="uid://dik5vni4f6o6y" path="res://scenes/player/playerGear_Scenes/guardianRightFoot.tscn" id="13_8sfcx"]
 [ext_resource type="PackedScene" uid="uid://dbrreqpdxs362" path="res://scenes/player/playerGear_Scenes/guardianRightLeg.tscn" id="14_8dw20"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="14_c58lj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n635t"]
+size = Vector3(1.23096, 1.80548, 0.600098)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -142,9 +146,15 @@ height = 1.75
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_6gw00"]
 length = 0.51
 
-[node name="e_Guardian" type="CharacterBody3D"]
-collision_layer = 13
-collision_mask = 13
+[node name="e_Guardian" type="CharacterBody3D" groups=["enemies"]]
+disable_mode = 2
+script = ExtResource("1_b0dsg")
+
+[node name="guardianHitbox" type="Area3D" parent="." groups=["enemies"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="guardianHitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00170898, 0.883087, 0.0490723)
+shape = SubResource("BoxShape3D_n635t")
 
 [node name="visuals" type="Node3D" parent="."]
 
@@ -206,10 +216,11 @@ surface_material_override/1 = ExtResource("12_cuhts")
 surface_material_override/2 = ExtResource("13_7otxe")
 surface_material_override/3 = ExtResource("14_c58lj")
 
-[node name="hitBox" type="Area3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic" groups=["playerMeleeWeapon"]]
+[node name="hitBox" type="Area3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D"]
+visible = false
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/hitBox"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D/hitBox"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
 shape = SubResource("CapsuleShape3D_q4wyj")
 
@@ -276,4 +287,16 @@ shape = SubResource("SeparationRayShape3D_6gw00")
 [node name="checkStairsRayCast" type="RayCast3D" parent="."]
 target_position = Vector3(0, -0.5, 0)
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 1.75
+path_height_offset = 1.0
+path_max_distance = 2.01
+avoidance_enabled = true
+height = 2.0
+radius = 0.75
+
+[connection signal="area_exited" from="guardianHitbox" to="." method="_on_guardian_hitbox_area_exited"]
 [connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="body_entered" from="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D/hitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

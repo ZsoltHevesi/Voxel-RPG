@@ -1,3 +1,9 @@
+MeshInstance3D
+StaticBody3D
+NavigationRegion3D
+CollisionShape3D
+Area3D
+NavigationAgent3D
 Label
 Button
 HBoxContainer
@@ -5,10 +11,4 @@ ColorRect
 Control
 HSlider
 CanvasLayer
-MeshInstance3D
 Node3D
-VoxelGI
-CollisionShape3D
-Area3D
-GPUParticles3D
-StaticBody3D

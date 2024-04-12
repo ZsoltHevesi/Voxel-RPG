@@ -147,11 +147,11 @@
 		"item_scene" : "guardianLeftFoot.tscn"
 	},
 	"21" : {
-		"texture" : "guardianLeftFoot.png",
+		"texture" : "guardianRightFoot.png",
 		"slot_type" : 10,
 		"def" : 10,
 		"dmg" : 0,
-		"item_scene" : "guardianLeftFoot.tscn"
+		"item_scene" : "guardianRightFoot.tscn"
 	},
 	"22" : {
 		"texture" : "scimitar.png",
