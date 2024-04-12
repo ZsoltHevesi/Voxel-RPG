@@ -1,7 +1,9 @@
 extends CharacterBody3D
+
 @onready var navAgent = $NavigationAgent3D
 @onready var guardian = $"."
 @onready var player = get_tree().get_root().get_node("world/Player")
+@onready var hit_box = $visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D/hitBox
 
 # Vars for animation related nodes
 @onready var animation_player = $visuals/AnimationPlayer
@@ -133,6 +135,7 @@ func update_target_location(target_location):
 func _on_navigation_agent_3d_target_reached():
 	if attackAnimFinished == true:
 		animationTree.set("parameters/weaponOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		hit_box.monitoring = true
 		attackAnimFinished = false
 
 
@@ -150,11 +153,12 @@ func _on_guardian_hitbox_area_exited(area):
 		meleeImmunity = false
 
 
+func _on_animation_tree_animation_finished(swordAttack1):
+	attackAnimFinished = true
+	hit_box.monitoring = false
+
+
 func _on_hit_box_body_entered(body):
 	if body.name == "Player":
 		# Deal damage to the player
 		body.takeDamage(enemyDamage)
-
-
-func _on_animation_tree_animation_finished(swordAttack1):
-	attackAnimFinished = true

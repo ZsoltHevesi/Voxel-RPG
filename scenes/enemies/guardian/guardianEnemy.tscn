@@ -218,10 +218,11 @@ surface_material_override/1 = ExtResource("12_cuhts")
 surface_material_override/2 = ExtResource("13_7otxe")
 surface_material_override/3 = ExtResource("14_c58lj")
 
-[node name="hitBox" type="Area3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic"]
+[node name="hitBox" type="Area3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D"]
+visible = false
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/hitBox"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D/hitBox"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
 shape = SubResource("CapsuleShape3D_q4wyj")
 
@@ -289,9 +290,14 @@ shape = SubResource("SeparationRayShape3D_6gw00")
 target_position = Vector3(0, -0.5, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 1.75
+path_height_offset = 1.0
+path_max_distance = 2.01
+height = 2.0
+radius = 0.75
 
 [connection signal="area_exited" from="guardianHitbox" to="." method="_on_guardian_hitbox_area_exited"]
 [connection signal="animation_finished" from="visuals/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
-[connection signal="body_entered" from="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/hitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="visuals/pnTorso/pnRightShoulder/pnRightHand/pnRightWeaponSlot/longSwordMagic/MeshInstance3D/hitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
