@@ -156,5 +156,5 @@ func _on_hit_box_body_entered(body):
 		body.takeDamage(enemyDamage)
 
 
-func _on_animation_tree_animation_finished(swordArrack1):
+func _on_animation_tree_animation_finished(swordAttack1):
 	attackAnimFinished = true

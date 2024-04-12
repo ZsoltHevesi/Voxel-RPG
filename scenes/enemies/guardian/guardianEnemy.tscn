@@ -100,7 +100,7 @@ filter_enabled = true
 filters = ["pnTorso/pnRightShoulder/pnRightHand:position", "pnTorso/pnRightShoulder/pnRightHand:rotation", "pnTorso/pnRightShoulder:position", "pnTorso/pnRightShoulder:rotation", "pnTorso:position", "pnTorso:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(288.636, 468.149)
+graph_offset = Vector2(288.636, 291.987)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
