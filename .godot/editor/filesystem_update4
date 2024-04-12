@@ -39,3 +39,4 @@ res://scenes/enemies/clanger/e_clanger.tscn
 res://scenes/levels/test/test-area.tscn
 res://scenes/levels/test/test-area.VoxelGI_data.res
 res://database/database.json
+res://scripts/player/player.gd

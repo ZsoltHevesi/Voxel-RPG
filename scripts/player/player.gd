@@ -217,6 +217,7 @@ func takeDamage(amount):
 # Function to handle player death
 func die():
 	game_over_screen.visible = true
+	win_fail_buttons.visible = true
 	get_tree().paused = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
