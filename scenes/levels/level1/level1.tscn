@@ -179,7 +179,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
 ID = "11"
 
 [node name="e_Guardian" parent="level1/map" instance=ExtResource("16_yg5tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3.26494)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05536, -3.26494)
 
 [connection signal="body_entered" from="level1/Area3D" to="Player" method="_on_Fallbarrier_body_entered"]
 [connection signal="body_entered" from="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea" to="." method="_on_next_level_area_body_entered"]

@@ -100,7 +100,6 @@ filter_enabled = true
 filters = ["pnTorso/pnRightShoulder/pnRightHand:position", "pnTorso/pnRightShoulder/pnRightHand:rotation", "pnTorso/pnRightShoulder:position", "pnTorso/pnRightShoulder:rotation", "pnTorso:position", "pnTorso:rotation"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sxeqy"]
-graph_offset = Vector2(288.636, 291.987)
 nodes/IdleWalkRunBlend/node = SubResource("AnimationNodeBlend3_0gny3")
 nodes/IdleWalkRunBlend/position = Vector2(940, 900)
 nodes/aimTransition/node = SubResource("AnimationNodeTransition_8id78")
@@ -148,8 +147,7 @@ height = 1.75
 length = 0.51
 
 [node name="e_Guardian" type="CharacterBody3D" groups=["enemies"]]
-collision_layer = 13
-collision_mask = 13
+disable_mode = 2
 script = ExtResource("1_b0dsg")
 
 [node name="guardianHitbox" type="Area3D" parent="." groups=["enemies"]]
@@ -293,6 +291,7 @@ target_position = Vector3(0, -0.5, 0)
 target_desired_distance = 1.75
 path_height_offset = 1.0
 path_max_distance = 2.01
+avoidance_enabled = true
 height = 2.0
 radius = 0.75
 

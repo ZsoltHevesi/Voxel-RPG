@@ -36,3 +36,4 @@ res://scenes/player/player.tscn
 res://scenes/enemies/guardian/guardianEnemy.tscn
 res://scenes/enemies/guardian/guardianEnemy.gd
 res://AutoLoad/database.gd
+res://scripts/levelWorld.gd

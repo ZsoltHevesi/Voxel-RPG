@@ -30,10 +30,8 @@ func _physics_process(delta):
 
 func _on_next_level_area_body_entered(body):
 	if body.name == "Player":
-		pauseNav = true
 		world.get_node("level1").queue_free()
 		nextLevel = next_level.instantiate()
 		world.add_child(nextLevel)
-		pauseNav = false
 		body.position.x = 0
 		body.position.z = 0
