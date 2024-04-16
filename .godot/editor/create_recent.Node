@@ -1,3 +1,6 @@
+Node2D
+ColorRect
+TextureRect
 MeshInstance3D
 StaticBody3D
 NavigationRegion3D
@@ -7,8 +10,6 @@ NavigationAgent3D
 Label
 Button
 HBoxContainer
-ColorRect
 Control
 HSlider
 CanvasLayer
-Node3D

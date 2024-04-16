@@ -9,12 +9,23 @@
 [node name="playerMenu" type="Node2D"]
 
 [node name="UI" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_yg07x")
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_left = 15.0
+offset_top = 57.0
+offset_right = -39.0001
+offset_bottom = -130.0
+color = Color(0.823529, 0.74902, 0.580392, 0.737255)
 
 [node name="inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
@@ -345,6 +356,7 @@ offset_left = 220.0
 offset_top = 120.0
 offset_right = 340.0
 offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 
 [node name="DMGLabel" type="Label" parent="UI"]
@@ -354,6 +366,7 @@ offset_left = 20.0
 offset_top = 120.0
 offset_right = 140.0
 offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Damage:"
 
@@ -365,6 +378,7 @@ offset_left = 220.0
 offset_top = 55.0
 offset_right = 340.0
 offset_bottom = 115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 
 [node name="DEFLabel" type="Label" parent="UI"]
@@ -374,6 +388,7 @@ offset_left = 20.0
 offset_top = 55.0
 offset_right = 177.0
 offset_bottom = 115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Defense:
 "
