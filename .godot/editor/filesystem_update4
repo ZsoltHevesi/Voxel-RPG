@@ -15,6 +15,9 @@ res://assets/materials/emission/tealGlow1.tres
 res://assets/materials/diffuse/brownPastelDIFF4.tres
 res://assets/materials/emission/orangeGlow1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
+res://assets/materials/diffuse/blueDIFF1.tres
+res://assets/materials/diffuse/crimsonDIFF1.tres
+res://assets/materials/diffuse/purpleDIFF1.tres
 res://assets/materials/emission/purpleTransGlow1.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
@@ -29,15 +32,13 @@ res://assets/materials/diffuse/reddishBrownDIFF3.tres
 res://assets/materials/diffuse/reddishBrownDIFF2.tres
 res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/boneDIFF1.tres
-res://assets/materials/diffuse/crimsonDIFF1.tres
-res://assets/materials/diffuse/blueDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://scenes/player/menuTitle.tres
+res://database/database.json
+res://scenes/enemies/clanger/e_clanger.tscn
+res://scenes/enemies/guardian/guardianEnemy.gd
 res://scenes/levels/level2/level2.tscn
 res://scenes/decorations/lamps/castleTorchTallMounted.tscn
 res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
-res://assets/materials/diffuse/purpleDIFF1.tres
-res://scenes/tile scenes/castleMonarch scene/castleMonarch.VoxelGI_data.res
 res://scenes/player/playerGear_Scenes/handheldTorch.tscn
 res://scenes/decorations/lamps/castleTorchTall.tscn
-res://database/database.json
