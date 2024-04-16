@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://u1tg85ngyw53"]
+[gd_scene load_steps=9 format=3 uid="uid://u1tg85ngyw53"]
 
 [ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_xjltw"]
-[ext_resource type="PackedScene" uid="uid://jld07wu4v7vj" path="res://scenes/decorations/lamps/castleTorchTall.tscn" id="3_4qmsc"]
+[ext_resource type="ArrayMesh" uid="uid://c61et2dya56af" path="res://assets/models/decorations/lamps/torchTall_1x1x3.obj" id="2_byrrp"]
+[ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="3_ul06p"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="4_0kkhb"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="5_kys1f"]
+[ext_resource type="Material" uid="uid://dtodbsrrekavs" path="res://assets/particles/torchFireProcessMat.tres" id="6_6x74x"]
+[ext_resource type="BoxMesh" uid="uid://4n675dy0ve0" path="res://assets/particles/torchFire.tres" id="7_sgkbs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
 radius = 0.15
@@ -18,7 +23,26 @@ monitoring = false
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6.75066e-08, 0, 0.772185)
 shape = SubResource("CapsuleShape3D_q4wyj")
 
-[node name="CastleTorchTall" parent="." instance=ExtResource("3_4qmsc")]
+[node name="CastleTorchTall" type="Node3D" parent="."]
 transform = Transform3D(1.2, -1.04907e-07, 1.04907e-07, 1.04907e-07, -5.24537e-08, -1.2, 1.04907e-07, 1.2, -5.24537e-08, 2.39465e-08, 0, -0.273916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CastleTorchTall"]
+mesh = ExtResource("2_byrrp")
+surface_material_override/0 = ExtResource("3_ul06p")
+surface_material_override/1 = ExtResource("4_0kkhb")
+surface_material_override/2 = ExtResource("5_kys1f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CastleTorchTall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13237, 0)
+light_color = Color(1, 0.756863, 0.392157, 1)
+light_energy = 2.0
+omni_range = 15.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="CastleTorchTall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000891507, 1.26085, 0)
+amount = 40
+randomness = 1.0
+process_material = ExtResource("6_6x74x")
+draw_pass_1 = ExtResource("7_sgkbs")
 
 [connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

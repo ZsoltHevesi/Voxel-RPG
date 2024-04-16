@@ -49,3 +49,5 @@ res://scenes/decorations/lamps/chandelierBig.tscn
 res://scenes/decorations/lamps/chandelierSmall.tscn
 res://scenes/decorations/lamps/lightningLantern.tscn
 res://scenes/decorations/lamps/lightning_lantern_tall.tscn
+res://assets/particles/torchFireProcessMat.tres
+res://assets/particles/torchFire.tres

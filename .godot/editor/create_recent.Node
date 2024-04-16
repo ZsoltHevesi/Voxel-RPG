@@ -1,3 +1,4 @@
+GPUParticlesAttractorBox3D
 GPUParticles3D
 MeshInstance3D
 OmniLight3D
@@ -12,4 +13,3 @@ NavigationAgent3D
 Label
 Button
 HBoxContainer
-Control
