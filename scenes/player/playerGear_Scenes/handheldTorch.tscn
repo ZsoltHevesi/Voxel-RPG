@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1tg85ngyw53"]
+
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_xjltw"]
+[ext_resource type="PackedScene" uid="uid://jld07wu4v7vj" path="res://scenes/decorations/lamps/castleTorchTall.tscn" id="3_4qmsc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
+radius = 0.15
+height = 1.1431
+
+[node name="longSword" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+script = ExtResource("1_xjltw")
+
+[node name="hitBox" type="Area3D" parent="." groups=["playerMeleeWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6.75066e-08, 0, 0.772185)
+shape = SubResource("CapsuleShape3D_q4wyj")
+
+[node name="CastleTorchTall" parent="." instance=ExtResource("3_4qmsc")]
+transform = Transform3D(1.2, -1.04907e-07, 1.04907e-07, 1.04907e-07, -5.24537e-08, -1.2, 1.04907e-07, 1.2, -5.24537e-08, 2.39465e-08, 0, -0.273916)
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

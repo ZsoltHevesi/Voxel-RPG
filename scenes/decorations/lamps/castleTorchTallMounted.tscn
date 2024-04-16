@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://cvxwvkv5ko5xy"]
+[gd_scene load_steps=18 format=3 uid="uid://cvxwvkv5ko5xy"]
 
 [ext_resource type="ArrayMesh" uid="uid://b0rr3e7okk6tn" path="res://assets/models/decorations/lamps/torchTallMount1x1x3.obj" id="1_2pm7l"]
 [ext_resource type="ArrayMesh" uid="uid://c61et2dya56af" path="res://assets/models/decorations/lamps/torchTall_1x1x3.obj" id="2_bvc8u"]
 [ext_resource type="Material" uid="uid://cjeu6hd70w1o6" path="res://assets/materials/metallic/greyMET1.tres" id="2_mmsy3"]
 [ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_l18sg"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="4_igpvg"]
+[ext_resource type="Material" uid="uid://c7u1vsjfcmt8s" path="res://assets/materials/diffuse/blackDIFF.tres" id="5_sc6qh"]
 
 [sub_resource type="Gradient" id="Gradient_11w3n"]
 offsets = PackedFloat32Array(0, 0.189895, 0.418118, 0.881533)
@@ -65,6 +66,7 @@ surface_material_override/1 = ExtResource("4_igpvg")
 transform = Transform3D(0.9953, 0.096836, 0, -0.096836, 0.9953, 0, 0, 0, 1, 0.113189, 0.103829, 0)
 mesh = ExtResource("2_bvc8u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("5_sc6qh")
 surface_material_override/1 = ExtResource("3_l18sg")
 surface_material_override/2 = ExtResource("4_igpvg")
 
