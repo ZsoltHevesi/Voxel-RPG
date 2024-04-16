@@ -1,11 +1,11 @@
-res://scenes/levels/level1/level1.occ
-res://scenes/levels/level1/level1.tscn
+res://scenes/decorations/plants/plantPot.tscn
+res://assets/materials/diffuse/brownDIFF3.tres
+res://assets/materials/diffuse/brownPastelDIFF2.tres
+res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
 res://assets/materials/diffuse/greyDIFF1.tres
 res://assets/materials/diffuse/blackDIFF.tres
-res://assets/materials/diffuse/brownPastelDIFF2.tres
-res://assets/materials/diffuse/brownDIFF1.tres
 res://assets/materials/diffuse/greenDIFF2.tres
 res://assets/materials/metallic/goldMET2.tres
 res://assets/materials/metallic/goldMET1.tres
@@ -18,6 +18,10 @@ res://assets/materials/emission/purpleTransGlow1.tres
 res://assets/materials/emission/yellowNeon1.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
+res://scenes/player/playerGear_Scenes/magicSword.tscn
+res://scenes/player/playerGear_Scenes/magicLongSword.tscn
+res://scenes/enemies/guardian/guardianEnemy.tscn
+res://scenes/tile scenes/chateau scene/chateau.tscn
 res://assets/materials/diffuse/whiteDIFF.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/brownPastelDIFF1.tres
@@ -32,11 +36,14 @@ res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/crimsonDIFF1.tres
 res://assets/materials/diffuse/blueDIFF1.tres
-res://assets/materials/diffuse/brownDIFF3.tres
+res://scenes/decorations/lamps/candles_x3.tscn
+res://scenes/decorations/lamps/lightning_lantern_tall.tscn
+res://scenes/levels/level1/level1.occ
+res://scenes/levels/level1/level1.tscn
+res://scenes/tile scenes/chateau scene/chateau.VoxelGI_data.res
 res://scenes/player/menuTitle.tres
 res://scenes/levels/level2/level2.tscn
-res://scenes/player/player.tscn
-res://scenes/tile scenes/chateau scene/chateau.tscn
-res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
-res://scenes/decorations/plants/fern.tscn
-res://scenes/decorations/plants/plantPot.tscn
+res://scenes/decorations/lamps/lightningLantern.tscn
+res://scenes/tile scenes/castleMonarch scene/castleMonarch.tscn
+res://scenes/tile scenes/castleMonarch scene/castleMonarch.VoxelGI_data.res
+res://scenes/decorations/lamps/castleTorchTallMounted.tscn
