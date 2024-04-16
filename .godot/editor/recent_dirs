@@ -1,3 +1,4 @@
+res://assets/particles
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/Builds
 res://assets/models/player/armour/guardian
 res://scenes/player
@@ -19,4 +20,3 @@ res://AutoLoad
 F:/Godot Projects/4.2.1/3rdPerson_Platformer/Voxel-RPG/tools
 res://assets/materials/emission
 res://scenes/player/playerAnimations
-res://scripts/inventory
