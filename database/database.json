@@ -174,4 +174,11 @@
 		"dmg" : 20,
 		"item_scene" : "machete.tscn"
 	},
+	"25" : {
+		"texture" : "handheldTorch.png",
+		"slot_type" : 11,
+		"def" : 0,
+		"dmg" : 15,
+		"item_scene" : "handheldTorch.tscn"
+	},
 }

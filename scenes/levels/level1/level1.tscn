@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=23 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scripts/levelWorld.gd" id="1_ems3p"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bmiieijs6iwbw" path="res://scenes/tile scenes/spawn/spawn.tscn" id="10_rm33y"]
 [ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="11_8mh61"]
 [ext_resource type="PackedScene" uid="uid://crawnocbn8e3e" path="res://scenes/tile scenes/backdrop/tower.tscn" id="12_jke7u"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="13_bvqol"]
 [ext_resource type="PackedScene" uid="uid://3xoln0dfc6j0" path="res://scenes/enemies/guardian/guardianEnemy.tscn" id="16_yg5tm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
@@ -121,6 +122,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.6641, 13.9923, 15.2394)
 
 [node name="tower2" parent="level1/map/NavigationRegion3D/tiles" instance=ExtResource("12_jke7u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2736, 26.5307, -39.7088)
+
+[node name="abstractItem" parent="level1/map" instance=ExtResource("13_bvqol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.2, 3.58034, 0)
+ID = "25"
 
 [node name="clanger" parent="level1/map" instance=ExtResource("3_f8dnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1, 3.5, 0)
