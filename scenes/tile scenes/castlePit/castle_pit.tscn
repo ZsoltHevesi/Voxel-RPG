@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://5c6nguukifgb"]
 
 [ext_resource type="ArrayMesh" uid="uid://cr8i60blyh5fv" path="res://assets/models/tiles/castlePit/castlePit_1.obj" id="1_qmfr8"]
-[ext_resource type="Material" uid="uid://bmpl1n4laxme3" path="res://assets/materials/emission/orangeGlow1.tres" id="2_3kik1"]
+[ext_resource type="Material" uid="uid://bmpl1n4laxme3" path="res://assets/materials/emission/orangeTransGlow1.tres" id="2_3kik1"]
 [ext_resource type="ArrayMesh" uid="uid://cqkhwh7c42gk7" path="res://assets/models/tiles/castlePit/castlePit_2.obj" id="2_y3rd5"]
 [ext_resource type="Material" uid="uid://rb6itcb2pci" path="res://assets/materials/diffuse/greyDIFF3.tres" id="4_2n6xl"]
 [ext_resource type="Material" uid="uid://boxds4ylio230" path="res://assets/materials/diffuse/greyDIFF4.tres" id="4_rjyxk"]

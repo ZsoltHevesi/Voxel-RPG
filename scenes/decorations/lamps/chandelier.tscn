@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://x8hupu8xdx0c"]
 
-[ext_resource type="ArrayMesh" uid="uid://cbuc0xvmg5ps5" path="res://assets/models/decorations/furniture/chandelier.obj" id="1_wwh38"]
+[ext_resource type="ArrayMesh" uid="uid://cbuc0xvmg5ps5" path="res://assets/models/decorations/lamps/chandelier.obj" id="1_wwh38"]
 [ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="2_0nsrb"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_u5wc6"]
 

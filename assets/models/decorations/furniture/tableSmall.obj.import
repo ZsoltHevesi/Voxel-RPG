@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1b2fagyvsy2l"
+path="res://.godot/imported/tableSmall.obj-7c3e9e16c6d6762a39a00ba48f76e329.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tableSmall.obj-7c3e9e16c6d6762a39a00ba48f76e329.mesh"]
+
+source_file="res://assets/models/decorations/furniture/tableSmall.obj"
+dest_files=["res://.godot/imported/tableSmall.obj-7c3e9e16c6d6762a39a00ba48f76e329.mesh", "res://.godot/imported/tableSmall.obj-7c3e9e16c6d6762a39a00ba48f76e329.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
