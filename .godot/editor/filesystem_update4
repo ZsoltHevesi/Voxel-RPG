@@ -30,3 +30,7 @@ res://assets/materials/emission/redNeon1.tres
 res://scenes/levels/level2/level2.tscn
 res://scenes/player/player.tscn
 res://scenes/menus/inventory/playerMenu.tscn
+res://scenes/player/playerGear_Scenes/bokken.tscn
+res://scenes/tile scenes/chateau scene/chateau.tscn
+res://scenes/decorations/furniture/woodRockingChair1.tscn
+res://assets/materials/diffuse/crimsonDIFF1.tres
