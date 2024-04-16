@@ -181,4 +181,11 @@
 		"dmg" : 15,
 		"item_scene" : "handheldTorch.tscn"
 	},
+	"26" : {
+		"texture" : "magicLongSword.png",
+		"slot_type" : 11,
+		"def" : 0,
+		"dmg" : 70,
+		"item_scene" : "magicLongSword.tscn"
+	},
 }
