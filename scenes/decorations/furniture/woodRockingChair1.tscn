@@ -1,10 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn0l71e7a6i0c"]
+[gd_scene load_steps=6 format=3 uid="uid://dn0l71e7a6i0c"]
 
 [ext_resource type="ArrayMesh" uid="uid://dn3otd2x3upjh" path="res://assets/models/decorations/furniture/rockingChair1.obj" id="1_jr5yx"]
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_764i6"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_8b8d5"]
 [ext_resource type="Material" uid="uid://c8hkph2oir44i" path="res://assets/materials/diffuse/brownDIFF3.tres" id="3_i14bh"]
-
-
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w1axa"]
 size = Vector3(0.8, 0.424055, 0.78)
@@ -14,7 +13,8 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_jr5yx")
-surface_material_override/0 = ExtResource("2_764i6")
+surface_material_override/0 = ExtResource("3_8b8d5")
+surface_material_override/1 = ExtResource("2_764i6")
 surface_material_override/2 = ExtResource("3_i14bh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

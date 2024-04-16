@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="3_50gf0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blanj"]
-size = Vector3(0.075, 0.3, 1)
+size = Vector3(0.075, 0.3, 1.11353)
 
 [node name="Bokken" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
@@ -21,7 +21,7 @@ surface_material_override/1 = ExtResource("3_50gf0")
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.038, 0.735746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09912e-14, 0.038, 0.678983)
 shape = SubResource("BoxShape3D_blanj")
 
 [connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]
