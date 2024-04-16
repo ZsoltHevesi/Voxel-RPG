@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://oujjsg68ctu"]
+
+[ext_resource type="ArrayMesh" uid="uid://btr5wswkqnuvl" path="res://assets/models/decorations/plants/plantPot.obj" id="1_gwnr0"]
+[ext_resource type="Material" uid="uid://c8hkph2oir44i" path="res://assets/materials/diffuse/brownDIFF3.tres" id="2_15ufd"]
+[ext_resource type="Material" uid="uid://16axgl0yba6u" path="res://assets/materials/diffuse/brownPastelDIFF2.tres" id="2_ltvyo"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_mjqa4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17ffw"]
+size = Vector3(0.8, 0.68, 0.8)
+
+[node name="PlantPot" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_gwnr0")
+surface_material_override/0 = ExtResource("2_ltvyo")
+surface_material_override/1 = ExtResource("2_15ufd")
+surface_material_override/2 = ExtResource("3_mjqa4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.339841, 0)
+shape = SubResource("BoxShape3D_17ffw")

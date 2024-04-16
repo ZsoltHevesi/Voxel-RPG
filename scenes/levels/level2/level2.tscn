@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://clpxkdiunkt4j"]
+[gd_scene load_steps=20 format=3 uid="uid://clpxkdiunkt4j"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="2_715bw"]
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsDirectionalLight3D.gd" id="3_jr7sw"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://h2bwuc13ene5" path="res://scenes/tile scenes/closedSpawn/closed_spawn.tscn" id="9_6l6ib"]
 [ext_resource type="PackedScene" uid="uid://3xoln0dfc6j0" path="res://scenes/enemies/guardian/guardianEnemy.tscn" id="12_87tuh"]
 [ext_resource type="PackedScene" uid="uid://b28y412e8tws" path="res://scenes/enemies/clanger/e_clanger.tscn" id="12_ncokg"]
+[ext_resource type="PackedScene" uid="uid://c8ekcp1gti707" path="res://scenes/pickUp_Items/pickUp_Health.tscn" id="13_ckg43"]
+[ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="14_a8xxr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbcio"]
 sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
@@ -145,7 +147,23 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.066
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.23, 1, -126.607)
 
 [node name="e_Guardian3" parent="map" instance=ExtResource("12_87tuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.647, -17, -124.393)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.647, -17, -133.393)
 
 [node name="e_Guardian4" parent="map" instance=ExtResource("12_87tuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8065, -17, -124.393)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3918, -17, -137.35)
+
+[node name="healthPickup" parent="map" instance=ExtResource("13_ckg43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.2, -36.2)
+
+[node name="healthPickup2" parent="map" instance=ExtResource("13_ckg43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.2, -65.7)
+
+[node name="healthPickup3" parent="map" instance=ExtResource("13_ckg43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1.2, -70.4)
+
+[node name="healthPickup4" parent="map" instance=ExtResource("13_ckg43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.2, -36.2355)
+
+[node name="abstractItem" parent="." instance=ExtResource("14_a8xxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, -11.7)
+ID = "11"

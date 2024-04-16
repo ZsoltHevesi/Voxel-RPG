@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfmgtas6ogouh"]
+
+[ext_resource type="ArrayMesh" uid="uid://dvldfera6v54k" path="res://assets/models/decorations/plants/fern_Snow.obj" id="1_v6evu"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="2_x2qld"]
+[ext_resource type="Material" uid="uid://33xflcsi2pj3" path="res://assets/materials/diffuse/greenDIFF2.tres" id="3_yirj2"]
+[ext_resource type="Material" uid="uid://xtxpeje5gsv3" path="res://assets/materials/diffuse/whiteDIFF.tres" id="4_omtgr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_imc7n"]
+
+[node name="fern" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_v6evu")
+surface_material_override/0 = ExtResource("2_x2qld")
+surface_material_override/1 = ExtResource("3_yirj2")
+surface_material_override/2 = ExtResource("4_omtgr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_imc7n")

@@ -1,6 +1,27 @@
-[gd_scene format=3 uid="uid://bi3gwnugk6oil"]
+[gd_scene load_steps=8 format=3 uid="uid://bi3gwnugk6oil"]
+
+[ext_resource type="ArrayMesh" uid="uid://b02ggeyuj6a53" path="res://assets/models/decorations/furniture/wardrobe.obj" id="1_f56wy"]
+[ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="2_33gmy"]
+[ext_resource type="Material" uid="uid://biy0ya1er1lgk" path="res://assets/materials/metallic/brassMET1.tres" id="2_lm6n3"]
+[ext_resource type="Material" uid="uid://cfjkkr6fu81ty" path="res://assets/materials/diffuse/reddishBrownDIFF1.tres" id="4_ev6jn"]
+[ext_resource type="Material" uid="uid://crllqki1rfn56" path="res://assets/materials/diffuse/reddishBrownDIFF3.tres" id="4_gb1kw"]
+[ext_resource type="Material" uid="uid://dn3xft5a3fgqm" path="res://assets/materials/diffuse/reddishBrownDIFF2.tres" id="4_u4dft"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tsuc"]
+size = Vector3(2.3, 3, 1.5)
 
 [node name="woodWardrobe" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = ExtResource("1_f56wy")
+surface_material_override/0 = ExtResource("2_lm6n3")
+surface_material_override/1 = ExtResource("4_ev6jn")
+surface_material_override/2 = ExtResource("2_33gmy")
+surface_material_override/3 = ExtResource("4_u4dft")
+surface_material_override/4 = ExtResource("4_gb1kw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.101452)
+shape = SubResource("BoxShape3D_7tsuc")

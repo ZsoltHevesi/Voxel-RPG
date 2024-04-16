@@ -1,4 +1,5 @@
-res://assets/materials/emission/orangeGlow1.tres
+res://scenes/levels/level1/level1.occ
+res://scenes/levels/level1/level1.tscn
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
 res://assets/materials/diffuse/greyDIFF1.tres
@@ -12,23 +13,30 @@ res://assets/materials/metallic/greyMET1.tres
 res://assets/materials/metallic/darkGreyMET1.tres
 res://assets/materials/emission/redGlow1.tres
 res://assets/materials/emission/tealGlow1.tres
-res://assets/materials/emission/blueGlow1.tres
 res://assets/materials/diffuse/brownPastelDIFF4.tres
 res://assets/materials/emission/purpleTransGlow1.tres
 res://assets/materials/emission/yellowNeon1.tres
+res://assets/materials/transparent/clearGlass_Refr_Single.tres
+res://assets/materials/emission/redNeon1.tres
 res://assets/materials/diffuse/whiteDIFF.tres
 res://assets/materials/transparent/clearGlass_Refr.tres
 res://assets/materials/diffuse/brownPastelDIFF1.tres
 res://assets/materials/diffuse/greenDIFF1.tres
 res://assets/materials/diffuse/boneDIFF2.tres
+res://assets/materials/emission/orangeGlow1.tres
+res://assets/materials/metallic/brassMET1.tres
+res://assets/materials/diffuse/reddishBrownDIFF1.tres
+res://assets/materials/diffuse/reddishBrownDIFF3.tres
+res://assets/materials/diffuse/reddishBrownDIFF2.tres
 res://assets/materials/diffuse/brownDIFF2.tres
+res://assets/materials/diffuse/boneDIFF1.tres
+res://assets/materials/diffuse/crimsonDIFF1.tres
+res://assets/materials/diffuse/blueDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://scenes/player/menuTitle.tres
-res://assets/materials/transparent/clearGlass_Refr_Single.tres
-res://assets/materials/emission/redNeon1.tres
-res://scenes/decorations/lamps/candles_x3.tscn
-res://assets/materials/diffuse/boneDIFF1.tres
-res://scenes/decorations/furniture/tableSmall.tscn
+res://scenes/levels/level2/level2.tscn
+res://scenes/player/player.tscn
 res://scenes/tile scenes/chateau scene/chateau.tscn
-res://scenes/decorations/furniture/tableBig.tscn
-res://scenes/decorations/furniture/woodWardrobe.tscn
+res://scenes/tile scenes/hallways/castleHallways/castleLongHallway.tscn
+res://scenes/decorations/plants/fern.tscn
+res://scenes/decorations/plants/plantPot.tscn

@@ -1,7 +1,7 @@
 CollisionShape3D
 StaticBody3D
-OmniLight3D
 MeshInstance3D
+OmniLight3D
 Node2D
 ColorRect
 TextureRect

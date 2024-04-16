@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmiieijs6iwbw"]
 
 [ext_resource type="ArrayMesh" uid="uid://vwuttibo10x3" path="res://assets/models/tiles/spawn/spawn.obj" id="1_ic4fp"]
-[ext_resource type="PackedScene" uid="uid://dn1hv0pok472" path="res://scenes/decorations/lamps/biggerChandelier.tscn" id="2_v1ox8"]
+[ext_resource type="PackedScene" uid="uid://dn1hv0pok472" path="res://scenes/decorations/lamps/chandelierBig.tscn" id="2_v1ox8"]
 [ext_resource type="PackedScene" uid="uid://cvxwvkv5ko5xy" path="res://scenes/decorations/lamps/castleTorchTallMounted.tscn" id="3_3q3xd"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m7u5r"]
