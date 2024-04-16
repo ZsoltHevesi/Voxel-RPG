@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqgtgsms15pl4"]
+
+[ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_monas"]
+[ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="2_n6gkk"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_rqbxw"]
+[ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/purpleTransGlow1.tres" id="4_7cn7f"]
+[ext_resource type="Material" uid="uid://dlcydg0remmp1" path="res://assets/materials/emission/purpleTransGlow2.tres" id="5_g2xij"]
+[ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="6_ysoos"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
+radius = 0.15
+height = 1.5
+
+[node name="longSwordMagic" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
+script = ExtResource("1_monas")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_n6gkk")
+surface_material_override/0 = ExtResource("3_rqbxw")
+surface_material_override/1 = ExtResource("4_7cn7f")
+surface_material_override/2 = ExtResource("5_g2xij")
+surface_material_override/3 = ExtResource("6_ysoos")
+
+[node name="hitBox" type="Area3D" parent="." groups=["playerMeleeWeapon"]]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitBox"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.17185e-08, 0, 0.820363)
+shape = SubResource("CapsuleShape3D_q4wyj")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

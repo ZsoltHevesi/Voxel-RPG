@@ -11,7 +11,7 @@ data = PackedVector3Array(-0.1346, 1.8461, 0.0577, -0.1346, 0.1538, 0.0577, -0.1
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mdu7k"]
 gravity = Vector3(0, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gr7t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nx6uw"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.588235)
 emission_enabled = true
@@ -19,7 +19,7 @@ emission = Color(0.709804, 0.92549, 0.933333, 1)
 emission_energy_multiplier = 10.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_4lk78"]
-material = SubResource("StandardMaterial3D_7gr7t")
+material = SubResource("StandardMaterial3D_nx6uw")
 size = Vector3(0.01, 0.5, 0.01)
 
 [node name="lightningLanternTall" type="Node3D"]
@@ -104,3 +104,9 @@ amount = 1
 lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_mdu7k")
 draw_pass_1 = SubResource("BoxMesh_4lk78")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+light_color = Color(0.6, 0.768627, 0.968627, 1)
+light_energy = 2.0
+omni_range = 80.0

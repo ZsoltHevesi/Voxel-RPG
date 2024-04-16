@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcrdam64ph4ov"]
+[gd_scene load_steps=9 format=3 uid="uid://dcrdam64ph4ov"]
 
 [ext_resource type="ArrayMesh" uid="uid://dwjtly7shqmfy" path="res://assets/models/decorations/lamps/lingningLantern_1x1x1.obj" id="1_q1r6o"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="2_4xtqk"]
@@ -7,6 +7,20 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j00t0"]
 size = Vector3(0.27, 0.5, 0.27)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ebwmp"]
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gr7t"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.588235)
+emission_enabled = true
+emission = Color(0.709804, 0.92549, 0.933333, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_m1f1g"]
+material = SubResource("StandardMaterial3D_7gr7t")
+size = Vector3(0.01, 0.5, 0.01)
 
 [node name="LightningLantern" type="Node3D"]
 
@@ -21,3 +35,14 @@ surface_material_override/2 = ExtResource("3_itk3c")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 1.49012e-08, 2.23517e-08)
 shape = SubResource("BoxShape3D_j00t0")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.989208, -0.146515, 0, 0.146515, 0.989208, 0, 0.000480756, 0)
+amount = 1
+lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_ebwmp")
+draw_pass_1 = SubResource("BoxMesh_m1f1g")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+light_color = Color(0.6, 0.768627, 0.968627, 1)
+omni_range = 40.0

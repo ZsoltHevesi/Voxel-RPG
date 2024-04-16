@@ -70,7 +70,7 @@ surface_material_override/2 = ExtResource("4_igpvg")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240263, 1.25839, 0)
-light_color = Color(1, 0.619608, 0.392157, 1)
+light_color = Color(1, 0.737255, 0.388235, 1)
 light_energy = 4.0
 omni_range = 15.0
 
