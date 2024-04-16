@@ -1,4 +1,3 @@
-res://scenes/levels/level1/level1.tscn
 res://assets/materials/emission/orangeGlow1.tres
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
@@ -27,10 +26,9 @@ res://assets/materials/diffuse/brownDIFF3.tres
 res://scenes/player/menuTitle.tres
 res://assets/materials/transparent/clearGlass_Refr_Single.tres
 res://assets/materials/emission/redNeon1.tres
-res://scenes/levels/level2/level2.tscn
-res://scenes/player/player.tscn
-res://scenes/menus/inventory/playerMenu.tscn
-res://scenes/player/playerGear_Scenes/bokken.tscn
+res://scenes/decorations/lamps/candles_x3.tscn
+res://assets/materials/diffuse/boneDIFF1.tres
+res://scenes/decorations/furniture/tableSmall.tscn
 res://scenes/tile scenes/chateau scene/chateau.tscn
-res://scenes/decorations/furniture/woodRockingChair1.tscn
-res://assets/materials/diffuse/crimsonDIFF1.tres
+res://scenes/decorations/furniture/tableBig.tscn
+res://scenes/decorations/furniture/woodWardrobe.tscn

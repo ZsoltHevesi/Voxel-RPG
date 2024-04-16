@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://dn1hv0pok472"]
 
-[ext_resource type="ArrayMesh" uid="uid://bjqwj4v6jscpi" path="res://assets/models/decorations/furniture/biggerChandelier.obj" id="1_um21u"]
+[ext_resource type="ArrayMesh" uid="uid://bjqwj4v6jscpi" path="res://assets/models/decorations/lamps/biggerChandelier.obj" id="1_um21u"]
 [ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="2_srfqc"]
 [ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_0h1ws"]
+
 
 [node name="biggerChandelier" type="Node3D"]
 

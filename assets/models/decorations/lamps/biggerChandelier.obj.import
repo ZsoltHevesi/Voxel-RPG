@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bjqwj4v6jscpi"
+path="res://.godot/imported/biggerChandelier.obj-1a757a318190e912b8cadb042455365f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/biggerChandelier.obj-1a757a318190e912b8cadb042455365f.mesh"]
+
+source_file="res://assets/models/decorations/lamps/biggerChandelier.obj"
+dest_files=["res://.godot/imported/biggerChandelier.obj-1a757a318190e912b8cadb042455365f.mesh", "res://.godot/imported/biggerChandelier.obj-1a757a318190e912b8cadb042455365f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

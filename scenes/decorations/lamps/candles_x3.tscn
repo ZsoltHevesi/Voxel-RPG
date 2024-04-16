@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cidppn2m4i168"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxcdnf6giydso" path="res://assets/models/decorations/lamps/candles_x3.obj" id="1_cf1xd"]
+[ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="2_nppxg"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_l8p71"]
+[ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="3_ur2mh"]
+[ext_resource type="Material" uid="uid://byqpapy7uvvcu" path="res://assets/materials/emission/orangeGlow1.tres" id="5_5fh4m"]
+
+[node name="CandlesX3" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_cf1xd")
+surface_material_override/0 = ExtResource("2_nppxg")
+surface_material_override/1 = ExtResource("3_l8p71")
+surface_material_override/2 = ExtResource("3_ur2mh")
+surface_material_override/3 = ExtResource("5_5fh4m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439496, 0)
+light_color = Color(1, 0.756863, 0.392157, 1)
+light_energy = 2.0
+omni_range = 15.0

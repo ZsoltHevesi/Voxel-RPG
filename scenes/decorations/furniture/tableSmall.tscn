@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://djrg76tdtiukd"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1b2fagyvsy2l" path="res://assets/models/decorations/furniture/tableSmall.obj" id="1_p45kd"]
+[ext_resource type="Material" uid="uid://xxjrlc78o5oi" path="res://assets/materials/diffuse/brownDIFF2.tres" id="2_ar8cf"]
+[ext_resource type="Material" uid="uid://dkoemqexmihbp" path="res://assets/materials/diffuse/brownDIFF1.tres" id="3_8nhs4"]
+[ext_resource type="Material" uid="uid://cnilsnt05jp4u" path="res://assets/materials/diffuse/boneDIFF1.tres" id="3_pt4a4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjst3"]
+
+[node name="TableSmall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_p45kd")
+surface_material_override/0 = ExtResource("2_ar8cf")
+surface_material_override/1 = ExtResource("3_8nhs4")
+surface_material_override/2 = ExtResource("3_pt4a4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_mjst3")

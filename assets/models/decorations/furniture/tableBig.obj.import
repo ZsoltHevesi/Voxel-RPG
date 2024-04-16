@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pmdpaki4u1pw"
+path="res://.godot/imported/tableBig.obj-41202995072c3613f9a1b7ad68b8a7c9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tableBig.obj-41202995072c3613f9a1b7ad68b8a7c9.mesh"]
+
+source_file="res://assets/models/decorations/furniture/tableBig.obj"
+dest_files=["res://.godot/imported/tableBig.obj-41202995072c3613f9a1b7ad68b8a7c9.mesh", "res://.godot/imported/tableBig.obj-41202995072c3613f9a1b7ad68b8a7c9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
