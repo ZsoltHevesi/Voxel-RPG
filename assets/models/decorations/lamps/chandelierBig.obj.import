@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsbmud52eb5lj"
+path="res://.godot/imported/chandelierBig.obj-2b7d706654996ed4dcb685f023a4172e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chandelierBig.obj-2b7d706654996ed4dcb685f023a4172e.mesh"]
+
+source_file="res://assets/models/decorations/lamps/chandelierBig.obj"
+dest_files=["res://.godot/imported/chandelierBig.obj-2b7d706654996ed4dcb685f023a4172e.mesh", "res://.godot/imported/chandelierBig.obj-2b7d706654996ed4dcb685f023a4172e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

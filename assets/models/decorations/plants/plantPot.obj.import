@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btr5wswkqnuvl"
+path="res://.godot/imported/plantPot.obj-ad8354751d40aff0424c4727cf9369f1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plantPot.obj-ad8354751d40aff0424c4727cf9369f1.mesh"]
+
+source_file="res://assets/models/decorations/plants/plantPot.obj"
+dest_files=["res://.godot/imported/plantPot.obj-ad8354751d40aff0424c4727cf9369f1.mesh", "res://.godot/imported/plantPot.obj-ad8354751d40aff0424c4727cf9369f1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

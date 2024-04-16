@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://x8hupu8xdx0c"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbako8x7870pa" path="res://assets/models/decorations/lamps/chandelierSmall.obj" id="1_oh5uc"]
+[ext_resource type="Material" uid="uid://bnbjht73tkg44" path="res://assets/materials/diffuse/boneDIFF2.tres" id="2_b347o"]
+[ext_resource type="Material" uid="uid://di7jrwwc4ikou" path="res://assets/materials/metallic/goldMET1.tres" id="3_6qjgj"]
+[ext_resource type="Material" uid="uid://byqpapy7uvvcu" path="res://assets/materials/emission/orangeGlow1.tres" id="3_oooeq"]
+
+[node name="chandelierSmall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_oh5uc")
+surface_material_override/0 = ExtResource("2_b347o")
+surface_material_override/1 = ExtResource("3_oooeq")
+surface_material_override/2 = ExtResource("3_6qjgj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518351, -0.68839, -0.518143)
+light_color = Color(1, 0.878431, 0.596078, 1)
+omni_range = 40.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518351, -0.68839, 0.517289)
+light_color = Color(1, 0.878431, 0.596078, 1)
+omni_range = 40.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518287, -0.68839, 0.517289)
+light_color = Color(1, 0.878431, 0.596078, 1)
+omni_range = 40.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518287, -0.68839, -0.524723)
+light_color = Color(1, 0.878431, 0.596078, 1)
+omni_range = 40.0

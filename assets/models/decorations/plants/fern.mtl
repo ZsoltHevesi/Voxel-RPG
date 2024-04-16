@@ -1,15 +1,5 @@
-# Blender 3.6.9 MTL File: 'None'
+# Blender 3.6.7 MTL File: 'None'
 # www.blender.org
-
-newmtl fern.vox_Material_149
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.321569 0.192157 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
 
 newmtl fern.vox_Material_150
 Ns 250.000000
@@ -21,10 +11,10 @@ Ni 1.450000
 d 1.000000
 illum 2
 
-newmtl fern.vox_Material_232
+newmtl fern.vox_Material_255
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
-Kd 1.000000 1.000000 1.000000
+Kd 1.000000 0.000000 0.866667
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
