@@ -106,6 +106,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var maxHealth = 100
 var currentHealth = maxHealth
 
+@export var win = false
+
 # Vars for player stats
 var defense_stat = 0
 var attack_stat = 0
@@ -197,6 +199,12 @@ func _physics_process(delta):
 			weaponBlendTarget = 0.0
 			crosshair.visible = false
 	animationTree.set(weaponBlend, lerp(float(animationTree.get(weaponBlend)), weaponBlendTarget, delta * 5))
+	
+	if win == true:
+		win_screen.visible = true
+		win_fail_buttons.visible = true
+		get_tree().paused = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	_rotate_sep_ray() # call this before move_and_slide()
 	move_and_slide()

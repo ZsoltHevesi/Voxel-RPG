@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://clpxkdiunkt4j"]
+[gd_scene load_steps=21 format=3 uid="uid://clpxkdiunkt4j"]
 
+[ext_resource type="Script" path="res://scenes/levels/level2/level2.gd" id="1_8jo7i"]
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="2_715bw"]
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsDirectionalLight3D.gd" id="3_jr7sw"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cxlmser8kneuq" path="res://scenes/levels/level1/level1.occ" id="4_8fg3x"]
@@ -47,6 +48,7 @@ agent_max_climb = 0.51
 size = Vector3(30, 1, 30)
 
 [node name="Level2" type="Node3D"]
+script = ExtResource("1_8jo7i")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hsqog")
