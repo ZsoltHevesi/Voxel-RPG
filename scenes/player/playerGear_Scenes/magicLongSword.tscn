@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqgtgsms15pl4"]
+[gd_scene load_steps=17 format=3 uid="uid://cqgtgsms15pl4"]
 
 [ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_monas"]
 [ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="2_n6gkk"]
@@ -11,13 +11,42 @@
 radius = 0.15
 height = 1.5
 
+[sub_resource type="Gradient" id="Gradient_1c2qq"]
+colors = PackedColorArray(0, 0.705882, 1, 0.117647, 1, 1, 1, 0.117647)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d8hxy"]
+gradient = SubResource("Gradient_1c2qq")
+
+[sub_resource type="Curve" id="Curve_ub20s"]
+max_value = 16.0
+_data = [Vector2(0, 16), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_uvsfk"]
+curve = SubResource("Curve_ub20s")
+
+[sub_resource type="Curve" id="Curve_ku5h1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0971428, 1), 0.0, 0.0, 0, 0, Vector2(0.6, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_c7aem"]
+curve = SubResource("Curve_ku5h1")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5qumo"]
 emission_shape_scale = Vector3(0.5, 1, 5.5)
 emission_shape = 2
 emission_sphere_radius = 0.12
 gravity = Vector3(0, 2, 0)
+scale_curve = SubResource("CurveTexture_c7aem")
+color = Color(0, 0.705882, 1, 0.117647)
+color_ramp = SubResource("GradientTexture1D_d8hxy")
+emission_curve = SubResource("CurveTexture_uvsfk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cck4"]
+vertex_color_use_as_albedo = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_vqe7a"]
+material = SubResource("StandardMaterial3D_4cck4")
 size = Vector3(0.02, 0.02, 0.02)
 
 [node name="longSwordMagic" type="Node3D"]
@@ -39,7 +68,10 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.171
 shape = SubResource("CapsuleShape3D_q4wyj")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.86729e-08, 0, 0.899913)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.54775e-08, 0, 0.863362)
+amount = 80
+explosiveness = 0.1
+randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_5qumo")
 draw_pass_1 = SubResource("BoxMesh_vqe7a")
 

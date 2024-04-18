@@ -12,7 +12,7 @@ max_value = 16.0
 _data = [Vector2(0, 16), 0.0, 0.0, 0, 0, Vector2(0.8, 8), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_l1gjc"]
+[sub_resource type="CurveTexture" id="CurveTexture_depat"]
 curve = SubResource("Curve_ag0ko")
 
 [sub_resource type="Curve" id="Curve_piw1n"]
@@ -39,4 +39,4 @@ gravity = Vector3(0, 1, 0)
 scale_curve = SubResource("CurveTexture_fs3h8")
 color = Color(1, 0.741176, 0, 0.686275)
 color_ramp = SubResource("GradientTexture1D_tfo2o")
-emission_curve = SubResource("CurveTexture_l1gjc")
+emission_curve = SubResource("CurveTexture_depat")
