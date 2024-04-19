@@ -25,8 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://dbrreqpdxs362" path="res://scenes/player/playerGear_Scenes/guardianRightLeg.tscn" id="14_8dw20"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="14_c58lj"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_n635t"]
-size = Vector3(1.23096, 1.80548, 0.600098)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1o6fq"]
+height = 1.8
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6ovt"]
 _data = {
@@ -147,7 +147,7 @@ height = 1.75
 length = 0.51
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4e367"]
-size = Vector3(1, 1.75, 1)
+size = Vector3(0.9, 1.75, 0.9)
 
 [node name="e_Guardian" type="CharacterBody3D" groups=["enemies"]]
 disable_mode = 2
@@ -156,8 +156,8 @@ script = ExtResource("1_b0dsg")
 [node name="guardianHitbox" type="Area3D" parent="." groups=["enemies"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="guardianHitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00170898, 0.883087, 0.0490723)
-shape = SubResource("BoxShape3D_n635t")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1o6fq")
 
 [node name="visuals" type="Node3D" parent="."]
 
