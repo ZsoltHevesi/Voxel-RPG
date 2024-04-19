@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqgtgsms15pl4"]
+[gd_scene load_steps=10 format=3 uid="uid://cqgtgsms15pl4"]
 
 [ext_resource type="Script" path="res://scenes/player/playerGear_Scenes/sword.gd" id="1_monas"]
 [ext_resource type="ArrayMesh" uid="uid://c03s41ynmq2yq" path="res://assets/models/weapon models/longSword.obj" id="2_n6gkk"]
@@ -6,50 +6,12 @@
 [ext_resource type="Material" uid="uid://d1yd2cbptupq3" path="res://assets/materials/emission/purpleTransGlow1.tres" id="4_7cn7f"]
 [ext_resource type="Material" uid="uid://dlcydg0remmp1" path="res://assets/materials/emission/purpleTransGlow2.tres" id="5_g2xij"]
 [ext_resource type="Material" uid="uid://o5muet0ljals" path="res://assets/materials/metallic/darkGreyMET1.tres" id="6_ysoos"]
+[ext_resource type="Material" uid="uid://b56qgbdp0mimm" path="res://assets/particles/magicBlueProcessMat.tres" id="7_iigeb"]
+[ext_resource type="BoxMesh" uid="uid://jawhjdkaqtud" path="res://assets/particles/magicBlue.tres" id="8_jw54x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4wyj"]
 radius = 0.15
 height = 1.5
-
-[sub_resource type="Gradient" id="Gradient_1c2qq"]
-offsets = PackedFloat32Array(0, 0.306452, 0.719355)
-colors = PackedColorArray(0, 0.705882, 1, 1, 0, 0.42599, 1, 1, 0, 0.0784314, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_d8hxy"]
-gradient = SubResource("Gradient_1c2qq")
-
-[sub_resource type="Curve" id="Curve_ub20s"]
-max_value = 16.0
-_data = [Vector2(0, 16), 0.0, 0.0, 0, 0]
-point_count = 1
-
-[sub_resource type="CurveTexture" id="CurveTexture_uvsfk"]
-curve = SubResource("Curve_ub20s")
-
-[sub_resource type="Curve" id="Curve_ku5h1"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0971428, 1), 0.0, 0.0, 0, 0, Vector2(0.6, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="CurveTexture" id="CurveTexture_c7aem"]
-curve = SubResource("Curve_ku5h1")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5qumo"]
-emission_shape_scale = Vector3(0.5, 1, 5.5)
-emission_shape = 2
-emission_sphere_radius = 0.12
-gravity = Vector3(0, 2, 0)
-scale_curve = SubResource("CurveTexture_c7aem")
-color = Color(0, 0.705882, 1, 1)
-color_ramp = SubResource("GradientTexture1D_d8hxy")
-emission_curve = SubResource("CurveTexture_uvsfk")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cck4"]
-shading_mode = 0
-vertex_color_use_as_albedo = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_vqe7a"]
-material = SubResource("StandardMaterial3D_4cck4")
-size = Vector3(0.02, 0.02, 0.02)
 
 [node name="longSwordMagic" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.0119054)
@@ -74,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.54775e-08, 0, 0.863362)
 amount = 80
 explosiveness = 0.1
 randomness = 1.0
-process_material = SubResource("ParticleProcessMaterial_5qumo")
-draw_pass_1 = SubResource("BoxMesh_vqe7a")
+process_material = ExtResource("7_iigeb")
+draw_pass_1 = ExtResource("8_jw54x")
 
 [connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]

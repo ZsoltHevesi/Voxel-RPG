@@ -1,9 +1,9 @@
-GPUParticlesAttractorBox3D
-GPUParticles3D
-MeshInstance3D
-OmniLight3D
 CollisionShape3D
 StaticBody3D
+GPUParticles3D
+GPUParticlesAttractorBox3D
+MeshInstance3D
+OmniLight3D
 Node2D
 ColorRect
 TextureRect
@@ -12,4 +12,3 @@ Area3D
 NavigationAgent3D
 Label
 Button
-HBoxContainer
