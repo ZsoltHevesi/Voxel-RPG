@@ -22,11 +22,11 @@ Github:
 3
 Name: Yan Savioli Castanheira
 
-Student Number: 
+Student Number: C22371301
 
-Class Group:
+Class Group: TU858
 
-Github: 
+Github: https://github.com/Yan-Sav/Yan-Voxel-RPG
 
 4
 Name: Zsolt Hevesi
@@ -64,10 +64,25 @@ Github:
 # What I am most proud of in the assignment
 
 Each team member
+1():
+
+2():
+
+3(Yan):
+
+4():
 
 # What I learned
 
 Each team member
+
+1():
+
+2():
+
+3():
+
+4():
 
 # Proposal submitted earlier can go here (if there is one):
 
