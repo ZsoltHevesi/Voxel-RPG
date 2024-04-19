@@ -16,6 +16,7 @@ func _ready():
 		config.set_value("options", "fsr", 0)
 		config.set_value("options", "shadows", true)
 		config.set_value("options", "brightness", 1.00)
+		config.set_value("options", "fps_counter", false)
 		config.save("user://config.cfg")
 	err = config.has_section_key("options", "fullscreen")
 	if err != true:
@@ -50,6 +51,9 @@ func _ready():
 	err = config.has_section_key("options", "brightness")
 	if err != true:
 		config.set_value("options", "brightness", 1.00)
+	err = config.has_section_key("options", "fps_counter")
+	if err != true:
+		config.set_value("options", "fps_counter", false)
 	config.save("user://config.cfg")
 	get_window().set_size(Vector2i(config.get_value("options", "resolution_width"), config.get_value("options", "resolution_height")))
 	

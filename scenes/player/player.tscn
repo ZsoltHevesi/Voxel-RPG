@@ -275,8 +275,8 @@ grow_vertical = 2
 
 [node name="HealthBar" type="ProgressBar" parent="cameraMount/SpringArm3D/Camera3D/UI"]
 layout_mode = 1
-offset_right = 197.0
-offset_bottom = 27.0
+offset_right = 473.0
+offset_bottom = 39.0
 theme_override_styles/background = SubResource("StyleBoxFlat_q7qui")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pvv1a")
 value = 100.0

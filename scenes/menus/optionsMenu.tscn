@@ -182,6 +182,16 @@ custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "1.00"
 
+[node name="fpsBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
+layout_mode = 2
+
+[node name="fpsLabel" type="Label" parent="HBoxContainer/optionSetting/fpsBox"]
+layout_mode = 2
+text = "FPS Counter"
+
+[node name="fpsCheckBox" type="CheckBox" parent="HBoxContainer/optionSetting/fpsBox"]
+layout_mode = 2
+
 [node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
 size_flags_vertical = 4
@@ -197,4 +207,5 @@ text = "Back"
 [connection signal="toggled" from="HBoxContainer/optionSetting/ssaoBox/ssaoToggle" to="HBoxContainer/optionSetting" method="_on_ssao_toggle_toggled"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/glowBox/glowToggle" to="HBoxContainer/optionSetting" method="_on_glow_toggle_toggled"]
 [connection signal="value_changed" from="HBoxContainer/optionSetting/BrightnessBox/BrightnessSlider" to="HBoxContainer/optionSetting" method="_on_brightness_slider_value_changed"]
+[connection signal="toggled" from="HBoxContainer/optionSetting/fpsBox/fpsCheckBox" to="HBoxContainer/optionSetting" method="_on_check_box_toggled"]
 [connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]

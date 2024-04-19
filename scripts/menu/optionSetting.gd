@@ -13,6 +13,7 @@ extends VBoxContainer
 @onready var fsrOptions = $fsrBox/fsrOptions
 @onready var brightnessSlider = $BrightnessBox/BrightnessSlider
 @onready var brightnessLevel = $BrightnessBox/brightnessLevel
+@onready var fpsCheckBox = $fpsBox/fpsCheckBox
 
 var config = ConfigFile.new()
 
@@ -62,7 +63,8 @@ func _ready():
 	else:
 		scaleBox.hide()
 	brightnessSlider.value = config.get_value("options", "brightness")
-	
+	if config.get_value("options", "fps_counter"):
+		fpsCheckBox.set_pressed_no_signal(true)
 	
 
 func addResolutions():
@@ -203,3 +205,10 @@ func _on_glow_toggle_toggled(toggled_on):
 func _on_brightness_slider_value_changed(value):
 	brightnessLevel.set_text(str(value))
 	config.set_value("options", "brightness", value)
+
+
+func _on_check_box_toggled(toggled_on):
+	if toggled_on:
+		config.set_value("options", "fps_counter", true)
+	else:
+		config.set_value("options", "fps_counter", false)

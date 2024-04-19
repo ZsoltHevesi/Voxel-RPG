@@ -43,3 +43,6 @@ res://scenes/menus/optionsMenu.tscn
 res://AutoLoad/config.gd
 res://scenes/levels/level1/graphicsWorldEnvironment.gd
 res://scenes/menus/mainMenu.tscn
+res://scenes/player/player.tscn
+res://scenes/menus/fps_Counter.tscn
+res://scripts/menu/FPSMeter.gd
