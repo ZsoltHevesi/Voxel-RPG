@@ -1,3 +1,5 @@
+Sprite2D
+AudioStreamPlayer
 CheckBox
 Label
 HBoxContainer
@@ -11,5 +13,3 @@ Node2D
 ColorRect
 TextureRect
 NavigationRegion3D
-Area3D
-NavigationAgent3D

@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dya4c2kbb2rg"]
+[gd_scene load_steps=4 format=3 uid="uid://dya4c2kbb2rg"]
 
 [ext_resource type="Script" path="res://scripts/menu/mainMenu.gd" id="1_77ph2"]
+[ext_resource type="AudioStream" uid="uid://svs3tkmlj7e" path="res://Audio/baby-mandala-169039.mp3" id="2_vw7mu"]
+[ext_resource type="Texture2D" uid="uid://ceh4a1e13h32g" path="res://assets/TrialVoxPoster_-_Copy.jpg" id="3_hywgx"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.73
+offset_bottom = -0.400146
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_77ph2")
@@ -37,6 +39,17 @@ text = "Options"
 [node name="exitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vw7mu")
+volume_db = -5.0
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(966.5, 1248.5)
+scale = Vector2(0.544755, 0.502218)
+texture = ExtResource("3_hywgx")
 
 [connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/optionsButton" to="." method="_on_options_button_pressed"]
