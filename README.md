@@ -13,11 +13,11 @@ Github: https://github.com/danielo127730
 2
 Name: Georgy Kachelkin
 
-Student Number: 
+Student Number: D22124642
 
-Class Group:
+Class Group: TU856
 
-Github: 
+Github: https://github.com/gk355
 
 3
 Name: Yan Savioli Castanheira
