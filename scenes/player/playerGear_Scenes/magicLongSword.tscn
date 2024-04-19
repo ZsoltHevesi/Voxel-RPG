@@ -12,7 +12,8 @@ radius = 0.15
 height = 1.5
 
 [sub_resource type="Gradient" id="Gradient_1c2qq"]
-colors = PackedColorArray(0, 0.705882, 1, 0.117647, 1, 1, 1, 0.117647)
+offsets = PackedFloat32Array(0, 0.306452, 0.719355)
+colors = PackedColorArray(0, 0.705882, 1, 1, 0, 0.42599, 1, 1, 0, 0.0784314, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_d8hxy"]
 gradient = SubResource("Gradient_1c2qq")
@@ -38,11 +39,12 @@ emission_shape = 2
 emission_sphere_radius = 0.12
 gravity = Vector3(0, 2, 0)
 scale_curve = SubResource("CurveTexture_c7aem")
-color = Color(0, 0.705882, 1, 0.117647)
+color = Color(0, 0.705882, 1, 1)
 color_ramp = SubResource("GradientTexture1D_d8hxy")
 emission_curve = SubResource("CurveTexture_uvsfk")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cck4"]
+shading_mode = 0
 vertex_color_use_as_albedo = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_vqe7a"]
