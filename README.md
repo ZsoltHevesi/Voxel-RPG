@@ -69,7 +69,7 @@ Each team member
 
 1(Daniel): I am proud of being apart of this project and undertaking the challenge that it was. I am proud of my efforts and particularly the efforts of my team.
 
-The specific contributions which i'm most proud of implementing  in the game are the sprint functionality,  contributions to the health system, implementing a smoother camera using linear interpolation, implementing 3d pathfiding / enemy navigation, introducing damage incurring barriers and pioneering the enemy / player damage system. 
+The specific contributions which i'm most proud of implementing  in the game are the sprint functionality, Audio,  contributions to the health system, implementing a smoother camera using linear interpolation, implementing 3d pathfiding / enemy navigation, introducing damage incurring barriers and pioneering the enemy / player damage system. 
 
  There were many times when I would struggle to implement a feature. I would spend hours research and attempting to solve the problem. It was stressful but I persevered as did my team which faced similar difficulties and eventually we would overcomes these problems through collaboration and perseverance. I went into this project knowing absoulutely nothing about godot and game design. Despite my lack of knowledge I took on this challenge anyway and I've learned so much from it. The game turned out better than I ever could've imagined compared to where we began.  
 
