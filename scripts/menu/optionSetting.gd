@@ -11,6 +11,8 @@ extends VBoxContainer
 @onready var glowToggle = $glowBox/glowToggle
 @onready var scalingMode = $scaleModeBox/scalingMode
 @onready var fsrOptions = $fsrBox/fsrOptions
+@onready var brightnessSlider = $BrightnessBox/BrightnessSlider
+@onready var brightnessLevel = $BrightnessBox/brightnessLevel
 
 var config = ConfigFile.new()
 
@@ -59,6 +61,7 @@ func _ready():
 		scaleBox.show()
 	else:
 		scaleBox.hide()
+	brightnessSlider.value = config.get_value("options", "brightness")
 	
 	
 
@@ -195,3 +198,8 @@ func _on_glow_toggle_toggled(toggled_on):
 	else:
 		config.set_value("options", "glow", false)
 
+
+
+func _on_brightness_slider_value_changed(value):
+	brightnessLevel.set_text(str(value))
+	config.set_value("options", "brightness", value)

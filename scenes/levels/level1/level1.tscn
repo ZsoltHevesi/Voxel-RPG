@@ -37,6 +37,7 @@ glow_enabled = true
 fog_light_color = Color(0.941176, 0.94902, 0.956863, 1)
 fog_density = 0.0002
 volumetric_fog_density = 0.008
+adjustment_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ouqtc"]
 size = Vector3(500, 1, 500)

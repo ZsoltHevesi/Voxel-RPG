@@ -63,7 +63,6 @@ popup/item_3/text = "AMD FSR 2.2 (Slow)"
 popup/item_3/id = 3
 
 [node name="scaleBox" type="HBoxContainer" parent="HBoxContainer/optionSetting"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -80,6 +79,7 @@ value = 100.0
 ticks_on_borders = true
 
 [node name="scalingLabel" type="Label" parent="HBoxContainer/optionSetting/scaleBox"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "100% - 1920x1080"
 
@@ -172,10 +172,15 @@ text = "Brightness"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
+min_value = 0.5
+max_value = 2.0
+step = 0.05
+value = 1.0
 
-[node name="Label" type="Label" parent="HBoxContainer/optionSetting/BrightnessBox"]
+[node name="brightnessLevel" type="Label" parent="HBoxContainer/optionSetting/BrightnessBox"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "100"
+text = "1.00"
 
 [node name="backButton" type="Button" parent="HBoxContainer/optionSetting"]
 layout_mode = 2
@@ -191,4 +196,5 @@ text = "Back"
 [connection signal="toggled" from="HBoxContainer/optionSetting/shadowBox/shadowToggle" to="HBoxContainer/optionSetting" method="_on_shadow_toggle_toggled"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/ssaoBox/ssaoToggle" to="HBoxContainer/optionSetting" method="_on_ssao_toggle_toggled"]
 [connection signal="toggled" from="HBoxContainer/optionSetting/glowBox/glowToggle" to="HBoxContainer/optionSetting" method="_on_glow_toggle_toggled"]
+[connection signal="value_changed" from="HBoxContainer/optionSetting/BrightnessBox/BrightnessSlider" to="HBoxContainer/optionSetting" method="_on_brightness_slider_value_changed"]
 [connection signal="pressed" from="HBoxContainer/optionSetting/backButton" to="HBoxContainer/optionSetting" method="_on_back_button_pressed"]
