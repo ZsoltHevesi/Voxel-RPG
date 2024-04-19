@@ -1,2 +1,2 @@
-﻿50262
-C:/Users/orang/Documents/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe
+﻿57797
+C:/Users/Blues/Downloads/Godot/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe

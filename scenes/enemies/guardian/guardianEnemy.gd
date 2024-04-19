@@ -29,7 +29,7 @@ var chaseRange = 20
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var SPEED = 3.0
 var desiredDistance = 1.25
-var maxHealth = 100
+var maxHealth = 200
 @export var currentHealth = maxHealth
 var meleeImmunity = false
 

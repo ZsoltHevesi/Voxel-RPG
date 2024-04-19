@@ -1,14 +1,14 @@
-# Project Title
+# Project Title: Trial Vox
 
 Include for each contributer:
 1
 Name: Daniel O'Neill
 
-Student Number: 
+Student Number: C22307066
 
-Class Group:
+Class Group: Tu858
 
-Github: 
+Github: https://github.com/danielo127730
 
 2
 Name: Georgy Kachelkin
@@ -43,6 +43,8 @@ Github:
 
 # Screenshots
 
+
+
 # Description of the project
 
 # Instructions for use
@@ -64,7 +66,12 @@ Github:
 # What I am most proud of in the assignment
 
 Each team member
-1():
+
+1(Daniel): I am proud of being apart of this project and undertaking the challenge that it was. I am proud of my efforts and particularly the efforts of my team.
+
+The specific contributions which i'm most proud of implementing  in the game are the sprint functionality,  contributions to the health system, implementing a smoother camera using linear interpolation, implementing 3d pathfiding / enemy navigation, introducing damage incurring barriers and pioneering the enemy / player damage system. 
+
+ There were many times when I would struggle to implement a feature. I would spend hours research and attempting to solve the problem. It was stressful but I persevered as did my team which faced similar difficulties and eventually we would overcomes these problems through collaboration and perseverance. I went into this project knowing absoulutely nothing about godot and game design. Despite my lack of knowledge I took on this challenge anyway and I've learned so much from it. The game turned out better than I ever could've imagined compared to where we began.  
 
 2():
 
@@ -76,7 +83,7 @@ Each team member
 
 Each team member
 
-1():
+1(Daniel): I've learned a lot from this project. It improved my github and git command competency immensely. I learned how to use the godot game engine and gdscript.  I've experienced what it's like to work on complex problems with a team and collaborate on solutions to overcome those problems. I've learned about the process of designing a game and the various elements that go into it. It's given me a greater appreciation for the games that I play and the amount of work that must have went into their creation.
 
 2():
 
