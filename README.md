@@ -11,6 +11,7 @@ Class Group: Tu858
 
 Github: [https://github.com/danielo127730](https://github.com/danielo127730/Voxel-RPG)
 
+
 2
 Name: Georgy Kachelkin
 
@@ -19,6 +20,7 @@ Student Number: D22124642
 Class Group: TU856
 
 Github: https://github.com/gk355
+
 
 3
 Name: Yan Savioli Castanheira
@@ -75,9 +77,20 @@ To complete the game, kill all enemies in Level 2.
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| player.gd | Heavily modified from [reference 1](https://github.com/majikayogames/godot-character-controller-stairs) and [reference 2](https://www.youtube.com/watch?v=EP5AYllgHy8&t=1273s) |
+| e_clanger.gd | Modified from [reference](https://www.youtube.com/watch?v=-juhGgA076E) |
+| guardianEnemy.gd | Modified from [reference](https://www.youtube.com/watch?v=-juhGgA076E) |
+| abstractItem.gd | Modified from [reference](https://pastebin.com/YaPzmyqv) |
+| character.gd | Modified from [reference](https://pastebin.com/iJA2KbCe) |
+| inventory.gd | Modified from [reference](https://pastebin.com/chGct0NK) |
+| passive_slot.gd | Modified from [reference](https://pastebin.com/McWfmCZH) |
+| slot.gd | Modified from [reference](https://pastebin.com/SzuLRxGV) |
+| stats.gd | Modified from [reference](https://pastebin.com/Rdr4ALkK) |
+| UI.gd | Modified from [reference](https://pastebin.com/vTTj9npA) |
+| database.gd | Modified from [reference](https://pastebin.com/jdVUGRP3) |
+| database.json | Heavily modified from [reference](https://pastebin.com/ppZTCirg) |
+
+All other assets are self written, modelled, textured and animated
 
 # References
 * Item 1
