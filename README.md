@@ -1,4 +1,4 @@
-# Project Title: Trial Vox
+![image](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/310c37c6-7356-4d88-ab36-347a9c97f766)# Project Title: Trial Vox
 
 Include for each contributer:
 
@@ -76,7 +76,7 @@ To complete the game, kill all enemies in Level 2.
 # How it works:
 The Player controller works by using standard move_and_slide() code similar to the default one that Godot comes with, but we added a script which rotates seperation rays (one block/voxel high) which allow the player to walk up stairs for convenience. The player also has an off-set camera with a collision spring to get the effect that most 3rd person games such as Warframe use, and an Animation Tree to play different animations such as walk, attack and jump.
 
-Code relating to the inventory involves opening the database.json file and getting the proterties (such as respective icons, scenes, item ID and stats). When an enemy is killed, they will drop a random item which can be picked up and equipped by the player in the inventory, which will reflect the item properties visually and by taking less damage based on the gear they are wearing.
+Code relating to the inventory involves opening the database.json file in AutoLoad (which allows every script in the game to access it) and getting the proterties (such as respective icons, scenes, item ID and stats). When an enemy is killed, they will drop a random item which can be picked up and equipped by the player in the inventory, which will reflect the item properties visually and by taking less damage based on the gear they are wearing.
 
 Enemies work by being Navigation Agents of a Navigation mesh/region. When the player enters a certain radius of an enemy, they will begin following a path while avoiding obstacles to reach the player and begin attacking, if an attack hits the player or an enemy, they will begin taking damage until killed.
 
@@ -97,7 +97,7 @@ Enemies work by being Navigation Agents of a Navigation mesh/region. When the pl
 | database.gd | Modified from [reference](https://pastebin.com/jdVUGRP3) |
 | database.json | Heavily modified from [reference](https://pastebin.com/ppZTCirg) |
 
-All other assets are self written, modelled, textured or animated.
+All other assets are original and either self written, modelled, textured or animated.
 
 # What I am most proud of in the assignment
 
@@ -116,7 +116,7 @@ The specific contributions which i'm most proud of implementing  in the game are
 I am proud of having implemented the basic elements of functionality and display for player health which were later refined by Zsolt, Daniel and Georgy, I t isn't a big achievement but I'm happy with how it turned out given this was my first time writing code for a game in gd script.
 
 4(Zsolt Hevesi):
-I am proud of the 100% original assets me and George created through the MagicaVoxel and Blender tools as well as Godot's built-in tools, the original animations created in Godot's animation editor, complex inventory management and database, and the visuals (eg. VoxelGI lighting, materials, refraction etc.).
+I am proud of the 100% original assets (player gear, enemies, levels etc.) me and George created through the MagicaVoxel and Blender tools as well as Godot's built-in tools, the original animations created in Godot's animation editor, complex inventory management and database, and the visuals (eg. VoxelGI lighting, materials, refraction etc.).
 
 # What I learned
 
@@ -131,5 +131,5 @@ I've learned a lot from this project. It improved my github and git command comp
 I learned that there are various way that you can give a model animations be either through programs like Blender or through websites with pre-built animations and models like Mixamo, when deciding how to go about giving models animations with a website like Mixamo you must ensure that the models has a bone structure already set up and that the model does not have any floating parts which are not connected to the body so it can be imported to the Mixamo website and converted into a standard Mixamo model to have animations given to it. This allows the model to be given any animation that Mixamo has available and when all desired animations have been acquired you can export the the converted model with the animations to use in the game, also if the need to share the same animations between different models arises there is a way to export only the desired animations with the help of Blender so that as long as the models sharing animations are Mixamo models any animations can be shared between them.
 
 4(Zsolt Hevesi):
-This is my first time fully diving into a 3D game engine that is also open source, so everything I contributed to was learned through making this project such as Nodes, GDScript, game optimisation, Editor tools (animation, UI elements, materials, input maps etc.) and so much more. As a result of using original assets, I also learned other tools such as MagicaVoxel and Blender for the first time.
-I learned how to create a fully function Player controller that walks, runs, jumps, climbs stairs, an inventory system with slot types, meaningful item stats, icons and updating the visuals of the player to match the inventory.
+This is my first time fully diving into a 3D game engine that is also open source, so everything I contributed to was learned through making this project such as Nodes, GDScript, game optimisation, Editor tools (animation, UI elements, materials, input maps etc.) and so much more. As a result of using original assets, I also learned other tools such as MagicaVoxel and Blender for 3D modelling for the first time.
+I learned how to create a fully function Player controller that walks, runs, jumps, climbs stairs, an inventory system with slot types, meaningful item stats, icons and updating the visuals of the player to match the inventory, how to create working pathfinding enemies, level design, and how to manage a small team of developers.
