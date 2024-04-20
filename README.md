@@ -31,23 +31,40 @@ Github: https://github.com/Yan-Sav/Yan-Voxel-RPG
 4
 Name: Zsolt Hevesi
 
-Student Number: 
+Student Number: C22387231
 
-Class Group: 
+Class Group: TU858
 
-Github: 
+Github: https://github.com/ZsoltHevesi
 
 # Video
 
 [![TrialVoxTrailer](https://img.youtube.com/vi/dmLDlVRioho/0.jpg)](https://www.youtube.com/watch?v=dmLDlVRioho)
 
 # Screenshots
-
+![Screenshot (473)](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/796ab697-9a9a-4d42-81df-f7e978ff1304)
+![image3](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/0f4ada51-ccd0-4300-948b-123f2c547059)
+![image1](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/291af71b-c1d4-4f16-af1c-db4389bb8255)
+![image2](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/2dc85c3d-75cc-4d34-ab1a-b775b8d3883f)
 
 
 # Description of the project
+Trial Vox is a stylised 3D action RPG where the player goes through levels fighting enemies and gaining loot to help them survive, while trying to avoid dying themselves. 
 
 # Instructions for use
+| Key(s) | Action |
+|-----------|-----------|
+| W | Move forward |
+| A | Move left |
+| S | Move backward |
+| D | Move right |
+| SPACE | Jump |
+| Left Mouse Button | Melee Attack |
+| TAB | Open inventory |
+| Right Mouse Button | Aim gun (only if equipped) |
+| Right Mouse Button + Left Mouse button | Shoot gun (only if equipped) |
+
+To equip items, click and drag an item into the correct slot (a "stop" icon will appear if an item can not be equipped over the slot you're hovering over)
 
 # How it works:
 
