@@ -69,6 +69,7 @@ Trial Vox is a stylised 3D action RPG where the player goes through levels fight
 | Right Mouse Button + Left Mouse button | Shoot gun (only if equipped) |
 
 To equip items, click and drag an item into the correct slot (a "stop" icon will appear if an item can not be equipped in the slot you're hovering over)
+
 ![inventory](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/442722b2-f3e1-41f2-b56d-4bf1d92ab4c0)
 
 
