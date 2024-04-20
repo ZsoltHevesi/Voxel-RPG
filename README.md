@@ -1,4 +1,4 @@
-![image](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/310c37c6-7356-4d88-ab36-347a9c97f766)# Project Title: Trial Vox
+# Project Title: Trial Vox
 
 Include for each contributer:
 
