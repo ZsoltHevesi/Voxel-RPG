@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713605309
+::res://::1713612679
 export_presets.cfg::TextFile::-1::1713254454::0::1::::<><>::
 icon.svg::CompressedTexture2D::7874682967027633112::1703093245::1713605309::1::::<><>::
-README.md::TextFile::-1::1713602478::0::1::::<><>::
+README.md::TextFile::-1::1713612636::0::1::::<><>::
 ::res://assets/::1713605784
 ::res://assets/materials/::1706741028
 ::res://assets/materials/diffuse/::1713605623
@@ -208,7 +208,7 @@ solomonRightHand.png::CompressedTexture2D::944649316010656138::1709228389::17092
 solomonRightLeg.png::CompressedTexture2D::4585064724248501905::1709228389::1709228389::1::::<><>::
 solomonRightShoulder.png::CompressedTexture2D::4254381543996143266::1709228389::1709228389::1::::<><>::
 solomonTorso.png::CompressedTexture2D::8667962074744710961::1709228389::1709228389::1::::<><>::
-::res://assets/textures/templates/::1713607436
+::res://assets/textures/templates/::1713607437
 tempChest.png::CompressedTexture2D::1208157641533180079::1713606139::1713606141::1::::<><>::
 tempGun.png::CompressedTexture2D::5256808194063566437::1713607066::1713607067::1::::<><>::
 tempHelmet.png::CompressedTexture2D::2546808064434249191::1713606037::1713606039::1::::<><>::
@@ -274,8 +274,8 @@ test-area.VoxelGI_data.res::VoxelGIData::7308814506488196671::1713129707::0::1::
 fps_Counter.tscn::PackedScene::3438642583460207418::1713606815::0::1::::<><>::res://scripts/menu/FPSMeter.gd
 mainMenu.tscn::PackedScene::260163532246954956::1713606814::0::1::::<><>::res://scripts/menu/mainMenu.gd
 optionsMenu.tscn::PackedScene::1020445240813564691::1713606814::0::1::::<><>::res://scripts/menu/optionSetting.gd
-::res://scenes/menus/inventory/::1713607239
-playerMenu.tscn::PackedScene::2976407383753479003::1713607239::0::1::::<><>::res://scripts/inventory/UI.gd<>res://scripts/inventory/inventory.gd<>uid://bcjxs6tvs7440::::res://assets/textures/templates/tempHelmet.png<>uid://x3qxv5cjulff::::res://scenes/menus/inventory/slot/slot.tscn<>uid://rhigd5rmay8n::::res://assets/textures/templates/tempChest.png<>res://scripts/inventory/character.gd<>uid://bmrfipyieq710::::res://assets/textures/templates/tempRightLeg.png<>uid://fqth4fvlrk03::::res://assets/textures/templates/tempRightShoulder.png<>uid://cbfspasstnwu6::::res://assets/textures/templates/tempRightFoot.png<>uid://drh5mxkvyiqon::::res://scenes/menus/inventory/slot/passive_slot.tscn
+::res://scenes/menus/inventory/::1713607617
+playerMenu.tscn::PackedScene::2976407383753479003::1713607617::0::1::::<><>::res://scripts/inventory/UI.gd<>res://scripts/inventory/inventory.gd<>uid://bcjxs6tvs7440::::res://assets/textures/templates/tempHelmet.png<>uid://x3qxv5cjulff::::res://scenes/menus/inventory/slot/slot.tscn<>uid://rhigd5rmay8n::::res://assets/textures/templates/tempChest.png<>res://scripts/inventory/character.gd<>uid://bmrfipyieq710::::res://assets/textures/templates/tempRightLeg.png<>uid://fqth4fvlrk03::::res://assets/textures/templates/tempRightShoulder.png<>uid://dsiie63augse4::::res://assets/textures/templates/tempRightHand.png<>uid://cbfspasstnwu6::::res://assets/textures/templates/tempRightFoot.png<>uid://drh5mxkvyiqon::::res://scenes/menus/inventory/slot/passive_slot.tscn<>uid://bjvq3ukgkonb2::::res://assets/textures/templates/tempMelee.png<>uid://cg5o4lsqlkl3b::::res://assets/textures/templates/tempGun.png
 ::res://scenes/menus/inventory/slot/::1709706770
 passive_slot.tscn::PackedScene::8368767200985771657::1709701491::0::1::::<><>::uid://x3qxv5cjulff::::res://scenes/menus/inventory/slot/slot.tscn<>res://scripts/inventory/passive_slot.gd
 slot.tscn::PackedScene::1673159675370676939::1709706770::0::1::::<><>::res://scripts/inventory/slot.gd<>res://scripts/inventory/stats.gd
