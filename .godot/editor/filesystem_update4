@@ -1,4 +1,4 @@
-res://scenes/menus/inventory/playerMenu.tscn
+res://scenes/levels/level1/level1.tscn
 res://scripts/menu/optionSetting.gd
 res://assets/materials/diffuse/greyDIFF4.tres
 res://assets/materials/diffuse/greyDIFF2.tres
