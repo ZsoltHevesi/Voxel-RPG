@@ -66,6 +66,7 @@ Trial Vox is a stylised 3D action RPG where the player goes through levels fight
 | Right Mouse Button + Left Mouse button | Shoot gun (only if equipped) |
 
 To equip items, click and drag an item into the correct slot (a "stop" icon will appear if an item can not be equipped in the slot you're hovering over)
+To complete the game, kill all enemies in Level 2.
 
 # How it works:
 
