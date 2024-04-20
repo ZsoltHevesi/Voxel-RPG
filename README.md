@@ -87,7 +87,8 @@ To complete the game, kill all enemies in Level 2.
 
 Each team member
 
-1(Daniel): I am proud of being apart of this project and undertaking the challenge that it was. I am proud of my efforts and particularly the efforts of my team.
+1(Daniel):
+I am proud of being apart of this project and undertaking the challenge that it was. I am proud of my efforts and particularly the efforts of my team.
 
 The specific contributions which i'm most proud of implementing  in the game are the sprint functionality, Audio,  contributions to the health system, implementing a smoother camera using linear interpolation, implementing 3d pathfiding / enemy navigation, introducing damage incurring barriers and pioneering the enemy / player damage system. 
 
@@ -95,19 +96,24 @@ The specific contributions which i'm most proud of implementing  in the game are
 
 2():
 
-3(Yan): I am proud of having implemented the basic elements of functionality and display for player health which were later refined by Zsolt, Daniel and Georgy, I t isn't a big achievement but I'm happy with how it turned out given this was my first time writing code for a game in gd script.
+3(Yan):
+I am proud of having implemented the basic elements of functionality and display for player health which were later refined by Zsolt, Daniel and Georgy, I t isn't a big achievement but I'm happy with how it turned out given this was my first time writing code for a game in gd script.
 
-4(Zsolt Hevesi): I am proud of the 100% original assets me and George created through the MagicaVoxel and Blender tools as well as Godot's built-in tools, the original animations created in Godot's animation editor, complex inventory management and database, and the visuals (eg. VoxelGI lighting, materials, refraction etc.).
+4(Zsolt Hevesi):
+I am proud of the 100% original assets me and George created through the MagicaVoxel and Blender tools as well as Godot's built-in tools, the original animations created in Godot's animation editor, complex inventory management and database, and the visuals (eg. VoxelGI lighting, materials, refraction etc.).
 
 # What I learned
 
 Each team member
 
-1(Daniel): I've learned a lot from this project. It improved my github and git command competency immensely. I learned how to use the godot game engine and gdscript.  I've experienced what it's like to work on complex problems with a team and collaborate on solutions to overcome those problems. I've learned about the process of designing a game and the various elements that go into it. It's given me a greater appreciation for the games that I play and the amount of work that must have went into their creation.
+1(Daniel):
+I've learned a lot from this project. It improved my github and git command competency immensely. I learned how to use the godot game engine and gdscript.  I've experienced what it's like to work on complex problems with a team and collaborate on solutions to overcome those problems. I've learned about the process of designing a game and the various elements that go into it. It's given me a greater appreciation for the games that I play and the amount of work that must have went into their creation.
 
 2():
 
-3(Yan): I learned that there are various way that you can give a model animations be either through programs like Blender or through websites with pre-built animations and models like Mixamo, when deciding how to go about giving models animations with a website like Mixamo you must ensure that the models has a bone structure already set up and that the model does not have any floating parts which are not connected to the body so it can be imported to the Mixamo website and converted into a standard Mixamo model to have animations given to it. This allows the model to be given any animation that Mixamo has available and when all desired animations have been acquired you can export the the converted model with the animations to use in the game, also if the need to share the same animations between different models arises there is a way to export only the desired animations with the help of Blender so that as long as the models sharing animations are Mixamo models any animations can be shared between them.
+3(Yan):
+I learned that there are various way that you can give a model animations be either through programs like Blender or through websites with pre-built animations and models like Mixamo, when deciding how to go about giving models animations with a website like Mixamo you must ensure that the models has a bone structure already set up and that the model does not have any floating parts which are not connected to the body so it can be imported to the Mixamo website and converted into a standard Mixamo model to have animations given to it. This allows the model to be given any animation that Mixamo has available and when all desired animations have been acquired you can export the the converted model with the animations to use in the game, also if the need to share the same animations between different models arises there is a way to export only the desired animations with the help of Blender so that as long as the models sharing animations are Mixamo models any animations can be shared between them.
 
-4(Zsolt Hevesi): This is my first time fully diving into a 3D game engine that is also open source, so everything I contributed to was learned through making this project such as Nodes, GDScript, game optimisation, Editor tools (animation, UI elements, materials, input maps etc.) and so much more. As a result of using original assets, I also learned other tools such as MagicaVoxel and Blender for the first time.
+4(Zsolt Hevesi):
+This is my first time fully diving into a 3D game engine that is also open source, so everything I contributed to was learned through making this project such as Nodes, GDScript, game optimisation, Editor tools (animation, UI elements, materials, input maps etc.) and so much more. As a result of using original assets, I also learned other tools such as MagicaVoxel and Blender for the first time.
 I learned how to create a fully function Player controller that walks, runs, jumps, climbs stairs, an inventory system with slot types, meaningful item stats, icons and updating the visuals of the player to match the inventory.
