@@ -25,11 +25,11 @@ var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
 var lootPool = ["12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "26"]
 
 
-var chaseRange = 20
+var chaseRange = 40
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-var SPEED = 3.0
+var SPEED = 5.0
 var desiredDistance = 1.25
-var maxHealth = 200
+var maxHealth = 500
 @export var currentHealth = maxHealth
 var meleeImmunity = false
 

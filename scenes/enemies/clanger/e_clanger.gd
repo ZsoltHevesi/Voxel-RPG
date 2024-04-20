@@ -18,9 +18,9 @@ var lootInstance
 var loot = load("res://scenes/pickUp_Items/pickUp_abstractItem.tscn")
 var lootPool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23",]
 
-var chaseRange = 20
+var chaseRange = 50
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-var SPEED = 3.0
+var SPEED = 8.0
 var desiredDistance = 1.25
 
 var maxHealth = 100

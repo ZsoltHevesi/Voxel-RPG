@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/explore-japan-199943.mp3-839cc89fa98388df02fd
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -8,7 +8,7 @@ Student Number: C22307066
 
 Class Group: Tu858
 
-Github: https://github.com/danielo127730
+Github: https://github.com/danielo127730/Voxel-RPG
 
 2
 Name: Georgy Kachelkin
