@@ -71,7 +71,11 @@ To equip items, click and drag an item into the correct slot (a "stop" icon will
 To complete the game, kill all enemies in Level 2.
 
 # How it works:
+The Player controller works by using standard move_and_slide() code similar to the default one that Godot comes with, but we added a script which rotates seperation rays (one block/voxel high) which allow the player to walk up stairs for convenience. The player also has an off-set camera with a collision spring to get the effect that most 3rd person games such as Warframe use, and an Animation Tree to play different animations such as walk, attack and jump.
 
+Code relating to the inventory involves opening the database.json file and getting the proterties (such as respective icons, scenes, item ID and stats). When an enemy is killed, they will drop a random item which can be picked up and equipped by the player in the inventory, which will reflect the item properties visually and by taking less damage based on the gear they are wearing.
+
+Enemies work by being Navigation Agents of a Navigation mesh/region. When the player enters a certain radius of an enemy, they will begin following a path while avoiding obstacles to reach the player and begin attacking, if an attack hits the player or an enemy, they will begin taking damage until killed.
 
 # List of classes/assets in the project
 
@@ -90,11 +94,7 @@ To complete the game, kill all enemies in Level 2.
 | database.gd | Modified from [reference](https://pastebin.com/jdVUGRP3) |
 | database.json | Heavily modified from [reference](https://pastebin.com/ppZTCirg) |
 
-All other assets are self written, modelled, textured and animated
-
-# References
-* Item 1
-* Item 2
+All other assets are self written, modelled, textured or animated.
 
 # What I am most proud of in the assignment
 
