@@ -1,15 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bin1826yyqi48"]
+[gd_scene load_steps=14 format=3 uid="uid://bin1826yyqi48"]
 
 [ext_resource type="Script" path="res://scripts/inventory/UI.gd" id="1_yg07x"]
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="2_a624s"]
+[ext_resource type="Texture2D" uid="uid://bcjxs6tvs7440" path="res://assets/textures/templates/tempHelmet.png" id="2_t60bt"]
 [ext_resource type="PackedScene" uid="uid://x3qxv5cjulff" path="res://scenes/menus/inventory/slot/slot.tscn" id="3_rwh5q"]
+[ext_resource type="Texture2D" uid="uid://rhigd5rmay8n" path="res://assets/textures/templates/tempChest.png" id="3_w8bv8"]
 [ext_resource type="Script" path="res://scripts/inventory/character.gd" id="4_k6ifo"]
+[ext_resource type="Texture2D" uid="uid://bmrfipyieq710" path="res://assets/textures/templates/tempRightLeg.png" id="4_pwvny"]
+[ext_resource type="Texture2D" uid="uid://fqth4fvlrk03" path="res://assets/textures/templates/tempRightShoulder.png" id="4_svtxm"]
+[ext_resource type="Texture2D" uid="uid://dsiie63augse4" path="res://assets/textures/templates/tempRightHand.png" id="5_gl8n8"]
+[ext_resource type="Texture2D" uid="uid://cbfspasstnwu6" path="res://assets/textures/templates/tempRightFoot.png" id="5_hc56q"]
 [ext_resource type="PackedScene" uid="uid://drh5mxkvyiqon" path="res://scenes/menus/inventory/slot/passive_slot.tscn" id="5_rii7g"]
+[ext_resource type="Texture2D" uid="uid://bjvq3ukgkonb2" path="res://assets/textures/templates/tempMelee.png" id="6_6qcyq"]
+[ext_resource type="Texture2D" uid="uid://cg5o4lsqlkl3b" path="res://assets/textures/templates/tempGun.png" id="8_so3gk"]
 
 [node name="playerMenu" type="Node2D"]
 
 [node name="UI" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -27,6 +34,107 @@ offset_top = 57.0
 offset_right = -39.0001
 offset_bottom = -130.0
 color = Color(0.823529, 0.74902, 0.580392, 0.737255)
+
+[node name="tempHead" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 201.0
+offset_right = 390.0
+offset_bottom = 320.0
+texture = ExtResource("2_t60bt")
+
+[node name="tempChest" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 363.0
+offset_right = 390.0
+offset_bottom = 490.0
+texture = ExtResource("3_w8bv8")
+
+[node name="tempLeftShoulder" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 322.0
+offset_right = 515.0
+offset_bottom = 445.0
+texture = ExtResource("4_svtxm")
+flip_h = true
+
+[node name="tempLeftShoulder2" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 456.0
+offset_right = 520.0
+offset_bottom = 579.0
+texture = ExtResource("5_gl8n8")
+flip_h = true
+
+[node name="tempLeftShoulder3" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 459.0
+offset_right = 251.0
+offset_bottom = 582.0
+texture = ExtResource("5_gl8n8")
+
+[node name="tempLeftShoulder4" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 583.0
+offset_right = 130.0
+offset_bottom = 701.0
+texture = ExtResource("6_6qcyq")
+
+[node name="tempRightShoulder" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 324.0
+offset_right = 255.0
+offset_bottom = 447.0
+texture = ExtResource("4_svtxm")
+
+[node name="tempLeftLeg" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 596.0
+offset_right = 475.0
+offset_bottom = 723.0
+texture = ExtResource("4_pwvny")
+flip_h = true
+
+[node name="tempLeftLeg2" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 570.0
+offset_right = 654.0
+offset_bottom = 697.0
+texture = ExtResource("8_so3gk")
+flip_h = true
+
+[node name="tempRightLeg" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 596.0
+offset_right = 300.0
+offset_bottom = 723.0
+texture = ExtResource("4_pwvny")
+
+[node name="tempLeftFoot" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 732.0
+offset_right = 475.0
+offset_bottom = 859.0
+texture = ExtResource("5_hc56q")
+flip_h = true
+
+[node name="tempRightFoot" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 738.0
+offset_right = 301.0
+offset_bottom = 865.0
+texture = ExtResource("5_hc56q")
 
 [node name="inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
@@ -307,7 +415,6 @@ offset_left = 365.0
 offset_top = 650.0
 offset_right = 485.0
 offset_bottom = 770.0
-slot_type = 7
 
 [node name="leftFootSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0

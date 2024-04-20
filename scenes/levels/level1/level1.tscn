@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmw7fwjm363s7"]
+[gd_scene load_steps=23 format=3 uid="uid://cmw7fwjm363s7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/graphicsWorldEnvironment.gd" id="1_d7ia6"]
 [ext_resource type="Script" path="res://scripts/levelWorld.gd" id="1_ems3p"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://crawnocbn8e3e" path="res://scenes/tile scenes/backdrop/tower.tscn" id="12_jke7u"]
 [ext_resource type="PackedScene" uid="uid://cg21b1lue3yu7" path="res://scenes/pickUp_Items/pickUp_abstractItem.tscn" id="13_bvqol"]
 [ext_resource type="PackedScene" uid="uid://3xoln0dfc6j0" path="res://scenes/enemies/guardian/guardianEnemy.tscn" id="16_yg5tm"]
-[ext_resource type="AudioStream" uid="uid://xruo3mxyopcc" path="res://Audio/explore-japan-199943.mp3" id="17_iqvqb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hgwl"]
 sky_top_color = Color(0.647059, 0.654902, 0.670588, 1)
@@ -182,11 +181,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00753331, 3.70607, -64.8012
 
 [node name="e_Guardian" parent="level1/map" instance=ExtResource("16_yg5tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05536, -3.26494)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="level1"]
-stream = ExtResource("17_iqvqb")
-volume_db = -5.0
-autoplay = true
 
 [connection signal="body_entered" from="level1/Area3D" to="Player" method="_on_Fallbarrier_body_entered"]
 [connection signal="body_entered" from="level1/map/NavigationRegion3D/tiles/spawn/nextLevelArea" to="." method="_on_next_level_area_body_entered"]

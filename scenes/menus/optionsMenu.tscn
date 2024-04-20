@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://oskt4euxjg3l"]
+[gd_scene load_steps=2 format=3 uid="uid://oskt4euxjg3l"]
 
 [ext_resource type="Script" path="res://scripts/menu/optionSetting.gd" id="1_53fs5"]
-[ext_resource type="AudioStream" uid="uid://svs3tkmlj7e" path="res://Audio/baby-mandala-169039.mp3" id="2_qtng1"]
 
 [node name="optionsMenu" type="Control"]
 layout_mode = 3
@@ -197,10 +196,6 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 text = "Back"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_qtng1")
-autoplay = true
 
 [connection signal="item_selected" from="HBoxContainer/optionSetting/resolutionBox/resolutionList" to="HBoxContainer/optionSetting" method="_on_resolution_list_item_selected"]
 [connection signal="item_selected" from="HBoxContainer/optionSetting/scaleModeBox/scalingMode" to="HBoxContainer/optionSetting" method="_on_scaling_mode_item_selected"]
