@@ -1,7 +1,5 @@
 # Project Title: Trial Vox
 
-Include for each contributer:
-
 1
 Name: Daniel O'Neill
 
