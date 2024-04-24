@@ -43,6 +43,8 @@ Github: https://github.com/ZsoltHevesi
 # Video
 
 [![TrialVoxTrailer](https://img.youtube.com/vi/dmLDlVRioho/0.jpg)](https://www.youtube.com/watch?v=dmLDlVRioho)
+[![TrialVoxTrailer](https://img.youtube.com/vi/kbtCTc8xlCE/0.jpg)](https://www.youtube.com/watch?v=kbtCTc8xlCE)
+
 
 # Screenshots
 ![Screenshot (473)](https://github.com/ZsoltHevesi/Voxel-RPG/assets/124164938/796ab697-9a9a-4d42-81df-f7e978ff1304)
