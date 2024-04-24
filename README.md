@@ -82,6 +82,8 @@ Code relating to the inventory involves opening the database.json file in AutoLo
 
 Enemies work by being Navigation Agents of a Navigation mesh/region. When the player enters a certain radius of an enemy, they will begin following a path while avoiding obstacles to reach the player and begin attacking, if an attack hits the player or an enemy, they will begin taking damage until killed.
 
+The game has various visual settings that are saved between sessions (except for scaling due to issues encountered during development). These are implemented through a .cfg config file that stores every value for every setting, an autoload script which checks for the values in the config and if some are absent, it creates them with default values so the game still runs. Every time a setting is changed, its new value is written to the config file, which is read from by in-game nodes which change their properties based on values recieved.
+
 # List of classes/assets in the project
 
 | Class/asset | Source |
@@ -112,7 +114,8 @@ The specific contributions which i'm most proud of implementing  in the game are
 
  There were many times when I would struggle to implement a feature. I would spend hours research and attempting to solve the problem. It was stressful but I persevered as did my team which faced similar difficulties and eventually we would overcomes these problems through collaboration and perseverance. I went into this project knowing absoulutely nothing about godot and game design. Despite my lack of knowledge I took on this challenge anyway and I've learned so much from it. The game turned out better than I ever could've imagined compared to where we began.  
 
-2():
+2(Georgy Kachelkin):
+I am proud of the project in general. As our first attempt at making a full 3D game, we succeeded in my opinion. At least 90% of features that we planned were implemented, not perfectly, but the game is functional. Very proud of assets that we created ourselves and the systems that we managed to implement (like inventory, settings, winning and failing, combat, etc.). This project gave us invaluable experience in game development.
 
 3(Yan):
 I am proud of having implemented the basic elements of functionality and display for player health which were later refined by Zsolt, Daniel and Georgy, I t isn't a big achievement but I'm happy with how it turned out given this was my first time writing code for a game in gd script.
@@ -127,7 +130,8 @@ Each team member
 1(Daniel):
 I've learned a lot from this project. It improved my github and git command competency immensely. I learned how to use the godot game engine and gdscript.  I've experienced what it's like to work on complex problems with a team and collaborate on solutions to overcome those problems. I've learned about the process of designing a game and the various elements that go into it. It's given me a greater appreciation for the games that I play and the amount of work that must have went into their creation.
 
-2():
+2(Georgy Kachelkin):
+I learned a lot about the workflow and process of developing a game. Next time, I will know how to plan better, how to manage the scale of the project, how to set up communications better. In addition, I now have much more knowledge of Godot Engine and its programming language GDScript. Learned about how game systems should interact with each other, the importance of keeping the code as easy to read as possible and lots of other useful practices in development.
 
 3(Yan):
 I learned that there are various way that you can give a model animations be either through programs like Blender or through websites with pre-built animations and models like Mixamo, when deciding how to go about giving models animations with a website like Mixamo you must ensure that the models has a bone structure already set up and that the model does not have any floating parts which are not connected to the body so it can be imported to the Mixamo website and converted into a standard Mixamo model to have animations given to it. This allows the model to be given any animation that Mixamo has available and when all desired animations have been acquired you can export the the converted model with the animations to use in the game, also if the need to share the same animations between different models arises there is a way to export only the desired animations with the help of Blender so that as long as the models sharing animations are Mixamo models any animations can be shared between them.
