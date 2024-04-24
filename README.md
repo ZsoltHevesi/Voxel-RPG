@@ -7,7 +7,7 @@ Student Number: C22307066
 
 Class Group: Tu858
 
-Github: [https://github.com/danielo127730](https://github.com/danielo127730/Voxel-RPG)
+Github: [[https://github.com/danielo127730](https://github.com/danielo127730/Voxel-RPG)](https://github.com/ZsoltHevesi/Voxel-RPG/tree/my-feature-branch?tab=readme-ov-file)
 
 
 2
