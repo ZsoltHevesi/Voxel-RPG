@@ -1,2 +1,2 @@
-﻿59312
-C:/Users/Blues/Downloads/Godot/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe
+﻿54054
+C:/Users/Zslot/Desktop/me folder/somePrograms/Godot/Godot_v4.2.2-stable_mono_win64/Godot_v4.2.2-stable_mono_win64.exe

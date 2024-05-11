@@ -38,3 +38,7 @@ res://assets/materials/diffuse/brownDIFF2.tres
 res://assets/materials/diffuse/boneDIFF1.tres
 res://assets/materials/diffuse/brownDIFF3.tres
 res://scenes/player/menuTitle.tres
+res://scenes/menus/optionsMenu.tscn
+res://scenes/menus/mainMenu.tscn
+res://scenes/player/player.tscn
+res://scenes/menus/inventory/playerMenu.tscn

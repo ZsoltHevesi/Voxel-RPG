@@ -17,7 +17,6 @@
 [node name="playerMenu" type="Node2D"]
 
 [node name="UI" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -416,6 +415,7 @@ offset_left = 365.0
 offset_top = 650.0
 offset_right = 485.0
 offset_bottom = 770.0
+slot_type = 7
 
 [node name="leftFootSlot" parent="UI/character" instance=ExtResource("5_rii7g")]
 layout_mode = 0

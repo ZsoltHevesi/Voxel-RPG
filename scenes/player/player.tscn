@@ -169,9 +169,6 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="visuals"]
-libraries = {
-"": SubResource("AnimationLibrary_g6ovt")
-}
 tree_root = SubResource("AnimationNodeBlendTree_sxeqy")
 anim_player = NodePath("../AnimationPlayer")
 parameters/IdleWalkRunBlend/blend_amount = -1.0
